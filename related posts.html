@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Related Posts - CET 2025 Preparation Portal</title>
+    <meta name="description" content="Explore related articles and resources for CET 2025 preparation. Find study materials, tips, and updates to help you succeed in the exam.">
+    <meta name="keywords" content="CET 2025 related posts, CET preparation articles, CET study resources, CET exam updates, CET preparation tips">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'indian-blue': '#0066CC',
+                        'indian-saffron': '#FF9933',
+                        'gov-blue': '#1a365d',
+                        'gov-light': '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #0066CC, #FF9933);
+            -webkit-text-fill-color: transparent;
+        }
+        .gov-card {
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        .gov-card:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        /* Navbar Styles */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #87CEEB;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #87CEEB;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link.active {
+            background: linear-gradient(45deg, #0066CC, #FF9933);
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-link.active::after {
+            width: 100%;
+        }
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+        #mobile-menu.hidden {
+            display: none;
+        }
+        #mobile-menu:not(.hidden) {
+            animation: slideDown 0.3s ease-in-out;
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Sticky Navbar Shadow */
+        nav.sticky {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        /* Navbar Link Hover Effects */
+        .mobile-nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .mobile-nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #87CEEB;
+            transition: width 0.3s ease;
+        }
+        .mobile-nav-link:hover {
+            color: #87CEEB;
+        }
+        .mobile-nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+    </head>
+<body class="bg-gov-light">
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+    </div>
+    
+
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+
+    <!-- Related Posts Section -->
+    <section class="bg-white rounded-xl shadow-md p-8 mb-8">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold gradient-text inline-block mb-6">📚 Related Posts</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Related Post 1 -->
+                <a href="document-requirements.html" class="group block bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-100 overflow-hidden">
+                        <img src="img/apply-now.png" alt="Document Requirements" class="w-full h-48 object-cover object-center group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-4">
+                        <div class="text-xs text-gray-500 mb-1">May 15, 2025</div>
+                        <h3 class="font-semibold text-gray-800 group-hover:text-indian-blue transition duration-300">CET 2025 Document Requirements: Complete Guide</h3>
+                    </div>
+                </a>
+                
+                <!-- Related Post 2 -->
+                <a href="cet-vacancies.html" class="group block bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-100 overflow-hidden">
+                        <img src="img/banner1.png" alt="CET Vacancies" class="w-full h-48 object-cover object-center group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-4">
+                        <div class="text-xs text-gray-500 mb-1">May 10, 2025</div>
+                        <h3 class="font-semibold text-gray-800 group-hover:text-indian-blue transition duration-300">CET 2025 Vacancies: Complete List</h3>
+                    </div>
+                </a>
+                
+                <!-- Related Post 3 -->
+                <a href="exam-pattern.html" class="group block bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-100 overflow-hidden">
+                        <img src="img/previous-papers.png" alt="Exam Pattern" class="w-full h-48 object-cover object-center group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-4">
+                        <div class="text-xs text-gray-500 mb-1">May 5, 2025</div>
+                        <h3 class="font-semibold text-gray-800 group-hover:text-indian-blue transition duration-300">CET 2025 Exam Pattern and Previous Papers</h3>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="mt-6 text-center">
+                <a href="blog-index.html" class="inline-block text-indian-blue hover:text-indian-saffron font-medium transition duration-300">
+                    View All Blog Posts →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-sm text-gray-400">
+                © 2025 CET Preparation Portal. All rights reserved. ✨
+            </div>
+        </div>
+    </footer>
+    <!-- Loader Script -->
+    <script>
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('loader-hidden');
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

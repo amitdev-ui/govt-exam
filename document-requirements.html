@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Requirements - CET 2025 Preparation Portal</title>
+    <meta name="description" content="Complete list of documents required for CET 2025 application. Get detailed information about educational certificates, identity proofs, and other necessary documents.">
+    <meta name="keywords" content="CET 2025 documents, CET application requirements, CET eligibility documents, CET exam documents, CET registration documents">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'indian-blue': '#0066CC',
+                        'indian-saffron': '#FF9933',
+                        'gov-blue': '#1a365d',
+                        'gov-light': '#f8fafc',
+                        'document-blue': '#1e40af',
+                        'document-light': '#e0e7ff'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #0066CC, #FF9933);
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+        .gov-card {
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        .gov-card:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        /* Navbar Styles */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #87CEEB;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #87CEEB;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link.active {
+            background: linear-gradient(45deg, #0066CC, #FF9933);
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-link.active::after {
+            width: 100%;
+        }
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+        #mobile-menu.hidden {
+            display: none;
+        }
+        #mobile-menu:not(.hidden) {
+            animation: slideDown 0.3s ease-in-out;
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Sticky Navbar Shadow */
+        nav.sticky {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        /* Navbar Link Hover Effects */
+        .mobile-nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .mobile-nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #87CEEB;
+            transition: width 0.3s ease;
+        }
+        .mobile-nav-link:hover {
+            color: #87CEEB;
+        }
+        .mobile-nav-link:hover::after {
+            width: 100%;
+        }
+        .document-card {
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        .document-card:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .text-document-blue {
+            color: #1e40af;
+        }
+        .bg-document-blue {
+            background-color: #1e40af;
+        }
+        .bg-document-light {
+            background-color: #e0e7ff;
+        }
+    </style>
+    
+</head>
+<body class="bg-gov-light">
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+    </div>
+    
+
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+
+    <!-- Language Switcher -->
+    <div class="fixed top-4 right-4 z-50 flex items-center space-x-2">
+        <span class="text-sm text-gray-600">EN</span>
+        <label class="lang-switch">
+            <input type="checkbox" id="languageToggle">
+            <span class="slider"></span>
+        </label>
+        <span class="text-sm text-gray-600">हिं</span>
+    </div>
+
+    <!-- Floating Translation Button -->
+    <div class="floating-translate-btn" onclick="document.getElementById('languageToggle').click()">
+        <i class="fas fa-language"></i>
+        <span id="translateBtnText" class="font-semibold">Translate to Hindi</span>
+    </div>
+
+    <!-- Accessibility Menu -->
+    <a href="#main-content" class="skip-link">Skip to main content | Screen Reader Access</a>
+
+    <!-- Main Content -->
+    <main id="main-content" class="container mx-auto px-4 py-8">
+        <!-- Hero Banner -->
+        <div class="bg-gradient-to-r from-document-blue to-indian-blue text-white rounded-xl p-8 mb-8 shadow-lg">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4 text-white">CET 2025 Document Requirements</h1>
+                <p class="text-lg text-white mb-6">A comprehensive guide to prepare all necessary documents for your application</p>
+                <a href="apply-now.html" class="inline-block bg-white text-document-blue font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition duration-300 shadow-md">
+                    Apply Now →
+                </a>
+            </div>
+        </div>
+
+        <!-- Introduction -->
+        <section class="bg-white rounded-xl shadow-md p-8 mb-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold text-document-blue mb-4">Applying for the Common Eligibility Test (CET) 2025</h2>
+                <p class="text-gray-800 mb-4">
+                    Applying for the Common Eligibility Test (CET) 2025 requires careful preparation, especially when it comes to documentation. Ensuring that all necessary documents are ready and correctly formatted can prevent application rejections and streamline the submission process. This guide provides a detailed checklist of required documents, formatting specifications, and common pitfalls to avoid.
+                </p>
+            </div>
+        </section>
+
+        <!-- Required Documents Section -->
+        <section class="bg-white rounded-xl shadow-md p-8 mb-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold text-document-blue mb-6">🗂️ Required Documents for CET 2025 Application</h2>
+                
+                <!-- Document Cards -->
+                <div class="space-y-6">
+                    <!-- Photograph -->
+                    <div class="document-card bg-white rounded-lg p-6 hover-scale">
+                        <div class="flex items-start">
+                            <div class="document-icon mr-4 flex-shrink-0">
+                                📷
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-document-blue mb-2">Recent Passport-Sized Photograph</h3>
+                                <div class="bg-document-light p-4 rounded-lg mb-3">
+                                    <h4 class="font-medium text-document-blue mb-1">Specifications:</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                        <li>Format: JPEG/JPG</li>
+                                        <li>Size: 20–50 KB</li>
+                                        <li>Background: White</li>
+                                        <li>Front-facing, no accessories</li>
+                                    </ul>
+                                </div>
+                                <p class="text-gray-700"><span class="font-medium">Purpose:</span> For identification on admit cards and official records.</p>
+                                <div class="mt-2 text-sm text-gray-500">Recommended by: Career Power, Navbharat Times, Target Publications</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Signature -->
+                    <div class="document-card bg-white rounded-lg p-6 hover-scale">
+                        <div class="flex items-start">
+                            <div class="document-icon mr-4 flex-shrink-0">
+                                ✍️
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-document-blue mb-2">Signature</h3>
+                                <div class="bg-document-light p-4 rounded-lg mb-3">
+                                    <h4 class="font-medium text-document-blue mb-1">Specifications:</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                        <li>Format: JPEG/JPG</li>
+                                        <li>Size: 10–20 KB</li>
+                                        <li>Ink: Black on white paper</li>
+                                        <li>Signature should not be in capital letters</li>
+                                    </ul>
+                                </div>
+                                <p class="text-gray-700"><span class="font-medium">Purpose:</span> For verification and official documentation.</p>
+                                <div class="mt-2 text-sm text-gray-500">Recommended by: Testbook</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo ID Proof -->
+                    <div class="document-card bg-white rounded-lg p-6 hover-scale">
+                        <div class="flex items-start">
+                            <div class="document-icon mr-4 flex-shrink-0">
+                                🪪
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-document-blue mb-2">Valid Photo ID Proof</h3>
+                                <div class="bg-document-light p-4 rounded-lg mb-3">
+                                    <h4 class="font-medium text-document-blue mb-1">Acceptable IDs:</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                        <li>Aadhaar Card</li>
+                                        <li>Voter ID</li>
+                                        <li>Passport</li>
+                                        <li>Driving License</li>
+                                    </ul>
+                                </div>
+                                <p class="text-gray-700"><span class="font-medium">Purpose:</span> To verify the candidate's identity and eligibility.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Educational Certificates -->
+                    <div class="document-card bg-white rounded-lg p-6 hover-scale">
+                        <div class="flex items-start">
+                            <div class="document-icon mr-4 flex-shrink-0">
+                                🎓
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-document-blue mb-2">Educational Qualification Certificates</h3>
+                                <div class="bg-document-light p-4 rounded-lg mb-3">
+                                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                        <li>10th and 12th Mark Sheets</li>
+                                        <li>Graduation Degree/Mark Sheet (if applicable)</li>
+                                    </ul>
+                                </div>
+                                <p class="text-gray-700"><span class="font-medium">Purpose:</span> To confirm educational eligibility criteria.</p>
+                                <div class="mt-2 text-sm text-gray-500">Recommended by: Testbook, Propelld, Career Power, The Times of India</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category Certificate -->
+                    <div class="document-card bg-white rounded-lg p-6 hover-scale">
+                        <div class="flex items-start">
+                            <div class="document-icon mr-4 flex-shrink-0">
+                                📜
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-document-blue mb-2">Category Certificate (if applicable)</h3>
+                                <div class="bg-document-light p-4 rounded-lg mb-3">
+                                    <h4 class="font-medium text-document-blue mb-1">Categories:</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                        <li>SC/ST</li>
+                                        <li>OBC</li>
+                                        <li>EWS</li>
+                                    </ul>
+                                    <h4 class="font-medium text-document-blue mt-2 mb-1">Specifications:</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                        <li>Issued by a competent authority</li>
+                                        <li>Valid as per government norms</li>
+                                    </ul>
+                                </div>
+                                <p class="text-gray-700"><span class="font-medium">Purpose:</span> To avail reservation benefits.</p>
+                                <div class="mt-2 text-sm text-gray-500">Recommended by: The Times of India, Testbook</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other Certificates -->
+                    <div class="document-card bg-white rounded-lg p-6 hover-scale">
+                        <div class="flex items-start">
+                            <div class="document-icon mr-4 flex-shrink-0">
+                                📋
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-document-blue mb-2">Additional Certificates (if applicable)</h3>
+                                <div class="bg-document-light p-4 rounded-lg mb-3">
+                                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                        <li><span class="font-medium">Domicile Certificate:</span> To claim state-specific reservations or benefits.</li>
+                                        <li><span class="font-medium">Disability Certificate:</span> For candidates applying under the PwD category.</li>
+                                        <li><span class="font-medium">Experience Certificate:</span> For posts requiring prior work experience.</li>
+                                        <li><span class="font-medium">No Objection Certificate (NOC):</span> For currently employed candidates in government or private sectors.</li>
+                                    </ul>
+                                </div>
+                                <div class="mt-2 text-sm text-gray-500">Recommended by: admissionphysiotherapy.com, Target Publications, The Times of India</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Document Checklist -->
+                    <div class="document-card bg-white rounded-lg p-6 hover-scale">
+                        <div class="flex items-start">
+                            <div class="document-icon mr-4 flex-shrink-0">
+                                📝
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-document-blue mb-2">Complete Document Checklist</h3>
+                                <div class="bg-document-light p-4 rounded-lg mb-3">
+                                    <h4 class="font-medium text-document-blue mb-2">Essential Documents:</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                        <li>Recent passport size photograph (3.5 x 4.5 cm)</li>
+                                        <li>Scanned signature (3.5 x 1.5 cm)</li>
+                                        <li>Valid photo ID proof (Aadhaar Card/Voter ID/Passport)</li>
+                                        <li>10th and 12th mark sheets</li>
+                                        <li>Graduation degree/mark sheet (if applicable)</li>
+                                        <li>Category certificate (if applicable)</li>
+                                        <li>Domicile certificate (if applicable)</li>
+                                        <li>Experience certificate (if applicable)</li>
+                                        <li>NOC from current employer (if applicable)</li>
+                                    </ul>
+                                    <h4 class="font-medium text-document-blue mt-4 mb-2">Additional Requirements:</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                        <li>Disability certificate (for PwD candidates)</li>
+                                        <li>Income certificate (for EWS candidates)</li>
+                                        <li>Sports certificate (if applying under sports quota)</li>
+                                        <li>Ex-serviceman certificate (if applicable)</li>
+                                    </ul>
+                                </div>
+                                <p class="text-gray-700"><span class="font-medium">Note:</span> All documents should be clear, legible, and in the specified format.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formatting Guidelines -->
+        <section class="bg-white rounded-xl shadow-md p-8 mb-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold gradient-text inline-block mb-6">📏 Document Formatting Guidelines</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Photograph Format -->
+                    <div class="bg-document-light rounded-xl p-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-document-blue mb-3">Photograph</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-indian-blue mr-2">•</span>
+                                <span>Format: JPEG/JPG</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indian-blue mr-2">•</span>
+                                <span>Size: 20–50 KB</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indian-blue mr-2">•</span>
+                                <span>Dimensions: 3.5 cm x 4.5 cm</span>
+                            </li>
+                        </ul>
+                        <div class="mt-3 text-sm text-gray-500">Recommended by: Propelld, Careers360 Engineering, The Times of India, Shiksha, Career Power, IMS India</div>
+                    </div>
+
+                    <!-- Signature Format -->
+                    <div class="bg-document-light rounded-xl p-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-document-blue mb-3">Signature</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-indian-blue mr-2">•</span>
+                                <span>Format: JPEG/JPG</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indian-blue mr-2">•</span>
+                                <span>Size: 10–20 KB</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indian-blue mr-2">•</span>
+                                <span>Dimensions: 3.5 cm x 1.5 cm</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Certificates Format -->
+                    <div class="bg-document-light rounded-xl p-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-document-blue mb-3">Certificates/Documents</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-indian-blue mr-2">•</span>
+                                <span>Format: PDF</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indian-blue mr-2">•</span>
+                                <span>Size: Up to 200 KB each</span>
+                            </li>
+                        </ul>
+                        <p class="mt-3 text-sm text-gray-700 italic">Note: Ensure all scanned documents are clear, legible, and free from shadows or blurs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Common Mistakes -->
+        <section class="bg-white rounded-xl shadow-md p-8 mb-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold gradient-text inline-block mb-6">⚠️ Common Mistakes to Avoid</h2>
+                
+                <div class="bg-orange-50 border-l-4 border-orange-500 p-5 rounded-lg mb-6">
+                    <p class="text-orange-800 font-medium">The following mistakes can lead to application rejection:</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="checklist-item bg-white rounded-lg p-4 border border-gray-200">
+                        <div class="flex items-center">
+                            <div class="text-red-500 mr-3 text-xl">❌</div>
+                            <p class="text-gray-700">Uploading incorrect or outdated documents.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item bg-white rounded-lg p-4 border border-gray-200">
+                        <div class="flex items-center">
+                            <div class="text-red-500 mr-3 text-xl">❌</div>
+                            <p class="text-gray-700">Submitting photographs or signatures that do not meet the specified dimensions or formats.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item bg-white rounded-lg p-4 border border-gray-200">
+                        <div class="flex items-center">
+                            <div class="text-red-500 mr-3 text-xl">❌</div>
+                            <p class="text-gray-700">Failing to provide necessary certificates for claimed reservations.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item bg-white rounded-lg p-4 border border-gray-200">
+                        <div class="flex items-center">
+                            <div class="text-red-500 mr-3 text-xl">❌</div>
+                            <p class="text-gray-700">Not obtaining a NOC when required.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4 text-sm text-gray-500">Recommended by: The Economic Times, Careers360 Competitions, Career Power</div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="bg-white rounded-xl shadow-md p-8 mb-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold gradient-text inline-block mb-6">✅ Tips for a Smooth Application Process</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="checklist-item bg-white rounded-lg p-4 border border-gray-200">
+                        <div class="flex items-center">
+                            <div class="text-green-500 mr-3 text-xl">✓</div>
+                            <p class="text-gray-700">Prepare all documents in advance to avoid last-minute hassles.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item bg-white rounded-lg p-4 border border-gray-200">
+                        <div class="flex items-center">
+                            <div class="text-green-500 mr-3 text-xl">✓</div>
+                            <p class="text-gray-700">Double-check each document for clarity and correctness.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item bg-white rounded-lg p-4 border border-gray-200">
+                        <div class="flex items-center">
+                            <div class="text-green-500 mr-3 text-xl">✓</div>
+                            <p class="text-gray-700">Keep both digital and physical copies of all documents.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item bg-white rounded-lg p-4 border border-gray-200">
+                        <div class="flex items-center">
+                            <div class="text-green-500 mr-3 text-xl">✓</div>
+                            <p class="text-gray-700">Ensure that all certificates are valid and issued by competent authorities.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4 text-sm text-gray-500">Recommended by: Careers360 Competitions</div>
+            </div>
+        </section>
+
+        <!-- Image Section -->
+        <section class="bg-white rounded-xl shadow-md p-8 mb-8 text-center">
+            <h2 class="text-2xl font-bold text-document-blue mb-6">Document Checklist Infographic</h2>
+            <div class="bg-document-light p-8 rounded-lg inline-block">
+                <img src="img/apply-now.png" alt="CET 2025 Document Checklist" class="max-w-full h-auto rounded shadow-md">
+            </div>
+            <p class="text-gray-500 mt-4">A visual summary of required documents for CET 2025 application</p>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-gradient-to-r from-indian-blue to-indian-saffron rounded-xl p-8 text-center text-white">
+            <h2 class="text-2xl font-bold mb-4">Ready to Apply for CET 2025?</h2>
+            <p class="mb-6 max-w-2xl mx-auto">Now that you have all the information about required documents, take the next step in your career journey.</p>
+            <a href="apply-now.html" class="bg-white text-indian-blue font-bold px-8 py-3 rounded-lg hover:bg-gray-100 transition duration-300 shadow-lg inline-block">
+                Visit Apply Now Page →
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-sm text-gray-400">
+                © 2025 CET Preparation Portal. All rights reserved. ✨
+            </div>
+        </div>
+    </footer>
+
+    <!-- Include Navbar Script -->
+    <script>
+        // Load navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+
+        // Language Switcher Functionality
+        const languageToggle = document.getElementById('languageToggle');
+        const translateBtnText = document.getElementById('translateBtnText');
+        
+        // Hindi translations
+        const translations = {
+            // Headings
+            'CET 2025 Document Requirements': 'CET 2025 दस्तावेज़ आवश्यकताएं',
+            'A comprehensive guide to prepare all necessary documents for your application': 'आपके आवेदन के लिए सभी आवश्यक दस्तावेज़ तैयार करने के लिए एक व्यापक मार्गदर्शिका',
+            'Applying for the Common Eligibility Test (CET) 2025': 'कॉमन एलिजिबिलिटी टेस्ट (CET) 2025 के लिए आवेदन',
+            'Required Documents for CET 2025 Application': 'CET 2025 आवेदन के लिए आवश्यक दस्तावेज़',
+            
+            // Document Types
+            'Recent Passport-Sized Photograph': 'हाल का पासपोर्ट साइज़ फोटो',
+            'Signature': 'हस्ताक्षर',
+            'Photo ID Proof': 'फोटो आईडी प्रमाण',
+            'Educational Certificates': 'शैक्षणिक प्रमाणपत्र',
+            'Category Certificate': 'श्रेणी प्रमाणपत्र',
+            'Address Proof': 'पता प्रमाण',
+            'Income Certificate': 'आय प्रमाणपत्र',
+            
+            // Specifications
+            'Specifications:': 'विनिर्देश:',
+            'Format:': 'फॉर्मेट:',
+            'Size:': 'आकार:',
+            'Background:': 'पृष्ठभूमि:',
+            'Purpose:': 'उद्देश्य:',
+            'Recommended by:': 'द्वारा अनुशंसित:',
+            
+            // Common Terms
+            'Apply Now →': 'अभी आवेदन करें →',
+            'Skip to main content | Screen Reader Access': 'मुख्य सामग्री पर जाएं | स्क्रीन रीडर एक्सेस',
+            'View More': 'और देखें',
+            'Download': 'डाउनलोड',
+            'Share': 'शेयर करें',
+            
+            // Document Details
+            'For identification on admit cards and official records.': 'प्रवेश पत्र और आधिकारिक रिकॉर्ड पर पहचान के लिए।',
+            'For verification and official documentation.': 'सत्यापन और आधिकारिक दस्तावेज़ीकरण के लिए।',
+            'JPEG/JPG': 'जेपीईजी/जेपीजी',
+            '20–50 KB': '20-50 केबी',
+            '10–20 KB': '10-20 केबी',
+            'White': 'सफेद',
+            'Black on white paper': 'सफेद कागज पर काली स्याही',
+            'Front-facing, no accessories': 'सामने की ओर, बिना किसी सहायक वस्तु के',
+            'Signature should not be in capital letters': 'हस्ताक्षर बड़े अक्षरों में नहीं होना चाहिए'
+        };
+
+        languageToggle.addEventListener('change', function() {
+            const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, span, a, th, td');
+            elements.forEach(element => {
+                const text = element.textContent.trim();
+                if (this.checked) {
+                    // Switch to Hindi
+                    if (translations[text]) {
+                        element.textContent = translations[text];
+                    }
+                    translateBtnText.textContent = 'अंग्रेजी में अनुवाद करें';
+                } else {
+                    // Switch to English
+                    Object.entries(translations).forEach(([english, hindi]) => {
+                        if (text === hindi) {
+                            element.textContent = english;
+                        }
+                    });
+                    translateBtnText.textContent = 'Translate to Hindi';
+                }
+            });
+        });
+    </script>
+    <!-- Loader Script -->
+    <script>
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('loader-hidden');
+            }, 1500);
+        });
+    </script>
+    <script src="loader.js"></script>
+</body>
+</html>

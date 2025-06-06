@@ -1,0 +1,236 @@
+<!-- Modern Navbar -->
+<nav class="bg-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between h-16">
+            <!-- Logo and Brand -->
+            <div class="flex items-center">
+                <a href="index.html" class="flex-shrink-0 flex items-center">
+                    <img class="h-8 w-auto" src="img/logo.png" alt="CET Logo">
+                    <span class="ml-2 text-xl font-bold text-indian-blue">CET 2025</span>
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="index.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-indian-blue hover:bg-gray-50">Home</a>
+                <a href="cet-syllabus.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-indian-blue hover:bg-gray-50">CET Syllabus</a>
+                <a href="how-to-crack-cet.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-indian-blue hover:bg-gray-50">How to Crack CET</a>
+                <a href="blog-cet-benefits.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-indian-blue hover:bg-gray-50">CET Benefits</a>
+                <a href="cet-updates-2025.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-indian-blue hover:bg-gray-50">CET Updates</a>
+                <a href="blog-index.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-indian-blue hover:bg-gray-50">Blog</a>
+                <a href="contact.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-indian-blue hover:bg-gray-50">Contact</a>
+                
+                <!-- Language Switcher -->
+                <div class="flex items-center space-x-2 bg-gray-50 px-3 py-2 rounded-md">
+                    <span class="text-sm text-gray-600">EN</span>
+                    <label class="lang-switch relative inline-block w-12 h-6">
+                        <input type="checkbox" id="languageToggle" class="opacity-0 w-0 h-0">
+                        <span class="slider absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-gray-300 rounded-full transition-all duration-300 before:absolute before:h-4 before:w-4 before:left-1 before:bottom-1 before:bg-white before:rounded-full before:transition-all before:duration-300"></span>
+                    </label>
+                    <span class="text-sm text-gray-600">हिं</span>
+                </div>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+                <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indian-blue" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <!-- Icon when menu is closed -->
+                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <!-- Icon when menu is open -->
+                    <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state -->
+    <div class="hidden mobile-menu md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="index.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indian-blue hover:bg-gray-50">Home</a>
+            <a href="cet-syllabus.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indian-blue hover:bg-gray-50">CET Syllabus</a>
+            <a href="how-to-crack-cet.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indian-blue hover:bg-gray-50">How to Crack CET</a>
+            <a href="blog-cet-benefits.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indian-blue hover:bg-gray-50">CET Benefits</a>
+            <a href="cet-updates-2025.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indian-blue hover:bg-gray-50">CET Updates</a>
+            <a href="blog-index.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indian-blue hover:bg-gray-50">Blog</a>
+            <a href="contact.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indian-blue hover:bg-gray-50">Contact</a>
+            
+            <!-- Mobile Language Switcher -->
+            <div class="flex items-center justify-center space-x-2 bg-gray-50 px-3 py-2 rounded-md mt-2">
+                <span class="text-sm text-gray-600">EN</span>
+                <label class="lang-switch relative inline-block w-12 h-6">
+                    <input type="checkbox" id="languageToggleMobile" class="opacity-0 w-0 h-0">
+                    <span class="slider absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-gray-300 rounded-full transition-all duration-300 before:absolute before:h-4 before:w-4 before:left-1 before:bottom-1 before:bg-white before:rounded-full before:transition-all before:duration-300"></span>
+                </label>
+                <span class="text-sm text-gray-600">हिं</span>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<style>
+
+/* Navbar Styles */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #87CEEB;
+    transition: width 0.3s ease;
+}
+.nav-link:hover {
+    color: #87CEEB;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+.nav-link.active {
+    background: linear-gradient(45deg, #0066CC, #FF9933);
+    -webkit-text-fill-color: transparent;
+}
+.nav-link.active::after {
+    width: 100%;
+}
+/* Mobile Menu Animation */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+#mobile-menu.hidden {
+    display: none;
+}
+#mobile-menu:not(.hidden) {
+    animation: slideDown 0.3s ease-in-out;
+}
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Sticky Navbar Shadow */
+nav.sticky {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/* Navbar Link Hover Effects */
+.mobile-nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.mobile-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #87CEEB;
+    transition: width 0.3s ease;
+}
+.mobile-nav-link:hover {
+    color: #87CEEB;
+}
+.mobile-nav-link:hover::after {
+    width: 100%;
+}
+    /* Language Switcher Styles */
+    .lang-switch input:checked + .slider {
+        background-color: #0066CC;
+    }
+    
+    .lang-switch input:checked + .slider:before {
+        transform: translateX(24px);
+    }
+    
+    .lang-switch input:focus + .slider {
+        box-shadow: 0 0 1px #0066CC;
+    }
+</style>
+
+<script>
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu-button').addEventListener('click', function() {
+        document.querySelector('.mobile-menu').classList.toggle('hidden');
+    });
+
+    // Set active link based on current page
+    const currentPath = window.location.pathname;
+    document.querySelectorAll('.nav-link').forEach(link => {
+        if (link.getAttribute('href') === currentPath.split('/').pop()) {
+            link.classList.add('bg-indian-blue', 'text-white');
+            link.classList.remove('text-gray-700', 'hover:text-indian-blue', 'hover:bg-gray-50');
+        }
+    });
+
+    // Language switcher translations for navbar
+    const navbarTranslations = {
+        'Home': 'होम',
+        'CET Syllabus': 'सीईटी पाठ्यक्रम',
+        'How to Crack CET': 'सीईटी कैसे क्रैक करें',
+        'CET Benefits': 'सीईटी के लाभ',
+        'CET Updates': 'सीईटी अपडेट',
+        'Blog': 'ब्लॉग',
+        'Contact': 'संपर्क करें'
+    };
+
+    // Function to translate navbar
+    function translateNavbar(isHindi) {
+        document.querySelectorAll('.nav-link').forEach(link => {
+            const text = link.textContent.trim();
+            if (isHindi) {
+                if (navbarTranslations[text]) {
+                    link.textContent = navbarTranslations[text];
+                }
+            } else {
+                Object.entries(navbarTranslations).forEach(([english, hindi]) => {
+                    if (text === hindi) {
+                        link.textContent = english;
+                    }
+                });
+            }
+        });
+    }
+
+    // Sync language toggles
+    function syncLanguageToggles(isHindi) {
+        const desktopToggle = document.getElementById('languageToggle');
+        const mobileToggle = document.getElementById('languageToggleMobile');
+        
+        if (desktopToggle) desktopToggle.checked = isHindi;
+        if (mobileToggle) mobileToggle.checked = isHindi;
+    }
+
+    // Listen for language toggle changes
+    const languageToggles = document.querySelectorAll('#languageToggle, #languageToggleMobile');
+    languageToggles.forEach(toggle => {
+        toggle.addEventListener('change', function() {
+            const isHindi = this.checked;
+            translateNavbar(isHindi);
+            syncLanguageToggles(isHindi);
+            localStorage.setItem('preferredLanguage', isHindi ? 'hindi' : 'english');
+        });
+    });
+
+    // Initialize language preference
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedLanguage = localStorage.getItem('preferredLanguage');
+        if (savedLanguage === 'hindi') {
+            syncLanguageToggles(true);
+            translateNavbar(true);
+        }
+    });
+</script> 

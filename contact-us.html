@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CET 2025 Support</title>
+    <meta name="description" content="Get in touch with our CET 2025 preparation team for queries, support, and feedback.">
+    <meta name="keywords" content="CET 2025 contact, CET support, CET help, CET inquiry, CET feedback">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="translations.js"></script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .gov-banner {
+            background: linear-gradient(90deg, #0066CC 60%, #FF9933 100%);
+            color: white;
+            padding: 3rem 0 2rem 0;
+            text-align: center;
+        }
+        .gov-banner h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .gov-banner p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+        .contact-card {
+            background: #f8fafc;
+            border-radius: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+            padding: 2rem;
+        }
+        .contact-label {
+            font-weight: 500;
+            color: #1a365d;
+        }
+        .contact-info {
+            color: #0066CC;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="bg-gov-light">
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+    <div class="gov-banner">
+        <h1>Contact Us</h1>
+        <p>Reach out for any queries, support, or feedback regarding CET 2025.</p>
+    </div>
+    <main class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="contact-card">
+                <h2 class="text-xl font-bold mb-4 text-gov-blue">Contact Information</h2>
+                <p class="mb-2"><span class="contact-label">Email:</span> <span class="contact-info">support@cetportal.in</span></p>
+                <p class="mb-2"><span class="contact-label">Phone:</span> <span class="contact-info">+91-99999-88888</span></p>
+                <p class="mb-2"><span class="contact-label">Address:</span> <span class="contact-info">NRA CET Office, New Delhi, India</span></p>
+                <p class="mt-4 text-gray-600 text-sm">We usually respond within 24 hours on working days.</p>
+            </div>
+            <div class="contact-card">
+                <h2 class="text-xl font-bold mb-4 text-gov-blue">Send Us a Message</h2>
+                <form>
+                    <div class="mb-4">
+                        <label class="block mb-1 contact-label">Name</label>
+                        <input type="text" class="w-full border border-gray-300 rounded-lg px-3 py-2" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block mb-1 contact-label">Email</label>
+                        <input type="email" class="w-full border border-gray-300 rounded-lg px-3 py-2" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block mb-1 contact-label">Message</label>
+                        <textarea class="w-full border border-gray-300 rounded-lg px-3 py-2" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="bg-indian-blue text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">Send</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-gov-blue text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm text-gray-400">© 2025 सीईटी तैयारी पोर्टल। सर्वाधिकार सुरक्षित।</p>
+        </div>
+    </footer>
+    <script src="loader.js"></script>
+</body>
+</html> 

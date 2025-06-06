@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Note-Taking Strategies for CET 2025: A Complete Guide</title>
+    <meta name="description" content="Learn effective note-taking strategies for CET preparation. Discover proven methods, digital tools, and practical tips to create organized, efficient study notes.">
+    <meta name="keywords" content="CET note-taking, study notes, CET preparation tips, note-making techniques, digital notes, study organization, CET study methods">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+
+/* Navbar Styles */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #87CEEB;
+    transition: width 0.3s ease;
+}
+.nav-link:hover {
+    color: #87CEEB;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+.nav-link.active {
+    background: linear-gradient(45deg, #0066CC, #FF9933);
+    -webkit-text-fill-color: transparent;
+}
+.nav-link.active::after {
+    width: 100%;
+}
+/* Mobile Menu Animation */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+#mobile-menu.hidden {
+    display: none;
+}
+#mobile-menu:not(.hidden) {
+    animation: slideDown 0.3s ease-in-out;
+}
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Sticky Navbar Shadow */
+nav.sticky {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/* Navbar Link Hover Effects */
+.mobile-nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.mobile-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #87CEEB;
+    transition: width 0.3s ease;
+}
+.mobile-nav-link:hover {
+    color: #87CEEB;
+}
+.mobile-nav-link:hover::after {
+    width: 100%;
+}
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/notes.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 2rem;
+        }
+        .strategy-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+        .strategy-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .note-example {
+            background: #f8fafc;
+            border-left: 4px solid #4f46e5;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        .tool-badge {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+    </div>
+    
+
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+
+    <!-- Language Switcher -->
+    <div class="fixed top-4 right-4 z-50 flex items-center space-x-2 bg-white p-2 rounded-lg shadow-md">
+        <span class="text-sm text-gray-600">EN</span>
+        <label class="lang-switch">
+            <input type="checkbox" id="languageToggle">
+            <span class="slider"></span>
+        </label>
+        <span class="text-sm text-gray-600">हिं</span>
+    </div>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="container mx-auto px-4">
+                <div class="text-center">
+                    <h1 class="text-4xl font-bold mb-4">📝 Master Note-Taking Strategies</h1>
+                    <p class="text-lg mb-6">Transform your study notes into powerful learning tools for CET success</p>
+                    <div class="flex items-center justify-center text-sm">
+                        <span>Published: March 15, 2024</span>
+                        <span class="mx-2">•</span>
+                        <span>12 min read</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <div class="prose max-w-none">
+                <h2 class="text-2xl font-bold text-indian-blue mb-6">🎯 Why Effective Note-Taking Matters</h2>
+                <p class="text-gray-700 mb-6">Good note-taking is crucial for CET preparation as it helps in better understanding, retention, and quick revision of important concepts. Learn how to create notes that work for you.</p>
+
+                <!-- Note-Taking Methods -->
+                <h2 class="text-2xl font-bold text-indian-blue mb-6">📚 Popular Note-Taking Methods</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="strategy-card bg-white p-6 rounded-lg">
+                        <img src="img/cornelmethod.png" alt="Cornell Method" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Cornell Method</h3>
+                        <div class="note-example">
+                            <h4 class="font-semibold mb-2">Structure:</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li>Main notes section (right)</li>
+                                <li>Key points column (left)</li>
+                                <li>Summary section (bottom)</li>
+                            </ul>
+                        </div>
+                        <p class="text-gray-700 mt-4">Perfect for organizing lecture notes and creating quick revision materials.</p>
+                    </div>
+
+                    <div class="strategy-card bg-white p-6 rounded-lg">
+                        <img src="img/mindmapping.png" alt="Mind Mapping" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Mind Mapping</h3>
+                        <div class="note-example">
+                            <h4 class="font-semibold mb-2">Structure:</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li>Central concept</li>
+                                <li>Branching subtopics</li>
+                                <li>Visual connections</li>
+                            </ul>
+                        </div>
+                        <p class="text-gray-700 mt-4">Ideal for understanding relationships between concepts and topics.</p>
+                    </div>
+                </div>
+
+                <!-- Subject-Specific Strategies -->
+                <h2 class="text-2xl font-bold text-indian-blue mb-6">📖 Subject-Specific Strategies</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="strategy-card bg-white p-6 rounded-lg">
+                        <img src="img/mathmetic.jpg" alt="Mathematics" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Mathematics</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Formula sheets</li>
+                            <li>Step-by-step solutions</li>
+                            <li>Common mistakes</li>
+                            <li>Practice problems</li>
+                        </ul>
+                    </div>
+
+                    <div class="strategy-card bg-white p-6 rounded-lg">
+                        <img src="img/reasning.png" alt="Reasoning" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Reasoning</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Pattern recognition</li>
+                            <li>Shortcut methods</li>
+                            <li>Practice examples</li>
+                            <li>Time-saving tips</li>
+                        </ul>
+                    </div>
+
+                    <div class="strategy-card bg-white p-6 rounded-lg">
+                        <img src="img/gernel.png" alt="General Knowledge" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-2">General Knowledge</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Current affairs</li>
+                            <li>Important dates</li>
+                            <li>Key facts</li>
+                            <li>Visual aids</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Digital Tools -->
+                <h2 class="text-2xl font-bold text-indian-blue mb-6">💻 Digital Note-Taking Tools</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="strategy-card bg-white p-6 rounded-lg">
+                        <img src="img/notetakingapp.png" alt="Note-Taking Apps" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Recommended Apps</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tool-badge">Notion</span>
+                            <span class="tool-badge">OneNote</span>
+                            <span class="tool-badge">Evernote</span>
+                            <span class="tool-badge">GoodNotes</span>
+                        </div>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Cloud synchronization</li>
+                            <li>Multi-device access</li>
+                            <li>Search functionality</li>
+                            <li>Media integration</li>
+                        </ul>
+                    </div>
+
+                    <div class="strategy-card bg-white p-6 rounded-lg">
+                        <img src="img/organization.png" alt="Organization Tools" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Organization Tips</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Create subject folders</li>
+                            <li>Use tags and labels</li>
+                            <li>Regular backups</li>
+                            <li>Version control</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Best Practices -->
+                <h2 class="text-2xl font-bold text-indian-blue mb-6">✨ Best Practices</h2>
+                <div class="bg-gray-50 p-6 rounded-lg mb-8">
+                    <div class="space-y-4">
+                        <h3 class="font-semibold text-lg mb-4">Tips for Effective Note-Taking</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Use abbreviations and symbols</li>
+                            <li>Highlight key points</li>
+                            <li>Review and revise regularly</li>
+                            <li>Keep notes concise</li>
+                            <li>Use visual elements</li>
+                            <li>Maintain consistency</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Related Resources -->
+                <h2 class="text-2xl font-bold text-indian-blue mb-6">📚 Related Resources</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <a href="smart-study-techniques-cet.html" class="strategy-card bg-white p-6 rounded-lg">
+                        <h3 class="font-semibold text-lg mb-2">Smart Study Techniques</h3>
+                        <p class="text-gray-600 text-sm">Advanced study methods</p>
+                    </a>
+                    <a href="time-management-tips-cet.html" class="strategy-card bg-white p-6 rounded-lg">
+                        <h3 class="font-semibold text-lg mb-2">Time Management</h3>
+                        <p class="text-gray-600 text-sm">Efficient study planning</p>
+                    </a>
+                    <a href="mock-tests-cet-2025.html" class="strategy-card bg-white p-6 rounded-lg">
+                        <h3 class="font-semibold text-lg mb-2">Mock Tests</h3>
+                        <p class="text-gray-600 text-sm">Practice with mock tests</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm text-gray-400">© 2025 CET Preparation Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Translation functionality -->
+    <script>
+        const languageToggle = document.getElementById('languageToggle');
+        let isHindi = false;
+
+        const translations = {
+            'Master Note-Taking Strategies': 'नोट-टेकिंग रणनीतियों में महारत हासिल करें',
+            'Transform your study notes into powerful learning tools for CET success': 'अपने अध्ययन नोट्स को CET सफलता के लिए शक्तिशाली सीखने के उपकरणों में बदलें',
+            'Published: March 15, 2024': 'प्रकाशित: 15 मार्च, 2024',
+            '12 min read': '12 मिनट का पढ़ना',
+            'Why Effective Note-Taking Matters': 'प्रभावी नोट-टेकिंग क्यों महत्वपूर्ण है',
+            'Popular Note-Taking Methods': 'लोकप्रिय नोट-टेकिंग विधियां',
+            'Subject-Specific Strategies': 'विषय-विशिष्ट रणनीतियां',
+            'Digital Note-Taking Tools': 'डिजिटल नोट-टेकिंग उपकरण',
+            'Best Practices': 'सर्वोत्तम प्रथाएं',
+            'Tips for Effective Note-Taking': 'प्रभावी नोट-टेकिंग के लिए सुझाव',
+            'Related Resources': 'संबंधित संसाधन'
+        };
+
+        // Function to translate text
+        function translateText(text) {
+            if (!text) return '';
+            text = text.trim();
+            return isHindi ? translations[text] || text : text;
+        }
+
+        // Function to update language
+        function updateLanguage() {
+            const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, span, a, button, div:not([id="navbar"]):not([class*="lang-switch"])');
+            
+            elements.forEach(element => {
+                if (!element.textContent.trim()) return;
+                if (element.tagName === 'SCRIPT' || element.tagName === 'STYLE') return;
+                if (element.closest('.lang-switch')) return;
+                
+                const originalText = element.getAttribute('data-original-text') || element.textContent.trim();
+                if (!element.hasAttribute('data-original-text')) {
+                    element.setAttribute('data-original-text', originalText);
+                }
+                
+                const translatedText = translateText(originalText);
+                if (translatedText !== originalText) {
+                    element.textContent = translatedText;
+                }
+            });
+        }
+
+        // Event listener for the language toggle switch
+        languageToggle.addEventListener('change', function() {
+            isHindi = this.checked;
+            updateLanguage();
+            localStorage.setItem('preferredLanguage', isHindi ? 'hindi' : 'english');
+        });
+
+        // Initialize translations
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, span, a, button, div:not([id="navbar"]):not([class*="lang-switch"])');
+            
+            elements.forEach(element => {
+                if (!element.textContent.trim()) return;
+                if (element.tagName === 'SCRIPT' || element.tagName === 'STYLE') return;
+                if (element.closest('.lang-switch')) return;
+                
+                if (!element.hasAttribute('data-original-text')) {
+                    element.setAttribute('data-original-text', element.textContent.trim());
+                }
+            });
+
+            // Check if language preference is stored
+            const savedLanguage = localStorage.getItem('preferredLanguage');
+            if (savedLanguage === 'hindi') {
+                isHindi = true;
+                languageToggle.checked = true;
+                updateLanguage();
+            }
+        });
+    </script>
+
+    <!-- Loader Script -->
+    <script>
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('loader-hidden');
+            }, 1500);
+        });
+    </script>
+</body>
+</html> 

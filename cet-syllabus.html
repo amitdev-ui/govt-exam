@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CET पाठ्यक्रम - CET 2025 तैयारी पोर्टल</title>
+    <meta name="description" content="CET 2025 परीक्षा के लिए व्यापक पाठ्यक्रम। प्रभावी तैयारी के लिए विषयों, विषयों और प्रत्येक खंड के वेटेज के बारे में जानें।">
+    <meta name="keywords" content="CET 2025 पाठ्यक्रम, CET परीक्षा पाठ्यक्रम, CET पाठ्यक्रम पीडीएफ, CET विषय, CET विषय">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="translations.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'indian-blue': '#0066CC',
+                        'indian-saffron': '#FF9933',
+                        'gov-blue': '#1a365d',
+                        'gov-light': '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #0066CC, #FF9933);
+            -webkit-text-fill-color: transparent;
+        }
+        .gov-card {
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        .gov-card:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        /* Navbar Styles */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #87CEEB;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #87CEEB;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link.active {
+            background: linear-gradient(45deg, #0066CC, #FF9933);
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-link.active::after {
+            width: 100%;
+        }
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+        #mobile-menu.hidden {
+            display: none;
+        }
+        #mobile-menu:not(.hidden) {
+            animation: slideDown 0.3s ease-in-out;
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Sticky Navbar Shadow */
+        nav.sticky {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        /* Navbar Link Hover Effects */
+        .mobile-nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .mobile-nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #87CEEB;
+            transition: width 0.3s ease;
+        }
+        .mobile-nav-link:hover {
+            color: #87CEEB;
+        }
+        .mobile-nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+    
+</head>
+<body class="bg-gov-light">
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+    </div>
+    
+
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+
+    <!-- Main Content -->
+    <main id="main-content" class="container mx-auto px-4 py-8">
+        <!-- Hero Banner -->
+        <div class="relative rounded-xl p-8 mb-8 shadow-lg overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-100/80 to-blue-200/80"></div>
+            </div>
+            
+            <!-- Content -->
+            <div class="relative z-10 max-w-3xl mx-auto text-center">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4 text-indian-blue">CET 2025 का विस्तृत पाठ्यक्रम</h1>
+                <p class="text-lg text-gray-700 mb-6">क्या उम्मीद करें और सफलता के लिए कैसे तैयारी करें</p>
+                <a href="apply-now.html" class="inline-block bg-indian-blue text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300 shadow-md">
+                    अभी आवेदन करें →
+                </a>
+            </div>
+        </div>
+
+        <!-- Introduction -->
+        <section class="bg-white rounded-xl shadow-md p-8 mb-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold text-indian-blue mb-4">CET 2025 पाठ्यक्रम को समझना</h2>
+                <p class="text-gray-700 mb-4">
+                    कॉमन एलिजिबिलिटी टेस्ट (CET) 2025 सरकारी विभागों में विभिन्न ग्रुप C और D पदों के लिए आयोजित एक मानकीकृत परीक्षा है। प्रभावी तैयारी और उच्च स्कोर प्राप्त करने के लिए पाठ्यक्रम की गहरी समझ महत्वपूर्ण है। यह व्यापक मार्गदर्शिका परीक्षा पैटर्न और विषयवार विषयों को रणनीतिक तैयारी में मदद के लिए विभाजित करती है।
+                </p>
+                <p class="text-gray-700">
+                    चाहे आप पहली बार आवेदक हों या अपने पिछले स्कोर में सुधार करना चाहते हों, यह विस्तृत पाठ्यक्रम CET 2025 परीक्षा में सफलता के लिए आपका रोडमैप होगा।
+                </p>
+            </div>
+        </section>
+
+        <!-- Exam Pattern Section -->
+        <section class="bg-white rounded-xl shadow-md p-8 mb-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold text-indian-blue inline-block mb-6">📋 CET 2025 परीक्षा पैटर्न</h2>
+                
+                <div class="overflow-x-auto mb-6">
+                    <table class="min-w-full border border-gray-200 rounded-lg">
+                        <thead>
+                            <tr class="table-header">
+                                <th class="py-3 px-4 text-left rounded-tl-lg">पैरामीटर</th>
+                                <th class="py-3 px-4 text-left rounded-tr-lg">विवरण</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-row-alt border-b border-gray-200">
+                                <td class="py-3 px-4 font-medium">कुल प्रश्न</td>
+                                <td class="py-3 px-4">100 बहुविकल्पीय प्रश्न (MCQs)</td>
+                            </tr>
+                            <tr class="table-row-alt border-b border-gray-200">
+                                <td class="py-3 px-4 font-medium">कुल अंक</td>
+                                <td class="py-3 px-4">100 अंक (प्रति प्रश्न 1 अंक)</td>
+                            </tr>
+                            <tr class="table-row-alt border-b border-gray-200">
+                                <td class="py-3 px-4 font-medium">परीक्षा अवधि</td>
+                                <td class="py-3 px-4">90 मिनट (1.5 घंटे)</td>
+                            </tr>
+                            <tr class="table-row-alt border-b border-gray-200">
+                                <td class="py-3 px-4 font-medium">नकारात्मक अंकन</td>
+                                <td class="py-3 px-4">गलत उत्तरों के लिए कोई नकारात्मक अंकन नहीं</td>
+                            </tr>
+                            <tr class="table-row-alt border-b border-gray-200">
+                                <td class="py-3 px-4 font-medium">परीक्षा मोड</td>
+                                <td class="py-3 px-4">ऑफलाइन (OMR-आधारित)</td>
+                            </tr>
+                            <tr class="table-row-alt">
+                                <td class="py-3 px-4 font-medium rounded-bl-lg">भाषा</td>
+                                <td class="py-3 px-4 rounded-br-lg">द्विभाषी (अंग्रेजी और हिंदी)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h3 class="text-xl font-semibold text-syllabus-blue mb-4">विषयवार प्रश्नों का वितरण</h3>
+                
+                <div class="overflow-x-auto">
+                    <table class="min-w-full border border-gray-200 rounded-lg">
+                        <thead>
+                            <tr class="table-header">
+                                <th class="py-3 px-4 text-left rounded-tl-lg">विषय</th>
+                                <th class="py-3 px-4 text-center">प्रश्न</th>
+                                <th class="py-3 px-4 text-center rounded-tr-lg">अंक</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-row-alt border-b border-gray-200">
+                                <td class="py-3 px-4">सामान्य जागरूकता</td>
+                                <td class="py-3 px-4 text-center">15</td>
+                                <td class="py-3 px-4 text-center">15</td>
+                            </tr>
+                            <tr class="table-row-alt border-b border-gray-200">
+                                <td class="py-3 px-4">तार्किक क्षमता</td>
+                                <td class="py-3 px-4 text-center">15</td>
+                                <td class="py-3 px-4 text-center">15</td>
+                            </tr>
+                            <tr class="table-row-alt border-b border-gray-200">
+                                <td class="py-3 px-4">गणित</td>
+                                <td class="py-3 px-4 text-center">15</td>
+                                <td class="py-3 px-4 text-center">15</td>
+                            </tr>
+                            <tr class="table-row-alt border-b border-gray-200">
+                                <td class="py-3 px-4">अंग्रेजी भाषा</td>
+                                <td class="py-3 px-4 text-center">10</td>
+                                <td class="py-3 px-4 text-center">10</td>
+                            </tr>
+                            <tr class="table-row-alt border-b border-gray-200">
+                                <td class="py-3 px-4">हिंदी भाषा</td>
+                                <td class="py-3 px-4 text-center">10</td>
+                                <td class="py-3 px-4 text-center">10</td>
+                            </tr>
+                            <tr class="table-row-alt border-b border-gray-200">
+                                <td class="py-3 px-4">कंप्यूटर ज्ञान</td>
+                                <td class="py-3 px-4 text-center">10</td>
+                                <td class="py-3 px-4 text-center">10</td>
+                            </tr>
+                            <tr class="table-row-alt border-b border-gray-200">
+                                <td class="py-3 px-4">हरियाणा सामान्य ज्ञान</td>
+                                <td class="py-3 px-4 text-center">25</td>
+                                <td class="py-3 px-4 text-center">25</td>
+                            </tr>
+                            <tr class="font-semibold bg-gray-50">
+                                <td class="py-3 px-4 rounded-bl-lg">कुल</td>
+                                <td class="py-3 px-4 text-center">100</td>
+                                <td class="py-3 px-4 text-center rounded-br-lg">100</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mt-6 rounded-r-lg">
+                    <p class="text-blue-800"><span class="font-medium">नोट:</span> विभिन्न पदों के लिए प्रश्नों का वितरण थोड़ा भिन्न हो सकता है। सबसे सटीक जानकारी के लिए हमेशा आधिकारिक अधिसूचना देखें।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subject-wise Topics Section -->
+        <section class="bg-white rounded-xl shadow-md p-8 mb-8">
+            <div class="max-w-4xl mx-auto bg-blue-50 border-l-4">
+                <h2 class="text-2xl font-bold inline-block mb-6">📚 विषयवार विषय</h2>
+                
+                <!-- General Awareness -->
+                <div class="syllabus-card bg-white rounded-lg p-6 mb-6 hover-scale">
+                    <div class="flex items-start">
+                        <div class="subject-icon mr-4 flex-shrink-0">
+                            🌎
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-syllabus-blue mb-2">सामान्य जागरूकता</h3>
+                            <div class="bg-syllabus-light p-4 rounded-lg mb-3">
+                                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                    <li>वर्तमान घटनाएं (राष्ट्रीय और अंतर्राष्ट्रीय)</li>
+                                    <li>भारतीय इतिहास (प्राचीन, मध्यकालीन, आधुनिक)</li>
+                                    <li>भारतीय राजनीति और संविधान</li>
+                                    <li>भूगोल (भारत और विश्व)</li>
+                                    <li>आर्थिक और सामाजिक विकास</li>
+                                    <li>विज्ञान और प्रौद्योगिकी</li>
+                                    <li>पर्यावरणीय मुद्दे</li>
+                                </ul>
+                            </div>
+                            <p class="text-gray-700"><span class="font-medium">ध्यान केंद्रित करने वाले क्षेत्र:</span> हाल के सरकारी कार्यक्रम, महत्वपूर्ण नियुक्तियां, पुरस्कार और खेल आयोजन।</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Reasoning -->
+                <div class="syllabus-card bg-white rounded-lg p-6 mb-6 hover-scale">
+                    <div class="flex items-start">
+                        <div class="subject-icon mr-4 flex-shrink-0">
+                            🧩
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-syllabus-blue mb-2">तार्किक क्षमता</h3>
+                            <div class="bg-syllabus-light p-4 rounded-lg mb-3">
+                                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                    <li>मौखिक तर्क</li>
+                                    <li>अमौखिक तर्क</li>
+                                    <li>सादृश्य और वर्गीकरण</li>
+                                    <li>श्रृंखला पूर्ति</li>
+                                    <li>कोडिंग-डिकोडिंग</li>
+                                    <li>रक्त संबंध</li>
+                                    <li>दिशा ज्ञान</li>
+                                    <li>तार्किक वेन आरेख</li>
+                                    <li>पहेलियां और बैठने की व्यवस्था</li>
+                                </ul>
+                            </div>
+                            <p class="text-gray-700"><span class="font-medium">ध्यान केंद्रित करने वाले क्षेत्र:</span> न्यायवाक्य, कथन-निष्कर्ष, और तार्किक तर्क समस्याएं।</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mathematics -->
+                <div class="syllabus-card bg-white rounded-lg p-6 mb-6 hover-scale">
+                    <div class="flex items-start">
+                        <div class="subject-icon mr-4 flex-shrink-0">
+                            🔢
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-syllabus-blue mb-2">गणित</h3>
+                            <div class="bg-syllabus-light p-4 rounded-lg mb-3">
+                                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                    <li>संख्या प्रणाली और महत्तम समापवर्तक/लघुत्तम समापवर्त्य</li>
+                                    <li>प्रतिशत, अनुपात और समानुपात</li>
+                                    <li>लाभ, हानि और छूट</li>
+                                    <li>साधारण और चक्रवृद्धि ब्याज</li>
+                                    <li>समय, गति और दूरी</li>
+                                    <li>समय और कार्य</li>
+                                    <li>बुनियादी बीजगणित</li>
+                                    <li>ज्यामिति और क्षेत्रमिति</li>
+                                    <li>डेटा व्याख्या</li>
+                                </ul>
+                            </div>
+                            <p class="text-gray-700"><span class="font-medium">ध्यान केंद्रित करने वाले क्षेत्र:</span> अंकगणितीय समस्याएं, सरलीकरण, और तालिकाओं और ग्राफ़ से डेटा व्याख्या।</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Language Skills -->
+                <div class="syllabus-card bg-white rounded-lg p-6 mb-6 hover-scale">
+                    <div class="flex items-start">
+                        <div class="subject-icon mr-4 flex-shrink-0">
+                            📝
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-syllabus-blue mb-2">भाषा कौशल (अंग्रेजी और हिंदी)</h3>
+                            <div class="bg-syllabus-light p-4 rounded-lg mb-3">
+                                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                    <li>पठन समझ</li>
+                                    <li>व्याकरण और उपयोग</li>
+                                    <li>शब्दावली</li>
+                                    <li>वाक्य संरचना</li>
+                                    <li>त्रुटि पहचान</li>
+                                    <li>रिक्त स्थान भरना</li>
+                                    <li>समानार्थी और विलोम</li>
+                                    <li>मुहावरे और वाक्यांश</li>
+                                </ul>
+                            </div>
+                            <p class="text-gray-700"><span class="font-medium">ध्यान केंद्रित करने वाले क्षेत्र:</span> बुनियादी व्याकरण नियम, समझ पैसेज, और शब्दावली-आधारित प्रश्न।</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Computer Knowledge -->
+                <div class="syllabus-card bg-white rounded-lg p-6 mb-6 hover-scale">
+                    <div class="flex items-start">
+                        <div class="subject-icon mr-4 flex-shrink-0">
+                            💻
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-syllabus-blue mb-2">कंप्यूटर ज्ञान</h3>
+                            <div class="bg-syllabus-light p-4 rounded-lg mb-3">
+                                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                    <li>बुनियादी कंप्यूटर अवधारणाएं</li>
+                                    <li>हार्डवेयर और सॉफ्टवेयर</li>
+                                    <li>ऑपरेटिंग सिस्टम</li>
+                                    <li>एमएस ऑफिस (वर्ड, एक्सेल, पावरपॉइंट)</li>
+                                    <li>इंटरनेट और ईमेल</li>
+                                    <li>बुनियादी नेटवर्किंग अवधारणाएं</li>
+                                    <li>कंप्यूटर सुरक्षा</li>
+                                </ul>
+                            </div>
+                            <p class="text-gray-700"><span class="font-medium">ध्यान केंद्रित करने वाले क्षेत्र:</span> कंप्यूटर और इंटरनेट उपयोग के बुनियादी संचालन, शॉर्टकट और मूल अवधारणाएं।</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Haryana GK -->
+                <div class="syllabus-card bg-white rounded-lg p-6 hover-scale">
+                    <div class="flex items-start">
+                        <div class="subject-icon mr-4 flex-shrink-0">
+                            🏛️
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-syllabus-blue mb-2">हरियाणा सामान्य ज्ञान</h3>
+                            <div class="bg-syllabus-light p-4 rounded-lg mb-3">
+                                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                    <li>हरियाणा का इतिहास और संस्कृति</li>
+                                    <li>भूगोल और प्राकृतिक संसाधन</li>
+                                    <li>अर्थव्यवस्था और कृषि</li>
+                                    <li>कला, साहित्य और लोक परंपराएं</li>
+                                    <li>प्रसिद्ध व्यक्तित्व</li>
+                                    <li>सरकारी योजनाएं और नीतियां</li>
+                                    <li>हरियाणा से संबंधित वर्तमान मामले</li>
+                                    <li>प्रशासनिक संरचना</li>
+                                </ul>
+                            </div>
+                            <p class="text-gray-700"><span class="font-medium">ध्यान केंद्रित करने वाले क्षेत्र:</span> हरियाणा में हाल के विकास, सरकारी पहल और स्थानों का ऐतिहासिक महत्व।</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exam Pattern Table -->
+        <section class="bg-white rounded-xl shadow-md p-8 mb-8 text-center">
+            <h2 class="text-2xl font-bold text-syllabus-blue mb-6">CET 2025 परीक्षा पैटर्न सारांश</h2>
+            <div class="bg-syllabus-light p-8 rounded-lg inline-block">
+                <!-- Placeholder for table image -->
+                <img src="img/syllabus.webp" alt="CET 2025 Exam Pattern Table" class="max-w-full h-auto rounded shadow-md">
+            </div>
+            <p class="text-gray-500 mt-4">A visual summary of the CET 2025 exam pattern and subject-wise weightage</p>
+        </section>
+
+        <!-- Preparation Tips Section -->
+        <section class="bg-white rounded-xl shadow-md p-8 mb-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold gradient-text inline-block mb-6">🎯 तैयारी के टिप्स</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Recommended Books -->
+                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition duration-300">
+                        <h3 class="text-xl font-semibold text-syllabus-blue mb-4">अनुशंसित पुस्तकें</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <div>
+                                    <span class="font-medium">सामान्य जागरूकता:</span> लूसेंट का सामान्य ज्ञान, मनोरमा वार्षिकी
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <div>
+                                    <span class="font-medium">तार्किक क्षमता:</span> आरएस अग्रवाल रीजनिंग, मौखिक और अमौखिक तर्क के लिए आधुनिक दृष्टिकोण
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <div>
+                                    <span class="font-medium">गणित:</span> फास्ट ट्रैक ऑब्जेक्टिव अंकगणित, क्वांटम कैट
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <div>
+                                    <span class="font-medium">अंग्रेजी:</span> ऑब्जेक्टिव जनरल इंग्लिश, वर्ड पावर मेड ईजी
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <div>
+                                    <span class="font-medium">कंप्यूटर ज्ञान:</span> ऑब्जेक्टिव कंप्यूटर नॉलेज
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <div>
+                                    <span class="font-medium">हरियाणा सामान्य ज्ञान:</span> हरियाणा - अतीत, वर्तमान और भविष्य
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Online Resources -->
+                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition duration-300">
+                        <h3 class="text-xl font-semibold text-syllabus-blue mb-4">ऑनलाइन संसाधन</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <div>
+                                    <span class="font-medium">अभ्यास प्लेटफॉर्म:</span> टेस्टबुक, ग्रेडअप, अनअकैडमी
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <div>
+                                    <span class="font-medium">मॉक टेस्ट:</span> <a href="online-practice.html" class="text-indian-blue hover:underline">CET मॉक टेस्ट</a>, HSSC आधिकारिक वेबसाइट
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <div>
+                                    <span class="font-medium">वर्तमान मामले:</span> मासिक पत्रिकाएं, दैनिक समाचार विश्लेषण
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <div>
+                                    <span class="font-medium">वीडियो व्याख्यान:</span> यूट्यूब चैनल जैसे अड्डा247, टेस्टबुक, और करियर पावर
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <div>
+                                    <span class="font-medium">पिछले वर्ष के प्रश्न पत्र:</span> <a href="exam-pattern.html" class="text-indian-blue hover:underline">CET पिछले प्रश्न पत्र</a>, HSSC आधिकारिक वेबसाइट
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <div>
+                                    <span class="font-medium">मोबाइल ऐप्स:</span> GK टुडे, करंट अफेयर्स, हरियाणा GK
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-6 p-5 bg-yellow-50 border-l-4 border-yellow-400 rounded-r-lg">
+                    <h3 class="font-semibold text-yellow-800 mb-2">अध्ययन रणनीति के टिप्स</h3>
+                    <ul class="space-y-2 text-yellow-800">
+                        <li class="flex items-start">
+                            <span class="font-bold mr-2">•</span>
+                            <div>प्रत्येक विषय के लिए समर्पित समय के साथ विषयवार अध्ययन योजना बनाएं</div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="font-bold mr-2">•</span>
+                            <div>हरियाणा सामान्य ज्ञान पर अधिक ध्यान दें क्योंकि इसमें सबसे अधिक वेटेज (25%) है</div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="font-bold mr-2">•</span>
+                            <div>अपनी तैयारी का आकलन करने के लिए हर सप्ताह कम से कम एक मॉक टेस्ट का अभ्यास करें</div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="font-bold mr-2">•</span>
+                            <div>नियमित रूप से रिवीजन करें और त्वरित समीक्षा के लिए संक्षिप्त नोट्स बनाए रखें</div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="font-bold mr-2">•</span>
+                            <div>कठिन विषयों पर चर्चा करने के लिए अध्ययन समूहों या ऑनलाइन फोरम में शामिल हों</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-blue-50 border-l-4 border-indian-blue rounded-xl p-8 text-center">
+            <h2 class="text-2xl text-indian-blue font-bold mb-4">CET 2025 परीक्षा में सफल होने के लिए तैयार हैं?</h2>
+            <p class="text-gray-700 mb-6 max-w-2xl mx-auto">अब जब आप पाठ्यक्रम और परीक्षा पैटर्न को समझ गए हैं, तो अपनी तैयारी यात्रा में अगला कदम उठाएं।</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="apply-now.html" class="bg-indian-blue text-white font-bold px-8 py-3 rounded-lg hover:bg-blue-700 transition duration-300 shadow-lg inline-block">
+                    अभी आवेदन करें
+                </a>
+                <a href="online-practice.html" class="bg-white border-2 border-indian-blue text-indian-blue font-bold px-8 py-3 rounded-lg hover:bg-blue-50 transition duration-300 inline-block">
+                    अभ्यास परीक्षण
+                </a>
+            </div>
+        </section>
+
+        <!-- Related Posts Section -->
+        <section class="bg-white rounded-xl shadow-md p-8 mb-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold gradient-text inline-block mb-6">📚 Related Posts</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Related Post 1 -->
+                    <a href="document-requirements.html" class="group block bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-100 overflow-hidden">
+                            <img src="img/apply-now.png" alt="Document Requirements" class="w-full h-48 object-cover object-center group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-4">
+                            <div class="text-xs text-gray-500 mb-1">May 15, 2025</div>
+                            <h3 class="font-semibold text-gray-800 group-hover:text-indian-blue transition duration-300">CET 2025 Document Requirements: Complete Guide</h3>
+                        </div>
+                    </a>
+                    
+                    <!-- Related Post 2 -->
+                    <a href="cet-vacancies.html" class="group block bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-100 overflow-hidden">
+                            <img src="img/banner1.png" alt="CET Vacancies" class="w-full h-48 object-cover object-center group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-4">
+                            <div class="text-xs text-gray-500 mb-1">May 10, 2025</div>
+                            <h3 class="font-semibold text-gray-800 group-hover:text-indian-blue transition duration-300">CET 2025 Vacancies: Complete List</h3>
+                        </div>
+                    </a>
+                    
+                    <!-- Related Post 3 -->
+                    <a href="cet-latest-updates.html" class="group block bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-100 overflow-hidden">
+                            <img src="img/banner3.png" alt="Latest Updates" class="w-full h-48 object-cover object-center group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-4">
+                            <div class="text-xs text-gray-500 mb-1">May 5, 2025</div>
+                            <h3 class="font-semibold text-gray-800 group-hover:text-indian-blue transition duration-300">CET 2025 Latest Updates: Stay Informed</h3>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="mt-6 text-center">
+                    <a href="blog-index.html" class="inline-block text-indian-blue hover:text-indian-saffron font-medium transition duration-300">
+                        View All Blog Posts →
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm text-gray-400">© 2025 सीईटी तैयारी पोर्टल। सर्वाधिकार सुरक्षित।</p>
+        </div>
+    </footer>
+
+    <!-- Loader -->
+    <div id="loader-wrapper"></div>
+    <script src="loader.js"></script>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Set active link
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if (link.getAttribute('href') === currentPath.split('/').pop()) {
+                link.classList.add('bg-indian-blue', 'text-white');
+                link.classList.remove('text-gray-700', 'hover:text-indian-blue', 'hover:bg-gray-50');
+            }
+        });
+    </script>
+
+    <!-- Translation functionality -->
+    <script>
+        // Language Switcher Functionality
+        const languageToggle = document.getElementById('languageToggle');
+        const translateBtnText = document.getElementById('translateBtnText');
+        
+        // Hindi translations
+        const translations = {
+            // Headings
+            'Detailed CET 2025 Syllabus': 'CET 2025 का विस्तृत पाठ्यक्रम',
+            'What to Expect and How to Prepare for Success': 'क्या उम्मीद करें और सफलता के लिए कैसे तैयारी करें',
+            'Understanding the CET 2025 Syllabus': 'CET 2025 पाठ्यक्रम को समझना',
+            'CET 2025 Exam Pattern': 'CET 2025 परीक्षा पैटर्न',
+            'Subject-wise Distribution of Questions': 'विषयवार प्रश्नों का वितरण',
+            'Preparation Tips': 'तैयारी के टिप्स',
+            'Recommended Books': 'अनुशंसित पुस्तकें',
+            'Online Resources': 'ऑनलाइन संसाधन',
+            'Study Strategy Tips': 'अध्ययन रणनीति के टिप्स',
+            'Ready to Ace the CET 2025 Exam?': 'CET 2025 परीक्षा में सफल होने के लिए तैयार हैं?',
+            'Related Posts': 'संबंधित पोस्ट',
+            'CET 2025 Exam Pattern Summary': 'CET 2025 परीक्षा पैटर्न सारांश',
+            'Subject-wise Topics': 'विषयवार विषय',
+            
+            // Content
+            'The Common Eligibility Test (CET) 2025 is a standardized examination conducted for recruitment to various Group C and D posts in government departments.': 'कॉमन एलिजिबिलिटी टेस्ट (CET) 2025 सरकारी विभागों में विभिन्न ग्रुप C और D पदों के लिए आयोजित एक मानकीकृत परीक्षा है। प्रभावी तैयारी और उच्च स्कोर प्राप्त करने के लिए पाठ्यक्रम की गहरी समझ महत्वपूर्ण है। यह व्यापक मार्गदर्शिका परीक्षा पैटर्न और विषयवार विषयों को रणनीतिक तैयारी में मदद के लिए विभाजित करती है।',
+            'A thorough understanding of the syllabus is crucial for effective preparation and achieving a high score.': 'प्रभावी तैयारी और उच्च स्कोर प्राप्त करने के लिए पाठ्यक्रम की गहरी समझ महत्वपूर्ण है।',
+            'Whether you\'re a first-time applicant or looking to improve your previous score, this detailed syllabus will serve as your roadmap to success in the CET 2025 examination.': 'चाहे आप पहली बार आवेदक हों या अपने पिछले स्कोर में सुधार करना चाहते हों, यह विस्तृत पाठ्यक्रम CET 2025 परीक्षा में सफलता के लिए आपका रोडमैप होगा।',
+            
+            // Subjects
+            'General Awareness': 'सामान्य जागरूकता',
+            'Reasoning': 'तार्किक क्षमता',
+            'Mathematics': 'गणित',
+            'English Language': 'अंग्रेजी भाषा',
+            'Hindi Language': 'हिंदी भाषा',
+            'Computer Knowledge': 'कंप्यूटर ज्ञान',
+            'Haryana General Knowledge': 'हरियाणा सामान्य ज्ञान',
+            
+            // Topics
+            'Current Events (National and International)': 'वर्तमान घटनाएं (राष्ट्रीय और अंतर्राष्ट्रीय)',
+            'Indian History (Ancient, Medieval, Modern)': 'भारतीय इतिहास (प्राचीन, मध्यकालीन, आधुनिक)',
+            'Indian Polity and Constitution': 'भारतीय राजनीति और संविधान',
+            'Geography (Indian and World)': 'भूगोल (भारत और विश्व)',
+            'Economic and Social Development': 'आर्थिक और सामाजिक विकास',
+            'Science and Technology': 'विज्ञान और प्रौद्योगिकी',
+            'Environmental Issues': 'पर्यावरणीय मुद्दे',
+            
+            // Computer Topics
+            'Basic Computer Concepts': 'बुनियादी कंप्यूटर अवधारणाएं',
+            'Hardware and Software': 'हार्डवेयर और सॉफ्टवेयर',
+            'Operating Systems': 'ऑपरेटिंग सिस्टम',
+            'MS Office (Word, Excel, PowerPoint)': 'एमएस ऑफिस (वर्ड, एक्सेल, पावरपॉइंट)',
+            'Internet and Email': 'इंटरनेट और ईमेल',
+            'Basic Networking Concepts': 'बुनियादी नेटवर्किंग अवधारणाएं',
+            'Computer Security': 'कंप्यूटर सुरक्षा',
+            
+            // Haryana GK Topics
+            'History and Culture of Haryana': 'हरियाणा का इतिहास और संस्कृति',
+            'Geography and Natural Resources': 'भूगोल और प्राकृतिक संसाधन',
+            'Economy and Agriculture': 'अर्थव्यवस्था और कृषि',
+            'Art, Literature, and Folk Traditions': 'कला, साहित्य और लोक परंपराएं',
+            'Famous Personalities': 'प्रसिद्ध व्यक्तित्व',
+            'Government Schemes and Policies': 'सरकारी योजनाएं और नीतियां',
+            'Current Affairs related to Haryana': 'हरियाणा से संबंधित वर्तमान मामले',
+            'Administrative Structure': 'प्रशासनिक संरचना',
+            
+            // Books
+            'Lucent\'s General Knowledge': 'लूसेंट का सामान्य ज्ञान',
+            'Manorama Yearbook': 'मनोरमा वार्षिकी',
+            'RS Aggarwal Reasoning': 'आरएस अग्रवाल रीजनिंग',
+            'Modern Approach to Verbal & Non-Verbal Reasoning': 'मौखिक और अमौखिक तर्क के लिए आधुनिक दृष्टिकोण',
+            'Fast Track Objective Arithmetic': 'फास्ट ट्रैक ऑब्जेक्टिव अंकगणित',
+            'Quantum CAT': 'क्वांटम कैट',
+            'Objective General English': 'ऑब्जेक्टिव जनरल इंग्लिश',
+            'Word Power Made Easy': 'वर्ड पावर मेड ईजी',
+            'Objective Computer Knowledge': 'ऑब्जेक्टिव कंप्यूटर नॉलेज',
+            
+            // Online Resources
+            'Practice Platforms': 'अभ्यास प्लेटफॉर्म',
+            'Mock Tests': 'मॉक टेस्ट',
+            'Current Affairs': 'वर्तमान मामले',
+            'Video Lectures': 'वीडियो व्याख्यान',
+            'Previous Year Papers': 'पिछले वर्ष के प्रश्न पत्र',
+            'Mobile Apps': 'मोबाइल ऐप्स',
+            
+            // Study Tips
+            'Create a subject-wise study plan with dedicated time for each topic': 'प्रत्येक विषय के लिए समर्पित समय के साथ विषयवार अध्ययन योजना बनाएं',
+            'Focus more on Haryana GK as it carries the highest weightage (25%)': 'हरियाणा सामान्य ज्ञान पर अधिक ध्यान दें क्योंकि इसमें सबसे अधिक वेटेज (25%) है',
+            'Practice at least one mock test every week to assess your preparation': 'अपनी तैयारी का आकलन करने के लिए हर सप्ताह कम से कम एक मॉक टेस्ट का अभ्यास करें',
+            'Revise regularly and maintain short notes for quick review': 'नियमित रूप से रिवीजन करें और त्वरित समीक्षा के लिए संक्षिप्त नोट्स बनाए रखें',
+            'Join study groups or online forums to discuss difficult topics': 'कठिन विषयों पर चर्चा करने के लिए अध्ययन समूहों या ऑनलाइन फोरम में शामिल हों',
+            
+            // Navigation
+            'Apply Now': 'अभी आवेदन करें',
+            'Practice Tests': 'अभ्यास परीक्षण',
+            'View All Blog Posts': 'सभी ब्लॉग पोस्ट देखें',
+            
+            // Focus Areas
+            'Focus Areas': 'ध्यान केंद्रित करने वाले क्षेत्र',
+            'Basic operations, shortcuts, and fundamental concepts of computers and internet usage': 'कंप्यूटर और इंटरनेट उपयोग के बुनियादी संचालन, शॉर्टकट और मूल अवधारणाएं',
+            'Recent developments, government initiatives, and historical significance of places in Haryana': 'हरियाणा में हाल के विकास, सरकारी पहल और स्थानों का ऐतिहासिक महत्व'
+        };
+
+        languageToggle.addEventListener('change', function() {
+            const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, span, a, th, td');
+            elements.forEach(element => {
+                const text = element.textContent.trim();
+                if (this.checked) {
+                    // Switch to Hindi
+                    if (translations[text]) {
+                        element.textContent = translations[text];
+                    }
+                    translateBtnText.textContent = 'अंग्रेजी में अनुवाद करें';
+                } else {
+                    // Switch to English
+                    Object.entries(translations).forEach(([english, hindi]) => {
+                        if (text === hindi) {
+                            element.textContent = english;
+                        }
+                    });
+                    translateBtnText.textContent = 'Translate to Hindi';
+                }
+            });
+        });
+    </script>
+
+    <!-- Load navbar -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+    <!-- Loader Script -->
+    <script>
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('loader-hidden');
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

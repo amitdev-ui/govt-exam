@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="smartStudy.title">Smart Study Techniques for CET Success - CET Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="translations.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #0066CC;
+            --secondary: #FF9933;
+            --accent: #4CAF50;
+            --background: #f8fafc;
+            --text: #1e293b;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .article-header {
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(255, 153, 51, 0.1));
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .article-content h2 {
+            color: var(--primary);
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+            position: relative;
+            padding-left: 1rem;
+            border-left: 4px solid var(--primary);
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            color: #4a5568;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .article-content ul {
+            list-style-type: none;
+            margin-left: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .article-content li:before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            color: #64748b;
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .article-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .article-tag {
+            background-color: #e2e8f0;
+            color: #475569;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            transition: all 0.3s ease;
+        }
+
+        .article-tag:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .share-button {
+            background-color: #f1f5f9;
+            color: #475569;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .share-button:hover {
+            background-color: #e2e8f0;
+            transform: translateY(-2px);
+        }
+
+        .related-blogs {
+            background-color: #f8fafc;
+            padding: 4rem 0;
+            margin-top: 4rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .blog-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .blog-card-content {
+            padding: 1.5rem;
+        }
+
+        .sidebar-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .lang-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+        }
+
+        .lang-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 30px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(30px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+
+    <!-- Language Switcher -->
+    <div class="fixed top-4 right-4 z-50 flex items-center space-x-2 bg-white p-2 rounded-lg shadow-md">
+        <span class="text-sm text-gray-600">EN</span>
+        <label class="lang-switch">
+            <input type="checkbox" id="languageToggle">
+            <span class="slider"></span>
+        </label>
+        <span class="text-sm text-gray-600">हिं</span>
+    </div>
+
+    <!-- Article Header -->
+    <header class="article-header">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6" data-translate="smartStudy.mainTitle">Smart Study Techniques for CET Success</h1>
+                <p class="text-xl text-gray-600" data-translate="smartStudy.subtitle">Master the art of effective studying with these proven techniques</p>
+                <div class="mt-6 flex justify-center gap-4">
+                    <span class="text-gray-500" data-translate="smartStudy.date">March 20, 2024</span>
+                    <span class="text-gray-500">•</span>
+                    <span class="text-gray-500" data-translate="smartStudy.readTime">15 min read</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <article class="lg:w-2/3">
+                <div class="bg-white rounded-xl shadow-md p-8">
+                    <!-- Introduction -->
+                    <section class="mb-8">
+                        <img src="img/goodstudent.webp" alt="Student studying" class="w-full h-96 object-cover rounded-lg mb-6">
+                        <p class="text-lg text-gray-700" data-translate="smartStudy.intro">
+                            Success in the CET exam requires more than just hard work - it demands smart work. This comprehensive guide will help you develop effective study techniques that maximize your learning potential and help you achieve your goals.
+                        </p>
+                    </section>
+
+                    <!-- Active Learning -->
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-bold text-primary mb-4" data-translate="smartStudy.activeLearning.title">1. Active Learning Techniques</h2>
+                        <img src="img/books.png" alt="Active learning" class="w-full h-64 object-cover rounded-lg mb-4">
+                        <p class="text-gray-700 mb-4" data-translate="smartStudy.activeLearning.content">
+                            Active learning involves engaging with the material rather than passively reading. Here are some effective techniques:
+                        </p>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li data-translate="smartStudy.activeLearning.point1">Create mind maps for complex topics</li>
+                            <li data-translate="smartStudy.activeLearning.point2">Teach concepts to others or explain them aloud</li>
+                            <li data-translate="smartStudy.activeLearning.point3">Practice with previous year questions</li>
+                            <li data-translate="smartStudy.activeLearning.point4">Use flashcards for quick revision</li>
+                        </ul>
+                    </section>
+
+                    <!-- Time Management -->
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-bold text-primary mb-4" data-translate="smartStudy.timeManagement.title">2. Effective Time Management</h2>
+                        <img src="img/time.webp" alt="Time management" class="w-full h-64 object-cover rounded-lg mb-4">
+                        <p class="text-gray-700 mb-4" data-translate="smartStudy.timeManagement.content">
+                            Proper time management is crucial for CET preparation. Here's how to make the most of your study time:
+                        </p>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li data-translate="smartStudy.timeManagement.point1">Use the Pomodoro Technique (25-minute focused study sessions)</li>
+                            <li data-translate="smartStudy.timeManagement.point2">Create a realistic study schedule</li>
+                            <li data-translate="smartStudy.timeManagement.point3">Prioritize topics based on weightage</li>
+                            <li data-translate="smartStudy.timeManagement.point4">Take regular breaks to maintain focus</li>
+                        </ul>
+                    </section>
+
+                    <!-- Mock Tests -->
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-bold text-primary mb-4" data-translate="smartStudy.mockTests.title">3. Regular Mock Test Practice</h2>
+                        <img src="img/mock.png" alt="Mock tests" class="w-full h-64 object-cover rounded-lg mb-4">
+                        <p class="text-gray-700 mb-4" data-translate="smartStudy.mockTests.content">
+                            Mock tests are essential for CET preparation. They help you:
+                        </p>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li data-translate="smartStudy.mockTests.point1">Understand the exam pattern</li>
+                            <li data-translate="smartStudy.mockTests.point2">Improve time management</li>
+                            <li data-translate="smartStudy.mockTests.point3">Identify weak areas</li>
+                            <li data-translate="smartStudy.mockTests.point4">Build exam confidence</li>
+                        </ul>
+                    </section>
+
+                    <!-- Note-Taking -->
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-bold text-primary mb-4" data-translate="smartStudy.noteTaking.title">4. Effective Note-Taking Strategies</h2>
+                        <img src="img/notes.jpg" alt="Note taking" class="w-full h-64 object-cover rounded-lg mb-4">
+                        <p class="text-gray-700 mb-4" data-translate="smartStudy.noteTaking.content">
+                            Good notes are the foundation of effective revision. Here's how to take better notes:
+                        </p>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li data-translate="smartStudy.noteTaking.point1">Use the Cornell Note-Taking System</li>
+                            <li data-translate="smartStudy.noteTaking.point2">Create visual aids and diagrams</li>
+                            <li data-translate="smartStudy.noteTaking.point3">Use color coding for different topics</li>
+                            <li data-translate="smartStudy.noteTaking.point4">Review and revise notes regularly</li>
+                        </ul>
+                    </section>
+
+                    <!-- Memory Techniques -->
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-bold text-primary mb-4" data-translate="smartStudy.memory.title">5. Memory Enhancement Techniques</h2>
+                        <img src="img/openbook.jpg" alt="Memory techniques" class="w-full h-64 object-cover rounded-lg mb-4">
+                        <p class="text-gray-700 mb-4" data-translate="smartStudy.memory.content">
+                            Improve your memory retention with these techniques:
+                        </p>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li data-translate="smartStudy.memory.point1">Use mnemonic devices</li>
+                            <li data-translate="smartStudy.memory.point2">Practice spaced repetition</li>
+                            <li data-translate="smartStudy.memory.point3">Create associations and connections</li>
+                            <li data-translate="smartStudy.memory.point4">Get adequate sleep for memory consolidation</li>
+                        </ul>
+                    </section>
+
+                    <!-- Conclusion -->
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-bold text-primary mb-4" data-translate="smartStudy.conclusion.title">Conclusion</h2>
+                        <p class="text-gray-700" data-translate="smartStudy.conclusion.content">
+                            Success in CET requires a combination of smart study techniques, consistent practice, and proper time management. Implement these strategies in your preparation, and you'll be well on your way to achieving your goals.
+                        </p>
+                    </section>
+
+                    <!-- Tags -->
+                    <div class="article-tags">
+                        <span class="article-tag" data-translate="smartStudy.tags.study">Study Techniques</span>
+                        <span class="article-tag" data-translate="smartStudy.tags.time">Time Management</span>
+                        <span class="article-tag" data-translate="smartStudy.tags.memory">Memory</span>
+                        <span class="article-tag" data-translate="smartStudy.tags.preparation">CET Preparation</span>
+                    </div>
+
+                    <!-- Share Buttons -->
+                    <div class="share-buttons">
+                        <button class="share-button" data-translate="smartStudy.share.facebook">
+                            <i class="fab fa-facebook-f"></i> Share on Facebook
+                        </button>
+                        <button class="share-button" data-translate="smartStudy.share.twitter">
+                            <i class="fab fa-twitter"></i> Share on Twitter
+                        </button>
+                        <button class="share-button" data-translate="smartStudy.share.linkedin">
+                            <i class="fab fa-linkedin-in"></i> Share on LinkedIn
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Sidebar -->
+            <aside class="lg:w-1/3">
+                <div class="sticky top-8">
+                    <!-- Related Articles -->
+                    <div class="sidebar-card">
+                        <h3 class="text-xl font-bold mb-4" data-translate="smartStudy.related.title">Related Articles</h3>
+                        <div class="space-y-4">
+                            <a href="cet-syllabus.html" class="block">
+                                <img src="img/syllabus2025.png" alt="CET Syllabus" class="w-full h-32 object-cover rounded-lg">
+                                <h4 class="font-semibold mt-2" data-translate="smartStudy.related.syllabus">Complete CET Syllabus Guide</h4>
+                            </a>
+                            <a href="cet-success-stories.html" class="block">
+                                <img src="img/goodstudent.webp" alt="Success Stories" class="w-full h-32 object-cover rounded-lg">
+                                <h4 class="font-semibold mt-2" data-translate="smartStudy.related.stories">CET Success Stories</h4>
+                            </a>
+                            <a href="online-practice.html" class="block">
+                                <img src="img/mock.png" alt="Online Practice" class="w-full h-32 object-cover rounded-lg">
+                                <h4 class="font-semibold mt-2" data-translate="smartStudy.related.practice">Online Practice Tests</h4>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Tips -->
+                    <div class="sidebar-card">
+                        <h3 class="text-xl font-bold mb-4" data-translate="smartStudy.tips.title">Quick Tips</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span data-translate="smartStudy.tips.tip1">Study in short, focused sessions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span data-translate="smartStudy.tips.tip2">Take regular breaks</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span data-translate="smartStudy.tips.tip3">Stay hydrated and eat well</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span data-translate="smartStudy.tips.tip4">Get enough sleep</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm text-gray-400" data-translate="smartStudy.footer">© 2024 CET Exam. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Load navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+
+        // Language Toggle
+        const languageToggle = document.getElementById('languageToggle');
+        
+        // Check for saved language preference
+        const savedLanguage = localStorage.getItem('preferredLanguage');
+        if (savedLanguage === 'hi') {
+            languageToggle.checked = true;
+            translatePage('hi');
+        }
+
+        languageToggle.addEventListener('change', function() {
+            const language = this.checked ? 'hi' : 'en';
+            translatePage(language);
+            localStorage.setItem('preferredLanguage', language);
+        });
+
+        function translatePage(language) {
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                const translation = getTranslation(key, language);
+                if (translation) {
+                    element.textContent = translation;
+                }
+            });
+        }
+    </script>
+    <script src="loader.js"></script>
+</body>
+</html> 

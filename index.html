@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NRA CET 2025 Preparation Portal</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'indian-blue': '#0066CC',
+                        'indian-saffron': '#FF9933',
+                        'gov-blue': '#1a365d',
+                        'gov-light': '#f8fafc',
+                        'sky-blue': '#87CEEB',
+                        'light-blue': '#ADD8E6'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #87CEEB, #0066CC);
+            -webkit-text-fill-color: transparent;
+        }
+        .gov-card {
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            position: relative;
+        }
+        .gov-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .gov-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #87CEEB, #0066CC);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        .gov-card:hover::before {
+            transform: scaleX(1);
+        }
+        .card-image {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 1rem 1rem 0 0;
+            transition: transform 0.3s ease;
+        }
+        .gov-card:hover .card-image {
+            transform: scale(1.05);
+        }
+        .gov-card .p-6 {
+            position: relative;
+            z-index: 1;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,1));
+        }
+        .gov-card .bg-indian-blue {
+            background: linear-gradient(135deg, #87CEEB, #0066CC);
+            transition: transform 0.3s ease;
+        }
+        .gov-card:hover .bg-indian-blue {
+            transform: scale(1.1);
+        }
+        .gov-card h3 {
+            background: linear-gradient(45deg, #87CEEB, #0066CC);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 0.3s ease;
+        }
+        .gov-card:hover h3 {
+            transform: translateX(5px);
+        }
+        .gov-card a {
+            position: relative;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .gov-card a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #87CEEB, #0066CC);
+            transition: width 0.3s ease;
+        }
+        .gov-card a:hover::after {
+            width: 100%;
+        }
+        .header-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/header.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        /* Navbar Styles */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #87CEEB;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #87CEEB;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link.active {
+            background: linear-gradient(45deg, #87CEEB, #0066CC);
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-link.active::after {
+            width: 100%;
+        }
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+        #mobile-menu.hidden {
+            display: none;
+        }
+        #mobile-menu:not(.hidden) {
+            animation: slideDown 0.3s ease-in-out;
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Sticky Navbar Shadow */
+        nav.sticky {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        /* Navbar Link Hover Effects */
+        .mobile-nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .mobile-nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #87CEEB;
+            transition: width 0.3s ease;
+        }
+        .mobile-nav-link:hover {
+            color: #87CEEB;
+        }
+        .mobile-nav-link:hover::after {
+            width: 100%;
+        }
+        .banner-slider {
+            position: relative;
+            height: 600px;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .banner-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+        .banner-slide.active {
+            opacity: 1;
+        }
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .banner-overlay h1 {
+            animation: fadeInUp 1s ease-out;
+            letter-spacing: 1px;
+        }
+        .banner-overlay p {
+            animation: fadeInUp 1s ease-out 0.3s;
+            animation-fill-mode: both;
+        }
+        .banner-overlay p:last-child {
+            animation-delay: 0.6s;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .glow-text {
+            position: relative;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                         0 0 20px rgba(255, 255, 255, 0.3),
+                         0 0 30px rgba(255, 255, 255, 0.2);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                            0 0 20px rgba(255, 255, 255, 0.3),
+                            0 0 30px rgba(255, 255, 255, 0.2);
+            }
+            50% {
+                text-shadow: 0 0 15px rgba(255, 255, 255, 0.6),
+                            0 0 25px rgba(255, 255, 255, 0.4),
+                            0 0 35px rgba(255, 255, 255, 0.3);
+            }
+            100% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                            0 0 20px rgba(255, 255, 255, 0.3),
+                            0 0 30px rgba(255, 255, 255, 0.2);
+            }
+        }
+        /* Loader styles */
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        #loader.loader-hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loader-ring {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+        
+        .loader-ring div {
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            margin: 8px;
+            border: 8px solid #0066CC;
+            border-radius: 50%;
+            animation: loader-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            border-color: #0066CC transparent transparent transparent;
+        }
+        
+        .loader-ring div:nth-child(1) {
+            animation-delay: -0.45s;
+        }
+        
+        .loader-ring div:nth-child(2) {
+            animation-delay: -0.3s;
+        }
+        
+        .loader-ring div:nth-child(3) {
+            animation-delay: -0.15s;
+        }
+        
+        @keyframes loader-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        /* Updated image styles for blog and announcements sections */
+        .blog-image {
+            height: 240px;
+            object-fit: cover;
+            border-radius: 1rem 1rem 0 0;
+            transition: transform 0.3s ease;
+            width: 100%;
+        }
+        
+        .announcement-image {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            transition: transform 0.3s ease;
+            width: 100%;
+        }
+        
+        .gov-card:hover .blog-image,
+        .gov-card:hover .announcement-image {
+            transform: scale(1.05);
+        }
+        
+        /* Updated image styles for quick links section */
+        .quicklink-image {
+            height: 220px;
+            object-fit: cover;
+            border-radius: 1rem 1rem 0 0;
+            transition: transform 0.3s ease;
+            width: 100%;
+        }
+        
+        .gov-card:hover .quicklink-image {
+            transform: scale(1.05);
+        }
+        
+        .gov-card .p-6 {
+            position: relative;
+            z-index: 1;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,1));
+        }
+    </style>
+</head>
+<body class="bg-gov-light">
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Enhanced Banner Slider -->
+        <div class="banner-slider mb-8">
+            <div class="banner-slide active" style="background-image: url('img/goodstudent2.jpg');">
+                <div class="banner-overlay">
+                    <div class="container mx-auto px-4">
+                        <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                            <span class="bg-gradient-to-r from-sky-blue to-indian-blue text-transparent bg-clip-text glow-text">CET 2025</span>
+                        </h1>
+                        <p class="text-3xl md:text-4xl text-yellow-100 font-semibold mb-4 glow-text" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.6);">
+                            आपके सपनों की सीढ़ी
+                        </p>
+                        <p class="text-2xl md:text-3xl text-blue-50 font-medium glow-text" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.6);">
+                            सरकारी नौकरी का सुनहरा अवसर
+                        </p>
+                        <div class="mt-8 flex flex-wrap gap-4 justify-center">
+                            <a href="apply-now.html" class="bg-sky-blue hover:bg-indian-blue text-white font-medium py-3 px-8 rounded-lg transition duration-300 hover-scale">
+                                Apply Now
+                            </a>
+                            <a href="exam-pattern.html" class="bg-white text-indian-blue hover:bg-gray-100 font-medium py-3 px-8 rounded-lg transition duration-300 hover-scale">
+                                View Exam Pattern
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-slide" style="background-image: url('img/pmindinan2.png');">
+                <div class="banner-overlay">
+                    <div class="container mx-auto px-4">
+                        <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                            <span class="bg-gradient-to-r from-sky-blue to-indian-blue text-transparent bg-clip-text glow-text">सफलता का रहस्य</span>
+                        </h1>
+                        <p class="text-3xl md:text-4xl text-yellow-100 font-semibold mb-4 glow-text" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.6);">
+                            विशेषज्ञों की सीख
+                        </p>
+                        <p class="text-2xl md:text-3xl text-blue-50 font-medium glow-text" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.6);">
+                            सफलता के लिए सही रणनीति
+                        </p>
+                        <div class="mt-8 flex flex-wrap gap-4 justify-center">
+                            <a href="study-resources.html" class="bg-sky-blue hover:bg-indian-blue text-white font-medium py-3 px-8 rounded-lg transition duration-300 hover-scale">
+                                Study Resources
+                            </a>
+                            <a href="mock-tests-cet-2025.html" class="bg-white text-indian-blue hover:bg-gray-100 font-medium py-3 px-8 rounded-lg transition duration-300 hover-scale">
+                                Mock Tests
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-slide" style="background-image: url('img/pmindian.png');">
+                <div class="banner-overlay">
+                    <div class="container mx-auto px-4">
+                        <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                            <span class="bg-gradient-to-r from-sky-blue to-indian-blue text-transparent bg-clip-text glow-text">सफलता की कहानियां</span>
+                        </h1>
+                        <p class="text-3xl md:text-4xl text-yellow-100 font-semibold mb-4 glow-text" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.6);">
+                            टॉपर्स की सफलता का राज
+                        </p>
+                        <p class="text-2xl md:text-3xl text-blue-50 font-medium glow-text" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.6);">
+                            आप भी बन सकते हैं सफल
+                        </p>
+                        <div class="mt-8 flex flex-wrap gap-4 justify-center">
+                            <a href="cet-success-stories.html" class="bg-sky-blue hover:bg-indian-blue text-white font-medium py-3 px-8 rounded-lg transition duration-300 hover-scale">
+                                Success Stories
+                            </a>
+                            <a href="blog-index.html" class="bg-white text-indian-blue hover:bg-gray-100 font-medium py-3 px-8 rounded-lg transition duration-300 hover-scale">
+                                Read Blog
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Banner Slider
+            const slides = document.querySelectorAll('.banner-slide');
+            let currentSlide = 0;
+
+            function nextSlide() {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+
+            setInterval(nextSlide, 5000);
+        </script>
+
+        <!-- ATTENTION-GRABBING BLOG POSTS -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold text-gov-blue mb-6 text-center">⚠️ Critical Updates <span class="text-xl block text-gray-600">महत्वपूर्ण अपडेट</span></h2>
+            
+            <!-- Emergency Warning Blog Post - Top Priority -->
+            <div class="mx-auto mb-6 bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border-2 border-red-500 animate-pulse">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-2/5 bg-red-50">
+                        <div class="relative h-full">
+                            <div class="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg shadow-md z-10">
+                                <i class="fas fa-exclamation-triangle mr-1"></i> URGENT WARNING
+                            </div>
+                            <img src="img/warning.png" alt="Warning" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="md:w-3/5 p-6 bg-gradient-to-r from-red-50 to-orange-50">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full">आवश्यक चेतावनी</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full ml-2">अभी पढ़ें</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">⚠️ आप अपना सरकारी नौकरी का सपना खो सकते हैं — अगर इन बातों को नजरअंदाज़ किया!</h2>
+                        <p class="text-gray-600 mb-4">हर साल हज़ारों छात्र छोटी-छोटी लापरवाहियों के कारण रिजेक्ट हो जाते हैं। जाति प्रमाणपत्र अपडेट नहीं है? गलत फॉर्म भरा है? जल्दी जानें क्या गलतियां आपका सिलेक्शन रोक सकती हैं!</p>
+                        <a href="mistakes-avoid-govt-job.html" class="inline-block bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 transform hover:-translate-y-1">
+                            जरूर पढ़ें <i class="fas fa-exclamation-circle ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FEATURED BLOG POSTS IN ONE ROW -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Featured Blog Post 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border-2 border-yellow-400">
+                    <div class="relative">
+                        <img src="img/castecertificate.png" alt="अद्यतित जाति प्रमाणपत्र" class="w-full h-48 object-cover">
+                        <div class="absolute top-0 right-0 bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg shadow-md z-10">
+                            <i class="fas fa-star mr-1"></i> FEATURED
+                        </div>
+                    </div>
+                    <div class="p-6 bg-gradient-to-r from-yellow-50 to-orange-50">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-3 py-1 rounded-full">नई जानकारी</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-gray-900 mb-2">✍️ अद्यतित जाति प्रमाणपत्र: CET 2025 के लिए अनिवार्य दस्तावेज</h2>
+                        <p class="text-gray-600 mb-4 line-clamp-2">सरकारी नौकरियों में आरक्षण का लाभ उठाने के लिए अद्यतित जाति प्रमाणपत्र क्यों अनिवार्य है और इसे कैसे प्राप्त करें?</p>
+                        <a href="caste-certificate-importance.html" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:-translate-y-1">
+                            अभी पढ़ें <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Featured Blog Post 2 - CET Website Busy Solutions -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border-2 border-red-400 animate-pulse">
+                    <div class="relative">
+                        <img src="img/serverbussy.png" alt="CET Website Busy Solution" class="w-full h-48 object-cover">
+                        <div class="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg shadow-md z-10">
+                            <i class="fas fa-bolt mr-1"></i> HOT TIP
+                        </div>
+                    </div>
+                    <div class="p-6 bg-gradient-to-r from-red-50 to-blue-50">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full">आवश्यक सलाह</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-gray-900 mb-2">📢 वेबसाइट बिज़ी? पोर्टल स्लो? इस ब्लॉग से भरें फॉर्म!</h2>
+                        <p class="text-gray-600 mb-4 line-clamp-2">CET पोर्टल बार-बार "Server Busy" दिखा रहा है? इन गारंटीड टिप्स से आसानी से फॉर्म भरें।</p>
+                        <a href="cet-website-busy-solution.html" class="inline-block bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:-translate-y-1">
+                            समस्या हल करें <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Featured Blog Post 3 - CET Exam Date Extension -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border-2 border-blue-400 animate-pulse">
+                    <div class="relative">
+                        <img src="img/schedule.png" alt="CET Exam Date Extension" class="w-full h-48 object-cover">
+                        <div class="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg shadow-md z-10">
+                            <i class="fas fa-calendar-alt mr-1"></i> NEW UPDATE
+                        </div>
+                    </div>
+                    <div class="p-6 bg-gradient-to-r from-blue-50 to-indigo-50">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">महत्वपूर्ण अपडेट</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-gray-900 mb-2">📅 क्या CET की तारीख बढ़ेगी? जानिए सच्चाई!</h2>
+                        <p class="text-gray-600 mb-4 line-clamp-2">CET 2025 की तारीख बढ़ने की संभावना, कारण और प्रभाव की पूरी जानकारी पढ़ें।</p>
+                        <a href="cet-exam-date-extension.html" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:-translate-y-1">
+                            पूरी जानकारी पढ़ें <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Blogs Section -->
+        <section class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gov-blue mb-6">Latest from Our Blog <span class="text-xl block text-gray-600">हमारे ब्लॉग से नवीनतम</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Achievement Blog Card -->
+                <div class="gov-card rounded-lg overflow-hidden">
+                    <img src="img/stdentsforresult.jpg" alt="CET Achievement" class="blog-image">
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl text-gov-blue mb-2">🏆 CET पास करना एक बड़ी उपलब्धि <span class="text-base block text-gray-600">सीईटी की सफलता के लाभ</span></h3>
+                        <p class="text-gray-600 mb-4">जानिए CET पास करने के जबरदस्त लाभ और आत्मविश्वास कैसे बढ़ाएं। एक परीक्षा, अनेक अवसर!</p>
+                        <a href="blog-cet-achievement-hindi.html" class="text-indian-blue hover:underline font-medium">और पढ़ें →</a>
+                    </div>
+                </div>
+                
+                <!-- How to Crack CET Blog Card -->
+                <div class="gov-card rounded-lg overflow-hidden">
+                    <img src="img/2025cet.png" alt="How to Crack CET" class="blog-image">
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl text-gov-blue mb-2">📚 सीईटी कैसे क्रैक करें <span class="text-base block text-gray-600">विशेषज्ञों की सलाह</span></h3>
+                        <p class="text-gray-600 mb-4">सही रणनीति और समय प्रबंधन के साथ CET 2025 में सफलता पाने के प्रभावी टिप्स और तकनीकें।</p>
+                        <a href="how-to-crack-cet.html" class="text-indian-blue hover:underline font-medium">और पढ़ें →</a>
+                    </div>
+                </div>
+                
+                <!-- Upcoming Vacancies Blog Card -->
+                <div class="gov-card rounded-lg overflow-hidden">
+                    <img src="img/govtexam.png" alt="Upcoming Vacancies" class="blog-image">
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl text-gov-blue mb-2">💼 आगामी सरकारी नौकरियां <span class="text-base block text-gray-600">2 लाख+ रिक्तियां</span></h3>
+                        <p class="text-gray-600 mb-4">2025 में CET के माध्यम से भरी जाने वाली सरकारी नौकरियों की पूरी जानकारी और अवसर।</p>
+                        <a href="upcoming-vacancies-cet.html" class="text-indian-blue hover:underline font-medium">और पढ़ें →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="blog-index.html" class="inline-block bg-indian-blue text-white hover:bg-blue-700 font-medium py-3 px-8 rounded-lg transition duration-300">
+                    View All Blogs →
+                </a>
+            </div>
+        </section>
+
+        <!-- Hindi Welcome Section at start after the attention-grabbing blogs -->
+        <section class="bg-gradient-to-r from-blue-50 to-orange-50 rounded-lg shadow-md p-8 mb-8 border-l-4 border-indian-saffron">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-2/3">
+                    <h2 class="text-3xl font-bold text-gov-blue mb-4">CET 2025 की तैयारी के लिए आपका स्वागत है</h2>
+                    <p class="text-lg text-gray-700 mb-4">
+                        सामान्य पात्रता परीक्षा (CET) आपके सरकारी नौकरी के सपने को पूरा करने का सबसे सरल और विश्वसनीय माध्यम है। 2025 में इस महत्वपूर्ण परीक्षा में सफलता प्राप्त करके अपने भविष्य को उज्जवल बनाएं।
+                    </p>
+                    <div class="bg-white rounded-lg p-4 shadow-sm">
+                        <h3 class="font-semibold text-lg text-indian-blue mb-2">CET 2025 प्रमुख जानकारी:</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="flex items-start">
+                                <span class="text-indian-blue text-xl mr-2">✓</span>
+                                <span>एक परीक्षा, अनेक सरकारी विभागों में अवसर</span>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-indian-blue text-xl mr-2">✓</span>
+                                <span>3 वर्षों तक वैध स्कोरकार्ड</span>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-indian-blue text-xl mr-2">✓</span>
+                                <span>ग्रुप B और C के पदों के लिए पात्रता</span>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-indian-blue text-xl mr-2">✓</span>
+                                <span>सरकारी नौकरी का सुरक्षित और निश्चित रास्ता</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/3">
+                    <img src="img/pmindian.png" alt="CET Preparation" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </section>
+
+        <!-- Important Announcements -->
+        <section class="bg-white rounded-lg shadow-md p-6 mb-8 border-t-4 border-indian-saffron">
+            <h2 class="text-2xl font-bold text-gov-blue mb-4">Important Announcements <span class="text-xl block text-gray-600">महत्वपूर्ण घोषणाएं</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="gov-card p-4 rounded-lg bg-red-50 animate-pulse">
+                    <img src="img/warning.png" alt="सावधानी" class="announcement-image mb-4">
+                    <a href="mistakes-avoid-govt-job.html">
+                        <h3 class="font-semibold text-red-700 mb-2">⚠️ आपका सपना खतरे में है <span class="text-base block text-gray-600">गंभीर चेतावनी</span></h3>
+                    </a>
+                    <p class="text-gray-700">छोटी सी लापरवाही, बड़ी चूक बन सकती है - तुरंत जानें</p>
+                </div>
+                <div class="gov-card p-4 rounded-lg bg-blue-50 animate-pulse">
+                    <img src="img/schedule.png" alt="परीक्षा तिथि" class="announcement-image mb-4">
+                    <a href="cet-exam-date-extension.html">
+                        <h3 class="font-semibold text-blue-700 mb-2">📅 क्या तारीख बढ़ेगी? <span class="text-base block text-gray-600">महत्वपूर्ण अपडेट</span></h3>
+                    </a>
+                    <p class="text-gray-700">CET 2025 की तारीख बढ़ने की संभावना पर पूरी जानकारी</p>
+                </div>
+                <div class="gov-card p-4 rounded-lg bg-red-50">
+                    <img src="img/serverbussy.png" alt="Registration" class="announcement-image mb-4">
+                    <a href="cet-website-busy-solution.html">
+                        <h3 class="font-semibold text-red-700 mb-2">Server Busy? <span class="text-base block text-gray-600">समाधान यहां है</span></h3>
+                    </a>
+                    <p class="text-gray-700">पोर्टल स्लो होने पर भी फॉर्म कैसे भरें - यहां जानें!</p>
+                </div>
+                <div class="gov-card p-4 rounded-lg bg-green-50">
+                    <img src="img/previous-papers.png" alt="Syllabus" class="announcement-image mb-4">
+                    <a href="https://sarkari.network/wp-content/uploads/HSSC-CET-Group-C-Group-56-Mains-Exam-Question-Paper-17-Aug-2024-2.pdf">
+                        <h3 class="font-semibold text-green-700 mb-2">New Syllabus <span class="text-base block text-gray-600">नया पाठ्यक्रम</span></h3>
+                    </a>
+                    <p class="text-gray-700">Updated syllabus for all sections available</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <!-- CET Achievement Card -->
+            <div class="gov-card bg-white rounded-lg overflow-hidden">
+               <a href="blog-cet-achievement-hindi.html"><img src="img/stdentsforresult.jpg" alt="CET Achievement" class="quicklink-image"></a>
+                <div class="p-6">
+                <div class="flex items-center mb-4">
+                    <div class="bg-indian-blue p-3 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold ml-4 text-gov-blue">CET उपलब्धि</h3>
+                </div>
+                <p class="text-gray-600 mb-4">सीईटी पास करना एक बड़ी उपलब्धि है - अपने करियर के लिए इसके महत्वपूर्ण लाभ जानें</p>
+                <a href="blog-cet-achievement-hindi.html" class="text-indian-blue hover:underline font-medium">पूरा पढ़ें →</a>
+                </div>
+            </div>
+
+            <!-- How to Crack CET Card -->
+            <div class="gov-card bg-white rounded-lg overflow-hidden">
+                <a href="how-to-crack-cet.html"><img src="img/studyhour.png" style="width: 150%;!important" alt="How to Crack CET" class="quicklink-image"></a>
+                <div class="p-6">
+                <div class="flex items-center mb-4">
+                    <div class="bg-indian-blue p-3 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold ml-4 text-gov-blue">सफलता युक्तियां</h3>
+                </div>
+                <p class="text-gray-600 mb-4">CET 2025 में सफलता प्राप्त करने के लिए विशेषज्ञों के टिप्स और रणनीतियां</p>
+                <a href="how-to-crack-cet.html" class="text-indian-blue hover:underline font-medium">सफलता गाइड →</a>
+                </div>
+            </div>
+
+            <!-- Upcoming Vacancies Card -->
+            <div class="gov-card bg-white rounded-lg overflow-hidden">
+                <a href="upcoming-vacancies-cet.html"><img src="img/govtexam.png" alt="Upcoming Vacancies" class="quicklink-image"></a>
+                <div class="p-6">
+                <div class="flex items-center mb-4">
+                    <div class="bg-indian-blue p-3 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold ml-4 text-gov-blue">आगामी रिक्तियां</h3>
+                </div>
+                <p class="text-gray-600 mb-4">2025 में CET के माध्यम से भरी जाने वाली 2 लाख+ सरकारी नौकरियां</p>
+                <a href="upcoming-vacancies-cet.html" class="text-indian-blue hover:underline font-medium">अवसर देखें →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About CET Section -->
+        <section class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-2/3 md:pr-8">
+                    <h2 class="text-2xl font-bold text-gov-blue mb-4">About Common Eligibility Test (CET)</h2>
+                    <p class="text-gray-700 mb-4">
+                        The Common Eligibility Test (CET) is a standardized examination conducted by the National Recruitment Agency (NRA) for preliminary screening of candidates for various Group B and C (non-technical) posts in the Government of India.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        The CET score remains valid for three years, allowing candidates to apply for multiple government positions without taking separate preliminary exams.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mt-6">
+                        <a href="exam-pattern.html" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indian-blue hover:bg-blue-700">
+                            View Exam Pattern
+                        </a>
+                        <a href="study-resources.html" class="inline-flex items-center px-4 py-2 border border-indian-blue text-sm font-medium rounded-md text-indian-blue bg-white hover:bg-gray-50">
+                            Download Syllabus
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/3 mt-6 md:mt-0">
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="font-semibold text-gov-blue mb-4">Key Features</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Single Test for Multiple Jobs
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                3-Year Validity
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Computer-Based Test
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Hindi Content at Bottom -->
+        <section class="bg-gradient-to-r from-orange-50 to-blue-50 rounded-lg shadow-md p-8 mb-8 border-r-4 border-indian-blue">
+            <h2 class="text-3xl font-bold text-gov-blue mb-6 text-center">CET 2025 - सफलता का मंत्र</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-all">
+                    <div class="text-4xl text-center mb-4 text-indian-blue">📅</div>
+                    <h3 class="font-bold text-lg mb-2 text-center">नियमित अभ्यास</h3>
+                    <p class="text-gray-700">प्रतिदिन कम से कम 4-5 घंटे का अभ्यास आपको परीक्षा में सफलता दिलाएगा। मॉक टेस्ट से अपने प्रदर्शन का मूल्यांकन करें।</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-all">
+                    <div class="text-4xl text-center mb-4 text-indian-blue">📚</div>
+                    <h3 class="font-bold text-lg mb-2 text-center">सही अध्ययन सामग्री</h3>
+                    <p class="text-gray-700">हमारे द्वारा प्रदान की गई आधिकारिक अध्ययन सामग्री से तैयारी करें। नवीनतम पाठ्यक्रम पर ध्यान केंद्रित करें।</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-all">
+                    <div class="text-4xl text-center mb-4 text-indian-blue">🎯</div>
+                    <h3 class="font-bold text-lg mb-2 text-center">अपनी कमजोरियों पर काम करें</h3>
+                    <p class="text-gray-700">अपनी कमजोर विषयों की पहचान करके उन पर विशेष ध्यान दें। समय प्रबंधन और त्वरित गणना पर भी ध्यान दें।</p>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <p class="text-lg font-medium mb-4">CET 2025 में सफल होने के लिए अभी से तैयारी शुरू करें</p>
+                <a href="how-to-crack-cet.html" class="inline-block bg-indian-blue text-white hover:bg-blue-700 font-medium py-3 px-8 rounded-lg transition duration-300">
+                    विस्तृत मार्गदर्शन प्राप्त करें →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gov-blue text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <img src="img/logo.png" alt="CET Logo" class="h-16 w-16 mb-4">
+                    <h3 class="text-lg font-semibold mb-4">NRA CET 2025 Preparation Portal</h3>
+                    <p class="text-gray-300 text-sm">
+                        Your official platform for CET 2025 preparation and resources.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="exam-pattern.html" class="text-gray-300 hover:text-white transition duration-300">Exam Pattern</a></li>
+                        <li><a href="syllabus.html" class="text-gray-300 hover:text-white transition duration-300">Syllabus</a></li>
+                        <li><a href="study-resources.html" class="text-gray-300 hover:text-white transition duration-300">Study Resources</a></li>
+                        <li><a href="mock-tests.html" class="text-gray-300 hover:text-white transition duration-300">Mock Tests</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Information</h3>
+                    <p class="text-gray-300 text-sm mb-2">
+                        Email: <a href="mailto:amitselwal3@gmail.com" class="hover:underline">amitselwal3@gmail.com</a>
+                    </p>
+                    <div class="mt-4">
+                        <h4 class="font-semibold mb-2">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-300 hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-300 hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-300 hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-400">
+                © 2025 National Recruitment Agency. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        // Navbar loading and functionality
+        const loadNavbar = () => {
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-container').innerHTML = data;
+                    initializeNavbar();
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+        };
+
+        const initializeNavbar = () => {
+            // Mobile menu functionality
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Set active link
+            const currentPath = window.location.pathname;
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('href') === currentPath.split('/').pop()) {
+                    link.classList.add('bg-indian-blue', 'text-white');
+                    link.classList.remove('text-gray-700', 'hover:text-indian-blue', 'hover:bg-gray-50');
+                }
+            });
+
+            // Add scroll event listener for sticky navbar
+            const navbar = document.querySelector('nav');
+            if (navbar) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 0) {
+                        navbar.classList.add('sticky', 'top-0', 'z-50', 'bg-white', 'shadow-md');
+                    } else {
+                        navbar.classList.remove('sticky', 'top-0', 'z-50', 'bg-white', 'shadow-md');
+                    }
+                });
+            }
+        };
+
+        // Load navbar when DOM is ready
+        document.addEventListener('DOMContentLoaded', loadNavbar);
+    </script>
+
+    <!-- Translation functionality -->
+    <script src="translations.js"></script>
+
+    <!-- Loader Script -->
+    <script>
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('loader-hidden');
+                
+                // Remove loader completely after transition completes
+                loader.addEventListener('transitionend', () => {
+                    document.body.removeChild(loader);
+                });
+            }, 1000);
+        });
+    </script>
+    <script src="loader.js"></script>
+</body>
+</html>

@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CET 2025 Syllabus: Complete Guide - CET Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="translations.js"></script>
+    <style>
+
+/* Navbar Styles */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #87CEEB;
+    transition: width 0.3s ease;
+}
+.nav-link:hover {
+    color: #87CEEB;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+.nav-link.active {
+    background: linear-gradient(45deg, #0066CC, #FF9933);
+    -webkit-text-fill-color: transparent;
+}
+.nav-link.active::after {
+    width: 100%;
+}
+/* Mobile Menu Animation */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+#mobile-menu.hidden {
+    display: none;
+}
+#mobile-menu:not(.hidden) {
+    animation: slideDown 0.3s ease-in-out;
+}
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Sticky Navbar Shadow */
+nav.sticky {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/* Navbar Link Hover Effects */
+.mobile-nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.mobile-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #87CEEB;
+    transition: width 0.3s ease;
+}
+.mobile-nav-link:hover {
+    color: #87CEEB;
+}
+.mobile-nav-link:hover::after {
+    width: 100%;
+}
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #87CEEB;
+            --secondary: #FFC3A0;
+            --accent: #A0E7E5;
+            --highlight: #FFAEBC;
+            --light-bg: #F0F8FF;
+            --medium-bg: #E6F3FF;
+            --dark-bg: #CCE6FF;
+            --text: #333333;
+            --light-text: #666666;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Language Switcher Styles */
+        .lang-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+        }
+        .lang-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 30px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "EN";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        input:checked + .slider {
+            background-color: #0066CC;
+        }
+        input:checked + .slider:before {
+            transform: translateX(30px);
+            content: "हिं";
+        }
+        /* Floating Translation Button */
+        .floating-translate-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #0066CC, #004C99);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            animation: pulse 2s infinite;
+        }
+        .floating-translate-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 25px rgba(0, 102, 204, 0.4);
+            background: linear-gradient(135deg, #004C99, #0066CC);
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+            }
+            50% {
+                box-shadow: 0 4px 30px rgba(0, 102, 204, 0.5);
+            }
+            100% {
+                box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+            }
+        }
+
+        .article-header {
+            background: linear-gradient(135deg, var(--light-bg), var(--medium-bg));
+            padding: 6rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .article-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: url('img/pattern.png');
+            opacity: 0.05;
+            z-index: 0;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin: 2.5rem 0 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
+        }
+
+        .section-block {
+            background-color: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-top: 5px solid var(--primary);
+        }
+
+        .syllabus-card {
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .syllabus-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .syllabus-card.reasoning {
+            background-color: var(--light-bg);
+            border-left: 4px solid var(--primary);
+        }
+        
+        .syllabus-card.awareness {
+            background-color: #FFF5E6;
+            border-left: 4px solid #FFB347;
+        }
+        
+        .syllabus-card.aptitude {
+            background-color: #F0FFF0;
+            border-left: 4px solid #77DD77;
+        }
+        
+        .syllabus-card.english {
+            background-color: #F5F0FF;
+            border-left: 4px solid #B19CD9;
+        }
+
+        .syllabus-card h3 {
+            font-weight: 600;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+        
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .topic-item {
+            background-color: white;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .topic-item h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+        
+        .topic-item ul {
+            font-size: 0.85rem;
+            padding-left: 1rem;
+        }
+        
+        .topic-item li {
+            margin-bottom: 0.25rem;
+            color: var(--light-text);
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .tip-card {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .tip-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tip-card-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem;
+            font-weight: 600;
+        }
+        
+        .tip-card-body {
+            padding: 1rem;
+        }
+        
+        .tip-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+        
+        .tip-list li:last-child {
+            border-bottom: none;
+        }
+
+        .key-point {
+            background-color: var(--medium-bg);
+            border-radius: 0.5rem;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .key-point-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .key-point-title i {
+            color: var(--primary);
+            margin-right: 0.5rem;
+        }
+        
+        .related-blogs {
+            background-color: var(--light-bg);
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+        
+        .related-blog-card {
+            background-color: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .related-blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .blog-card-img {
+            height: 160px;
+            overflow: hidden;
+        }
+        
+        .blog-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .related-blog-card:hover .blog-card-img img {
+            transform: scale(1.05);
+        }
+        
+        .blog-card-content {
+            padding: 1.25rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .blog-card-tag {
+            display: inline-block;
+            background-color: var(--light-bg);
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .blog-card-title {
+            font-weight: 600;
+            font-size: 1.125rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+            color: var(--text);
+        }
+        
+        .blog-card-excerpt {
+            color: var(--light-text);
+            font-size: 0.875rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+        
+        .blog-card-link {
+            display: inline-block;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.875rem;
+            padding-bottom: 0.25rem;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .blog-card-link:hover {
+            border-bottom-color: var(--primary);
+        }
+
+        .highlight-box {
+            background-color: var(--medium-bg);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin: 2rem 0;
+        }
+        
+        .progress-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 2rem;
+            margin: 0.5rem 0 1.5rem;
+        }
+        
+        .progress-bar {
+            height: 10px;
+            background-color: var(--primary);
+            border-radius: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+
+    <!-- Language Switcher -->
+    <div class="fixed top-4 right-4 z-50 flex items-center space-x-2">
+        <span class="text-sm text-gray-600">EN</span>
+        <label class="lang-switch">
+            <input type="checkbox" id="languageToggle">
+            <span class="slider"></span>
+        </label>
+        <span class="text-sm text-gray-600">हिं</span>
+    </div>
+
+    <!-- Floating Translation Button -->
+    <div class="floating-translate-btn" id="translateBtn">
+        <i class="fas fa-language"></i>
+        <span id="translateBtnText" class="font-semibold">हिंदी में देखें</span>
+    </div>
+
+    <!-- Article Header with Hindi Motivational Text -->
+    <header class="article-header">
+        <div class="container mx-auto px-4">
+            <div class="header-content max-w-4xl mx-auto text-center">
+                <span class="inline-block bg-white bg-opacity-70 text-primary px-4 py-1 rounded-full text-sm font-semibold mb-4">Complete Guide</span>
+                <h1 class="text-4xl md:text-5xl font-bold mb-3">CET 2025 Syllabus</h1>
+                <p class="text-2xl text-gray-700 mb-4 font-medium">"सफलता की कुंजी है तैयारी, जो तैयार है वो जीतेगा"</p>
+                <p class="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">Comprehensive breakdown of official syllabus, important topics, and expert preparation strategies for Common Eligibility Test 2025</p>
+                <div class="article-meta justify-center flex flex-wrap gap-4">
+                    <span class="flex items-center"><i class="far fa-calendar-alt mr-2 text-primary"></i>Updated: March 16, 2024</span>
+                    <span class="flex items-center"><i class="far fa-clock mr-2 text-primary"></i>10 min read</span>
+                    <span class="flex items-center"><i class="far fa-eye mr-2 text-primary"></i>8.2k views</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <main class="article-content py-8">
+        <!-- Hero Image -->
+        <div class="section-block overflow-hidden">
+            <img src="img/syllabus2025.png" alt="CET Syllabus" class="w-full h-auto rounded-lg mb-6">
+            
+            <div class="key-point">
+                <div class="key-point-title">
+                    <i class="fas fa-lightbulb"></i> Syllabus Highlights
+                </div>
+                <p>The CET 2025 syllabus is comprehensive and covers four main sections with equal weightage: General Intelligence & Reasoning, General Awareness, Quantitative Aptitude, and English Language & Comprehension. Understanding the detailed syllabus is crucial for efficient preparation.</p>
+            </div>
+        </div>
+
+        <!-- Overview Section -->
+        <h2 class="section-title">Overview of CET 2025 Syllabus</h2>
+        <div class="section-block">
+            <p class="text-lg mb-4">
+                The CET 2025 exam consists of four main sections, each carrying equal weightage. The total exam is for 100 marks with multiple-choice questions testing candidates' aptitude across various domains:
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+                <div class="bg-blue-50 p-4 rounded-lg text-center">
+                    <div class="text-blue-600 text-3xl font-bold mb-2">25%</div>
+                    <div class="font-medium">General Intelligence & Reasoning</div>
+                </div>
+                <div class="bg-yellow-50 p-4 rounded-lg text-center">
+                    <div class="text-yellow-600 text-3xl font-bold mb-2">25%</div>
+                    <div class="font-medium">General Awareness</div>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg text-center">
+                    <div class="text-green-600 text-3xl font-bold mb-2">25%</div>
+                    <div class="font-medium">Quantitative Aptitude</div>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-lg text-center">
+                    <div class="text-purple-600 text-3xl font-bold mb-2">25%</div>
+                    <div class="font-medium">English Language & Comprehension</div>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>Important Exam Details</h3>
+                <ul class="space-y-2">
+                    <li><span class="font-semibold">Exam Duration:</span> 60 minutes (1 hour)</li>
+                    <li><span class="font-semibold">Total Questions:</span> 100 multiple-choice questions</li>
+                    <li><span class="font-semibold">Marking Scheme:</span> +1 for correct answer, no negative marking</li>
+                    <li><span class="font-semibold">Medium:</span> Bilingual (Hindi & English)</li>
+                    <li><span class="font-semibold">Qualifying Marks:</span> 40% (General), 35% (OBC), 30% (SC/ST)</li>
+        </ul>
+            </div>
+        </div>
+
+        <!-- Detailed Syllabus Section -->
+        <h2 class="section-title">Detailed Syllabus Breakdown</h2>
+        
+        <!-- Reasoning Section -->
+        <div class="syllabus-card reasoning">
+            <h3><i class="fas fa-brain mr-2"></i>1. General Intelligence & Reasoning</h3>
+            <p class="mb-4">This section tests your logical and analytical abilities through various types of questions.</p>
+            <div class="topic-grid">
+                <div class="topic-item">
+                    <h4>Verbal Reasoning</h4>
+                    <ul>
+                        <li>Analogy</li>
+                        <li>Classification</li>
+                        <li>Series Completion</li>
+                        <li>Coding-Decoding</li>
+                        <li>Blood Relations</li>
+                        <li>Direction Sense</li>
+                    </ul>
+                </div>
+                <div class="topic-item">
+                    <h4>Non-Verbal Reasoning</h4>
+                    <ul>
+                        <li>Pattern Recognition</li>
+                        <li>Figure Series</li>
+                        <li>Mirror Images</li>
+                        <li>Paper Folding</li>
+                        <li>Embedded Figures</li>
+                        <li>Cubes and Dice</li>
+                    </ul>
+                </div>
+                <div class="topic-item">
+                    <h4>Logical Reasoning</h4>
+                    <ul>
+                        <li>Syllogisms</li>
+                        <li>Statement-Conclusion</li>
+                        <li>Logical Problems</li>
+                        <li>Assumptions</li>
+                        <li>Strong & Weak Arguments</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-4">
+                <div class="text-sm font-semibold mb-1">Expected Question Distribution</div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 75%"></div>
+                </div>
+                <div class="text-xs text-right">Expected: 18-22 questions</div>
+            </div>
+        </div>
+
+        <!-- General Awareness Section -->
+        <div class="syllabus-card awareness">
+            <h3><i class="fas fa-globe-asia mr-2"></i>2. General Awareness</h3>
+            <p class="mb-4">This section covers current affairs and general knowledge.</p>
+            <div class="topic-grid">
+                <div class="topic-item">
+                    <h4>Current Affairs</h4>
+                    <ul>
+                        <li>National Events</li>
+                        <li>International News</li>
+                        <li>Sports Updates</li>
+                        <li>Science & Technology</li>
+                        <li>Awards & Recognitions</li>
+                    </ul>
+                </div>
+                <div class="topic-item">
+                    <h4>Static GK</h4>
+                    <ul>
+                        <li>History</li>
+                        <li>Geography</li>
+                        <li>Polity</li>
+                        <li>Economics</li>
+                        <li>Science</li>
+                    </ul>
+                </div>
+                <div class="topic-item">
+                    <h4>Special Focus Areas</h4>
+                    <ul>
+                        <li>Haryana History</li>
+                        <li>Haryana Geography</li>
+                        <li>Haryana Culture</li>
+                        <li>Govt. Schemes</li>
+                        <li>Important Days</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-4">
+                <div class="text-sm font-semibold mb-1">Expected Question Distribution</div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 80%; background-color: #FFB347;"></div>
+                </div>
+                <div class="text-xs text-right">Expected: 20-25 questions</div>
+            </div>
+        </div>
+
+        <!-- Quantitative Aptitude Section -->
+        <div class="syllabus-card aptitude">
+            <h3><i class="fas fa-calculator mr-2"></i>3. Quantitative Aptitude</h3>
+            <p class="mb-4">This section tests your mathematical and numerical abilities.</p>
+            <div class="topic-grid">
+                <div class="topic-item">
+                    <h4>Basic Mathematics</h4>
+                    <ul>
+                        <li>Number System</li>
+                        <li>Percentage</li>
+                        <li>Profit & Loss</li>
+                        <li>Time & Work</li>
+                        <li>Simple & Compound Interest</li>
+                    </ul>
+                </div>
+                <div class="topic-item">
+                    <h4>Advanced Topics</h4>
+                    <ul>
+                        <li>Algebra</li>
+                        <li>Geometry</li>
+                        <li>Trigonometry</li>
+                        <li>Statistics</li>
+                        <li>Data Interpretation</li>
+                    </ul>
+                </div>
+                <div class="topic-item">
+                    <h4>Numerical Reasoning</h4>
+                    <ul>
+                        <li>Simplification</li>
+                        <li>Ratio & Proportion</li>
+                        <li>Averages</li>
+                        <li>Speed, Time & Distance</li>
+                        <li>Mixtures & Alligations</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-4">
+                <div class="text-sm font-semibold mb-1">Expected Question Distribution</div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 70%; background-color: #77DD77;"></div>
+                </div>
+                <div class="text-xs text-right">Expected: 18-20 questions</div>
+            </div>
+        </div>
+
+        <!-- English Language Section -->
+        <div class="syllabus-card english">
+            <h3><i class="fas fa-book mr-2"></i>4. English Language & Comprehension</h3>
+            <p class="mb-4">This section evaluates your English language skills and comprehension abilities.</p>
+            <div class="topic-grid">
+                <div class="topic-item">
+                    <h4>Grammar & Vocabulary</h4>
+                    <ul>
+                        <li>Parts of Speech</li>
+                        <li>Tenses</li>
+                        <li>Synonyms & Antonyms</li>
+                        <li>Idioms & Phrases</li>
+                        <li>One Word Substitution</li>
+                    </ul>
+                </div>
+                <div class="topic-item">
+                    <h4>Comprehension</h4>
+                    <ul>
+                        <li>Reading Comprehension</li>
+                        <li>Error Detection</li>
+                        <li>Sentence Improvement</li>
+                        <li>Cloze Test</li>
+                        <li>Para Jumbles</li>
+                    </ul>
+                </div>
+                <div class="topic-item">
+                    <h4>Language Proficiency</h4>
+                    <ul>
+                        <li>Sentence Correction</li>
+                        <li>Fill in the blanks</li>
+                        <li>Active/Passive Voice</li>
+                        <li>Direct/Indirect Speech</li>
+                        <li>Spelling Correction</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-4">
+                <div class="text-sm font-semibold mb-1">Expected Question Distribution</div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 65%; background-color: #B19CD9;"></div>
+                </div>
+                <div class="text-xs text-right">Expected: 15-18 questions</div>
+            </div>
+        </div>
+
+        <!-- Preparation Tips Section -->
+        <h2 class="section-title">Expert Preparation Strategies</h2>
+        <div class="section-block">
+            <p class="mb-4">A strategic approach to CET preparation can significantly increase your chances of success:</p>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-card-header">Study Plan Creation</div>
+                    <div class="tip-card-body">
+                        <ul class="tip-list space-y-2">
+                            <li>Allocate specific time for each subject daily</li>
+                            <li>Focus more on your weak areas</li>
+                            <li>Keep 1-2 hours for revision every week</li>
+                            <li>Set realistic daily and weekly targets</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-card-header">Practice Strategy</div>
+                    <div class="tip-card-body">
+                        <ul class="tip-list space-y-2">
+                            <li>Solve previous year papers weekly</li>
+                            <li>Take timed mock tests regularly</li>
+                            <li>Analyze performance after each test</li>
+                            <li>Improve speed and accuracy simultaneously</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-card-header">Resource Utilization</div>
+                    <div class="tip-card-body">
+                        <ul class="tip-list space-y-2">
+                            <li>Use standard books for core concepts</li>
+                            <li>Follow reliable newspapers for current affairs</li>
+                            <li>Join online test series for practice</li>
+                            <li>Create concise notes for quick revision</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-card-header">Final Month Strategy</div>
+                    <div class="tip-card-body">
+                        <ul class="tip-list space-y-2">
+                            <li>Focus on revision rather than new topics</li>
+                            <li>Take at least 15 full-length mock tests</li>
+                            <li>Practice time management techniques</li>
+                            <li>Stay healthy and maintain positive mindset</li>
+        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="key-point mt-6">
+                <div class="key-point-title">
+                    <i class="fas fa-quote-left"></i> Expert Advice
+                </div>
+                <p class="italic">"Focus on understanding the concepts rather than rote memorization. Regular practice and analyzing your mistakes will help improve your performance significantly. The CET exam tests your application skills more than your theoretical knowledge."</p>
+                <p class="text-right font-semibold mt-2">- Rahul Sharma, CET Topper</p>
+            </div>
+        </div>
+
+        <div class="article-tags flex flex-wrap gap-2 mt-8">
+            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">Syllabus</span>
+            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">CET Preparation</span>
+            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">Exam Pattern</span>
+            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">Study Guide</span>
+        </div>
+
+        <div class="share-buttons flex gap-3 mt-6">
+            <button class="flex items-center gap-2 bg-blue-100 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg transition-all">
+                <i class="fab fa-facebook-f"></i>
+                Share
+            </button>
+            <button class="flex items-center gap-2 bg-blue-100 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg transition-all">
+                <i class="fab fa-twitter"></i>
+                Tweet
+            </button>
+            <button class="flex items-center gap-2 bg-blue-100 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg transition-all">
+                <i class="fab fa-linkedin-in"></i>
+                Share
+            </button>
+            <button class="flex items-center gap-2 bg-blue-100 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg transition-all ml-auto">
+                <i class="fas fa-print"></i>
+                Print
+            </button>
+        </div>
+    </main>
+    
+    <!-- Related Blogs Section -->
+    <section class="related-blogs">
+        <div class="container mx-auto px-4 py-8">
+            <h2 class="text-3xl font-bold text-center mb-8">Related Articles</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Related Blog 1 -->
+                <div class="related-blog-card">
+                    <div class="blog-card-img">
+                        <img src="img/previous-papers.png" alt="Previous Year Papers">
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="blog-card-tag">Exam Analysis</span>
+                        <h3 class="blog-card-title">Previous Year Question Papers Analysis</h3>
+                        <p class="blog-card-excerpt">In-depth analysis of previous year question papers to help you understand the exam pattern and important topics.</p>
+                        <a href="exam-pattern.html" class="blog-card-link">Read Full Article →</a>
+                    </div>
+                </div>
+                
+                <!-- Related Blog 2 -->
+                <div class="related-blog-card">
+                    <div class="blog-card-img">
+                        <img src="img/mock.png" alt="Mock Tests">
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="blog-card-tag">Preparation</span>
+                        <h3 class="blog-card-title">Top 10 Mock Tests for CET 2025</h3>
+                        <p class="blog-card-excerpt">Discover the best mock tests to practice and improve your CET score. Includes free and premium test series recommendations.</p>
+                        <a href="mock-tests-cet-2025.html" class="blog-card-link">Read Full Article →</a>
+                    </div>
+                </div>
+                
+                <!-- Related Blog 3 -->
+                <div class="related-blog-card">
+                    <div class="blog-card-img">
+                        <img src="img/time.webp" alt="Time Management">
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="blog-card-tag">Strategy</span>
+                        <h3 class="blog-card-title">Time Management Tips for CET</h3>
+                        <p class="blog-card-excerpt">Learn effective time management strategies to maximize your study efficiency and exam performance.</p>
+                        <a href="time-management-tips-cet.html" class="blog-card-link">Read Full Article →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="blog-index.html" class="inline-block bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-lg font-medium transition-all">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p>&copy; 2024 CET Exam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Load navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+            
+        // Add scroll animation for sections
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section-block, .syllabus-card, .related-blog-card');
+            
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(section);
+            });
+            });
+
+        // Translation Script
+        const languageToggle = document.getElementById('languageToggle');
+        const translateBtn = document.getElementById('translateBtn');
+        const translateBtnText = document.getElementById('translateBtnText');
+        
+        // Always default to Hindi
+        languageToggle.checked = true;
+        
+        // Call translatePage on document ready
+        document.addEventListener('DOMContentLoaded', function() {
+            translatePage();
+        });
+        
+        // Hindi translations for syllabus page
+        const translations = {
+            // Page Title & Header
+            "CET 2025 Syllabus: Complete Guide - CET Blog": "CET 2025 पाठ्यक्रम: संपूर्ण मार्गदर्शिका - CET ब्लॉग",
+            "Complete Guide": "संपूर्ण मार्गदर्शिका",
+            "CET 2025 Syllabus": "CET 2025 पाठ्यक्रम",
+            "\"सफलता की कुंजी है तैयारी, जो तैयार है वो जीतेगा\"": "\"सफलता की कुंजी है तैयारी, जो तैयार है वो जीतेगा\"",
+            "Comprehensive breakdown of official syllabus, important topics, and expert preparation strategies for Common Eligibility Test 2025": "आधिकारिक पाठ्यक्रम, महत्वपूर्ण विषयों और कॉमन एलिजिबिलिटी टेस्ट 2025 के लिए विशेषज्ञ तैयारी रणनीतियों का व्यापक विश्लेषण",
+            "Updated: March 16, 2024": "अपडेट: 16 मार्च, 2024",
+            "10 min read": "10 मिनट का पढ़ना",
+            "8.2k views": "8.2k व्यूज",
+            
+            // Overview Section
+            "Syllabus Highlights": "पाठ्यक्रम की मुख्य बातें",
+            "The CET 2025 syllabus is comprehensive and covers four main sections with equal weightage: General Intelligence & Reasoning, General Awareness, Quantitative Aptitude, and English Language & Comprehension. Understanding the detailed syllabus is crucial for efficient preparation.": "CET 2025 का पाठ्यक्रम व्यापक है और चार मुख्य खंडों को समान महत्व के साथ कवर करता है: सामान्य बुद्धिमत्ता और तर्क, सामान्य जागरूकता, मात्रात्मक योग्यता, और अंग्रेजी भाषा और समझ। कुशल तैयारी के लिए विस्तृत पाठ्यक्रम को समझना महत्वपूर्ण है।",
+            "Overview of CET 2025 Syllabus": "CET 2025 पाठ्यक्रम का अवलोकन",
+            "The CET 2025 exam consists of four main sections, each carrying equal weightage. The total exam is for 100 marks with multiple-choice questions testing candidates' aptitude across various domains:": "CET 2025 परीक्षा में चार मुख्य खंड शामिल हैं, प्रत्येक का समान महत्व है। कुल परीक्षा 100 अंकों की है, जिसमें बहुविकल्पीय प्रश्न उम्मीदवारों की योग्यता का विभिन्न क्षेत्रों में परीक्षण करते हैं:",
+            "General Intelligence & Reasoning": "सामान्य बुद्धिमत्ता और तर्क",
+            "General Awareness": "सामान्य जागरूकता",
+            "Quantitative Aptitude": "मात्रात्मक योग्यता",
+            "English Language & Comprehension": "अंग्रेजी भाषा और समझ",
+            "Important Exam Details": "महत्वपूर्ण परीक्षा विवरण",
+            "Exam Duration:": "परीक्षा अवधि:",
+            "60 minutes (1 hour)": "60 मिनट (1 घंटा)",
+            "Total Questions:": "कुल प्रश्न:",
+            "100 multiple-choice questions": "100 बहुविकल्पीय प्रश्न",
+            "Marking Scheme:": "अंकन योजना:",
+            "+1 for correct answer, no negative marking": "सही उत्तर के लिए +1, कोई नकारात्मक अंकन नहीं",
+            "Medium:": "माध्यम:",
+            "Bilingual (Hindi & English)": "द्विभाषी (हिंदी और अंग्रेजी)",
+            "Qualifying Marks:": "क्वालिफाइंग अंक:",
+            "40% (General), 35% (OBC), 30% (SC/ST)": "40% (सामान्य), 35% (OBC), 30% (SC/ST)",
+            
+            // Detailed Syllabus Section
+            "Detailed Syllabus Breakdown": "विस्तृत पाठ्यक्रम विश्लेषण",
+            "1. General Intelligence & Reasoning": "1. सामान्य बुद्धिमत्ता और तर्क",
+            "This section tests your logical and analytical abilities through various types of questions.": "यह खंड विभिन्न प्रकार के प्रश्नों के माध्यम से आपकी तार्किक और विश्लेषणात्मक क्षमताओं का परीक्षण करता है।",
+            "Verbal Reasoning": "मौखिक तर्क",
+            "Analogy": "अनुरूपता",
+            "Classification": "वर्गीकरण",
+            "Series Completion": "श्रृंखला पूर्णता",
+            "Coding-Decoding": "कोडिंग-डिकोडिंग",
+            "Blood Relations": "रक्त संबंध",
+            "Direction Sense": "दिशा ज्ञान",
+            "Non-Verbal Reasoning": "गैर-मौखिक तर्क",
+            "Pattern Recognition": "पैटर्न पहचान",
+            "Figure Series": "आकृति श्रृंखला",
+            "Mirror Images": "दर्पण प्रतिबिंब",
+            "Paper Folding": "कागज मोड़ना",
+            "Embedded Figures": "अंतर्निहित आकृतियां",
+            "Cubes and Dice": "घन और पासे",
+            "Logical Reasoning": "तार्किक तर्क",
+            "Syllogisms": "न्यायवाक्य",
+            "Statement-Conclusion": "कथन-निष्कर्ष",
+            "Logical Problems": "तार्किक समस्याएं",
+            "Assumptions": "मान्यताएं",
+            "Strong & Weak Arguments": "मजबूत और कमजोर तर्क",
+            "Expected Question Distribution": "अपेक्षित प्रश्न वितरण",
+            "Expected: 18-22 questions": "अपेक्षित: 18-22 प्रश्न",
+            
+            // General Awareness Section
+            "2. General Awareness": "2. सामान्य जागरूकता",
+            "This section covers current affairs and general knowledge.": "इस खंड में समसामयिक घटनाएं और सामान्य ज्ञान शामिल है।",
+            "Current Affairs": "समसामयिक घटनाएं",
+            "National Events": "राष्ट्रीय घटनाएं",
+            "International News": "अंतरराष्ट्रीय समाचार",
+            "Sports Updates": "खेल अपडेट",
+            "Science & Technology": "विज्ञान और प्रौद्योगिकी",
+            "Awards & Recognitions": "पुरस्कार और सम्मान",
+            "Static GK": "स्थिर सामान्य ज्ञान",
+            "History": "इतिहास",
+            "Geography": "भूगोल",
+            "Polity": "राजनीति",
+            "Economics": "अर्थशास्त्र",
+            "Science": "विज्ञान",
+            "Special Focus Areas": "विशेष फोकस क्षेत्र",
+            "Haryana History": "हरियाणा का इतिहास",
+            "Haryana Geography": "हरियाणा का भूगोल",
+            "Haryana Culture": "हरियाणा संस्कृति",
+            "Govt. Schemes": "सरकारी योजनाएं",
+            "Important Days": "महत्वपूर्ण दिन",
+            "Expected: 20-25 questions": "अपेक्षित: 20-25 प्रश्न",
+            
+            // Quantitative Aptitude Section
+            "3. Quantitative Aptitude": "3. मात्रात्मक योग्यता",
+            "This section tests your mathematical and numerical abilities.": "यह खंड आपकी गणितीय और संख्यात्मक क्षमताओं का परीक्षण करता है।",
+            "Basic Mathematics": "बुनियादी गणित",
+            "Number System": "संख्या प्रणाली",
+            "Percentage": "प्रतिशत",
+            "Profit & Loss": "लाभ और हानि",
+            "Time & Work": "समय और कार्य",
+            "Simple & Compound Interest": "साधारण और चक्रवृद्धि ब्याज",
+            "Advanced Topics": "उन्नत विषय",
+            "Algebra": "बीजगणित",
+            "Geometry": "ज्यामिति",
+            "Trigonometry": "त्रिकोणमिति",
+            "Statistics": "सांख्यिकी",
+            "Data Interpretation": "डेटा व्याख्या",
+            "Numerical Reasoning": "संख्यात्मक तर्क",
+            "Simplification": "सरलीकरण",
+            "Ratio & Proportion": "अनुपात और समानुपात",
+            "Averages": "औसत",
+            "Speed, Time & Distance": "गति, समय और दूरी",
+            "Mixtures & Alligations": "मिश्रण और मिश्रित अनुपात",
+            "Expected: 18-20 questions": "अपेक्षित: 18-20 प्रश्न",
+            
+            // English Language Section
+            "4. English Language & Comprehension": "4. अंग्रेजी भाषा और समझ",
+            "This section evaluates your English language skills and comprehension abilities.": "यह खंड आपके अंग्रेजी भाषा कौशल और समझ क्षमताओं का मूल्यांकन करता है।",
+            "Grammar & Vocabulary": "व्याकरण और शब्दावली",
+            "Parts of Speech": "वाक्य के भाग",
+            "Tenses": "काल",
+            "Synonyms & Antonyms": "समानार्थी और विपरीतार्थी शब्द",
+            "Idioms & Phrases": "मुहावरे और वाक्यांश",
+            "One Word Substitution": "एक शब्द प्रतिस्थापन",
+            "Comprehension": "समझ",
+            "Reading Comprehension": "पठन बोध",
+            "Error Detection": "त्रुटि पहचान",
+            "Sentence Improvement": "वाक्य सुधार",
+            "Cloze Test": "क्लोज टेस्ट",
+            "Para Jumbles": "पैरा जंबल्स",
+            "Language Proficiency": "भाषा प्रवीणता",
+            "Sentence Correction": "वाक्य सुधार",
+            "Fill in the blanks": "रिक्त स्थान भरें",
+            "Active/Passive Voice": "सक्रिय/निष्क्रिय वाच्य",
+            "Direct/Indirect Speech": "प्रत्यक्ष/अप्रत्यक्ष कथन",
+            "Spelling Correction": "वर्तनी सुधार",
+            "Expected: 15-18 questions": "अपेक्षित: 15-18 प्रश्न",
+            
+            // Preparation Tips Section
+            "Expert Preparation Strategies": "विशेषज्ञ तैयारी रणनीतियां",
+            "A strategic approach to CET preparation can significantly increase your chances of success:": "CET तैयारी के लिए एक रणनीतिक दृष्टिकोण आपकी सफलता की संभावनाओं को काफी बढ़ा सकता है:",
+            "Study Plan Creation": "अध्ययन योजना निर्माण",
+            "Allocate specific time for each subject daily": "प्रतिदिन प्रत्येक विषय के लिए विशिष्ट समय आवंटित करें",
+            "Focus more on your weak areas": "अपने कमजोर क्षेत्रों पर अधिक ध्यान दें",
+            "Keep 1-2 hours for revision every week": "हर सप्ताह पुनरीक्षण के लिए 1-2 घंटे रखें",
+            "Set realistic daily and weekly targets": "वास्तविक दैनिक और साप्ताहिक लक्ष्य निर्धारित करें",
+            "Practice Strategy": "अभ्यास रणनीति",
+            "Solve previous year papers weekly": "साप्ताहिक पिछले वर्ष के पेपर हल करें",
+            "Take timed mock tests regularly": "नियमित रूप से समयबद्ध मॉक टेस्ट लें",
+            "Analyze performance after each test": "प्रत्येक परीक्षण के बाद प्रदर्शन का विश्लेषण करें",
+            "Improve speed and accuracy simultaneously": "गति और सटीकता में एक साथ सुधार करें",
+            "Resource Utilization": "संसाधन उपयोग",
+            "Use standard books for core concepts": "मूल अवधारणाओं के लिए मानक पुस्तकों का उपयोग करें",
+            "Follow reliable newspapers for current affairs": "समसामयिक घटनाओं के लिए विश्वसनीय समाचार पत्रों का अनुसरण करें",
+            "Join online test series for practice": "अभ्यास के लिए ऑनलाइन टेस्ट सीरीज में शामिल हों",
+            "Create concise notes for quick revision": "त्वरित पुनरीक्षण के लिए संक्षिप्त नोट्स बनाएं",
+            "Final Month Strategy": "अंतिम माह की रणनीति",
+            "Focus on revision rather than new topics": "नए विषयों के बजाय पुनरीक्षण पर ध्यान दें",
+            "Take at least 15 full-length mock tests": "कम से कम 15 पूर्ण लंबाई के मॉक टेस्ट लें",
+            "Practice time management techniques": "समय प्रबंधन तकनीकों का अभ्यास करें",
+            "Stay healthy and maintain positive mindset": "स्वस्थ रहें और सकारात्मक मानसिकता बनाए रखें",
+            "Expert Advice": "विशेषज्ञ सलाह",
+            "\"Focus on understanding the concepts rather than rote memorization. Regular practice and analyzing your mistakes will help improve your performance significantly. The CET exam tests your application skills more than your theoretical knowledge.\"": "\"रटने के बजाय अवधारणाओं को समझने पर ध्यान दें। नियमित अभ्यास और अपनी गलतियों का विश्लेषण करने से आपके प्रदर्शन में काफी सुधार होगा। CET परीक्षा आपके सैद्धांतिक ज्ञान से अधिक आपके अनुप्रयोग कौशल का परीक्षण करती है।\"",
+            "- Rahul Sharma, CET Topper": "- राहुल शर्मा, CET टॉपर",
+            
+            // Related Blogs Section
+            "Related Articles": "संबंधित लेख",
+            "Exam Analysis": "परीक्षा विश्लेषण",
+            "Previous Year Question Papers Analysis": "पिछले वर्ष के प्रश्न पत्रों का विश्लेषण",
+            "In-depth analysis of previous year question papers to help you understand the exam pattern and important topics.": "परीक्षा पैटर्न और महत्वपूर्ण विषयों को समझने में आपकी मदद करने के लिए पिछले वर्ष के प्रश्न पत्रों का गहन विश्लेषण।",
+            "Read Full Article →": "पूरा लेख पढ़ें →",
+            "Preparation": "तैयारी",
+            "Top 10 Mock Tests for CET 2025": "CET 2025 के लिए शीर्ष 10 मॉक टेस्ट",
+            "Discover the best mock tests to practice and improve your CET score. Includes free and premium test series recommendations.": "अपने CET स्कोर का अभ्यास करने और सुधारने के लिए सर्वश्रेष्ठ मॉक टेस्ट खोजें। मुफ्त और प्रीमियम टेस्ट सीरीज की सिफारिशें शामिल हैं।",
+            "Strategy": "रणनीति",
+            "Time Management Tips for CET": "CET के लिए समय प्रबंधन टिप्स",
+            "Learn effective time management strategies to maximize your study efficiency and exam performance.": "अपनी अध्ययन दक्षता और परीक्षा प्रदर्शन को अधिकतम करने के लिए प्रभावी समय प्रबंधन रणनीतियां सीखें।",
+            "View All Articles": "सभी लेख देखें",
+            
+            // Footer
+            "© 2024 CET Exam. All rights reserved.": "© 2024 CET परीक्षा। सर्वाधिकार सुरक्षित।",
+            
+            // Translation Button
+            "हिंदी में देखें": "हिंदी में देखें",
+            "अंग्रेजी में देखें": "अंग्रेजी में देखें",
+            "Translate to Hindi": "हिंदी में अनुवाद करें",
+            "Translate to English": "अंग्रेजी में अनुवाद करें"
+        };
+
+        // Function to translate page content
+        function translatePage() {
+            const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, span, a, th, td, button');
+            
+            elements.forEach(element => {
+                const text = element.textContent.trim();
+                
+                if (languageToggle.checked) {
+                    // Switch to Hindi
+                    if (translations[text]) {
+                        element.textContent = translations[text];
+                    }
+                    translateBtnText.textContent = "अंग्रेजी में देखें";
+                    localStorage.setItem('language', 'hindi');
+                } else {
+                    // Switch to English
+                    Object.entries(translations).forEach(([english, hindi]) => {
+                        if (text === hindi) {
+                            element.textContent = english;
+                        }
+                    });
+                    translateBtnText.textContent = "हिंदी में देखें";
+                    localStorage.setItem('language', 'english');
+                }
+            });
+        }
+
+        // Event listeners for language toggle
+        languageToggle.addEventListener('change', translatePage);
+        translateBtn.addEventListener('click', function() {
+            languageToggle.checked = !languageToggle.checked;
+            translatePage();
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Practice - CET 2025 Preparation Portal</title>
+    <meta name="description" content="Practice CET 2025 questions online with our comprehensive test series. Get instant feedback, detailed solutions, and track your progress.">
+    <meta name="keywords" content="CET 2025 practice tests, CET online mock tests, CET practice questions, CET test series, CET preparation online">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'indian-blue': '#0066CC',
+                        'indian-saffron': '#FF9933',
+                        'gov-blue': '#1a365d',
+                        'gov-light': '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #0066CC, #FF9933);
+            -webkit-text-fill-color: transparent;
+        }
+        .gov-card {
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        .gov-card:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        /* Navbar Styles */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #87CEEB;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #87CEEB;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link.active {
+            background: linear-gradient(45deg, #0066CC, #FF9933);
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-link.active::after {
+            width: 100%;
+        }
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+        #mobile-menu.hidden {
+            display: none;
+        }
+        #mobile-menu:not(.hidden) {
+            animation: slideDown 0.3s ease-in-out;
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Sticky Navbar Shadow */
+        nav.sticky {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        /* Navbar Link Hover Effects */
+        .mobile-nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .mobile-nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #87CEEB;
+            transition: width 0.3s ease;
+        }
+        .mobile-nav-link:hover {
+            color: #87CEEB;
+        }
+        .mobile-nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+    </head>
+<body class="bg-gov-light">
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+    </div>
+    
+
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="bg-white gov-shadow rounded-lg p-6 mb-8">
+            <h1 class="text-2xl md:text-3xl font-bold text-gov-blue mb-2">Haryana CET Online Practice Tests 2025</h1>
+            <p class="text-gov-gray text-lg">Evaluate your preparation level with our comprehensive mock tests</p>
+        </section>
+
+        <!-- Practice Tests Section -->
+        <section class="bg-white gov-shadow rounded-lg p-6 mb-8">
+            <h2 class="text-xl font-semibold text-gov-blue mb-4">🧪 Haryana CET Online Practice Test Schedule</h2>
+            <p class="text-gov-gray mb-6">Students can attempt these mock tests online to evaluate their preparation level for the Haryana CET 2025.</p>
+            
+            <div class="overflow-x-auto">
+                <table class="min-w-full border gov-border">
+                    <thead>
+                        <tr class="bg-gray-50">
+                            <th class="py-3 px-4 border-b text-left">Test Name</th>
+                            <th class="py-3 px-4 border-b text-center">Date</th>
+                            <th class="py-3 px-4 border-b text-center">Subject</th>
+                            <th class="py-3 px-4 border-b text-center">Duration</th>
+                            <th class="py-3 px-4 border-b text-center">Attempt Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-3 px-4 border-b">Mock Test 1</td>
+                            <td class="py-3 px-4 border-b text-center">June 5, 2025</td>
+                            <td class="py-3 px-4 border-b text-center">General Awareness</td>
+                            <td class="py-3 px-4 border-b text-center">60 mins</td>
+                            <td class="py-3 px-4 border-b text-center">
+                                <a href="https://testbook.com/haryana-cet" target="_blank" class="bg-gov-blue text-white px-6 py-2 rounded-lg hover:bg-gov-light-blue transition-colors inline-block">Attempt Now</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 border-b">Mock Test 2</td>
+                            <td class="py-3 px-4 border-b text-center">June 10, 2025</td>
+                            <td class="py-3 px-4 border-b text-center">Quantitative Aptitude</td>
+                            <td class="py-3 px-4 border-b text-center">60 mins</td>
+                            <td class="py-3 px-4 border-b text-center">
+                                <a href="https://byjusexamprep.com/" target="_blank" class="bg-gov-blue text-white px-6 py-2 rounded-lg hover:bg-gov-light-blue transition-colors inline-block">Attempt Now</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 border-b">Mock Test 3</td>
+                            <td class="py-3 px-4 border-b text-center">June 15, 2025</td>
+                            <td class="py-3 px-4 border-b text-center">Reasoning & Logic</td>
+                            <td class="py-3 px-4 border-b text-center">60 mins</td>
+                            <td class="py-3 px-4 border-b text-center">
+                                <a href="https://www.adda247.com/jobs/haryana-cet/" target="_blank" class="bg-gov-blue text-white px-6 py-2 rounded-lg hover:bg-gov-light-blue transition-colors inline-block">Attempt Now</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 border-b">Mock Test 4</td>
+                            <td class="py-3 px-4 border-b text-center">June 20, 2025</td>
+                            <td class="py-3 px-4 border-b text-center">Haryana GK</td>
+                            <td class="py-3 px-4 border-b text-center">60 mins</td>
+                            <td class="py-3 px-4 border-b text-center">
+                                <a href="https://www.jagranjosh.com/" target="_blank" class="bg-gov-blue text-white px-6 py-2 rounded-lg hover:bg-gov-light-blue transition-colors inline-block">Attempt Now</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 border-b">Full Length Mock Test</td>
+                            <td class="py-3 px-4 border-b text-center">June 25, 2025</td>
+                            <td class="py-3 px-4 border-b text-center">All Subjects</td>
+                            <td class="py-3 px-4 border-b text-center">90 mins</td>
+                            <td class="py-3 px-4 border-b text-center">
+                                <a href="https://testbook.com/haryana-cet" target="_blank" class="bg-gov-blue text-white px-6 py-2 rounded-lg hover:bg-gov-light-blue transition-colors inline-block">Attempt Now</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Important Notes Section -->
+        <section class="bg-white gov-shadow rounded-lg p-6 mb-8">
+            <h2 class="text-xl font-semibold text-gov-blue mb-4">Important Notes</h2>
+            <ul class="list-disc list-inside text-gov-gray space-y-2">
+                <li>All mock tests are free to attempt</li>
+                <li>Results will be available immediately after test completion</li>
+                <li>Detailed solutions will be provided for all questions</li>
+                <li>Performance analysis will help identify weak areas</li>
+                <li>Regular practice will improve time management skills</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gov-blue text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <img src="logo.png" alt="CET Logo" class="h-16 w-16 mb-4">
+                    <h3 class="text-lg font-semibold mb-4">Haryana Staff Selection Commission</h3>
+                    <p class="text-gray-300 text-sm">
+                        Government of Haryana
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Important Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://hssc.gov.in/" target="_blank" class="text-gray-300 hover:text-white">HSSC Official Website</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">One-Time Registration</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Syllabus Download</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Previous Year Papers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Information</h3>
+                    <p class="text-gray-300 text-sm mb-2">
+                        HSSC Office, Panchkula<br>
+                        Phone: 0172-2560123<br>
+                        Email: info@hssc.gov.in
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-400">
+                <p>© 2025 Haryana Staff Selection Commission. All rights reserved.</p>
+                <p class="mt-2">This website is for informational and educational purposes only and is not affiliated with HSSC.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Set active link
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if (link.getAttribute('href') === currentPath.split('/').pop()) {
+                link.classList.add('bg-indian-blue', 'text-white');
+                link.classList.remove('text-gray-700', 'hover:text-indian-blue', 'hover:bg-gray-50');
+            }
+        });
+    </script>
+
+    <!-- Translation functionality -->
+    <script>
+        // Language Switcher Functionality
+        const languageToggle = document.getElementById('languageToggle');
+        const translateBtn = document.getElementById('translateBtn');
+        
+        // Hindi translations
+        const translations = {
+            // Headings
+            'Haryana CET Online Practice Tests 2025': 'हरियाणा CET ऑनलाइन प्रैक्टिस टेस्ट 2025',
+            'Evaluate your preparation level': 'अपने तैयारी स्तर का मूल्यांकन करें',
+            'Haryana CET Online Practice Test Schedule': 'हरियाणा CET ऑनलाइन प्रैक्टिस टेस्ट शेड्यूल',
+            'Important Notes': 'महत्वपूर्ण नोट्स',
+            'Test Name': 'टेस्ट का नाम',
+            'Date': 'तारीख',
+            'Subject': 'विषय',
+            'Duration': 'अवधि',
+            'Attempt Link': 'अटेम्प्ट लिंक',
+            'Attempt Now': 'अभी अटेम्प्ट करें',
+
+            // Test Names
+            'Mock Test 1': 'मॉक टेस्ट 1',
+            'Mock Test 2': 'मॉक टेस्ट 2',
+            'Mock Test 3': 'मॉक टेस्ट 3',
+            'Mock Test 4': 'मॉक टेस्ट 4',
+            'Full Length Mock Test': 'पूर्ण लंबाई मॉक टेस्ट',
+
+            // Important Notes
+            'All mock tests are free to attempt': 'सभी मॉक टेस्ट मुफ्त में अटेम्प्ट कर सकते हैं',
+            'Results will be available immediately after test completion': 'टेस्ट पूरा होने के तुरंत बाद रिजल्ट उपलब्ध होगा',
+            'Detailed solutions will be provided for all questions': 'सभी प्रश्नों के लिए विस्तृत समाधान प्रदान किए जाएंगे',
+            'Performance analysis will help identify weak areas': 'प्रदर्शन विश्लेषण कमजोर क्षेत्रों की पहचान में मदद करेगा',
+            'Regular practice will improve time management skills': 'नियमित अभ्यास समय प्रबंधन कौशल में सुधार करेगा'
+        };
+
+        function translatePage() {
+            const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, span, a, th, td');
+            elements.forEach(element => {
+                const text = element.textContent.trim();
+                if (languageToggle.checked) {
+                    // Switch to Hindi
+                    if (translations[text]) {
+                        element.textContent = translations[text];
+                    }
+                } else {
+                    // Switch to English
+                    Object.entries(translations).forEach(([english, hindi]) => {
+                        if (text === hindi) {
+                            element.textContent = english;
+                        }
+                    });
+                }
+            });
+        }
+
+        languageToggle.addEventListener('change', translatePage);
+        translateBtn.addEventListener('click', () => {
+            languageToggle.checked = !languageToggle.checked;
+            translatePage();
+        });
+    </script>
+    <!-- Loader Script -->
+    <script>
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('loader-hidden');
+            }, 1500);
+        });
+    </script>
+    <script src="loader.js"></script>
+</body>
+</html> 

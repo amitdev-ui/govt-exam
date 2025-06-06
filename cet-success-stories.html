@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CET 2025 Success Stories - Toppers & Their Strategies</title>
+    <meta name="description" content="Read inspiring success stories of candidates who cracked CET exams. Learn from their strategies, tips, and experiences.">
+    <meta name="keywords" content="CET success stories, CET toppers, CET preparation strategy, CET exam experience, CET 2025 success">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="translations.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&family=Baloo+Bhai+2:wght@500;600;700&family=Yatra+One&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #0066CC, #FF9933);
+            -webkit-text-fill-color: transparent;
+        }
+        .banner-slider {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .banner-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+        .banner-slide.active {
+            opacity: 1;
+        }
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .banner-overlay h1 {
+            animation: fadeInUp 1s ease-out;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        .banner-overlay p {
+            animation: fadeInUp 1s ease-out 0.3s;
+            animation-fill-mode: both;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .banner-overlay p:last-child {
+            animation-delay: 0.6s;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .glow-text {
+            position: relative;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                         0 0 20px rgba(255, 255, 255, 0.3),
+                         0 0 30px rgba(255, 255, 255, 0.2);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                            0 0 20px rgba(255, 255, 255, 0.3),
+                            0 0 30px rgba(255, 255, 255, 0.2);
+            }
+            50% {
+                text-shadow: 0 0 15px rgba(255, 255, 255, 0.6),
+                            0 0 25px rgba(255, 255, 255, 0.4),
+                            0 0 35px rgba(255, 255, 255, 0.3);
+            }
+            100% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                            0 0 20px rgba(255, 255, 255, 0.3),
+                            0 0 30px rgba(255, 255, 255, 0.2);
+            }
+        }
+        /* Navbar Styles */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #87CEEB;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #87CEEB;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link.active {
+            background: linear-gradient(45deg, #0066CC, #FF9933);
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-link.active::after {
+            width: 100%;
+        }
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+        #mobile-menu.hidden {
+            display: none;
+        }
+        #mobile-menu:not(.hidden) {
+            animation: slideDown 0.3s ease-in-out;
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Sticky Navbar Shadow */
+        nav.sticky {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        /* Navbar Link Hover Effects */
+        .mobile-nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .mobile-nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #87CEEB;
+            transition: width 0.3s ease;
+        }
+        .mobile-nav-link:hover {
+            color: #87CEEB;
+        }
+        .mobile-nav-link:hover::after {
+            width: 100%;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/success.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 2rem;
+        }
+        .story-card {
+            transition: all 0.3s ease;
+        }
+        .story-card:hover {
+            transform: translateY(-5px);
+        }
+        .quote-box {
+            border-left: 4px solid #4f46e5;
+            background: #f8fafc;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .achievement-badge {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .stat-card, .factor-card {
+            transition: all 0.3s ease;
+        }
+        .stat-card:hover, .factor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .stat-card img, .factor-card img {
+            transition: transform 0.3s ease;
+        }
+        .stat-card:hover img, .factor-card:hover img {
+            transform: scale(1.05);
+        }
+        /* Language Switch Styles */
+        .lang-switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+        .lang-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 24px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #0066CC;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        .page-header {
+            background: linear-gradient(135deg, #E6F3FF 0%, #F0F7FF 100%);
+            padding: 4rem 0;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #E2E8F0;
+            position: relative;
+            overflow: hidden;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .rotating-headings {
+            position: relative;
+            height: 80px;
+            text-align: center;
+        }
+        .rotating-heading {
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+            font-family: 'Yatra One', cursive;
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3),
+                         0 0 20px rgba(255, 215, 0, 0.2),
+                         0 0 30px rgba(255, 215, 0, 0.1);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        .rotating-heading:nth-child(2) {
+            background: linear-gradient(45deg, #87CEEB, #4682B4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            text-shadow: 0 0 10px rgba(135, 206, 235, 0.3),
+                         0 0 20px rgba(135, 206, 235, 0.2),
+                         0 0 30px rgba(135, 206, 235, 0.1);
+        }
+        .rotating-heading:nth-child(3) {
+            background: linear-gradient(45deg, #98FB98, #32CD32);
+            -webkit-background-clip: text;
+            background-clip: text;
+            text-shadow: 0 0 10px rgba(152, 251, 152, 0.3),
+                         0 0 20px rgba(152, 251, 152, 0.2),
+                         0 0 30px rgba(152, 251, 152, 0.1);
+        }
+        .rotating-heading:nth-child(4) {
+            background: linear-gradient(45deg, #FFB6C1, #FF69B4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            text-shadow: 0 0 10px rgba(255, 182, 193, 0.3),
+                         0 0 20px rgba(255, 182, 193, 0.2),
+                         0 0 30px rgba(255, 182, 193, 0.1);
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 215, 0, 0.3),
+                            0 0 20px rgba(255, 215, 0, 0.2),
+                            0 0 30px rgba(255, 215, 0, 0.1);
+            }
+            to {
+                text-shadow: 0 0 15px rgba(255, 215, 0, 0.4),
+                            0 0 25px rgba(255, 215, 0, 0.3),
+                            0 0 35px rgba(255, 215, 0, 0.2);
+            }
+        }
+        .rotating-heading.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .rotating-heading::before {
+            content: '📚';
+            position: absolute;
+            left: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2.5rem;
+            filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+        }
+        .rotating-heading::after {
+            content: '🎯';
+            position: absolute;
+            right: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2.5rem;
+            filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+        }
+        .page-subtitle {
+            color: #4A5568;
+            font-size: 1.5rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 1.5rem auto 0;
+            position: relative;
+            padding: 0 2rem;
+            font-family: 'Baloo Bhai 2', cursive;
+            font-weight: 500;
+            background: linear-gradient(45deg, #4A5568, #718096);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .page-subtitle::before {
+            content: '💫';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+        }
+        .page-subtitle::after {
+            content: '💫';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+        }
+        .floating-emoji {
+            position: absolute;
+            font-size: 1.5rem;
+            animation: float 3s ease-in-out infinite;
+            opacity: 0.6;
+        }
+        .emoji-1 { top: 20%; left: 10%; animation-delay: 0s; }
+        .emoji-2 { top: 40%; right: 15%; animation-delay: 0.5s; }
+        .emoji-3 { bottom: 30%; left: 20%; animation-delay: 1s; }
+        .emoji-4 { bottom: 20%; right: 25%; animation-delay: 1.5s; }
+        .achievement-btn {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-align: center;
+            display: inline-block;
+            margin: 0.25rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 0.875rem;
+        }
+        .achievement-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(45deg, #FFA500, #FFD700);
+        }
+        .achievement-btn.blue {
+            background: linear-gradient(45deg, #4F46E5, #7C3AED);
+        }
+        .achievement-btn.blue:hover {
+            background: linear-gradient(45deg, #7C3AED, #4F46E5);
+        }
+        .achievement-btn.green {
+            background: linear-gradient(45deg, #059669, #10B981);
+        }
+        .achievement-btn.green:hover {
+            background: linear-gradient(45deg, #10B981, #059669);
+        }
+        .achievement-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gov-light">
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container mx-auto px-4">
+            <div class="relative">
+                <span class="floating-emoji emoji-1">📖</span>
+                <span class="floating-emoji emoji-2">🎓</span>
+                <span class="floating-emoji emoji-3">🏆</span>
+                <span class="floating-emoji emoji-4">⭐</span>
+                <div class="rotating-headings">
+                    <h1 class="rotating-heading active">सीईटी सफलता की कहानियां</h1>
+                    <h1 class="rotating-heading">सफलता का रहस्य</h1>
+                    <h1 class="rotating-heading">सीईटी टॉपर्स की कहानियां</h1>
+                    <h1 class="rotating-heading">सफलता की यात्रा</h1>
+                </div>
+                <p class="page-subtitle">सीईटी के माध्यम से सफलता प्राप्त करने वाले उम्मीदवारों की वास्तविक कहानियां</p>
+            </div>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Main Content -->
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <div class="prose max-w-none">
+                <h2 class="text-2xl font-bold text-indian-blue mb-6">🏆 प्रमुख सफलता की कहानियां</h2>
+                <p class="text-gray-700 mb-6">समर्पण और रणनीतिक तैयारी के माध्यम से अपने सपनों को साकार करने वाले सीईटी टॉपर्स की प्रेरक यात्राओं को जानें।</p>
+
+                <!-- Story 1 -->
+                <div class="story-card bg-white p-6 rounded-lg mb-8 shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="relative">
+                            <img src="img/rahulsharma.jpg" alt="Rahul Sharma" class="w-full h-96 object-cover rounded-lg shadow-md">
+                            <div class="absolute top-4 left-4 flex items-center space-x-2">
+                                <span class="achievement-badge">AIR 1</span>
+                                <span class="achievement-badge">CET 2024</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <h3 class="text-2xl font-bold mb-4">Rahul Sharma की सफलता की कहानी</h3>
+                            <p class="text-gray-700 mb-4">समर्पित तैयारी और रणनीतिक योजना के माध्यम से प्रशासनिक सेवाओं में स्थान प्राप्त किया।</p>
+                            <div class="quote-box">
+                                <p class="italic text-gray-700">"सफलता सबसे बुद्धिमान होने के बारे में नहीं है, यह सबसे निरंतर होने के बारे में है। मैंने 6 महीने तक हर दिन 8 घंटे अध्ययन किया, एक भी दिन नहीं छोड़ा।"</p>
+                            </div>
+                            <h4 class="font-semibold text-lg mb-2 mt-4">मुख्य रणनीतियां:</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li>सख्त दैनिक कार्यक्रम</li>
+                                <li>नियमित मॉक टेस्ट</li>
+                                <li>कमजोर क्षेत्रों पर ध्यान</li>
+                                <li>समूह अध्ययन सत्र</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story 2 -->
+                <div class="story-card bg-white p-6 rounded-lg mb-8 shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="relative">
+                            <img src="img/priyapatel.avif" alt="Priya Patel" class="w-full h-96 object-cover rounded-lg shadow-md">
+                            <div class="absolute top-4 left-4 flex items-center space-x-2">
+                                <span class="achievement-badge">AIR 3</span>
+                                <span class="achievement-badge">CET 2024</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <h3 class="text-2xl font-bold mb-4">Priya Patel की यात्रा</h3>
+                            <p class="text-gray-700 mb-4">निरंतर प्रयास और उचित मार्गदर्शन के माध्यम से वित्त विभाग में सफलता प्राप्त की।</p>
+                            <div class="quote-box">
+                                <p class="italic text-gray-700">"समय प्रबंधन मेरी सबसे बड़ी चुनौती थी। मैंने पोमोडोरो तकनीक का उपयोग किया और सप्ताहांत का अधिकतम उपयोग गहन अध्ययन सत्रों के लिए किया।"</p>
+                            </div>
+                            <h4 class="font-semibold text-lg mb-2 mt-4">तैयारी के टिप्स:</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li>स्मार्ट समय प्रबंधन</li>
+                                <li>गुणवत्ता पर मात्रा</li>
+                                <li>नियमित ब्रेक</li>
+                                <li>ऑनलाइन संसाधन</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CET Advantages and Success Factors Section -->
+                <div class="bg-indigo-50 p-8 rounded-lg shadow-md mb-8">
+                    <h2 class="text-2xl font-bold text-indigo-800 mb-6 text-center">सीईटी के लाभ और सफलता के कारक</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-xl font-semibold text-indigo-700 mb-3">प्रमुख लाभ:</h3>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li>सरकारी नौकरियों के लिए प्रवेश द्वार</li>
+                                <li>विभिन्न क्षेत्रों में अवसर</li>
+                                <li>निष्पक्ष और पारदर्शी चयन प्रक्रिया</li>
+                                <li>राष्ट्र निर्माण में योगदान का अवसर</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-indigo-700 mb-3">सफलता के लिए महत्वपूर्ण:</h3>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li>लगातार अध्ययन और अभ्यास</li>
+                                <li>सही मार्गदर्शन और संसाधन</li>
+                                <li>समय प्रबंधन और मॉक टेस्ट</li>
+                                <li>आत्मविश्वास और सकारात्मक दृष्टिकोण</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl font-bold text-indian-blue mb-6">📊 सफलता के आंकड़े</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="stat-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="img/grow.png" alt="सफलता दर" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-lg font-semibold mb-2 text-center">सफलता दर</h4>
+                            <p class="text-2xl font-bold text-blue-600 text-center">85%</p>
+                        </div>
+                    </div>
+                    <div class="stat-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="img/studyhour.png" alt="तैयारी का समय" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-lg font-semibold mb-2 text-center">औसत तैयारी का समय</h4>
+                            <p class="text-2xl font-bold text-blue-600 text-center">6 महीने</p>
+                        </div>
+                    </div>
+                    <div class="stat-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="img/prepare.png" alt="अध्ययन घंटे" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-lg font-semibold mb-2 text-center">दैनिक अध्ययन घंटे</h4>
+                            <p class="text-2xl font-bold text-blue-600 text-center">4-6 घंटे</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl font-bold text-indian-blue mb-6">💡 सामान्य सफलता कारक</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="factor-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="img/notes.jpg" alt="अध्ययन तकनीकें" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-3 text-center">अध्ययन तकनीकें</h4>
+                            <p class="text-gray-600 text-center text-lg">प्रभावी अध्ययन विधियां और समय प्रबंधन रणनीतियां</p>
+                        </div>
+                    </div>
+                    <div class="factor-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="img/achive.jpg" alt="जीवनशैली की आदतें" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-3 text-center">जीवनशैली की आदतें</h4>
+                            <p class="text-gray-600 text-center text-lg">स्वस्थ दिनचर्या और तनाव प्रबंधन के तरीके</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl font-bold text-indian-blue mb-6">🎯 आकांक्षियों के लिए सुझाव</h2>
+                <div class="bg-gray-50 p-6 rounded-lg mb-8">
+                    <div class="space-y-4">
+                        <h3 class="font-semibold text-lg mb-4">हमारे टॉपर्स से</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>जल्दी शुरू करें और निरंतर रहें</li>
+                            <li>अवधारणाओं को समझने पर ध्यान दें</li>
+                            <li>पिछले वर्ष के प्रश्न पत्रों का अभ्यास करें</li>
+                            <li>नियमित मॉक टेस्ट दें</li>
+                            <li>स्वस्थ जीवनशैली बनाए रखें</li>
+                            <li>सकारात्मक और प्रेरित रहें</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl font-bold text-indian-blue mb-6">📚 संबंधित संसाधन</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="resource-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <img src="img/syllabus2025.png" alt="सीईटी पाठ्यक्रम" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h4 class="text-lg font-semibold mb-2">सीईटी पाठ्यक्रम</h4>
+                        <p class="text-gray-600 mb-4">सीईटी 2025 पाठ्यक्रम और परीक्षा पैटर्न की व्यापक मार्गदर्शिका</p>
+                        <a href="cet-syllabus.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                            पाठ्यक्रम देखें
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="resource-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <img src="img/exampattern2025.png" alt="तैयारी मार्गदर्शिका" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h4 class="text-lg font-semibold mb-2">तैयारी मार्गदर्शिका</h4>
+                        <p class="text-gray-600 mb-4">विस्तृत अध्ययन योजना और तैयारी रणनीतियां</p>
+                        <a href="how-to-crack-cet.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                            मार्गदर्शिका पढ़ें
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="resource-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <img src="img/documents.jpg" alt="आवेदन प्रक्रिया" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h4 class="text-lg font-semibold mb-2">आवेदन प्रक्रिया</h4>
+                        <p class="text-gray-600 mb-4">सीईटी आवेदन के लिए चरण-दर-चरण मार्गदर्शिका</p>
+                        <a href="cet-application-process.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                            और जानें
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm text-gray-400">© 2025 सीईटी तैयारी पोर्टल। सर्वाधिकार सुरक्षित।</p>
+        </div>
+    </footer>
+
+    <!-- Language Switcher -->
+    <div class="fixed bottom-4 right-4 z-50 flex items-center space-x-2 bg-white p-2 rounded-lg shadow-md">
+        <span class="text-sm text-gray-600">EN</span>
+        <label class="lang-switch">
+            <input type="checkbox" id="languageToggle">
+            <span class="slider"></span>
+        </label>
+        <span class="text-sm text-gray-600">हिं</span>
+    </div>
+
+    <!-- Translation functionality -->
+    <script>
+        const languageToggle = document.getElementById('languageToggle');
+        let isHindi = false;
+
+        const translations = {
+            // Navbar translations
+            'Home': 'होम',
+            'Exam Pattern': 'परीक्षा पैटर्न',
+            'Study Resources': 'अध्ययन संसाधन',
+            'Mock Tests': 'मॉक टेस्ट',
+            'Blog': 'ब्लॉग',
+            
+            // Main content translations
+            'Success Rate': 'सफलता दर',
+            'Average Preparation Time': 'औसत तैयारी का समय',
+            'Daily Study Hours': 'दैनिक अध्ययन घंटे',
+            'Study Techniques': 'अध्ययन तकनीकें',
+            'Lifestyle Habits': 'जीवनशैली की आदतें',
+            'Effective study methods and time management strategies': 'प्रभावी अध्ययन विधियां और समय प्रबंधन रणनीतियां',
+            'Healthy routines and stress management practices': 'स्वस्थ दिनचर्या और तनाव प्रबंधन के तरीके',
+            
+            // Success Stories translations
+            'Rahul Sharma\'s Success Story': 'राहुल शर्मा की सफलता की कहानी',
+            'Priya Patel\'s Journey': 'प्रिया पटेल की यात्रा',
+            'Key Strategies': 'मुख्य रणनीतियां',
+            'Preparation Tips': 'तैयारी के टिप्स',
+            'Strict daily schedule': 'सख्त दैनिक कार्यक्रम',
+            'Regular mock tests': 'नियमित मॉक टेस्ट',
+            'Focus on weak areas': 'कमजोर क्षेत्रों पर ध्यान दें',
+            'Group study sessions': 'समूह अध्ययन सत्र',
+            'Smart time management': 'स्मार्ट समय प्रबंधन',
+            'Quality over quantity': 'गुणवत्ता पर मात्रा',
+            'Regular breaks': 'नियमित ब्रेक',
+            'Online resources': 'ऑनलाइन संसाधन'
+        };
+
+        function translatePage() {
+            const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, a, li, span:not(.slider)');
+            
+            elements.forEach(element => {
+                const text = element.textContent.trim();
+                if (translations[text]) {
+                    element.textContent = isHindi ? translations[text] : text;
+                }
+            });
+        }
+
+        languageToggle.addEventListener('change', function() {
+            isHindi = this.checked;
+            translatePage();
+        });
+
+        // Mobile menu functionality
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+
+    <!-- Add this before the closing body tag -->
+    <script>
+        // Rotating Headings Animation
+        const headings = document.querySelectorAll('.rotating-heading');
+        let currentIndex = 0;
+
+        function rotateHeadings() {
+            headings.forEach(heading => heading.classList.remove('active'));
+            currentIndex = (currentIndex + 1) % headings.length;
+            headings[currentIndex].classList.add('active');
+        }
+
+        setInterval(rotateHeadings, 4000);
+    </script>
+
+    <div id="loader-wrapper"></div>
+    <script src="loader.js"></script>
+</body>
+</html> 

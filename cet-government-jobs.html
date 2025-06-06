@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="governmentJobs.title">Government Jobs Through CET 2025</title>
+    <meta name="description" content="Explore government job opportunities through CET 2025. Learn about various departments, positions, salary structures, and career growth prospects in government service.">
+    <meta name="keywords" content="CET government jobs, CET career opportunities, government jobs through CET, CET 2025 jobs, government service through CET, CET job prospects, government department jobs">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="translations.js"></script>
+    <style>
+
+/* Navbar Styles */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #87CEEB;
+    transition: width 0.3s ease;
+}
+.nav-link:hover {
+    color: #87CEEB;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+.nav-link.active {
+    background: linear-gradient(45deg, #0066CC, #FF9933);
+    -webkit-text-fill-color: transparent;
+}
+.nav-link.active::after {
+    width: 100%;
+}
+/* Mobile Menu Animation */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+#mobile-menu.hidden {
+    display: none;
+}
+#mobile-menu:not(.hidden) {
+    animation: slideDown 0.3s ease-in-out;
+}
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Sticky Navbar Shadow */
+nav.sticky {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/* Navbar Link Hover Effects */
+.mobile-nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.mobile-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #87CEEB;
+    transition: width 0.3s ease;
+}
+.mobile-nav-link:hover {
+    color: #87CEEB;
+}
+.mobile-nav-link:hover::after {
+    width: 100%;
+}
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/bannerofcet.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 2rem;
+        }
+        .job-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+    </div>
+    
+
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+
+    <!-- Language Switcher -->
+    <div class="fixed top-4 right-4 z-50 flex items-center space-x-2 bg-white p-2 rounded-lg shadow-md">
+        <span class="text-sm text-gray-600">EN</span>
+        <label class="lang-switch">
+            <input type="checkbox" id="languageToggle">
+            <span class="slider"></span>
+        </label>
+        <span class="text-sm text-gray-600">हिं</span>
+    </div>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="container mx-auto px-4">
+                <div class="text-center">
+                    <h1 class="text-4xl font-bold mb-4" data-translate="governmentJobs.title">🏛️ Government Jobs Through CET 2025</h1>
+                    <p class="text-lg mb-6" data-translate="governmentJobs.description">Your gateway to prestigious government positions. Explore various departments, career paths, and growth opportunities.</p>
+                    <div class="flex items-center justify-center text-sm">
+                        <span>Published: March 15, 2024</span>
+                        <span class="mx-2">•</span>
+                        <span>10 min read</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <div class="prose max-w-none">
+                <h2 class="text-2xl font-bold text-indian-blue mb-6">📋 Overview of Government Jobs</h2>
+                <p class="text-gray-700 mb-6">The Common Eligibility Test (CET) opens doors to numerous government job opportunities across various departments. This comprehensive guide will help you understand the different positions, requirements, and career prospects available through CET.</p>
+
+                <h2 class="text-2xl font-bold text-indian-blue mb-6">🏢 Major Departments and Positions</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="job-card bg-white p-6 rounded-lg">
+                        <img src="img/govtexam.png" alt="Administrative Positions" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-2" data-translate="governmentJobs.categories.administrative.title">Administrative Positions</h3>
+                        <p class="text-gray-700 mb-4" data-translate="governmentJobs.categories.administrative.description">Various administrative roles in government departments</p>
+                    </div>
+
+                    <div class="job-card bg-white p-6 rounded-lg">
+                        <img src="img/moneyposition.jpg" alt="Finance Positions" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-2" data-translate="governmentJobs.categories.finance.title">Finance Positions</h3>
+                        <p class="text-gray-700 mb-4" data-translate="governmentJobs.categories.finance.description">Financial and accounting positions in government organizations</p>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl font-bold text-indian-blue mb-6">💰 Salary Structure and Benefits</h2>
+                <div class="bg-gray-50 p-6 rounded-lg mb-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="font-semibold text-lg mb-4">Basic Salary Range</h3>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li>Entry Level: ₹25,000 - ₹35,000</li>
+                                <li>Mid Level: ₹35,000 - ₹45,000</li>
+                                <li>Senior Level: ₹45,000 - ₹60,000</li>
+                                <li>Department Head: ₹60,000+</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-4">Additional Benefits</h3>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li>Dearness Allowance (DA)</li>
+                                <li>House Rent Allowance (HRA)</li>
+                                <li>Medical Benefits</li>
+                                <li>Pension Scheme</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl font-bold text-indian-blue mb-6">📈 Career Growth Opportunities</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="job-card bg-white p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2">Entry Level</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Assistant Grade</li>
+                            <li>Junior Clerk</li>
+                            <li>Data Entry Operator</li>
+                            <li>Office Assistant</li>
+                        </ul>
+                    </div>
+                    <div class="job-card bg-white p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2">Mid Level</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Section Officer</li>
+                            <li>Supervisor</li>
+                            <li>Team Leader</li>
+                            <li>Department Coordinator</li>
+                        </ul>
+                    </div>
+                    <div class="job-card bg-white p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2">Senior Level</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Department Head</li>
+                            <li>Administrative Officer</li>
+                            <li>Project Manager</li>
+                            <li>Policy Advisor</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl font-bold text-indian-blue mb-6">🎯 Selection Process</h2>
+                <div class="bg-gray-50 p-6 rounded-lg mb-8">
+                    <div class="space-y-4">
+                        <h3 class="font-semibold text-lg mb-4">Steps in Selection</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>CET Written Examination</li>
+                            <li>Document Verification</li>
+                            <li>Skill Test (if applicable)</li>
+                            <li>Final Interview</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl font-bold text-indian-blue mb-6">💼 Job Security and Work-Life Balance</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="job-card bg-white p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2">Benefits</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Permanent employment</li>
+                            <li>Regular working hours</li>
+                            <li>Weekend holidays</li>
+                            <li>Medical facilities</li>
+                        </ul>
+                    </div>
+                    <div class="job-card bg-white p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2">Work Environment</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Professional atmosphere</li>
+                            <li>Learning opportunities</li>
+                            <li>Team collaboration</li>
+                            <li>Career development</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl font-bold text-indian-blue mb-6">📚 Related Resources</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    
+                    <a href="cet-2025-schedule.html" class="job-card bg-white p-6 rounded-lg">
+                        <img src="img/group.jpg" alt="">    <h3 class="font-semibold text-lg mb-2">CET 2025 Schedule</h3>
+                        <p class="text-gray-600 text-sm">Important dates and deadlines</p>
+                    </a>
+                    
+                    <a href="how-to-crack-cet.html" class="job-card bg-white p-6 rounded-lg">
+                     <img src="img/schedule.png" alt="">   <h3 class="font-semibold text-lg mb-2">How to Crack CET</h3>
+                        <p class="text-gray-600 text-sm">Preparation strategies</p>
+                    </a>
+                    
+                    <a href="cet-success-stories.html" class="job-card bg-white p-6 rounded-lg">
+                        <img src="img/notes.jpg" alt="">    <h3 class="font-semibold text-lg mb-2">Success Stories</h3>
+                        <p class="text-gray-600 text-sm">Real experiences and tips</p>
+                    </a>
+                </div>
+
+                <!-- Add new Hindi content section -->
+                <div class="hindi-content mt-8 p-6 bg-gray-50 rounded-lg">
+                    <h2 class="text-2xl font-bold text-indian-blue mb-6">CET के माध्यम से सरकारी नौकरियों के बारे में विस्तृत जानकारी</h2>
+                    <p class="text-gray-700 mb-4">CET परीक्षा सरकारी नौकरियों के लिए एक महत्वपूर्ण प्रवेश द्वार है। यह परीक्षा उम्मीदवारों को विभिन्न सरकारी विभागों में नौकरी पाने का अवसर प्रदान करती है। CET के माध्यम से मिलने वाली नौकरियां न केवल सुरक्षित हैं, बल्कि इनमें कई अतिरिक्त लाभ भी शामिल हैं।</p>
+                    
+                    <h3 class="text-xl font-semibold mb-4">सरकारी नौकरियों के प्रमुख लाभ</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+                        <li>स्थायी रोजगार की सुरक्षा</li>
+                        <li>नियमित वेतन वृद्धि और पदोन्नति</li>
+                        <li>सामाजिक सुरक्षा और पेंशन लाभ</li>
+                        <li>बेहतर कार्य-जीवन संतुलन</li>
+                        <li>सरकारी आवास और चिकित्सा सुविधाएं</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold mb-4">CET के माध्यम से उपलब्ध विभाग</h3>
+                    <p class="text-gray-700 mb-4">CET के माध्यम से आप विभिन्न सरकारी विभागों में नौकरी पा सकते हैं, जैसे:</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+                        <li>प्रशासनिक सेवाएं</li>
+                        <li>वित्त विभाग</li>
+                        <li>कानूनी विभाग</li>
+                        <li>सूचना प्रौद्योगिकी विभाग</li>
+                        <li>सामाजिक कल्याण विभाग</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold mb-4">करियर विकास के अवसर</h3>
+                    <p class="text-gray-700 mb-4">सरकारी नौकरियों में करियर विकास के अनेक अवसर उपलब्ध हैं। आप अपनी योग्यता और अनुभव के आधार पर उच्च पदों पर पदोन्नत हो सकते हैं। सरकारी विभागों में नियमित प्रशिक्षण कार्यक्रम भी आयोजित किए जाते हैं, जो आपके कौशल को बढ़ाने में मदद करते हैं।</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm text-gray-400">© 2025 CET Preparation Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Translation functionality -->
+    <script>
+        const languageToggle = document.getElementById('languageToggle');
+        let isHindi = false;
+
+        const translations = {
+            'Government Jobs Through CET 2025': 'CET 2025 के माध्यम से सरकारी नौकरियां',
+            'Your gateway to prestigious government positions. Explore various departments, career paths, and growth opportunities.': 'प्रतिष्ठित सरकारी पदों के लिए आपका प्रवेश द्वार। विभिन्न विभागों, करियर पथ और विकास के अवसरों का अन्वेषण करें।',
+            'Published: March 15, 2024': 'प्रकाशित: 15 मार्च, 2024',
+            '10 min read': '10 मिनट का पढ़ना',
+            'Overview of Government Jobs': 'सरकारी नौकरियों का अवलोकन',
+            'The Common Eligibility Test (CET) opens doors to numerous government job opportunities across various departments. This comprehensive guide will help you understand the different positions, requirements, and career prospects available through CET.': 'कॉमन एलिजिबिलिटी टेस्ट (CET) विभिन्न विभागों में सरकारी नौकरियों के अनेक अवसर खोलता है। यह व्यापक मार्गदर्शिका आपको CET के माध्यम से उपलब्ध विभिन्न पदों, आवश्यकताओं और करियर संभावनाओं को समझने में मदद करेगी।',
+            'Major Departments and Positions': 'प्रमुख विभाग और पद',
+            'Administrative Services': 'प्रशासनिक सेवाएं',
+            'Finance Department': 'वित्त विभाग',
+            'Salary Structure and Benefits': 'वेतन संरचना और लाभ',
+            'Career Growth Opportunities': 'करियर विकास के अवसर',
+            'Selection Process': 'चयन प्रक्रिया',
+            'Job Security and Work-Life Balance': 'नौकरी की सुरक्षा और कार्य-जीवन संतुलन',
+            'Benefits': 'लाभ',
+            'Work Environment': 'कार्य वातावरण',
+            'Related Resources': 'संबंधित संसाधन',
+            'Basic Salary Range': 'मूल वेतन सीमा',
+            'Entry Level': 'प्रवेश स्तर',
+            'Mid Level': 'मध्य स्तर',
+            'Senior Level': 'वरिष्ठ स्तर',
+            'Department Head': 'विभाग प्रमुख',
+            'Additional Benefits': 'अतिरिक्त लाभ',
+            'Dearness Allowance (DA)': 'महंगाई भत्ता (DA)',
+            'House Rent Allowance (HRA)': 'मकान किराया भत्ता (HRA)',
+            'Medical Benefits': 'चिकित्सा लाभ',
+            'Pension Scheme': 'पेंशन योजना',
+            'Steps in Selection': 'चयन के चरण',
+            'CET Written Examination': 'CET लिखित परीक्षा',
+            'Document Verification': 'दस्तावेज़ सत्यापन',
+            'Skill Test (if applicable)': 'कौशल परीक्षा (यदि लागू हो)',
+            'Final Interview': 'अंतिम साक्षात्कार',
+            'Permanent employment': 'स्थायी रोजगार',
+            'Regular working hours': 'नियमित कार्य घंटे',
+            'Weekend holidays': 'सप्ताहांत की छुट्टियां',
+            'Medical facilities': 'चिकित्सा सुविधाएं',
+            'Professional atmosphere': 'पेशेवर वातावरण',
+            'Learning opportunities': 'सीखने के अवसर',
+            'Team collaboration': 'टीम सहयोग',
+            'Career development': 'करियर विकास',
+            'Important dates and deadlines': 'महत्वपूर्ण तिथियां और समय सीमा',
+            'Preparation strategies': 'तैयारी की रणनीतियां',
+            'Real experiences and tips': 'वास्तविक अनुभव और सुझाव',
+            'Assistant Grade': 'सहायक ग्रेड',
+            'Junior Clerk': 'जूनियर क्लर्क',
+            'Data Entry Operator': 'डेटा एंट्री ऑपरेटर',
+            'Office Assistant': 'कार्यालय सहायक',
+            'Section Officer': 'अनुभाग अधिकारी',
+            'Supervisor': 'पर्यवेक्षक',
+            'Team Leader': 'टीम लीडर',
+            'Department Coordinator': 'विभाग समन्वयक',
+            'Project Manager': 'परियोजना प्रबंधक',
+            'Policy Advisor': 'नीति सलाहकार',
+            'Administrative Officer': 'प्रशासनिक अधिकारी',
+            'Accountant': 'लेखाकार',
+            'Audit Officer': 'लेखा परीक्षा अधिकारी',
+            'Tax Assistant': 'कर सहायक',
+            'Financial Assistant': 'वित्तीय सहायक'
+        };
+
+        // Function to translate text
+        function translateText(text) {
+            if (!text) return '';
+            text = text.trim();
+            return isHindi ? translations[text] || text : text;
+        }
+
+        // Function to update language
+        function updateLanguage() {
+            const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, span, a, button, div:not([id="navbar"]):not([class*="lang-switch"])');
+            
+            elements.forEach(element => {
+                if (!element.textContent.trim()) return;
+                if (element.tagName === 'SCRIPT' || element.tagName === 'STYLE') return;
+                if (element.closest('.lang-switch')) return;
+                
+                const originalText = element.getAttribute('data-original-text') || element.textContent.trim();
+                if (!element.hasAttribute('data-original-text')) {
+                    element.setAttribute('data-original-text', originalText);
+                }
+                
+                const translatedText = translateText(originalText);
+                if (translatedText !== originalText) {
+                    element.textContent = translatedText;
+                }
+            });
+        }
+
+        // Event listener for the language toggle switch
+        languageToggle.addEventListener('change', function() {
+            isHindi = this.checked;
+            updateLanguage();
+            localStorage.setItem('preferredLanguage', isHindi ? 'hindi' : 'english');
+        });
+
+        // Initialize translations
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, span, a, button, div:not([id="navbar"]):not([class*="lang-switch"])');
+            
+            elements.forEach(element => {
+                if (!element.textContent.trim()) return;
+                if (element.tagName === 'SCRIPT' || element.tagName === 'STYLE') return;
+                if (element.closest('.lang-switch')) return;
+                
+                if (!element.hasAttribute('data-original-text')) {
+                    element.setAttribute('data-original-text', element.textContent.trim());
+                }
+            });
+
+            // Check if language preference is stored
+            const savedLanguage = localStorage.getItem('preferredLanguage');
+            if (savedLanguage === 'hindi') {
+                isHindi = true;
+                languageToggle.checked = true;
+                updateLanguage();
+            }
+        });
+    </script>
+
+    <!-- Loader Script -->
+    <script>
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('loader-hidden');
+            }, 1500);
+        });
+    </script>
+
+    <script>
+        // Load navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+
+        // Update language switcher functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageToggles = document.querySelectorAll('#languageToggle, #languageToggleMobile');
+            languageToggles.forEach(toggle => {
+                toggle.addEventListener('change', function() {
+                    const isHindi = this.checked;
+                    translatePage(isHindi ? 'hi' : 'en');
+                    localStorage.setItem('preferredLanguage', isHindi ? 'hindi' : 'english');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

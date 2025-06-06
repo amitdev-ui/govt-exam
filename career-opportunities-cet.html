@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="career.title">Career Opportunities Through CET</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="translations.js"></script>
+    <style>
+
+/* Navbar Styles */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #87CEEB;
+    transition: width 0.3s ease;
+}
+.nav-link:hover {
+    color: #87CEEB;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+.nav-link.active {
+    background: linear-gradient(45deg, #0066CC, #FF9933);
+    -webkit-text-fill-color: transparent;
+}
+.nav-link.active::after {
+    width: 100%;
+}
+/* Mobile Menu Animation */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+#mobile-menu.hidden {
+    display: none;
+}
+#mobile-menu:not(.hidden) {
+    animation: slideDown 0.3s ease-in-out;
+}
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Sticky Navbar Shadow */
+nav.sticky {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/* Navbar Link Hover Effects */
+.mobile-nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.mobile-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #87CEEB;
+    transition: width 0.3s ease;
+}
+.mobile-nav-link:hover {
+    color: #87CEEB;
+}
+.mobile-nav-link:hover::after {
+    width: 100%;
+}
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #0066CC;
+            --secondary: #FF9933;
+            --accent: #4CAF50;
+            --background: #f8fafc;
+            --text: #1e293b;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .article-header {
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(255, 153, 51, 0.1));
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .language-switcher {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background: white;
+            border-radius: 2rem;
+            padding: 0.5rem 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: 1px solid #e2e8f0;
+        }
+
+        .language-switcher:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .language-switcher i {
+            color: #0066CC;
+            font-size: 1.2rem;
+        }
+
+        .language-switcher span {
+            color: #1e293b;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .lang-switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+
+        .lang-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 24px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #0066CC;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .article-content h2 {
+            color: var(--primary);
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            color: #4a5568;
+        }
+
+        .article-content ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: #64748b;
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+        }
+
+        .article-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin: 2rem 0;
+        }
+
+        .article-tag {
+            background-color: #e2e8f0;
+            color: #475569;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .share-button {
+            background-color: #f1f5f9;
+            color: #475569;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .share-button:hover {
+            background-color: #e2e8f0;
+            transform: translateY(-2px);
+        }
+
+        .career-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease;
+        }
+
+        .career-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .career-card h3 {
+            color: var(--primary);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .career-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .detail-item {
+            background-color: #f8fafc;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .detail-item h4 {
+            color: var(--secondary);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .salary-range {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .benefit-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-card i {
+            font-size: 2rem;
+            color: #0066CC;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h3 {
+            color: #1e293b;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        [lang="hi"] {
+            display: none;
+        }
+
+        body[data-lang="hi"] [lang="en"] {
+            display: none;
+        }
+
+        body[data-lang="hi"] [lang="hi"] {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+
+    <!-- Hero Section -->
+    <div class="bg-indian-blue text-white py-16">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4" data-translate="career.title">Career Opportunities Through CET</h1>
+            <p class="text-xl md:text-2xl mb-8" data-translate="career.description">Discover the wide range of career opportunities available through CET 2025</p>
+        </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold mb-8 text-center" data-translate="career.benefits.title">Benefits of CET</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Job Security -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-semibold mb-4" data-translate="career.benefits.jobSecurity.title">Job Security</h3>
+                <p class="text-gray-600" data-translate="career.benefits.jobSecurity.description">Government jobs provide long-term stability and security</p>
+            </div>
+
+            <!-- Career Growth -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-semibold mb-4" data-translate="career.benefits.growth.title">Career Growth</h3>
+                <p class="text-gray-600" data-translate="career.benefits.growth.description">Clear promotion paths and regular salary increments</p>
+            </div>
+
+            <!-- Additional Benefits -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-semibold mb-4" data-translate="career.benefits.benefits.title">Additional Benefits</h3>
+                <p class="text-gray-600" data-translate="career.benefits.benefits.description">Healthcare, housing, and retirement benefits</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4" data-translate="common.applyNow">Apply Now</h2>
+            <p class="text-xl mb-8" data-translate="career.description">Start your journey towards a rewarding government career</p>
+            <a href="cet-2025-register.html" class="bg-indian-blue text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300">
+                <span data-translate="common.applyNow">Apply Now</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <p class="text-center">&copy; 2025 CET. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Load navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+
+        // Update language switcher functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageToggles = document.querySelectorAll('#languageToggle, #languageToggleMobile');
+            languageToggles.forEach(toggle => {
+                toggle.addEventListener('change', function() {
+                    const isHindi = this.checked;
+                    translatePage(isHindi ? 'hi' : 'en');
+                    localStorage.setItem('preferredLanguage', isHindi ? 'hindi' : 'english');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

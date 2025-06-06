@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CET Latest Updates - CET 2025 Preparation Portal</title>
+    <meta name="description" content="Stay updated with the latest news, notifications, and important updates for CET 2025 examination.">
+    <meta name="keywords" content="CET 2025 updates, CET latest news, CET notifications, CET exam updates, CET preparation updates">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'indian-blue': '#0066CC',
+                        'indian-saffron': '#FF9933',
+                        'gov-blue': '#1a365d',
+                        'gov-light': '#f8fafc',
+                        'update-blue': '#1e40af',
+                        'update-light': '#e0e7ff'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #0066CC, #FF9933);
+            -webkit-text-fill-color: transparent;
+        }
+        .gov-card {
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        .gov-card:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        /* Navbar Styles */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #87CEEB;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #87CEEB;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link.active {
+            background: linear-gradient(45deg, #0066CC, #FF9933);
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-link.active::after {
+            width: 100%;
+        }
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+        #mobile-menu.hidden {
+            display: none;
+        }
+        #mobile-menu:not(.hidden) {
+            animation: slideDown 0.3s ease-in-out;
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Sticky Navbar Shadow */
+        nav.sticky {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        /* Language Switcher Styles */
+        .lang-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+        }
+        .lang-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 30px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "EN";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        input:checked + .slider {
+            background-color: #0066CC;
+        }
+        input:checked + .slider:before {
+            transform: translateX(30px);
+            content: "हिं";
+        }
+        /* Floating Translation Button */
+        .floating-translate-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #0066CC, #004C99);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            animation: pulse 2s infinite;
+        }
+        .floating-translate-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 25px rgba(0, 102, 204, 0.4);
+            background: linear-gradient(135deg, #004C99, #0066CC);
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+            }
+            50% {
+                box-shadow: 0 4px 30px rgba(0, 102, 204, 0.5);
+            }
+            100% {
+                box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+            }
+        }
+        .date-badge {
+            background-color: #e0e7ff;
+            color: #1e40af;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            background-color: #1e40af;
+            border-radius: 50%;
+            position: absolute;
+            left: -6px;
+        }
+    </style>
+    
+</head>
+<body class="bg-gov-light">
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+    </div>
+    
+
+    <!-- Keep only the first navbar -->
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+
+    <!-- Language Switcher -->
+    <div class="fixed top-4 right-4 z-50 flex items-center space-x-2">
+        <span class="text-sm text-gray-600">EN</span>
+        <label class="lang-switch">
+            <input type="checkbox" id="languageToggle">
+            <span class="slider"></span>
+        </label>
+        <span class="text-sm text-gray-600">हिं</span>
+    </div>
+
+    <!-- Floating Translation Button -->
+    <div class="floating-translate-btn" onclick="document.getElementById('languageToggle').click()">
+        <i class="fas fa-language"></i>
+        <span id="translateBtnText" class="font-semibold">Translate to Hindi</span>
+    </div>
+
+    <!-- Accessibility Menu -->
+    <a href="#main-content" class="skip-link">Skip to main content | Screen Reader Access</a>
+
+    <!-- Header Section -->
+
+
+    <!-- Main Content -->
+    <main id="main-content" class="container mx-auto px-4 py-8">
+        <!-- Hero Banner -->
+        <div class="bg-blue-100 text-update-blue rounded-xl p-8 mb-8 shadow-lg">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4">CET 2025 Latest Updates</h1>
+                <p class="text-lg opacity-90 mb-6">Stay informed on important announcements, application dates, and policy changes</p>
+                <a href="apply-now.html" class="inline-block bg-white text-update-blue font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition duration-300 shadow-md">
+                    Apply Now →
+                </a>
+            </div>
+        </div>
+
+        <!-- Introduction -->
+        <section class="bg-white rounded-xl shadow-md p-8 mb-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold text-update-blue mb-4">Stay Updated with CET 2025 News</h2>
+                <p class="text-gray-700 mb-4">
+                    The Common Eligibility Test (CET) 2025 is a major recruitment examination that opens doors to various government positions. Staying updated with the latest announcements, application dates, and policy changes is crucial for candidates preparing for this competitive exam.
+                </p>
+                <p class="text-gray-700">
+                    This page compiles all the important updates related to CET 2025, ensuring you don't miss any critical information that could impact your application or preparation strategy.
+                </p>
+            </div>
+        </section>
+
+        <!-- Application Dates Section -->
+        <section class="bg-white rounded-xl shadow-md p-8 mb-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold inline-block mb-6">📅 Application Dates</h2>
+                
+                <!-- Haryana CET -->
+                <div class="update-card bg-white rounded-lg p-6 mb-6 hover-scale">
+                    <div class="flex items-start">
+                        <div class="update-icon mr-4 flex-shrink-0">
+                            📝
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-update-blue mb-2">Haryana CET Applications Open</h3>
+                            <div class="flex items-center mb-3">
+                                <span class="date-badge">May 28 - June 12, 2025</span>
+                            </div>
+                            <p class="text-gray-700 mb-3">
+                                The Haryana Staff Selection Commission (HSSC) has announced that applications for the Common Eligibility Test (CET) 2025 will be accepted from May 28 to June 12, 2025. Candidates are advised to apply early to avoid last-minute technical issues.
+                            </p>
+                            <div class="bg-update-light p-4 rounded-lg">
+                                <h4 class="font-medium text-update-blue mb-2">Important Details:</h4>
+                                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                    <li>Application Fee: ₹500 for General Category, ₹250 for SC/ST/OBC</li>
+                                    <li>Mode of Application: Online only through the official HSSC portal</li>
+                                    <li>Required Documents: Photo, Signature, ID Proof, Educational Certificates</li>
+                                </ul>
+                            </div>
+                            <div class="mt-3">
+                                <a href="https://hssc.gov.in" target="_blank" class="text-indian-blue hover:underline font-medium">Visit Official Website →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- DDA Recruitment -->
+                <div class="update-card bg-white rounded-lg p-6 mb-6 hover-scale">
+                    <div class="flex items-start">
+                        <div class="update-icon mr-4 flex-shrink-0">
+                            🏙️
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-update-blue mb-2">DDA Recruitment through CET</h3>
+                            <div class="flex items-center mb-3">
+                                <span class="date-badge">July 1 - August 14, 2025</span>
+                            </div>
+                            <p class="text-gray-700 mb-3">
+                                The Delhi Development Authority (DDA) has announced recruitment for various posts through the CET 2025 examination. Applications will be accepted from July 1 to August 14, 2025. This is a great opportunity for candidates looking for positions in the national capital region.
+                            </p>
+                            <div class="bg-update-light p-4 rounded-lg">
+                                <h4 class="font-medium text-update-blue mb-2">Vacancy Details:</h4>
+                                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                    <li>Junior Secretariat Assistant: 120 posts</li>
+                                    <li>Stenographer: 85 posts</li>
+                                    <li>Patwari: 45 posts</li>
+                                    <li>Various Technical Positions: 200+ posts</li>
+                                </ul>
+                            </div>
+                            <div class="mt-3">
+                                <a href="https://dda.gov.in" target="_blank" class="text-indian-blue hover:underline font-medium">Check DDA Website →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exam Schedule Section -->
+        <section class="bg-white rounded-xl shadow-md p-8 mb-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold inline-block mb-6">🗓️ Exam Schedule</h2>
+                
+                <div class="update-card bg-white rounded-lg p-6 hover-scale">
+                    <div class="flex items-start">
+                        <div class="update-icon mr-4 flex-shrink-0">
+                            📊
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-update-blue mb-2">Tentative Exam Dates Announced</h3>
+                            <p class="text-gray-700 mb-4">
+                                The National Recruitment Agency (NRA) has released the tentative schedule for CET 2025. While exact dates are yet to be confirmed, the exams are expected to be conducted in August or September 2025. The official notification with confirmed dates will be released approximately 45 days before the examination.
+                            </p>
+                            
+                            <div class="bg-update-light p-4 rounded-lg mb-4">
+                                <h4 class="font-medium text-update-blue mb-2">Expected Timeline:</h4>
+                                <div class="space-y-4">
+                                    <div class="timeline-item pt-1 pb-4">
+                                        <div class="timeline-dot top-2"></div>
+                                        <h5 class="font-medium">Application Period</h5>
+                                        <p class="text-gray-600">May - August 2025 (varies by recruiting agency)</p>
+                                    </div>
+                                    <div class="timeline-item pt-1 pb-4">
+                                        <div class="timeline-dot top-2"></div>
+                                        <h5 class="font-medium">Admit Card Release</h5>
+                                        <p class="text-gray-600">15-20 days before the exam</p>
+                                    </div>
+                                    <div class="timeline-item pt-1 pb-4">
+                                        <div class="timeline-dot top-2"></div>
+                                        <h5 class="font-medium">Examination Period</h5>
+                                        <p class="text-gray-600">August - September 2025</p>
+                                    </div>
+                                    <div class="timeline-item pt-1">
+                                        <div class="timeline-dot top-2"></div>
+                                        <h5 class="font-medium">Result Declaration</h5>
+                                        <p class="text-gray-600">Expected by October-November 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg">
+                                <p class="text-yellow-800"><span class="font-medium">Important Note:</span> Candidates are advised to regularly check the official website for any updates regarding the exam schedule. The dates mentioned are tentative and subject to change.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Policy Changes Section -->
+        <section class="bg-white rounded-xl shadow-md p-8 mb-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold inline-block mb-6">📜 Policy Changes</h2>
+                
+                <!-- Reservation Criteria -->
+                <div class="update-card bg-white rounded-lg p-6 mb-6 hover-scale">
+                    <div class="flex items-start">
+                        <div class="update-icon mr-4 flex-shrink-0">
+                            ⚖️
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-update-blue mb-2">New Reservation Criteria for Group D Posts</h3>
+                            <div class="flex items-center mb-3">
+                                <span class="date-badge">Announced: April 15, 2025</span>
+                            </div>
+                            <p class="text-gray-700 mb-3">
+                                The Government of Haryana has introduced new reservation criteria for Group D posts in the upcoming CET 2025. The changes aim to provide more opportunities to candidates from economically weaker sections and ensure balanced representation across different categories.
+                            </p>
+                            <div class="bg-update-light p-4 rounded-lg">
+                                <h4 class="font-medium text-update-blue mb-2">Key Changes:</h4>
+                                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                    <li>10% reservation for Economically Weaker Sections (EWS)</li>
+                                    <li>4% reservation for Persons with Benchmark Disabilities (PwBD)</li>
+                                    <li>10% reservation for Ex-Servicemen</li>
+                                    <li>District-wise quota system for certain positions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Related Blogs Section -->
+    <section class="bg-blue-50 py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">संबंधित लेख</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Related Blog 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 hover:shadow-lg">
+                    <div class="h-48 overflow-hidden">
+                        <img src="img/previous-papers.png" alt="परीक्षा पैटर्न" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">परीक्षा पैटर्न</span>
+                        <h3 class="font-bold text-lg mb-2">CET 2025 परीक्षा पैटर्न और प्रारूप</h3>
+                        <p class="text-gray-600 text-sm mb-4">CET 2025 की तैयारी के लिए विस्तृत परीक्षा पैटर्न और महत्वपूर्ण विषयों का विश्लेषण।</p>
+                        <a href="exam-pattern.html" class="text-blue-700 font-medium text-sm hover:underline">पूरा लेख पढ़ें →</a>
+                    </div>
+                </div>
+                
+                <!-- Related Blog 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 hover:shadow-lg">
+                    <div class="h-48 overflow-hidden">
+                        <img src="img/syllabus2025.png" alt="पाठ्यक्रम" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">पाठ्यक्रम</span>
+                        <h3 class="font-bold text-lg mb-2">CET 2025 पाठ्यक्रम विस्तृत गाइड</h3>
+                        <p class="text-gray-600 text-sm mb-4">CET 2025 के लिए आधिकारिक पाठ्यक्रम और विषयवार अध्ययन सामग्री का व्यापक विश्लेषण।</p>
+                        <a href="syllabus-cet-2025.html" class="text-blue-700 font-medium text-sm hover:underline">पूरा लेख पढ़ें →</a>
+                    </div>
+                </div>
+                
+                <!-- Related Blog 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 hover:shadow-lg">
+                    <div class="h-48 overflow-hidden">
+                        <img src="img/time.webp" alt="समय प्रबंधन" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">रणनीति</span>
+                        <h3 class="font-bold text-lg mb-2">CET के लिए समय प्रबंधन युक्तियाँ</h3>
+                        <p class="text-gray-600 text-sm mb-4">अपने अध्ययन दक्षता और परीक्षा प्रदर्शन को बेहतर बनाने के लिए प्रभावी समय प्रबंधन रणनीतियाँ।</p>
+                        <a href="time-management-tips-cet.html" class="text-blue-700 font-medium text-sm hover:underline">पूरा लेख पढ़ें →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="blog-index.html" class="inline-block bg-white border-2 border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white px-6 py-3 rounded-lg font-medium transition-all">सभी लेख देखें</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <!-- Translation Script -->
+    <script>
+        // Language Switcher Functionality
+        const languageToggle = document.getElementById('languageToggle');
+        const translateBtnText = document.getElementById('translateBtnText');
+        
+        // Default to Hindi
+        languageToggle.checked = true;
+        
+        // Call translatePage on document ready
+        document.addEventListener('DOMContentLoaded', function() {
+            translatePage();
+        });
+        
+        // Hindi translations
+        const translations = {
+            // Headings
+            'CET 2025 Latest Updates': 'CET 2025 के नवीनतम अपडेट',
+            'Stay informed on important announcements, application dates, and policy changes': 'महत्वपूर्ण घोषणाओं, आवेदन तिथियों और नीति परिवर्तनों के बारे में जानकारी रखें',
+            'Apply Now →': 'अभी आवेदन करें →',
+            'Skip to main content | Screen Reader Access': 'मुख्य सामग्री पर जाएं | स्क्रीन रीडर एक्सेस',
+            
+            // Update Categories
+            'Application Dates': 'आवेदन तिथियां',
+            'Exam Schedule': 'परीक्षा कार्यक्रम',
+            'Policy Changes': 'नीति परिवर्तन',
+            'Stay Updated with CET 2025 News': 'CET 2025 समाचारों के साथ अपडेट रहें',
+            
+            // Common Terms
+            'Date': 'तिथि',
+            'Category': 'श्रेणी',
+            'Details': 'विवरण',
+            'Status': 'स्थिति',
+            'View More': 'और देखें',
+            'Read More': 'और पढ़ें',
+            'Download': 'डाउनलोड',
+            'Share': 'शेयर करें',
+            
+            // Section Content
+            'The Common Eligibility Test (CET) 2025 is a major recruitment examination that opens doors to various government positions. Staying updated with the latest announcements, application dates, and policy changes is crucial for candidates preparing for this competitive exam.': 'कॉमन एलिजिबिलिटी टेस्ट (CET) 2025 एक प्रमुख भर्ती परीक्षा है जो विभिन्न सरकारी पदों के लिए द्वार खोलती है। इस प्रतिस्पर्धी परीक्षा की तैयारी करने वाले उम्मीदवारों के लिए नवीनतम घोषणाओं, आवेदन तिथियों और नीति परिवर्तनों के साथ अपडेट रहना महत्वपूर्ण है।',
+            'This page compiles all the important updates related to CET 2025, ensuring you don\'t miss any critical information that could impact your application or preparation strategy.': 'यह पेज CET 2025 से संबंधित सभी महत्वपूर्ण अपडेट संकलित करता है, यह सुनिश्चित करता है कि आप किसी भी महत्वपूर्ण जानकारी को न चूकें जो आपके आवेदन या तैयारी रणनीति को प्रभावित कर सकती है।',
+            
+            'Haryana CET Applications Open': 'हरियाणा CET आवेदन खुले',
+            'May 28 - June 12, 2025': '28 मई - 12 जून, 2025',
+            'The Haryana Staff Selection Commission (HSSC) has announced that applications for the Common Eligibility Test (CET) 2025 will be accepted from May 28 to June 12, 2025. Candidates are advised to apply early to avoid last-minute technical issues.': 'हरियाणा कर्मचारी चयन आयोग (HSSC) ने घोषणा की है कि कॉमन एलिजिबिलिटी टेस्ट (CET) 2025 के लिए आवेदन 28 मई से 12 जून, 2025 तक स्वीकार किए जाएंगे। उम्मीदवारों को अंतिम समय की तकनीकी समस्याओं से बचने के लिए जल्दी आवेदन करने की सलाह दी जाती है।',
+            'Important Details:': 'महत्वपूर्ण विवरण:',
+            'Application Fee: ₹500 for General Category, ₹250 for SC/ST/OBC': 'आवेदन शुल्क: सामान्य वर्ग के लिए ₹500, SC/ST/OBC के लिए ₹250',
+            'Mode of Application: Online only through the official HSSC portal': 'आवेदन का माध्यम: केवल आधिकारिक HSSC पोर्टल के माध्यम से ऑनलाइन',
+            'Required Documents: Photo, Signature, ID Proof, Educational Certificates': 'आवश्यक दस्तावेज: फोटो, हस्ताक्षर, पहचान प्रमाण, शैक्षिक प्रमाण पत्र',
+            'Visit Official Website →': 'आधिकारिक वेबसाइट पर जाएँ →',
+            
+            'DDA Recruitment through CET': 'CET के माध्यम से DDA भर्ती',
+            'July 1 - August 14, 2025': '1 जुलाई - 14 अगस्त, 2025',
+            'The Delhi Development Authority (DDA) has announced recruitment for various posts through the CET 2025 examination. Applications will be accepted from July 1 to August 14, 2025. This is a great opportunity for candidates looking for positions in the national capital region.': 'दिल्ली विकास प्राधिकरण (DDA) ने CET 2025 परीक्षा के माध्यम से विभिन्न पदों के लिए भर्ती की घोषणा की है। आवेदन 1 जुलाई से 14 अगस्त, 2025 तक स्वीकार किए जाएंगे। यह राष्ट्रीय राजधानी क्षेत्र में पदों की तलाश करने वाले उम्मीदवारों के लिए एक बड़ा अवसर है।',
+            'Vacancy Details:': 'रिक्ति विवरण:',
+            'Junior Secretariat Assistant: 120 posts': 'जूनियर सचिवालय सहायक: 120 पद',
+            'Stenographer: 85 posts': 'आशुलिपिक: 85 पद',
+            'Patwari: 45 posts': 'पटवारी: 45 पद',
+            'Various Technical Positions: 200+ posts': 'विभिन्न तकनीकी पद: 200+ पद',
+            'Check DDA Website →': 'DDA वेबसाइट देखें →',
+            
+            'Tentative Exam Dates Announced': 'अनंतिम परीक्षा तिथियाँ घोषित',
+            'The National Recruitment Agency (NRA) has released the tentative schedule for CET 2025. While exact dates are yet to be confirmed, the exams are expected to be conducted in August or September 2025. The official notification with confirmed dates will be released approximately 45 days before the examination.': 'राष्ट्रीय भर्ती एजेंसी (NRA) ने CET 2025 के लिए अनंतिम कार्यक्रम जारी किया है। जबकि सटीक तिथियां अभी तक पुष्टि की जानी बाकी हैं, परीक्षाएं अगस्त या सितंबर 2025 में आयोजित होने की उम्मीद है। पुष्टि की गई तिथियों के साथ आधिकारिक अधिसूचना परीक्षा से लगभग 45 दिन पहले जारी की जाएगी।',
+            'Expected Timeline:': 'अपेक्षित समयावधि:',
+            'Application Period': 'आवेदन अवधि',
+            'May - August 2025 (varies by recruiting agency)': 'मई - अगस्त 2025 (भर्ती एजेंसी के अनुसार अलग-अलग)',
+            'Admit Card Release': 'प्रवेश पत्र जारी',
+            '15-20 days before the exam': 'परीक्षा से 15-20 दिन पहले',
+            'Examination Period': 'परीक्षा अवधि',
+            'August - September 2025': 'अगस्त - सितंबर 2025',
+            'Result Declaration': 'परिणाम घोषणा',
+            'Expected by October-November 2025': 'अक्टूबर-नवंबर 2025 तक अपेक्षित',
+            'Important Note:': 'महत्वपूर्ण नोट:',
+            'Candidates are advised to regularly check the official website for any updates regarding the exam schedule. The dates mentioned are tentative and subject to change.': 'उम्मीदवारों को सलाह दी जाती है कि वे परीक्षा कार्यक्रम के संबंध में किसी भी अपडेट के लिए नियमित रूप से आधिकारिक वेबसाइट की जांच करें। उल्लिखित तिथियां अनंतिम हैं और परिवर्तन के अधीन हैं।',
+            
+            'New Reservation Criteria for Group D Posts': 'समूह D पदों के लिए नई आरक्षण मानदंड',
+            'Announced: April 15, 2025': 'घोषित: 15 अप्रैल, 2025',
+            'The Government of Haryana has introduced new reservation criteria for Group D posts in the upcoming CET 2025. The changes aim to provide more opportunities to candidates from economically weaker sections and ensure balanced representation across different categories.': 'हरियाणा सरकार ने आगामी CET 2025 में समूह D पदों के लिए नए आरक्षण मानदंड पेश किए हैं। परिवर्तनों का उद्देश्य आर्थिक रूप से कमजोर वर्गों के उम्मीदवारों को अधिक अवसर प्रदान करना और विभिन्न श्रेणियों में संतुलित प्रतिनिधित्व सुनिश्चित करना है।',
+            'Key Changes:': 'प्रमुख परिवर्तन:',
+            '10% reservation for Economically Weaker Sections (EWS)': 'आर्थिक रूप से कमजोर वर्गों (EWS) के लिए 10% आरक्षण',
+            '4% reservation for Persons with Benchmark Disabilities (PwBD)': 'बेंचमार्क विकलांगता वाले व्यक्तियों (PwBD) के लिए 4% आरक्षण',
+            '10% reservation for Ex-Servicemen': 'भूतपूर्व सैनिकों के लिए 10% आरक्षण',
+            'District-wise quota system for certain positions': 'कुछ पदों के लिए जिलेवार कोटा प्रणाली',
+            
+            // Related Blogs Section
+            'Related Articles': 'संबंधित लेख',
+            'Exam Pattern': 'परीक्षा पैटर्न',
+            'CET 2025 Exam Pattern and Format': 'CET 2025 परीक्षा पैटर्न और प्रारूप',
+            'In-depth analysis of exam pattern and important topics for CET 2025 preparation.': 'CET 2025 की तैयारी के लिए विस्तृत परीक्षा पैटर्न और महत्वपूर्ण विषयों का विश्लेषण।',
+            'Read Full Article →': 'पूरा लेख पढ़ें →',
+            'Syllabus': 'पाठ्यक्रम',
+            'CET 2025 Syllabus Detailed Guide': 'CET 2025 पाठ्यक्रम विस्तृत गाइड',
+            'Comprehensive breakdown of official syllabus and subject-wise study material for CET 2025.': 'CET 2025 के लिए आधिकारिक पाठ्यक्रम और विषयवार अध्ययन सामग्री का व्यापक विश्लेषण।',
+            'Strategy': 'रणनीति',
+            'Time Management Tips for CET': 'CET के लिए समय प्रबंधन युक्तियाँ',
+            'Learn effective time management strategies to improve your study efficiency and exam performance.': 'अपने अध्ययन दक्षता और परीक्षा प्रदर्शन को बेहतर बनाने के लिए प्रभावी समय प्रबंधन रणनीतियाँ।',
+            'View All Articles': 'सभी लेख देखें'
+        };
+
+        // Function to translate the page
+        function translatePage() {
+            const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, span, a, th, td');
+            elements.forEach(element => {
+                const text = element.textContent.trim();
+                if (languageToggle.checked) {
+                    // Switch to Hindi
+                    if (translations[text]) {
+                        element.textContent = translations[text];
+                    }
+                    translateBtnText.textContent = "अंग्रेजी में अनुवाद करें";
+                } else {
+                    // Switch to English
+                    Object.entries(translations).forEach(([english, hindi]) => {
+                        if (text === hindi) {
+                            element.textContent = english;
+                        }
+                    });
+                    translateBtnText.textContent = "Translate to Hindi";
+                }
+            });
+        }
+        
+        // Event listeners for language toggle
+        languageToggle.addEventListener('change', translatePage);
+        document.querySelector('.floating-translate-btn').addEventListener('click', function() {
+            languageToggle.checked = !languageToggle.checked;
+            translatePage();
+        });
+    </script>
+    <!-- Loader Script -->
+    <script>
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('loader-hidden');
+            }, 1500);
+        });
+    </script>
+    <script src="loader.js"></script>
+</body>
+</html>

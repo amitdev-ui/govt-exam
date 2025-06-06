@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailed Syllabus - CET 2025 Preparation Portal</title>
+    <meta name="description" content="Comprehensive syllabus for CET 2025 examination with detailed subject-wise breakdown.">
+    <meta name="keywords" content="CET 2025 syllabus, CET exam pattern, Haryana CET syllabus, CET subject-wise topics, CET preparation guide">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'indian-blue': '#0066CC',
+                        'indian-saffron': '#FF9933',
+                        'gov-blue': '#1a365d',
+                        'gov-light': '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #0066CC, #FF9933);
+            -webkit-text-fill-color: transparent;
+        }
+        .gov-card {
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        .gov-card:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        /* Navbar Styles */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #87CEEB;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #87CEEB;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link.active {
+            background: linear-gradient(45deg, #0066CC, #FF9933);
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-link.active::after {
+            width: 100%;
+        }
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+        #mobile-menu.hidden {
+            display: none;
+        }
+        #mobile-menu:not(.hidden) {
+            animation: slideDown 0.3s ease-in-out;
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Sticky Navbar Shadow */
+        nav.sticky {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        /* Navbar Link Hover Effects */
+        .mobile-nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .mobile-nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #87CEEB;
+            transition: width 0.3s ease;
+        }
+        .mobile-nav-link:hover {
+            color: #87CEEB;
+        }
+        .mobile-nav-link:hover::after {
+            width: 100%;
+        }
+        .syllabus-card {
+            transition: all 0.3s ease;
+        }
+        .syllabus-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        th {
+            background-color: #f8fafc;
+            font-weight: 600;
+        }
+
+        /* Language Switcher Styles */
+        .lang-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+        }
+        .lang-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 30px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "EN";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        input:checked + .slider {
+            background-color: #0066CC;
+        }
+        input:checked + .slider:before {
+            transform: translateX(30px);
+            content: "हिं";
+        }
+
+        /* Floating Translation Button */
+        .floating-translate-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #0066CC, #004C99);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            animation: pulse 2s infinite;
+        }
+
+        .floating-translate-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 25px rgba(0, 102, 204, 0.4);
+            background: linear-gradient(135deg, #004C99, #0066CC);
+        }
+
+        .floating-translate-btn i {
+            font-size: 20px;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+            }
+            50% {
+                box-shadow: 0 4px 30px rgba(0, 102, 204, 0.5);
+            }
+            100% {
+                box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-3px);
+            }
+        }
+    </style>
+    
+</head>
+<body class="bg-gov-light">
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+    </div>
+    
+
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+
+    <!-- Language Switcher -->
+    <div class="fixed top-4 right-4 z-50 flex items-center space-x-2">
+        <span class="text-sm text-gray-600">EN</span>
+        <label class="lang-switch">
+            <input type="checkbox" id="languageToggle">
+            <span class="slider"></span>
+        </label>
+        <span class="text-sm text-gray-600">हिं</span>
+    </div>
+
+    <!-- Floating Translation Button -->
+    <div class="floating-translate-btn" onclick="document.getElementById('languageToggle').click()">
+        <i class="fas fa-language"></i>
+        <span id="translateBtnText" class="font-semibold">Translate to Hindi</span>
+    </div>
+
+    <main class="container mx-auto px-4 py-10 max-w-4xl">
+        <!-- Breadcrumb Navigation -->
+        <nav class="text-sm mb-6" aria-label="Breadcrumb">
+            <ol class="list-none p-0 inline-flex">
+                <li class="flex items-center">
+                    <a href="index.html" class="text-indian-blue hover:text-indian-saffron">Home</a>
+                    <svg class="fill-current w-3 h-3 mx-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/>
+                    </svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="blog-index.html" class="text-indian-blue hover:text-indian-saffron">Blog</a>
+                    <svg class="fill-current w-3 h-3 mx-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/>
+                    </svg>
+                </li>
+                <li><span class="text-gray-500">CET 2025 Syllabus</span></li>
+            </ol>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-8">
+            <img src="img/exampattern2025.png" alt="CET 2025 Syllabus" class="w-full h-64 object-cover">
+            <div class="p-8">
+                <h1 class="text-4xl font-bold text-gov-blue mb-4">Detailed CET 2025 Syllabus: Subject-Wise Topics & Exam Pattern</h1>
+                <p class="text-gray-600 text-lg mb-6">The Common Eligibility Test (CET) 2025 is a gateway to government jobs in Group C and Group D categories. Whether you're applying through Haryana CET or the upcoming National Recruitment Agency CET, understanding the syllabus and exam pattern is the first step to smart preparation.</p>
+                <div class="flex items-center text-sm text-gray-500">
+                    <span>Published: March 15, 2024</span>
+                    <span class="mx-2">•</span>
+                    <span>10 min read</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <div class="prose max-w-none">
+                <!-- Exam Pattern Section -->
+                <h2 class="text-2xl font-bold text-gov-blue mb-6">CET 2025 Exam Pattern</h2>
+                <div class="bg-gov-light rounded-lg p-6 mb-8">
+                    <img src="img/exampattern2025-2.png" alt="CET Exam Pattern" class="w-full rounded-lg shadow-md mb-6">
+                    <div class="table-container">
+                        <table class="w-full">
+                            <thead>
+                                <tr>
+                                    <th>Section</th>
+                                    <th>No. of Questions</th>
+                                    <th>Marks</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>General Awareness</td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                </tr>
+                                <tr>
+                                    <td>Reasoning</td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                </tr>
+                                <tr>
+                                    <td>Quantitative Aptitude</td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                </tr>
+                                <tr>
+                                    <td>Language (English/Hindi)</td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                </tr>
+                                <tr>
+                                    <td>Computer Knowledge</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>Haryana General Knowledge</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr class="font-semibold">
+                                    <td>Total</td>
+                                    <td>100</td>
+                                    <td>100</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-4 text-gray-600">
+                        <p>⏰ Duration: 90 minutes</p>
+                        <p>❌ No negative marking</p>
+                        <p>🗣 Language: Bilingual (Hindi & English)</p>
+                    </div>
+                </div>
+
+                <!-- Subject-Wise Syllabus -->
+                <h2 class="text-2xl font-bold text-gov-blue mb-6">Subject-Wise CET 2025 Syllabus</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <!-- General Awareness -->
+                    <div class="syllabus-card bg-gov-light rounded-lg p-6">
+                        <h3 class="text-xl font-semibold text-gov-blue mb-4">🧠 General Awareness</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                            <li>Current affairs (national & international)</li>
+                            <li>Indian history & freedom struggle</li>
+                            <li>Indian polity & constitution</li>
+                            <li>Geography</li>
+                            <li>Economics & budget</li>
+                            <li>Awards, sports, books</li>
+                        </ul>
+                    </div>
+
+                    <!-- Reasoning -->
+                    <div class="syllabus-card bg-gov-light rounded-lg p-6">
+                        <h3 class="text-xl font-semibold text-gov-blue mb-4">🔍 Reasoning Ability</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                            <li>Analogies, classification</li>
+                            <li>Series (number & alphabet)</li>
+                            <li>Syllogism, blood relation</li>
+                            <li>Direction sense</li>
+                            <li>Coding-decoding</li>
+                            <li>Puzzles & seating arrangement</li>
+                        </ul>
+                    </div>
+
+                    <!-- Quantitative Aptitude -->
+                    <div class="syllabus-card bg-gov-light rounded-lg p-6">
+                        <h3 class="text-xl font-semibold text-gov-blue mb-4">📐 Quantitative Aptitude</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                            <li>Number system</li>
+                            <li>Simplification & approximation</li>
+                            <li>Percentage, profit & loss</li>
+                            <li>Simple & compound interest</li>
+                            <li>Ratio & proportion</li>
+                            <li>Time, speed, distance</li>
+                            <li>Mensuration & data interpretation</li>
+                        </ul>
+                    </div>
+
+                    <!-- Language -->
+                    <div class="syllabus-card bg-gov-light rounded-lg p-6">
+                        <h3 class="text-xl font-semibold text-gov-blue mb-4">📝 Language (English/Hindi)</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                            <li>Grammar & sentence structure</li>
+                            <li>Vocabulary & idioms</li>
+                            <li>Reading comprehension</li>
+                            <li>Synonyms/antonyms</li>
+                            <li>Cloze test & fill-in-the-blanks</li>
+                        </ul>
+                    </div>
+
+                    <!-- Computer Knowledge -->
+                    <div class="syllabus-card bg-gov-light rounded-lg p-6">
+                        <h3 class="text-xl font-semibold text-gov-blue mb-4">💻 Computer Awareness</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                            <li>Basics of computers</li>
+                            <li>Internet & email</li>
+                            <li>MS Office (Word, Excel, PowerPoint)</li>
+                            <li>Input/output devices</li>
+                            <li>Operating systems</li>
+                            <li>Cybersecurity basics</li>
+                        </ul>
+                    </div>
+
+                    <!-- Haryana GK -->
+                    <div class="syllabus-card bg-gov-light rounded-lg p-6">
+                        <h3 class="text-xl font-semibold text-gov-blue mb-4">📍 Haryana General Knowledge</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                            <li>Geography, history, and culture of Haryana</li>
+                            <li>Local festivals and fairs</li>
+                            <li>Haryana Government schemes</li>
+                            <li>Sports & personalities from Haryana</li>
+                            <li>Districts & administrative structure</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Preparation Tips -->
+                <div class="bg-indian-blue text-white rounded-lg p-8 mb-8">
+                    <h2 class="text-2xl font-bold mb-4">🧠 Preparation Tips for CET 2025</h2>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Start with previous year papers and mock tests</li>
+                        <li>Follow standard books (Lucent, Arihant, NCERTs)</li>
+                        <li>Use online platforms like Testbook, Gradeup, Adda247</li>
+                        <li>Practice Haryana GK from local newspapers and govt portals</li>
+                        <li>Create a monthly study planner</li>
+                    </ul>
+                </div>
+
+                <!-- Recommended Books -->
+                <h2 class="text-2xl font-bold text-gov-blue mb-6">📌 Recommended Books</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-gov-light rounded-lg p-6">
+                        <ul class="space-y-2 text-gray-600">
+                            <li><strong>General Awareness</strong> – Lucent GK, Pratiyogita Darpan</li>
+                            <li><strong>Reasoning</strong> – R.S. Aggarwal</li>
+                            <li><strong>Maths</strong> – Quantitative Aptitude by Arun Sharma</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gov-light rounded-lg p-6">
+                        <ul class="space-y-2 text-gray-600">
+                            <li><strong>English/Hindi</strong> – Objective General English by S.P. Bakshi / Hindi Vyakaran by Dr. N. Dharm</li>
+                            <li><strong>Computer</strong> – Objective Computer Awareness by Arihant</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Conclusion -->
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold text-gov-blue mb-4">Conclusion</h2>
+                    <p class="text-gray-600">The CET 2025 syllabus is well-balanced and focused on testing your fundamentals and local knowledge. With regular practice and a strategic approach, you can score well and open the doors to your dream government job.</p>
+                </div>
+
+                <!-- Related Articles -->
+                <div class="bg-gov-light rounded-lg p-6">
+                    <h2 class="text-xl font-bold text-gov-blue mb-4">Related Blog Posts</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <a href="how-to-crack-cet.html" class="block p-4 bg-white rounded-lg hover:shadow-md transition">
+                            <img src="img/study.jpg" alt="CET Preparation" class="w-full h-32 object-cover rounded-lg mb-3">
+                            <h3 class="font-semibold text-gov-blue">How to Crack CET 2025: Top Strategies</h3>
+                        </a>
+                        <a href="cet-vacancies.html" class="block p-4 bg-white rounded-lg hover:shadow-md transition">
+                            <img src="img/upcoming vacancy.png" alt="CET Vacancies" class="w-full h-32 object-cover rounded-lg mb-3">
+                            <h3 class="font-semibold text-gov-blue">CET 2025: Upcoming Vacancies Overview</h3>
+                        </a>
+                        <a href="blog-cet-benefits.html" class="block p-4 bg-white rounded-lg hover:shadow-md transition">
+                            <img src="img/pm.jpg" alt="CET Benefits" class="w-full h-32 object-cover rounded-lg mb-3">
+                            <h3 class="font-semibold text-gov-blue">Top Benefits of Qualifying CET</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gov-blue text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm text-gray-400">© 2025 CET Preparation Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Include Navbar Script -->
+    <script>
+        // Load navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+
+        // Set active link in breadcrumb
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('bg-indian-blue');
+            }
+        });
+
+        // Language Switcher Functionality
+        const languageToggle = document.getElementById('languageToggle');
+        const translateBtnText = document.getElementById('translateBtnText');
+        
+        // Hindi translations
+        const translations = {
+            // Headings
+            'Detailed CET 2025 Syllabus: Subject-Wise Topics & Exam Pattern': 'CET 2025 का विस्तृत पाठ्यक्रम: विषयवार विषय और परीक्षा पैटर्न',
+            'CET 2025 Exam Pattern': 'CET 2025 परीक्षा पैटर्न',
+            'Subject-Wise CET 2025 Syllabus': 'विषयवार CET 2025 पाठ्यक्रम',
+            'Preparation Tips for CET 2025': 'CET 2025 के लिए तैयारी के टिप्स',
+            'Recommended Books': 'अनुशंसित पुस्तकें',
+            'Conclusion': 'निष्कर्ष',
+            'Related Blog Posts': 'संबंधित ब्लॉग पोस्ट',
+            
+            // Content
+            'The Common Eligibility Test (CET) 2025 is a gateway to government jobs in Group C and Group D categories.': 'कॉमन एलिजिबिलिटी टेस्ट (CET) 2025 ग्रुप C और ग्रुप D श्रेणियों में सरकारी नौकरियों का प्रवेश द्वार है।',
+            'Whether you\'re applying through Haryana CET or the upcoming National Recruitment Agency CET, understanding the syllabus and exam pattern is the first step to smart preparation.': 'चाहे आप हरियाणा CET के माध्यम से आवेदन कर रहे हों या आगामी राष्ट्रीय भर्ती एजेंसी CET के माध्यम से, पाठ्यक्रम और परीक्षा पैटर्न को समझना स्मार्ट तैयारी का पहला कदम है।',
+            'Section': 'खंड',
+            'No. of Questions': 'प्रश्नों की संख्या',
+            'Marks': 'अंक',
+            'Duration: 90 minutes': 'अवधि: 90 मिनट',
+            'No negative marking': 'नकारात्मक अंकन नहीं',
+            'Language: Bilingual (Hindi & English)': 'भाषा: द्विभाषी (हिंदी और अंग्रेजी)',
+            
+            // Subject Names
+            'General Awareness': 'सामान्य जागरूकता',
+            'Reasoning': 'तार्किक क्षमता',
+            'Quantitative Aptitude': 'संख्यात्मक अभियोग्यता',
+            'Language (English/Hindi)': 'भाषा (अंग्रेजी/हिंदी)',
+            'Computer Knowledge': 'कंप्यूटर ज्ञान',
+            'Haryana General Knowledge': 'हरियाणा सामान्य ज्ञान',
+            'Total': 'कुल',
+            
+            // Navigation
+            'Home': 'मुख्य पृष्ठ',
+            'Blog': 'ब्लॉग',
+            'CET 2025 Syllabus': 'CET 2025 पाठ्यक्रम',
+            
+            // Additional Content
+            'Published: March 15, 2024': 'प्रकाशित: 15 मार्च, 2024',
+            '10 min read': '10 मिनट का पठन',
+            'Start with previous year papers and mock tests': 'पिछले वर्ष के पत्रों और मॉक टेस्ट से शुरू करें',
+            'Follow standard books (Lucent, Arihant, NCERTs)': 'मानक पुस्तकों का पालन करें (लूसेंट, अरिहंत, NCERT)',
+            'Use online platforms like Testbook, Gradeup, Adda247': 'टेस्टबुक, ग्रेडअप, अड्डा247 जैसे ऑनलाइन प्लेटफॉर्म का उपयोग करें',
+            'Practice Haryana GK from local newspapers and govt portals': 'स्थानीय समाचार पत्रों और सरकारी पोर्टलों से हरियाणा GK का अभ्यास करें',
+            'Create a monthly study planner': 'मासिक अध्ययन योजनाकार बनाएं',
+            'The CET 2025 syllabus is well-balanced and focused on testing your fundamentals and local knowledge.': 'CET 2025 का पाठ्यक्रम अच्छी तरह से संतुलित है और आपके मूलभूत ज्ञान और स्थानीय ज्ञान का परीक्षण करने पर केंद्रित है।',
+            'With regular practice and a strategic approach, you can score well and open the doors to your dream government job.': 'नियमित अभ्यास और रणनीतिक दृष्टिकोण के साथ, आप अच्छा स्कोर कर सकते हैं और अपनी सपनों की सरकारी नौकरी के दरवाजे खोल सकते हैं।'
+        };
+
+        languageToggle.addEventListener('change', function() {
+            const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, span, a, th, td');
+            elements.forEach(element => {
+                const text = element.textContent.trim();
+                if (this.checked) {
+                    // Switch to Hindi
+                    if (translations[text]) {
+                        element.textContent = translations[text];
+                    }
+                    translateBtnText.textContent = 'अंग्रेजी में अनुवाद करें';
+                } else {
+                    // Switch to English
+                    Object.entries(translations).forEach(([english, hindi]) => {
+                        if (text === hindi) {
+                            element.textContent = english;
+                        }
+                    });
+                    translateBtnText.textContent = 'Translate to Hindi';
+                }
+            });
+        });
+    </script>
+    <!-- Loader Script -->
+    <script>
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('loader-hidden');
+            }, 1500);
+        });
+    </script>
+</body>
+</html> 

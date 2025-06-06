@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for CET 2025 - Application Process</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="translations.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'indian-blue': '#0066CC',
+                        'indian-saffron': '#FF9933',
+                        'gov-blue': '#1a365d',
+                        'gov-light': '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #0066CC, #FF9933);
+            -webkit-text-fill-color: transparent;
+        }
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #0066CC;
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+        .nav-link {
+            position: relative;
+            padding: 0.5rem 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #0066CC, #FF9933);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        .nav-link:hover {
+            color: #0066CC;
+            transform: translateY(-2px);
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link.active {
+            color: #0066CC;
+            font-weight: 600;
+        }
+        .nav-link.active::after {
+            width: 100%;
+            background: linear-gradient(90deg, #0066CC, #FF9933);
+        }
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+        #mobile-menu.hidden {
+            display: none;
+        }
+        #mobile-menu:not(.hidden) {
+            animation: slideDown 0.3s ease-in-out;
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Sticky Navbar Shadow */
+        nav.sticky {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        /* Navbar Link Hover Effects */
+        .mobile-nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .mobile-nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #0066CC, #FF9933);
+            transition: width 0.3s ease;
+        }
+        .mobile-nav-link:hover {
+            color: #0066CC;
+            transform: translateX(5px);
+        }
+        .mobile-nav-link:hover::after {
+            width: 100%;
+        }
+        .apply-card {
+            border-left: 4px solid #0066CC;
+            transition: all 0.3s ease;
+        }
+        .apply-card:hover {
+            border-left-color: #FF9933;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .countdown {
+            background: linear-gradient(45deg, #0066CC, #FF9933);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gov-card {
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        .gov-card:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+    </style>
+    </head>
+<body class="bg-gov-light">
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+
+    <!-- Accessibility Menu -->
+    <a href="#main-content" class="skip-link">Skip to main content | Screen Reader Access</a>
+
+    <!-- Main Content -->
+    <main id="main-content" class="container mx-auto px-4 py-8">
+        <!-- Countdown Banner -->
+        <div style="background-color: skyblue;" class="bg--to-r from-indian-blue to-indian-saffron text-white rounded-lg p-6 mb-8 text-center">
+            <h2 class="text-2xl font-bold mb-2">⏰ Application Deadline Countdown</h2>
+            <p class="text-xl" id="countdown">Loading...</p>
+            
+            <!-- Add Translation Button -->
+            <div class="mt-4">
+                <button id="translateBtn" class="bg-indian-blue text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300 flex items-center justify-center mx-auto">
+                    <i class="fas fa-language mr-2"></i>
+                    <span id="translateBtnText">हिंदी में देखें</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Application Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <!-- Haryana CET Card -->
+            <div class="apply-card bg-white rounded-lg shadow-md p-6 hover-scale">
+                <div class="flex items-center mb-4">
+                    <span class="text-2xl mr-2">🟢</span>
+                    <h2 class="text-xl font-bold text-gray-800">Haryana CET 2025</h2>
+                </div>
+                <p class="text-gray-600 mb-4">Group C & D Posts - Haryana Staff Selection Commission (HSSC)</p>
+                
+                <div class="space-y-4">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-semibold text-indian-blue mb-2">📅 Important Dates</h3>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>Application Period: May 28 to June 12, 2025</li>
+                            <li>Fee Payment Deadline: June 14, 2025 (until 6:00 PM)</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-semibold text-indian-blue mb-2">👥 Eligibility</h3>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>Education: 10th or 12th grade completed</li>
+                            <li>Age: 18–42 years</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4 mt-6">
+                        <a href="https://hssc.gov.in" target="_blank" class="bg-indian-blue text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                            Apply Online →
+                        </a>
+                        <a href="#" class="bg-white border border-indian-blue text-indian-blue px-6 py-2 rounded-lg hover:bg-gray-50 transition duration-300">
+                            Download Notification
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NRA CET Card -->
+            <div class="apply-card bg-white rounded-lg shadow-md p-6 hover-scale">
+                <div class="flex items-center mb-4">
+                    <span class="text-2xl mr-2">🟡</span>
+                    <h2 class="text-xl font-bold text-gray-800">NRA CET 2025</h2>
+                </div>
+                <p class="text-gray-600 mb-4">National-Level Exam for SSC, RRB, IBPS</p>
+                
+                <div class="space-y-4">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-semibold text-indian-blue mb-2">📅 Expected Timeline</h3>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>Notification Release: July 2025</li>
+                            <li>Exam Period: October–November 2025</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-semibold text-indian-blue mb-2">👥 Eligibility</h3>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>Education: 10th, 12th, or graduation (based on exam level)</li>
+                            <li>For non-gazetted posts in central government organizations</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4 mt-6">
+                        <a href="https://nracet.nic.in" target="_blank" class="bg-indian-blue text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                            Visit Portal →
+                        </a>
+                        <button class="bg-white border border-indian-blue text-indian-blue px-6 py-2 rounded-lg hover:bg-gray-50 transition duration-300" onclick="alert('Notification will be available in July 2025')">
+                            Get Updates
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Resources -->
+        <section class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-bold bg-blue mb-4">📚 Additional Resources</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="how-to-crack-cet.html" class="bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition duration-300 group">
+                    <img src="img/prepare.png" alt="Application Guide" class="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition duration-300">
+                    <h3 class="font-semibold text-indian-blue mb-2">📋 Application Guide</h3>
+                    <p class="text-gray-600">Step-by-step guide for filling out the application form</p>
+                </a>
+                <a href="document-requirements.html" class="bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition duration-300 group">
+                    <img src="img/requiermnent.jpg" alt="Document Checklist" class="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition duration-300">
+                    <h3 class="font-semibold text-indian-blue mb-2">📝 Document Checklist</h3>
+                    <p class="text-gray-600">Essential documents required for application</p>
+                </a>
+                <a href="blog-cet-achievement-hindi.html" class="bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition duration-300 group">
+                    <img src="img/achivement.png" alt="CET Benefits" class="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition duration-300">
+                    <h3 class="font-semibold text-indian-blue mb-2">❓ Benefits Of Cracking CET 2025</h3>
+                    <p class="text-gray-600">🏆 CET सफलता: सरकारी नौकरी की दिशा में एक ऐतिहासिक उपलब्धि!</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm text-gray-400">© 2025 सीईटी तैयारी पोर्टल। सर्वाधिकार सुरक्षित।</p>
+        </div>
+    </footer>
+
+    <!-- Loader -->
+    <div id="loader-wrapper"></div>
+    <script src="loader.js"></script>
+
+    <!-- Include Navbar Script -->
+    <script>
+        // Load navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+
+        // Countdown Timer
+        function updateCountdown() {
+            const deadline = new Date('June 14, 2025 18:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = deadline - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').innerHTML = 
+                `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds remaining`;
+
+            if (distance < 0) {
+                document.getElementById('countdown').innerHTML = "Application Period Ended";
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+
+    <!-- Translation functionality -->
+    <script>
+        const languageToggle = document.getElementById('languageToggle');
+        const translateBtnText = document.getElementById('translateBtnText');
+        let isHindi = false;
+
+        const translations = {
+            'hero.title': 'ग्रुप C और D सरकारी नौकरियां: सुरक्षित करियर का द्वार (2025 गाइड)',
+            'hero.subtitle': 'CET 2025 के माध्यम से सरकारी सेवाओं में अवसरों का अन्वेषण करें',
+            'apply.button': 'अभी आवेदन करें →',
+            'intro.heading': '🎯 ग्रुप C और D नौकरियां सरकारी सेवाओं की रीढ़ क्यों हैं',
+            'intro.paragraph1': 'नौकरी की सुरक्षा, काम-जीवन संतुलन और समाज में सम्मान की बात आती है, तो सरकारी विभागों में ग्रुप C और D की नौकरियां सबसे आगे हैं। ये पद न केवल स्थिरता प्रदान करते हैं बल्कि CET (कॉमन एलिजिबिलिटी टेस्ट) 2025 के माध्यम से सरकारी कार्यबल में सीधी प्रविष्टि भी देते हैं।',
+            'what.heading': '🏛️ ग्रुप C और D नौकरियां क्या हैं?',
+            'table.group': 'समूह',
+            'table.type': 'कार्य का प्रकार',
+            'table.departments': 'सामान्य विभाग',
+            'table.row1.group': 'ग्रुप C',
+            'table.row1.work': 'क्लर्क, स्टेनोग्राफी, जूनियर सहायक, डाटा एंट्री',
+            'table.row1.departments': 'एसएससी, रेलवे, राज्य सेवाएं',
+            'table.row2.group': 'ग्रुप D',
+            'table.row2.work': 'चपरासी, हेल्पर, ड्राइवर, मल्टी-टास्किंग स्टाफ (एमटीएस)',
+            'table.row2.departments': 'स्वास्थ्य, शिक्षा, पुलिस, नगर पालिका',
+            'what.paragraph1': 'ये नौकरियां हर सरकारी विभाग के सुचारू कामकाज के लिए आवश्यक हैं, जिससे वे अत्यधिक मूल्यवान और सम्मानित हैं।',
+            'cet2025.heading': '📋 CET 2025: कई अवसरों के लिए एक परीक्षा',
+            'cet2025.paragraph1': 'CET 2025 केंद्रीय और राज्य-स्तरीय विभागों में ग्रुप C और D रिक्तियों के लिए एक परीक्षा आयोजित करके भर्ती प्रक्रिया को सरल बनाता है। इसका मतलब है:',
+            'cet2025.bullet1': '✅ एक बार आवेदन करें — कई नौकरियों के लिए योग्य',
+            'cet2025.bullet2': '✅ परीक्षा का तनाव कम',
+            'cet2025.bullet3': '✅ पारदर्शी और योग्यता-आधारित भर्ती',
+            'eligibility.heading': '👨‍🎓 ग्रुप C और D नौकरियों के लिए पात्रता मानदंड',
+            'eligibility.groupc.heading': 'ग्रुप C:',
+            'eligibility.groupc.qualification': '<span class="font-medium">योग्यता:</span> पद के आधार पर 12वीं पास / स्नातक',
+            'eligibility.groupc.age': '<span class="font-medium">आयु सीमा:</span> 18–35 वर्ष (आरक्षित श्रेणियों के लिए छूट)',
+            'eligibility.groupd.heading': 'ग्रुप D:',
+            'eligibility.groupd.qualification': '<span class="font-medium">योग्यता:</span> 10वीं पास या समकक्ष',
+            'eligibility.groupd.age': '<span class="font-medium">आयु सीमा:</span> 18–35 वर्ष (मानदंडों के अनुसार छूट)',
+            'positions.heading': '💼 ग्रुप C और D में उपलब्ध शीर्ष पद',
+            'positions.groupc.heading': '✅ ग्रुप C पद:',
+            'positions.groupc.post1': 'लोअर डिवीजन क्लर्क (एलडीसी)',
+            'positions.groupc.post2': 'जूनियर सचिवालय सहायक',
+            'positions.groupc.post3': 'स्टेनोग्राफर',
+            'positions.groupc.post4': 'टाइपिस्ट',
+            'positions.groupc.post5': 'डाटा एंट्री ऑपरेटर (डीईओ)',
+            'positions.groupd.heading': '✅ ग्रुप D पद:',
+            'positions.groupd.post1': 'चपरासी / ऑफिस अटेंडेंट',
+            'positions.groupd.post2': 'ड्राइवर',
+            'positions.groupd.post3': 'स्वीपर / क्लीनर',
+            'positions.groupd.post4': 'मल्टी-टास्किंग स्टाफ (एमटीएस)',
+            'positions.groupd.post5': 'माली / गार्डनर',
+            'salary.heading': '💰 ग्रुप C और D नौकरियों का वेतन और सुविधाएं',
+            'salary.table.group': 'समूह',
+            'salary.table.pay': 'वेतनमान',
+            'salary.table.benefits': 'लाभ',
+            'salary.table.row1.group': 'C',
+            'salary.table.row1.pay': '₹25,000 – ₹81,100',
+            'salary.table.row1.benefits': 'एचआरए, डीए, मेडिकल, पेंशन',
+            'salary.table.row2.group': 'D',
+            'salary.table.row2.pay': '₹18,000 – ₹56,900',
+            'salary.table.row2.benefits': 'नौकरी की सुरक्षा, पीएफ, बोनस, एलटीसी',
+            'salary.paragraph1': '✨ सरकारी नौकरियां नियमित पदोन्नति और वार्षिक वृद्धि प्रदान करती हैं, जिससे वे आर्थिक रूप से सुरक्षित होती हैं।',
+            'benefits.heading': '📌 CET के माध्यम से ग्रुप C और D नौकरियों के लाभ',
+            'benefits.bullet1.title': 'नौकरी की सुरक्षा',
+            'benefits.bullet1.text': 'पेंशन लाभ के साथ स्थायी पद',
+            'benefits.bullet2.title': 'निश्चित कार्य घंटे',
+            'benefits.bullet2.text': 'छुट्टियों के साथ संतुलित जीवन',
+            'benefits.bullet3.title': 'कम प्रतिस्पर्धा',
+            'benefits.bullet3.text': 'उच्च समूह परीक्षाओं की तुलना में आसान',
+            'benefits.bullet4.title': 'करियर ग्रोथ',
+            'benefits.bullet4.text': 'नियमित विभागीय पदोन्नति',
+            'benefits.bullet5.title': 'समावेशी',
+            'benefits.bullet5.text': '10वीं और 12वीं पास छात्रों के लिए बढ़िया',
+            'howapply.heading': '📝 ग्रुप C और D नौकरियों के लिए कैसे आवेदन करें?',
+            'howapply.step1': 'आधिकारिक सीईटी पोर्टल पर जाएं (उदाहरण: https://hssc.gov.in)',
+            'howapply.step2': 'आधार और मोबाइल का उपयोग करके पंजीकरण पूरा करें',
+            'howapply.step3': 'आवश्यक दस्तावेज अपलोड करें (फोटो, हस्ताक्षर, प्रमाण पत्र)',
+            'howapply.step4': 'ग्रुप C/D के तहत पद चुनें',
+            'howapply.step5': 'आवेदन जमा करें और रसीद प्रिंट करें',
+            'dates.heading': '📅 CET 2025 के महत्वपूर्ण तिथियां',
+            'dates.start': '<span class="font-medium">आवेदन शुरू:</span> 28 मई 2025',
+            'dates.end': '<span class="font-medium">आवेदन की अंतिम तिथि:</span> 12 जून 2025',
+            'dates.exam': '<span class="font-medium">परीक्षा अनुमानित:</span> अगस्त–सितंबर 2025',
+            'dates.result': '<span class="font-medium">परिणाम घोषणा:</span> अधिसूचित किया जाएगा',
+            'resources.heading': '📚 ग्रुप C और D CET की तैयारी के लिए सर्वश्रेष्ठ संसाधन',
+            'resources.books.heading': 'किताबें',
+            'resources.books.book1': 'लुसेंट की जीके',
+            'resources.books.book2': 'आरएस अग्रवाल (गणित)',
+            'resources.books.book3': 'अरिहंत रीजनिंग',
+            'resources.online.heading': 'ऑनलाइन प्लेटफॉर्म',
+            'resources.online.platform1': 'टेस्टबुक',
+            'resources.online.platform2': 'ग्रेडअप',
+            'resources.online.platform3': 'अड्डा247',
+            'resources.papers.heading': 'पिछले प्रश्न पत्र',
+            'resources.papers.paper1': 'सीईटी हरियाणा के पेपर हल करें',
+            'resources.papers.paper2': 'एसएससी ग्रुप C/D के पेपर',
+            'resources.papers.paper3': 'मॉक टेस्ट का अभ्यास करें',
+            'related.heading': '📚 संबंधित पोस्ट',
+            'related.post1.title': 'पहले प्रयास में CET कैसे क्रैक करें',
+            'related.post2.title': 'विस्तृत CET 2025 पाठ्यक्रम और टिप्स',
+            'final.heading': '🏁 अंतिम विचार',
+            'final.paragraph1': 'ग्रुप C या D की नौकरी पाना अब कोई सपना नहीं है—यह CET 2025 के साथ एक यथार्थवादी लक्ष्य है। न्यूनतम योग्यता और ईमानदारी से तैयारी के साथ, कोई भी सम्मानजनक और आजीवन सरकारी नौकरी पा सकता है। आज ही तैयारी शुरू करें और अपना भविष्य सुरक्षित करें।',
+            'final.paragraph2': '🔔 मुफ्त मॉक टेस्ट, अध्ययन सामग्री और नवीनतम नौकरी अलर्ट के लिए हमसे जुड़े रहें।',
+            'footer.copyright': '© 2025 CET Preparation Portal. All rights reserved. ✨',
+            'Translate to Hindi': 'अंग्रेजी में अनुवाद करें',
+            'View in English': 'हिंदी में देखें'
+        };
+
+        function updateContent(lang) {
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[key]) {
+                    element.innerHTML = translations[key]; // Use innerHTML to support spans within translations
+                } else {
+                     // Fallback to original English if Hindi translation is missing
+                     // Note: You might need a mechanism to store original English text if not using innerText/textContent
+                     // For now, we rely on the presence of data-translate attribute and the key in the translations object.
+                }
+            });
+             // Update button text separately
+            translateBtnText.textContent = lang === 'hindi' ? 'अंग्रेजी में अनुवाद करें' : 'Translate to Hindi';
+        }
+
+        languageToggle.addEventListener('click', function() {
+            isHindi = !isHindi;
+            updateContent(isHindi ? 'hindi' : 'english');
+        });
+
+        // Initial load: Apply English text (which is already in HTML) or default to Hindi if preferred
+        // updateContent('english'); // You can uncomment this if you want to explicitly initialize in English
+
+    </script>
+    <!-- Loader Script -->
+    <script>
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('loader-hidden');
+            }, 1500);
+        });
+    </script>
+</body>
+</html> 

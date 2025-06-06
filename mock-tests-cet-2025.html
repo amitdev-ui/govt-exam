@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Mock Tests for CET 2025 - CET Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+
+/* Navbar Styles */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #87CEEB;
+    transition: width 0.3s ease;
+}
+.nav-link:hover {
+    color: #87CEEB;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+.nav-link.active {
+    background: linear-gradient(45deg, #0066CC, #FF9933);
+    -webkit-text-fill-color: transparent;
+}
+.nav-link.active::after {
+    width: 100%;
+}
+/* Mobile Menu Animation */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+#mobile-menu.hidden {
+    display: none;
+}
+#mobile-menu:not(.hidden) {
+    animation: slideDown 0.3s ease-in-out;
+}
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Sticky Navbar Shadow */
+nav.sticky {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/* Navbar Link Hover Effects */
+.mobile-nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.mobile-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #87CEEB;
+    transition: width 0.3s ease;
+}
+.mobile-nav-link:hover {
+    color: #87CEEB;
+}
+.mobile-nav-link:hover::after {
+    width: 100%;
+}
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #0066CC;
+            --secondary: #FF9933;
+            --accent: #4CAF50;
+            --background: #f8fafc;
+            --text: #1e293b;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .article-header {
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(255, 153, 51, 0.1));
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .article-content h2 {
+            color: var(--primary);
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            color: #4a5568;
+        }
+
+        .article-content ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: #64748b;
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+        }
+
+        .article-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin: 2rem 0;
+        }
+
+        .article-tag {
+            background-color: #e2e8f0;
+            color: #475569;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .share-button {
+            background-color: #f1f5f9;
+            color: #475569;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .share-button:hover {
+            background-color: #e2e8f0;
+            transform: translateY(-2px);
+        }
+
+        .mock-test-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .mock-test-card h3 {
+            color: var(--primary);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .mock-test-features {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .feature-tag {
+            background-color: #f0f9ff;
+            color: #0369a1;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+
+    <!-- Article Header -->
+    <header class="article-header">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Top 10 Mock Tests for CET 2025</h1>
+                <div class="article-meta justify-center">
+                    <span><i class="far fa-calendar-alt mr-2"></i>March 16, 2024</span>
+                    <span><i class="far fa-clock mr-2"></i>8 min read</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <main class="article-content">
+        <img src="img/mock.png" alt="Mock Tests" class="w-full h-auto rounded-lg mb-8">
+        
+        <p class="lead text-xl text-gray-700 mb-8">
+            Discover the best mock tests and practice resources for CET 2025. This comprehensive guide covers both free and premium test series to help you prepare effectively.
+        </p>
+
+        <h2>Why Mock Tests are Essential</h2>
+        <p>
+            Mock tests are crucial for CET preparation as they help you:
+        </p>
+        <ul>
+            <li>Understand the exam pattern and question types</li>
+            <li>Improve time management skills</li>
+            <li>Identify your strengths and weaknesses</li>
+            <li>Build exam temperament</li>
+            <li>Track your progress over time</li>
+        </ul>
+
+        <h2>Top Free Mock Test Series</h2>
+        
+        <div class="mock-test-card">
+            <h3>1. CET Official Practice Tests</h3>
+            <p>Free mock tests provided by the official CET portal with detailed solutions and performance analysis.</p>
+            <div class="mock-test-features">
+                <span class="feature-tag">Free</span>
+                <span class="feature-tag">Official Pattern</span>
+                <span class="feature-tag">Detailed Solutions</span>
+            </div>
+        </div>
+
+        <div class="mock-test-card">
+            <h3>2. CET Preparation Portal Tests</h3>
+            <p>Regular mock tests with comprehensive coverage of all subjects and difficulty levels.</p>
+            <div class="mock-test-features">
+                <span class="feature-tag">Free</span>
+                <span class="feature-tag">Weekly Tests</span>
+                <span class="feature-tag">Performance Analytics</span>
+            </div>
+        </div>
+
+        <h2>Premium Mock Test Series</h2>
+
+        <div class="mock-test-card">
+            <h3>3. CET Pro Test Series</h3>
+            <p>Comprehensive test series with detailed analysis, video solutions, and personalized feedback.</p>
+            <div class="mock-test-features">
+                <span class="feature-tag">Premium</span>
+                <span class="feature-tag">Video Solutions</span>
+                <span class="feature-tag">Personal Mentoring</span>
+            </div>
+        </div>
+
+        <div class="mock-test-card">
+            <h3>4. CET Master Series</h3>
+            <p>Advanced level tests designed by subject experts with focus on time management and accuracy.</p>
+            <div class="mock-test-features">
+                <span class="feature-tag">Premium</span>
+                <span class="feature-tag">Expert Designed</span>
+                <span class="feature-tag">Performance Tracking</span>
+            </div>
+        </div>
+
+        <h2>How to Make the Most of Mock Tests</h2>
+        <ul>
+            <li>Take tests in a simulated exam environment</li>
+            <li>Analyze your performance after each test</li>
+            <li>Focus on improving weak areas</li>
+            <li>Maintain a record of your scores</li>
+            <li>Review solutions thoroughly</li>
+        </ul>
+
+        <div class="article-tags">
+            <span class="article-tag">Mock Tests</span>
+            <span class="article-tag">CET Preparation</span>
+            <span class="article-tag">Practice Tests</span>
+            <span class="article-tag">Exam Strategy</span>
+        </div>
+
+        <div class="share-buttons">
+            <button class="share-button">
+                <i class="fab fa-facebook-f"></i>
+                Share
+            </button>
+            <button class="share-button">
+                <i class="fab fa-twitter"></i>
+                Tweet
+            </button>
+            <button class="share-button">
+                <i class="fab fa-linkedin-in"></i>
+                Share
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p>&copy; 2024 CET Exam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Load navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+</body>
+</html> 

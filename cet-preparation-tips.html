@@ -1,0 +1,304 @@
+<style>
+
+/* Navbar Styles */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #87CEEB;
+    transition: width 0.3s ease;
+}
+.nav-link:hover {
+    color: #87CEEB;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+.nav-link.active {
+    background: linear-gradient(45deg, #0066CC, #FF9933);
+    -webkit-text-fill-color: transparent;
+}
+.nav-link.active::after {
+    width: 100%;
+}
+/* Mobile Menu Animation */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+#mobile-menu.hidden {
+    display: none;
+}
+#mobile-menu:not(.hidden) {
+    animation: slideDown 0.3s ease-in-out;
+}
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Sticky Navbar Shadow */
+nav.sticky {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/* Navbar Link Hover Effects */
+.mobile-nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.mobile-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #87CEEB;
+    transition: width 0.3s ease;
+}
+.mobile-nav-link:hover {
+    color: #87CEEB;
+}
+.mobile-nav-link:hover::after {
+    width: 100%;
+}
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+    .gradient-bg {
+        background: linear-gradient(135deg, rgba(0,102,204,0.1) 0%, rgba(255,153,51,0.1) 100%);
+    }
+    .tip-card {
+        transition: transform 0.3s ease;
+    }
+    .tip-card:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Language Switcher Styles */
+    .lang-switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 30px;
+    }
+    .lang-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+        border-radius: 30px;
+    }
+    .slider:before {
+        position: absolute;
+        content: "EN";
+        height: 22px;
+        width: 22px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: .4s;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        font-weight: bold;
+    }
+    input:checked + .slider {
+        background-color: #0066CC;
+    }
+    input:checked + .slider:before {
+        transform: translateX(30px);
+        content: "हिं";
+    }
+
+    /* Floating Translation Button */
+    .floating-translate-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: linear-gradient(135deg, #0066CC, #004C99);
+        color: white;
+        padding: 12px 24px;
+        border-radius: 30px;
+        box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 1000;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        animation: pulse 2s infinite;
+    }
+
+    .floating-translate-btn:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 6px 25px rgba(0, 102, 204, 0.4);
+        background: linear-gradient(135deg, #004C99, #0066CC);
+    }
+
+    .floating-translate-btn i {
+        font-size: 20px;
+        animation: bounce 1s infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+        }
+        50% {
+            box-shadow: 0 4px 30px rgba(0, 102, 204, 0.5);
+        }
+        100% {
+            box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+        }
+    }
+
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-3px);
+        }
+    }
+</style>
+</head>
+<body class="bg-gray-50">
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-content">
+            <img src="book-loading.svg" alt="Loading..." />
+            <p>📚 कृपया प्रतीक्षा करें... जानकारी लोड हो रही है</p>
+        </div>
+    </div>
+
+    <!-- Include Navbar -->
+    <div id="navbar-container"></div>
+    <script src="navbar.js"></script>
+
+    <!-- Language Switcher -->
+    <div class="fixed top-4 right-4 z-50 flex items-center space-x-2">
+        <span class="text-sm text-gray-600">EN</span>
+        <label class="lang-switch">
+            <input type="checkbox" id="languageToggle">
+            <span class="slider"></span>
+        </label>
+        <span class="text-sm text-gray-600">हिं</span>
+    </div>
+
+    <!-- Floating Translation Button -->
+    <div class="floating-translate-btn" onclick="document.getElementById('languageToggle').click()">
+        <i class="fas fa-language"></i>
+        <span id="translateBtnText" class="font-semibold">Translate to Hindi</span>
+    </div>
+
+<script>
+    // Load navbar
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+        });
+
+    // Set active link
+    const currentPath = window.location.pathname;
+    document.querySelectorAll('.nav-link').forEach(link => {
+        if (link.getAttribute('href') === currentPath.split('/').pop()) {
+            link.classList.add('text-indigo-900');
+            link.classList.remove('text-gray-600');
+        }
+    });
+
+    // Language Switcher Functionality
+    const languageToggle = document.getElementById('languageToggle');
+    const translateBtnText = document.getElementById('translateBtnText');
+    
+    // Hindi translations
+    const translations = {
+        // Headings
+        'How to Crack CET 2025: Expert Tips & Strategies': 'CET 2025 कैसे पास करें: विशेषज्ञ टिप्स और रणनीतियां',
+        'Understanding the CET Exam': 'CET परीक्षा को समझना',
+        'Essential Preparation Tips': 'आवश्यक तैयारी टिप्स',
+        'Subject-Wise Preparation Strategy': 'विषयवार तैयारी रणनीति',
+        'Time Management Tips': 'समय प्रबंधन टिप्स',
+        'Mock Tests & Practice': 'मॉक टेस्ट और अभ्यास',
+        'Common Mistakes to Avoid': 'बचने के लिए सामान्य गलतियां',
+        'Last-Minute Preparation Tips': 'आखिरी समय की तैयारी टिप्स',
+        'Related Articles': 'संबंधित लेख',
+        
+        // Content
+        'The Common Eligibility Test (CET) is your gateway to various government jobs.': 'कॉमन एलिजिबिलिटी टेस्ट (CET) विभिन्न सरकारी नौकरियों का प्रवेश द्वार है।',
+        'With proper planning and execution, you can crack this exam and secure your future.': 'उचित योजना और क्रियान्वयन के साथ, आप इस परीक्षा को पास कर सकते हैं और अपना भविष्य सुरक्षित कर सकते हैं।',
+        'Understand the exam pattern and syllabus thoroughly': 'परीक्षा पैटर्न और पाठ्यक्रम को अच्छी तरह से समझें',
+        'Create a realistic study plan': 'एक यथार्थवादी अध्ययन योजना बनाएं',
+        'Focus on weak areas': 'कमजोर क्षेत्रों पर ध्यान दें',
+        'Practice regularly': 'नियमित रूप से अभ्यास करें',
+        'Take mock tests': 'मॉक टेस्ट लें',
+        'Stay updated with current affairs': 'वर्तमान मामलों से अपडेट रहें',
+        
+        // Navigation
+        'Home': 'मुख्य पृष्ठ',
+        'CET Syllabus': 'CET पाठ्यक्रम',
+        'How to Crack CET': 'CET कैसे पास करें',
+        'CET Benefits': 'CET के लाभ',
+        'CET Updates': 'CET अपडेट',
+        'Blog': 'ब्लॉग',
+        'Contact': 'संपर्क करें',
+        
+        // Additional Content
+        'Published: March 15, 2024': 'प्रकाशित: 15 मार्च, 2024',
+        '10 min read': '10 मिनट का पठन',
+        'Start your preparation early': 'अपनी तैयारी जल्दी शुरू करें',
+        'Follow a structured approach': 'एक संरचित दृष्टिकोण का पालन करें',
+        'Stay motivated and consistent': 'प्रेरित और निरंतर रहें',
+        'Join study groups': 'अध्ययन समूहों में शामिल हों',
+        'Take care of your health': 'अपने स्वास्थ्य का ध्यान रखें',
+        'Believe in yourself': 'अपने आप पर विश्वास करें'
+    };
+
+    languageToggle.addEventListener('change', function() {
+        const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, span, a');
+        elements.forEach(element => {
+            const text = element.textContent.trim();
+            if (this.checked) {
+                // Switch to Hindi
+                if (translations[text]) {
+                    element.textContent = translations[text];
+                }
+                translateBtnText.textContent = 'अंग्रेजी में अनुवाद करें';
+            } else {
+                // Switch to English
+                Object.entries(translations).forEach(([english, hindi]) => {
+                    if (text === hindi) {
+                        element.textContent = english;
+                    }
+                });
+                translateBtnText.textContent = 'Translate to Hindi';
+            }
+        });
+    });
+</script> 

@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CET 2025 Blog - Latest Updates, Tips, and Resources</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="translations.js"></script>
+    <style>
+
+/* Navbar Styles */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #87CEEB;
+    transition: width 0.3s ease;
+}
+.nav-link:hover {
+    color: #87CEEB;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+.nav-link.active {
+    background: linear-gradient(45deg, #0066CC, #FF9933);
+    -webkit-text-fill-color: transparent;
+}
+.nav-link.active::after {
+    width: 100%;
+}
+/* Mobile Menu Animation */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+#mobile-menu.hidden {
+    display: none;
+}
+#mobile-menu:not(.hidden) {
+    animation: slideDown 0.3s ease-in-out;
+}
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Sticky Navbar Shadow */
+nav.sticky {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/* Navbar Link Hover Effects */
+.mobile-nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.mobile-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #87CEEB;
+    transition: width 0.3s ease;
+}
+.mobile-nav-link:hover {
+    color: #87CEEB;
+}
+.mobile-nav-link:hover::after {
+    width: 100%;
+}
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #87CEEB;
+            --primary-dark: #5DADE2;
+            --accent: #4CAF50;
+            --background: #f8fafc;
+            --text: #1e293b;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+        }
+
+        .hero-section {
+            background-color: #e0f7fa;
+            color: var(--text);
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-section h1 {
+            color: #2980B9;
+            font-weight: 700;
+        }
+
+        .search-bar {
+            background: white;
+            border-radius: 2rem;
+            padding: 0.75rem 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .search-bar:focus-within {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+            border-color: var(--primary);
+        }
+
+        .category-filter {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            justify-content: center;
+            padding: 0 1rem;
+        }
+
+        .category-btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 2rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background: white;
+            border: 2px solid #e2e8f0;
+            color: var(--text);
+            position: relative;
+        }
+
+        .category-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border-color: #87CEEB;
+            background-color: #f0f9ff;
+        }
+
+        .category-btn.active {
+            background: #87CEEB;
+            color: white;
+            border-color: #87CEEB;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Grid Layout with Masonry-like effect */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            padding: 0 1rem;
+            position: relative;
+            min-height: 200px;
+        }
+
+        /* Add margin to first and third columns for staggered effect */
+        .blog-grid .blog-item:nth-child(3n+1) {
+            margin-top: 30px;
+        }
+
+        .blog-grid .blog-item:nth-child(3n+2) {
+            margin-top: 15px;
+        }
+
+        .blog-grid .blog-item:nth-child(3n+3) {
+            margin-top: 0px;
+        }
+
+        /* Add margin between cards */
+        .blog-item {
+            margin-bottom: 20px;
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            will-change: transform, box-shadow, opacity;
+            max-height: 420px;
+        }
+
+        .blog-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Blog image styles */
+        .blog-image {
+            width: 100%;
+            height: 160px; /* Reduced height */
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            position: relative;
+        }
+        
+        .blog-item:hover .blog-image {
+            transform: scale(1.05);
+        }
+
+        .blog-item .content {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Add light background colors to content areas */
+        .blog-item.preparation .content {
+            background-color: #f0fdf4; /* Light green */
+            border-top: 3px solid #86efac;
+        }
+
+        .blog-item.benefits .content {
+            background-color: #f0f9ff; /* Light blue */
+            border-top: 3px solid #93c5fd;
+        }
+
+        .blog-item.updates .content {
+            background-color: #fdf2f8; /* Light pink */
+            border-top: 3px solid #f9a8d4;
+        }
+
+        .blog-item.documents .content {
+            background-color: #f0fdf4; /* Light green */
+            border-top: 3px solid #86efac;
+        }
+
+        .blog-item.exam-pattern .content {
+            background-color: #f0f9ff; /* Light blue */
+            border-top: 3px solid #93c5fd;
+        }
+
+        /* Category-specific styles with enhanced colors */
+        .blog-item .category {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .blog-item.preparation .category {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+
+        .blog-item.benefits .category {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+
+        .blog-item.updates .category {
+            background-color: #fce7f3;
+            color: #be185d;
+        }
+
+        .blog-item.documents .category {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+
+        .blog-item.exam-pattern .category {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+
+        .blog-item .title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+            color: var(--text);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .blog-item .excerpt {
+            color: #64748b;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            flex-grow: 1;
+        }
+
+        .blog-item .read-more {
+            color: #2980B9;
+            font-weight: 500;
+            text-decoration: none;
+            margin-top: auto;
+            position: relative;
+            padding-bottom: 2px;
+        }
+
+        .blog-item .read-more::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #2980B9;
+            transition: width 0.3s ease;
+        }
+
+        .blog-item .read-more:hover::after {
+            width: 100%;
+        }
+
+        /* Improved transitions for filtering */
+        .blog-item {
+            transition: opacity 0.4s ease, transform 0.4s ease, height 0.4s ease, margin 0.4s ease;
+        }
+        
+        .blog-item.hidden {
+            opacity: 0;
+            transform: scale(0.95);
+            pointer-events: none;
+            position: absolute;
+            visibility: hidden;
+            height: 0;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            .category-filter {
+                justify-content: center;
+            }
+            .blog-grid .blog-item:nth-child(n) {
+                margin-top: 0;
+            }
+        }
+
+        /* Translation button styling */
+        #translateBtn {
+            background-color: #87CEEB;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 30px;
+            color: white;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #translateBtn:hover {
+            background-color: #5DADE2;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        #translateBtn i {
+            margin-right: 8px;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-6">
+                <h1 class="text-4xl md:text-5xl font-bold mb-3">CET Blog</h1>
+                <p class="text-lg md:text-xl text-gray-600">Your ultimate resource for CET preparation and updates</p>
+                <!-- Add Translation Button -->
+                <div class="mt-4">
+                    <button id="translateBtn" class="bg-indian-blue text-white px-6 py-2 rounded-full hover:bg-indian-blue-dark transition-colors duration-300 flex items-center justify-center mx-auto">
+                        <i class="fas fa-language mr-2"></i>
+                        <span id="translateBtnText">हिंदी में देखें</span>
+                    </button>
+                </div>
+            </div>
+            <div class="max-w-2xl mx-auto">
+                <div class="search-bar flex items-center">
+                    <i class="fas fa-search text-gray-400 mr-3"></i>
+                    <input type="text" placeholder="Search articles..." class="w-full outline-none text-gray-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12 max-w-6xl">
+        <!-- Emergency Warning Blog Post - Top Priority - LARGER THAN OTHERS -->
+        <div class="mx-auto mb-10 bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border-2 border-red-500 animate-pulse">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-2/5 bg-red-50">
+                    <div class="relative h-full">
+                        <div class="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg shadow-md z-10">
+                            <i class="fas fa-exclamation-triangle mr-1"></i> URGENT WARNING
+                        </div>
+                        <img src="img/warning.png" alt="Warning" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="md:w-3/5 p-6 bg-gradient-to-r from-red-50 to-orange-50">
+                    <div class="flex items-center mb-2">
+                        <span class="bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full">आवश्यक चेतावनी</span>
+                        <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full ml-2">अभी पढ़ें</span>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-2">⚠️ आप अपना सरकारी नौकरी का सपना खो सकते हैं — अगर इन बातों को नजरअंदाज़ किया!</h2>
+                    <p class="text-gray-600 mb-4">हर साल हज़ारों छात्र छोटी-छोटी लापरवाहियों के कारण रिजेक्ट हो जाते हैं। जाति प्रमाणपत्र अपडेट नहीं है? गलत फॉर्म भरा है? जल्दी जानें क्या गलतियां आपका सिलेक्शन रोक सकती हैं!</p>
+                    <a href="mistakes-avoid-govt-job.html" class="inline-block bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 transform hover:-translate-y-1">
+                        जरूर पढ़ें <i class="fas fa-exclamation-circle ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FEATURED BLOG POSTS IN ONE ROW -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            <!-- Featured Blog Post 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border-2 border-yellow-400">
+                <div class="relative">
+                    <img src="img/castecertificate.png" alt="अद्यतित जाति प्रमाणपत्र" class="w-full h-48 object-cover">
+                    <div class="absolute top-0 right-0 bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg shadow-md z-10">
+                        <i class="fas fa-star mr-1"></i> FEATURED
+                    </div>
+                </div>
+                <div class="p-6 bg-gradient-to-r from-yellow-50 to-orange-50">
+                    <div class="flex items-center mb-2">
+                        <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-3 py-1 rounded-full">नई जानकारी</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-900 mb-2">✍️ अद्यतित जाति प्रमाणपत्र: CET 2025 के लिए अनिवार्य दस्तावेज</h2>
+                    <p class="text-gray-600 mb-4 line-clamp-2">सरकारी नौकरियों में आरक्षण का लाभ उठाने के लिए अद्यतित जाति प्रमाणपत्र क्यों अनिवार्य है और इसे कैसे प्राप्त करें?</p>
+                    <a href="caste-certificate-importance.html" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:-translate-y-1">
+                        अभी पढ़ें <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Featured Blog Post 2 - CET Website Busy Solutions -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border-2 border-red-400 animate-pulse">
+                <div class="relative">
+                    <img src="img/serverbussy.png" alt="CET Website Busy Solution" class="w-full h-48 object-cover">
+                    <div class="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg shadow-md z-10">
+                        <i class="fas fa-bolt mr-1"></i> HOT TIP
+                    </div>
+                </div>
+                <div class="p-6 bg-gradient-to-r from-red-50 to-blue-50">
+                    <div class="flex items-center mb-2">
+                        <span class="bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full">आवश्यक सलाह</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-900 mb-2">📢 वेबसाइट बिज़ी? पोर्टल स्लो? इस ब्लॉग से भरें फॉर्म!</h2>
+                    <p class="text-gray-600 mb-4 line-clamp-2">CET पोर्टल बार-बार "Server Busy" दिखा रहा है? इन गारंटीड टिप्स से आसानी से फॉर्म भरें।</p>
+                    <a href="cet-website-busy-solution.html" class="inline-block bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:-translate-y-1">
+                        समस्या हल करें <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Featured Blog Post 3 - CET Exam Date Extension -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border-2 border-blue-400 animate-pulse">
+                <div class="relative">
+                    <img src="img/schedule.png" alt="CET Exam Date Extension" class="w-full h-48 object-cover">
+                    <div class="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg shadow-md z-10">
+                        <i class="fas fa-calendar-alt mr-1"></i> NEW UPDATE
+                    </div>
+                </div>
+                <div class="p-6 bg-gradient-to-r from-blue-50 to-indigo-50">
+                    <div class="flex items-center mb-2">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">महत्वपूर्ण अपडेट</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-900 mb-2">📅 क्या CET की तारीख बढेगी? जानिए सच्चाई!</h2>
+                    <p class="text-gray-600 mb-4 line-clamp-2">CET 2025 की तारीख बढने की संभावना, कारण और प्रभाव की पूरी जानकारी पढ़ें।</p>
+                    <a href="cet-exam-date-extension.html" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:-translate-y-1">
+                        पूरी जानकारी पढ़ें <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Category Filters - Fixed with proper styling -->
+        <div class="category-filter mb-8">
+            <button class="category-btn active" data-category="all">All Posts</button>
+            <button class="category-btn" data-category="vacancies">Vacancies</button>
+            <button class="category-btn" data-category="preparation">Preparation</button>
+            <button class="category-btn" data-category="benefits">Benefits</button>
+            <button class="category-btn" data-category="updates">Updates</button>
+            <button class="category-btn" data-category="documents">Documents</button>
+            <button class="category-btn" data-category="exam-pattern">Exam Pattern</button>
+        </div>
+
+        <!-- Blog Grid -->
+        <div class="blog-grid">
+            <!-- Featured Post -->
+            <div class="blog-item preparation">
+                <img src="img/2025cet.png" alt="CET Preparation" class="blog-image">
+                <div class="content">
+                    <span class="category">Featured</span>
+                    <h2 class="title">How to Crack CET: Complete Preparation Guide</h2>
+                    <p class="excerpt">Master the CET exam with our comprehensive preparation guide, including study strategies, time management tips, and subject-wise preparation techniques.</p>
+                    <a href="how-to-crack-cet.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <!-- Caste Certificate Blog Post -->
+            <div class="blog-item documents" style="border: 2px solid #FCD34D;">
+                <img src="img/castecertificate.png" alt="अद्यतित जाति प्रमाणपत्र" class="blog-image">
+                <div class="content">
+                    <span class="category" style="background-color: #FFEDD5; color: #C2410C;">Documents</span>
+                    <h2 class="title">अद्यतित जाति प्रमाणपत्र: CET 2025 के लिए अनिवार्य दस्तावेज</h2>
+                    <p class="excerpt">क्यों अद्यतित जाति प्रमाणपत्र CET 2025 और भविष्य की हर सरकारी वैकेंसी के लिए अत्यंत आवश्यक है? विस्तृत जानकारी पढ़ें।</p>
+                    <a href="caste-certificate-importance.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <!-- CET Website Busy Solution Blog Post -->
+            <div class="blog-item preparation" style="border: 2px solid #EF4444;">
+                <img src="img/apply-now.png" alt="CET Website Busy Solution" class="blog-image">
+                <div class="content" style="background-color: #FEF2F2; border-top: 3px solid #EF4444;">
+                    <span class="category" style="background-color: #FEE2E2; color: #B91C1C;">Tips & Tricks</span>
+                    <h2 class="title">वेबसाइट बिज़ी? पोर्टल स्लो? CET फॉर्म भरने के स्मार्ट टिप्स</h2>
+                    <p class="excerpt">CET पोर्टल बार-बार "Server Busy" दिखा रहा है? इन गारंटीड टिप्स के साथ आसानी से फॉर्म भरें। जानें सही समय और तकनीक!</p>
+                    <a href="cet-website-busy-solution.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+            
+            <!-- CET Exam Date Extension Blog Post -->
+            <div class="blog-item updates" style="border: 2px solid #3B82F6;">
+                <img src="img/schedule.png" alt="CET Exam Date Extension" class="blog-image">
+                <div class="content" style="background-color: #EFF6FF; border-top: 3px solid #3B82F6;">
+                    <span class="category" style="background-color: #DBEAFE; color: #1E40AF;">Updates</span>
+                    <h2 class="title">📅 क्या CET की तारीख बढ़ाई जा सकती है? जानिए क्या है सच्चाई!</h2>
+                    <p class="excerpt">CET 2025 की तारीख बढ़ने की संभावना, कारण और प्रभाव की पूरी जानकारी। जानें क्या आपको अतिरिक्त तैयारी का समय मिल सकता है।</p>
+                    <a href="cet-exam-date-extension.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <!-- New Posts -->
+            <div class="blog-item preparation">
+                <img src="img/mock.png" alt="Mock Tests" class="blog-image">
+                <div class="content">
+                    <span class="category">Preparation</span>
+                    <h2 class="title">Top 10 Mock Tests for CET 2025</h2>
+                    <p class="excerpt">Discover the best mock tests to practice and improve your CET score. Includes free and premium test series recommendations.</p>
+                    <a href="mock-tests-cet-2025.html" class="read-more">
+                            Read More
+                        </a>
+                    </div>
+            </div>
+
+            <div class="blog-item exam-pattern">
+                <img src="img/syllabus2025.png" alt="Syllabus" class="blog-image">
+                    <div class="content">
+                    <span class="category">Exam Pattern</span>
+                    <h2 class="title">CET 2025 Syllabus: Complete Breakdown</h2>
+                    <p class="excerpt">Detailed analysis of CET syllabus, important topics, and weightage for each section.</p>
+                    <a href="syllabus-cet-2025.html" class="read-more">
+                            Read More
+                        </a>
+                    </div>
+            </div>
+
+            <div class="blog-item benefits vacancies">
+                <img src="img/cd.png" alt="Career Opportunities" class="blog-image">
+                <div class="content">
+                    <span class="category">Benefits</span>
+                    <h2 class="title">Career Opportunities After CET</h2>
+                    <p class="excerpt">Explore various government job opportunities and career paths available after clearing CET.</p>
+                    <a href="cet-government-jobs.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-item preparation">
+                <img src="img/time.webp" alt="Time Management" class="blog-image">
+                <div class="content">
+                    <span class="category">Preparation</span>
+                    <h2 class="title">Time Management Tips for CET</h2>
+                    <p class="excerpt">Learn effective time management strategies to maximize your study efficiency and exam performance.</p>
+                    <a href="time-management-tips-cet.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-item documents">
+                <img src="img/documents.jpg" alt="Application Process" class="blog-image">
+                <div class="content">
+                    <span class="category">Documents</span>
+                    <h2 class="title">CET Application Process Guide</h2>
+                    <p class="excerpt">Step-by-step guide to complete your CET application process without any mistakes.</p>
+                    <a href="cet-application-process.html" class="read-more">
+                            Read More
+                        </a>
+                    </div>
+            </div>
+
+            <div class="blog-item updates">
+                <img src="img/updated.webp" alt="Latest Updates" class="blog-image">
+                    <div class="content">
+                        <span class="category">Updates</span>
+                    <h2 class="title">Latest CET Notification Updates</h2>
+                    <p class="excerpt">Stay updated with the latest CET notifications, exam dates, and important announcements.</p>
+                    <a href="cet-latest-updates.html" class="read-more">
+                            Read More
+                        </a>
+                    </div>
+            </div>
+
+            <div class="blog-item preparation">
+                <img src="img/books.png" alt="Study Materials" class="blog-image">
+                <div class="content">
+                    <span class="category">Preparation</span>
+                    <h2 class="title">Best Books for CET Preparation</h2>
+                    <p class="excerpt">Comprehensive list of recommended books and study materials for CET preparation.</p>
+                    <a href="best-books-cet-preparation.html" class="read-more">
+                            Read More
+                        </a>
+                    </div>
+            </div>
+
+            <div class="blog-item exam-pattern">
+                <img src="img/exampattern2025.png" alt="Previous Year Analysis" class="blog-image">
+                    <div class="content">
+                        <span class="category">Exam Pattern</span>
+                        <h2 class="title">Understanding CET Exam Pattern</h2>
+                        <p class="excerpt">Detailed breakdown of CET exam pattern, marking scheme, and question types.</p>
+                    <a href="exam-pattern.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <!-- Warning Blog Post -->
+            <div class="blog-item documents" style="border: 2px solid #EF4444;">
+                <img src="img/warning.png" alt="Application Rejection Warning" class="blog-image">
+                <div class="content" style="background-color: #FEF2F2; border-top: 3px solid #EF4444;">
+                    <span class="category" style="background-color: #FEE2E2; color: #B91C1C;">Warning</span>
+                    <h2 class="title">⚠️ आप अपना सरकारी नौकरी का सपना खो सकते हैं — अगर इन बातों को नजरअंदाज़ किया!</h2>
+                    <p class="excerpt">हर साल हज़ारों छात्र छोटी-छोटी लापरवाहियों के कारण रिजेक्ट हो जाते हैं। जानें क्या गलतियां आपका सिलेक्शन रोक सकती हैं!</p>
+                    <a href="mistakes-avoid-govt-job.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-item benefits vacancies">
+                <img src="img/vacancyof2025.png" alt="Salary Structure" class="blog-image">
+                <div class="content">
+                    <span class="category">Benefits</span>
+                    <h2 class="title">Why CET is a Game-Changer for Government Jobs</h2>
+                    <p class="excerpt">Discover how CET simplifies the government job application process and opens doors to multiple opportunities.</p>
+                    <a href="cet-government-jobs.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-item preparation">
+                <img src="img/syllabus.png" alt="Study Material" class="blog-image">
+                <div class="content">
+                    <span class="category">Preparation</span>
+                    <h2 class="title">Essential Study Materials for CET 2025</h2>
+                    <p class="excerpt">Comprehensive guide to the best study materials, online resources, and preparation tools for CET 2025.</p>
+                    <a href="study-resources.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-item exam-pattern">
+                <img src="img/previous-papers.png" alt="Previous Papers" class="blog-image">
+                <div class="content">
+                    <span class="category">Exam Pattern</span>
+                    <h2 class="title">Previous Year Question Papers Analysis</h2>
+                    <p class="excerpt">In-depth analysis of previous year question papers to help you understand the exam pattern and important topics.</p>
+                    <a href="exam-pattern.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-item updates">
+                <img src="img/schedule.png" alt="Exam Schedule" class="blog-image">
+                <div class="content">
+                    <span class="category">Updates</span>
+                    <h2 class="title">CET 2025 Exam Schedule and Important Dates</h2>
+                    <p class="excerpt">Stay updated with the complete exam schedule, registration dates, and important deadlines for CET 2025.</p>
+                    <a href="cet-2025-schedule.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-item preparation">
+                <img src="img/group.jpg" alt="Success Tips" class="blog-image">
+                <div class="content">
+                    <span class="category">Preparation</span>
+                    <h2 class="title">Success Stories: How Toppers Cracked CET</h2>
+                    <p class="excerpt">Inspiring success stories and valuable tips from CET toppers to help you achieve your goals.</p>
+                    <a href="cet-success-stories.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-item preparation">
+                <img src="img/haryanagk.png" alt="GK Preparation" class="blog-image">
+                <div class="content">
+                    <span class="category">Preparation</span>
+                    <h2 class="title">GK Preparation Strategy for CET</h2>
+                    <p class="excerpt">Expert tips and strategies to master the General Knowledge section of CET exam.</p>
+                    <a href="haryana-gk.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-item updates">
+                <img src="img/upcoming-vacancy.png" alt="Upcoming Vacancies" class="blog-image">
+                <div class="content">
+                    <span class="category">Updates</span>
+                    <h2 class="title">Upcoming Government Vacancies After CET</h2>
+                    <p class="excerpt">Latest information about upcoming government job vacancies that will be filled through CET scores.</p>
+                    <a href="upcoming-vacancies-cet.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-item preparation">
+                <img src="img/notes.jpg" alt="Note Taking" class="blog-image">
+                <div class="content">
+                    <span class="category">Preparation</span>
+                    <h2 class="title">Effective Note-Taking Strategies for CET</h2>
+                    <p class="excerpt">Learn the best note-taking techniques and strategies to organize your study material effectively for CET preparation.</p>
+                    <a href="note-taking-strategies-cet.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-item preparation">
+                <img src="img/openbook.jpg" alt="Study Tips" class="blog-image">
+                <div class="content">
+                    <span class="category">Preparation</span>
+                    <h2 class="title">Smart Study Techniques for CET Success</h2>
+                    <p class="excerpt">Discover proven study techniques and methods to enhance your learning efficiency and retention for CET exam.</p>
+                    <a href="time-management-tips-cet.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-item updates vacancies">
+                <img src="img/wearehirhing.webp" alt="Job Opportunities" class="blog-image">
+                <div class="content">
+                    <span class="category">Updates</span>
+                    <h2 class="title">Latest Job Opportunities Through CET</h2>
+                    <p class="excerpt">Stay informed about the newest job openings and recruitment notifications that are being filled through CET scores.</p>
+                    <a href="cet-vacancies.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-item preparation">
+                <img src="img/motivation.jpg" alt="Motivation" class="blog-image">
+                <div class="content">
+                    <span class="category">Preparation</span>
+                    <h2 class="title">Stay Motivated: Tips for CET Preparation</h2>
+                    <p class="excerpt">Essential tips and strategies to maintain motivation and focus during your CET preparation journey.</p>
+                    <a href="blog-cet-achievement.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-item updates">
+                <img src="img/stdentsforresult.jpg" alt="CET Achievement" class="blog-image">
+                <div class="content">
+                    <span class="category">Updates</span>
+                    <h2 class="title">CET पास करना एक बड़ी उपलब्धि</h2>
+                    <p class="excerpt">जानिए CET पास करने के जबरदस्त लाभ और सफलता की कहानियां</p>
+                    <a href="blog-cet-achievement-hindi.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-item benefits">
+                <img src="img/group.jpg" alt="CET Benefits" class="blog-image">
+                <div class="content">
+                    <span class="category">Benefits</span>
+                    <h2 class="title">Top Benefits of Qualifying CET</h2>
+                    <p class="excerpt">Discover how CET 2025 can transform your career prospects</p>
+                    <a href="blog-cet-benefits.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-item preparation">
+                <img src="img/syllabus.png" alt="Study Material" class="blog-image">
+                <div class="content">
+                    <span class="category">Preparation</span>
+                    <h2 class="title">Online Practice Tests for CET 2025</h2>
+                    <p class="excerpt">Access free online practice tests and quizzes to improve your CET preparation and track your progress.</p>
+                    <a href="online-practice.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-item updates vacancies">
+                <img src="img/vacancy2.png" alt="Future Vacancies" class="blog-image">
+                <div class="content">
+                    <span class="category">Updates</span>
+                    <h2 class="title">Group C & D Jobs Through CET</h2>
+                    <p class="excerpt">Explore various Group C and D government job opportunities available through CET qualification.</p>
+                    <a href="group-c-d-jobs.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-item updates">
+                <img src="img/apply-now.png" alt="Application" class="blog-image">
+                <div class="content">
+                    <span class="category">Updates</span>
+                    <h2 class="title">CET Vacancies 2025: Complete List</h2>
+                    <p class="excerpt">Comprehensive list of all government job vacancies that will be filled through CET 2025 scores.</p>
+                    <a href="cet-vacancies.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-item documents">
+                <img src="img/documents.jpg" alt="Document Requirements" class="blog-image">
+                <div class="content">
+                    <span class="category">Documents</span>
+                    <h2 class="title">CET Document Requirements</h2>
+                    <p class="excerpt">Complete list of required documents and verification process for CET application.</p>
+                    <a href="document-requirements.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About Section -->
+                <div class="space-y-4">
+                    <h3 class="text-xl font-semibold mb-4">About CET</h3>
+                    <p class="text-gray-400">Your trusted resource for Common Eligibility Test preparation, updates, and guidance.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="syllabus.html" class="text-gray-400 hover:text-white transition-colors">Syllabus</a></li>
+                        <li><a href="https://sarkari.network/wp-content/uploads/HSSC-CET-Group-C-Group-56-Mains-Exam-Question-Paper-17-Aug-2024-2.pdf" class="text-gray-400 hover:text-white transition-colors">Previous Papers</a></li>
+                        <li><a href="study-materials.html" class="text-gray-400 hover:text-white transition-colors">Study Materials</a></li>
+                        <li><a href="mock-tests.html" class="text-gray-400 hover:text-white transition-colors">Mock Tests</a></li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Stay Updated</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for latest updates and resources.</p>
+                    <form class="space-y-2">
+                        <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-primary">
+                        <button type="submit" class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition-colors">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 CET Exam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Load navbar and footer
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+
+        // Loading animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const loadingElements = document.querySelectorAll('.loading');
+            loadingElements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.classList.add('loaded');
+                }, index * 100);
+            });
+        });
+
+        // Enhanced Category filter functionality with smooth transitions 
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const blogItems = document.querySelectorAll('.blog-item');
+            let isFiltering = false;
+
+            // Initial setup - make sure all items have appropriate classes
+            blogItems.forEach(item => {
+                // Get category from the span with class "category"
+                const categorySpan = item.querySelector('.category');
+                if (categorySpan) {
+                    const categoryText = categorySpan.textContent.toLowerCase().trim();
+                    
+                    // Add appropriate class based on category text if it doesn't already exist
+                    if (categoryText.includes('featured')) {
+                        !item.classList.contains('featured') && item.classList.add('featured');
+                    }
+                    if (categoryText.includes('preparation') || categoryText.includes('tips')) {
+                        !item.classList.contains('preparation') && item.classList.add('preparation');
+                    }
+                    if (categoryText.includes('benefits')) {
+                        !item.classList.contains('benefits') && item.classList.add('benefits');
+                    }
+                    if (categoryText.includes('updates')) {
+                        !item.classList.contains('updates') && item.classList.add('updates');
+                    }
+                    if (categoryText.includes('documents')) {
+                        !item.classList.contains('documents') && item.classList.add('documents');
+                    }
+                    if (categoryText.includes('exam pattern') || categoryText.includes('pattern')) {
+                        !item.classList.contains('exam-pattern') && item.classList.add('exam-pattern');
+                    }
+                    if (categoryText.includes('vacanc')) {
+                        !item.classList.contains('vacancies') && item.classList.add('vacancies');
+                    }
+                }
+            });
+
+            function filterItems(category) {
+                if (isFiltering) return;
+                isFiltering = true;
+                
+                // Remove active class from all buttons
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Find and activate the selected category button
+                const activeButton = document.querySelector(`.category-btn[data-category="${category}"]`);
+                if (activeButton) activeButton.classList.add('active');
+
+                // Show/hide blog items with animations
+                blogItems.forEach(item => {
+                    if (category === 'all' || item.classList.contains(category)) {
+                        // Show item with animation
+                        item.classList.remove('hidden');
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 50); // Small delay for the animation to work
+                    } else {
+                        // Hide item with animation
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(10px)';
+                        setTimeout(() => {
+                            item.classList.add('hidden');
+                        }, 400); // Match this with the CSS transition duration
+                    }
+                });
+
+                // Re-arrange grid items for masonry effect after filtering
+                setTimeout(arrangeGridItems, 500);
+                
+                // Reset filtering state after transition
+                setTimeout(() => {
+                    isFiltering = false;
+                }, 600);
+            }
+
+            // Function to arrange grid items for better masonry effect
+            function arrangeGridItems() {
+                const visibleItems = document.querySelectorAll('.blog-item:not(.hidden)');
+                
+                visibleItems.forEach((item, index) => {
+                    // Reset margins first
+                    item.style.marginTop = '0px';
+                    
+                    // Apply staggered effect for desktop view
+                    if (window.innerWidth > 640) {
+                        if (index % 3 === 0) item.style.marginTop = '30px';
+                        else if (index % 3 === 1) item.style.marginTop = '15px';
+                    }
+                });
+            }
+
+            // Add click event listeners to category buttons
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const selectedCategory = button.getAttribute('data-category');
+                    filterItems(selectedCategory);
+                });
+            });
+
+            // Initialize masonry layout
+            arrangeGridItems();
+            
+            // Handle window resize
+            window.addEventListener('resize', arrangeGridItems);
+        });
+
+        // Search functionality
+        const searchInput = document.querySelector('.search-bar input');
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const blogItems = document.querySelectorAll('.blog-item');
+            
+            blogItems.forEach(item => {
+                const title = item.querySelector('.title').textContent.toLowerCase();
+                const excerpt = item.querySelector('.excerpt').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || excerpt.includes(searchTerm)) {
+                    item.classList.remove('hidden');
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(10px)';
+                    setTimeout(() => {
+                        item.classList.add('hidden');
+                    }, 400);
+                }
+            });
+        });
+
+        // Translation functionality
+        let isHindi = false;
+        const translateBtn = document.getElementById('translateBtn');
+        const translateBtnText = document.getElementById('translateBtnText');
+        
+        // Translation mappings
+        const translations = {
+            'CET Blog': 'CET ब्लॉग',
+            'Your ultimate resource for CET preparation and updates': 'CET तैयारी और अपडेट के लिए आपका अंतिम संसाधन',
+            'Search articles...': 'लेख खोजें...',
+            'All': 'सभी',
+            'Vacancies': 'रिक्तियां',
+            'Preparation': 'तैयारी',
+            'Benefits': 'लाभ',
+            'Updates': 'अपडेट',
+            'Documents': 'दस्तावेज़',
+            'Exam Pattern': 'परीक्षा पैटर्न',
+            'Read More': 'और पढ़ें',
+            'Featured': 'विशेष',
+            'Popular': 'लोकप्रिय',
+            'Updated': 'अपडेट किया गया',
+            'New': 'नया',
+            'min read': 'मिनट का पढ़ना',
+            'More Articles': 'और लेख',
+            'About CET': 'CET के बारे में',
+            'Your trusted resource for Common Eligibility Test preparation, updates, and guidance.': 'कॉमन एलिजिबिलिटी टेस्ट की तैयारी, अपडेट और मार्गदर्शन के लिए आपका विश्वसनीय संसाधन।',
+            'Quick Links': 'त्वरित लिंक',
+            'Home': 'होम',
+            'About Us': 'हमारे बारे में',
+            'Contact': 'संपर्क',
+            'Privacy Policy': 'गोपनीयता नीति',
+            'Terms & Conditions': 'नियम और शर्तें',
+            'Resources': 'संसाधन',
+            'Syllabus': 'पाठ्यक्रम',
+            'Previous Papers': 'पिछले पेपर',
+            'Study Materials': 'अध्ययन सामग्री',
+            'Mock Tests': 'मॉक टेस्ट',
+            'FAQ': 'सामान्य प्रश्न',
+            'Stay Updated': 'अपडेट रहें',
+            'Subscribe to our newsletter for latest updates and resources.': 'नवीनतम अपडेट और संसाधनों के लिए हमारे न्यूज़लेटर की सदस्यता लें।',
+            'Enter your email': 'अपना ईमेल दर्ज करें',
+            'Subscribe': 'सब्सक्राइब',
+            'All rights reserved.': 'सर्वाधिकार सुरक्षित।',
+            'Top Benefits of Qualifying CET': 'CET पास करने के शीर्ष लाभ',
+            'Discover how CET 2025 can transform your career prospects': 'जानिए कैसे CET 2025 आपके करियर के अवसरों को बदल सकता है',
+            'Essential Study Materials for CET 2025': 'CET 2025 के लिए आवश्यक अध्ययन सामग्री',
+            'Comprehensive guide to the best study materials, online resources, and preparation tools for CET 2025.': 'CET 2025 के लिए सर्वश्रेष्ठ अध्ययन सामग्री, ऑनलाइन संसाधनों और तैयारी उपकरणों की व्यापक मार्गदर्शिका।',
+            'Benefits': 'लाभ',
+            'Preparation': 'तैयारी',
+            'Read More': 'और पढ़ें'
+        };
+
+        function translatePage() {
+            isHindi = !isHindi;
+            translateBtnText.textContent = isHindi ? 'View in English' : 'हिंदी में देखें';
+            
+            // Translate all translatable elements
+            document.querySelectorAll('h1, h2, h3, p, span, button, input[placeholder], a').forEach(element => {
+                const originalText = element.getAttribute('data-original-text') || element.textContent;
+                if (translations[originalText]) {
+                    if (!element.getAttribute('data-original-text')) {
+                        element.setAttribute('data-original-text', originalText);
+                    }
+                    element.textContent = isHindi ? translations[originalText] : originalText;
+                }
+            });
+
+            // Handle input placeholders
+            document.querySelectorAll('input[placeholder]').forEach(input => {
+                const originalPlaceholder = input.getAttribute('data-original-placeholder') || input.placeholder;
+                if (translations[originalPlaceholder]) {
+                    if (!input.getAttribute('data-original-placeholder')) {
+                        input.setAttribute('data-original-placeholder', originalPlaceholder);
+                    }
+                    input.placeholder = isHindi ? translations[originalPlaceholder] : originalPlaceholder;
+                }
+            });
+        }
+
+        translateBtn.addEventListener('click', translatePage);
+
+        // Add smooth transition for language switch
+        document.body.style.transition = 'all 0.3s ease';
+    </script>
+    
+    <!-- Loader Script -->
+    <script src="loader.js"></script>
+</body>
+</html>

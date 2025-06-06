@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CET Benefits - CET 2025 Preparation Portal</title>
+    <meta name="description" content="Discover the benefits of cracking CET 2025. Learn about career opportunities, job security, and growth prospects in government sector.">
+    <meta name="keywords" content="CET 2025 benefits, CET career opportunities, CET job security, CET government jobs, CET advantages">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'indian-blue': '#0066CC',
+                        'indian-saffron': '#FF9933',
+                        'gov-blue': '#1a365d',
+                        'gov-light': '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #0066CC, #FF9933);
+            -webkit-text-fill-color: transparent;
+        }
+        .gov-card {
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        .gov-card:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        /* Navbar Styles */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #87CEEB;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #87CEEB;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link.active {
+            background: linear-gradient(45deg, #0066CC, #FF9933);
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-link.active::after {
+            width: 100%;
+        }
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+        #mobile-menu.hidden {
+            display: none;
+        }
+        #mobile-menu:not(.hidden) {
+            animation: slideDown 0.3s ease-in-out;
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Sticky Navbar Shadow */
+        nav.sticky {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        /* Navbar Link Hover Effects */
+        .mobile-nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .mobile-nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #87CEEB;
+            transition: width 0.3s ease;
+        }
+        .mobile-nav-link:hover {
+            color: #87CEEB;
+        }
+        .mobile-nav-link:hover::after {
+            width: 100%;
+        }
+        /* Language Switcher Styles */
+        .lang-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+        }
+        .lang-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 30px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "EN";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        input:checked + .slider {
+            background-color: #0066CC;
+        }
+        input:checked + .slider:before {
+            transform: translateX(30px);
+            content: "हिं";
+        }
+        /* Floating Translation Button */
+        .floating-translate-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #0066CC, #004C99);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            animation: pulse 2s infinite;
+        }
+        .floating-translate-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 25px rgba(0, 102, 204, 0.4);
+            background: linear-gradient(135deg, #004C99, #0066CC);
+        }
+        .floating-translate-btn i {
+            font-size: 20px;
+            animation: bounce 1s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+            }
+            50% {
+                box-shadow: 0 4px 30px rgba(0, 102, 204, 0.5);
+            }
+            100% {
+                box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+            }
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-3px);
+            }
+        }
+    </style>
+    
+</head>
+<body class="bg-gov-light">
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+    </div>
+    
+
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+
+    <!-- Floating Translation Button -->
+    <div class="floating-translate-btn" onclick="document.getElementById('languageToggle').click()">
+        <i class="fas fa-language"></i>
+        <span id="translateBtnText" class="font-semibold">Translate to Hindi</span>
+    </div>
+
+    <!-- Language Switcher -->
+    <div class="fixed top-4 right-4 z-50 flex items-center space-x-2">
+        <span class="text-sm text-gray-600">EN</span>
+        <label class="lang-switch">
+            <input type="checkbox" id="languageToggle">
+            <span class="slider"></span>
+        </label>
+        <span class="text-sm text-gray-600">हिं</span>
+    </div>
+
+    <main class="container mx-auto px-4 py-10 max-w-4xl">
+        <!-- Hero Section -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-8">
+            <img src="img/group.jpg" alt="CET Benefits Hero" class="w-full h-64 object-cover">
+            <div class="p-8">
+                <h1 class="text-4xl font-bold text-gov-blue mb-4">Top Benefits of Qualifying the CET Exam in 2025</h1>
+                <p class="text-gray-600 text-lg mb-6">The Common Eligibility Test (CET) is revolutionizing government job recruitment in India. Discover how qualifying CET 2025 can transform your career prospects.</p>
+                <div class="flex items-center text-sm text-gray-500">
+                    <span>Published: March 15, 2024</span>
+                    <span class="mx-2">•</span>
+                    <span>5 min read</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <div class="prose max-w-none">
+                <h2 class="text-2xl font-bold text-gov-blue mb-6">Why CET 2025 is a Game-Changer</h2>
+                <p class="text-gray-700 mb-6">The Common Eligibility Test (CET) has transformed the landscape of government job recruitment in India. Here's why qualifying CET 2025 can be your ticket to a successful government career:</p>
+
+                <!-- Benefits Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <!-- Benefit Card 1 -->
+                    <div class="benefit-card bg-gov-light rounded-lg p-6">
+                        <img src="img/nokrihinokri.png" alt="Unified Recruitment" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold text-gov-blue mb-2">1. Unified Recruitment Process</h3>
+                        <p class="text-gray-600">Single exam for multiple government job applications, eliminating the need to prepare for various recruitment tests. This streamlined approach saves time and resources while increasing your chances of selection.</p>
+                        <p class="text-gray-600 mt-2">एकीकृत भर्ती प्रक्रिया: एक ही परीक्षा से कई सरकारी नौकरियों के लिए आवेदन करें। यह व्यवस्थित दृष्टिकोण समय और संसाधनों को बचाता है और चयन की संभावना को बढ़ाता है।</p>
+                    </div>
+
+                    <!-- Benefit Card 2 -->
+                    <div class="benefit-card bg-gov-light rounded-lg p-6">
+                        <img src="img/money-saving.png" alt="Cost Effective" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold text-gov-blue mb-2">2. Cost and Time Efficiency</h3>
+                        <p class="text-gray-600">Save on multiple application fees and reduce preparation time with a single comprehensive exam. The CET system eliminates the need for separate applications and fees for different government jobs.</p>
+                        <p class="text-gray-600 mt-2">लागत और समय की बचत: एक ही व्यापक परीक्षा से कई आवेदन शुल्क बचाएं। CET प्रणाली अलग-अलग सरकारी नौकरियों के लिए अलग-अलग आवेदन और शुल्क की आवश्यकता को समाप्त करती है।</p>
+                    </div>
+
+                    <!-- Benefit Card 3 -->
+                    <div class="benefit-card bg-gov-light rounded-lg p-6">
+                        <img src="img/trnsperce.png" alt="Transparency" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold text-gov-blue mb-2">3. Enhanced Transparency</h3>
+                        <p class="text-gray-600">Standardized testing process ensures fair evaluation and reduces malpractices in recruitment. The digital-first approach of CET ensures complete transparency in the selection process.</p>
+                        <p class="text-gray-600 mt-2">बेहतर पारदर्शिता: मानकीकृत परीक्षण प्रक्रिया निष्पक्ष मूल्यांकन सुनिश्चित करती है। CET का डिजिटल-फर्स्ट दृष्टिकोण चयन प्रक्रिया में पूर्ण पारदर्शिता सुनिश्चित करता है।</p>
+                    </div>
+
+                    <!-- Benefit Card 4 -->
+                    <div class="benefit-card bg-gov-light rounded-lg p-6">
+                        <img src="img/multiple.png" alt="Multiple Attempts" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold text-gov-blue mb-2">4. Multiple Attempts</h3>
+                        <p class="text-gray-600">Opportunity to improve scores within the validity period, increasing chances of selection. The CET score remains valid for three years, giving candidates multiple opportunities to secure their desired position.</p>
+                        <p class="text-gray-600 mt-2">कई प्रयासों का अवसर: वैधता अवधि के भीतर स्कोर सुधारने का अवसर। CET स्कोर तीन वर्षों तक मान्य रहता है, जो उम्मीदवारों को अपनी पसंदीदा स्थिति प्राप्त करने के लिए कई अवसर देता है।</p>
+                    </div>
+                </div>
+
+                <!-- Detailed Benefits -->
+                <h2 class="text-2xl font-bold text-gov-blue mb-6">Comprehensive Benefits Breakdown</h2>
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <img src="img/growth.png" alt="Career Growth" class="w-24 h-24 object-cover rounded-lg">
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gov-blue mb-2">Career Growth Opportunities</h3>
+                            <p class="text-gray-600">Qualifying CET opens doors to various positions in SSC, RRB, and IBPS, offering a broad spectrum of career options in the government sector. The exam serves as a gateway to prestigious government positions with excellent growth prospects.</p>
+                            <p class="text-gray-600 mt-2">कैरियर में विकास के अवसर: CET पास करने से SSC, RRB और IBPS में विभिन्न पदों के अवसर मिलते हैं। यह परीक्षा उत्कृष्ट विकास संभावनाओं वाले प्रतिष्ठित सरकारी पदों का प्रवेश द्वार है।</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <img src="img/secure-job.png" alt="Job Security" class="w-24 h-24 object-cover rounded-lg">
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gov-blue mb-2">Job Security and Stability</h3>
+                            <p class="text-gray-600">Government jobs offer unparalleled job security, regular promotions, and comprehensive benefits packages. The stability provided by government positions ensures long-term career growth and financial security.</p>
+                            <p class="text-gray-600 mt-2">नौकरी की सुरक्षा और स्थिरता: सरकारी नौकरियां अतुलनीय नौकरी सुरक्षा प्रदान करती हैं। सरकारी पदों द्वारा प्रदान की गई स्थिरता दीर्घकालिक कैरियर विकास और वित्तीय सुरक्षा सुनिश्चित करती है।</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <img src="img/skills-dev.png" alt="Skill Development" class="w-24 h-24 object-cover rounded-lg">
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gov-blue mb-2">Skill Development</h3>
+                            <p class="text-gray-600">CET preparation enhances your analytical, reasoning, and problem-solving skills, valuable for any career path. The comprehensive syllabus ensures development of both technical and soft skills essential for professional growth.</p>
+                            <p class="text-gray-600 mt-2">कौशल विकास: CET की तैयारी आपके विश्लेषणात्मक और समस्या-समाधान कौशल को बढ़ाती है। व्यापक पाठ्यक्रम पेशेवर विकास के लिए आवश्यक तकनीकी और सॉफ्ट स्किल्स के विकास को सुनिश्चित करता है।</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Resources Section -->
+                <div class="mt-12 bg-white rounded-lg shadow-lg p-8">
+                    <h2 class="text-2xl font-bold text-gov-blue mb-6">Essential Resources for CET Preparation</h2>
+                    
+                    <!-- Notes Section -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 mb-12">
+                        <div class="md:w-1/2">
+                            <img src="img/notes.jpg" alt="CET Study Notes" class="w-full h-64 object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h3 class="text-xl font-semibold text-gov-blue mb-4">Comprehensive Study Notes</h3>
+                            <p class="text-gray-600 mb-4">Access well-structured study notes covering all CET subjects. Our notes are designed to help you understand complex topics easily and retain information effectively.</p>
+                            <p class="text-gray-600 mb-4">सभी CET विषयों को कवर करने वाले अच्छी तरह से संरचित अध्ययन नोट्स तक पहुंचें। हमारे नोट्स जटिल विषयों को आसानी से समझने और जानकारी को प्रभावी ढंग से याद रखने में मदद करने के लिए डिज़ाइन किए गए हैं।</p>
+                            <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                <li>Subject-wise comprehensive notes</li>
+                                <li>Important formulas and concepts</li>
+                                <li>Practice questions with solutions</li>
+                                <li>Quick revision guides</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Syllabus Section -->
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+                        <div class="md:w-1/2">
+                            <img src="img/syllabus2.png" alt="CET Syllabus" class="w-full h-64 object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h3 class="text-xl font-semibold text-gov-blue mb-4">Detailed Syllabus Coverage</h3>
+                            <p class="text-gray-600 mb-4">Get complete access to the updated CET syllabus with detailed topic-wise breakdown. Our syllabus guide helps you plan your preparation strategically and ensures you don't miss any important topics.</p>
+                            <p class="text-gray-600 mb-4">अपडेटेड CET पाठ्यक्रम तक पूरी पहुंच प्राप्त करें। हमारा पाठ्यक्रम गाइड आपको अपनी तैयारी की रणनीतिक योजना बनाने में मदद करता है और सुनिश्चित करता है कि आप कोई महत्वपूर्ण विषय न छोड़ें।</p>
+                            <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                <li>Topic-wise detailed breakdown</li>
+                                <li>Weightage of each section</li>
+                                <li>Important topics highlighted</li>
+                                <li>Preparation strategy guide</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="mt-12 bg-indian-blue text-white rounded-lg p-8 text-center">
+                    <h2 class="text-2xl font-bold mb-4">Ready to Start Your CET Journey?</h2>
+                    <p class="mb-6">Begin your preparation today and unlock these benefits for your future.</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="how-to-crack-cet.html" class="bg-white text-indian-blue px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                            How to Crack CET →
+                        </a>
+                        <a href="study-resources.html" class="bg-indian-saffron text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition">
+                            Study Resources →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Articles -->
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-gov-blue mb-6">Related Articles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <a href="how-to-crack-cet.html" class="flex items-center space-x-4 hover:bg-gray-50 p-4 rounded-lg transition">
+                    <img src="img/notes.jpg" alt="Preparation Tips" class="w-24 h-24 object-cover rounded-lg">
+                    <div>
+                        <h3 class="font-semibold text-gov-blue">Expert Tips for CET 2025 Preparation</h3>
+                        <p class="text-sm text-gray-600">Learn proven strategies to excel in your CET examination</p>
+                    </div>
+                </a>
+                <a href="cet-syllabus.html" class="flex items-center space-x-4 hover:bg-gray-50 p-4 rounded-lg transition">
+                    <img src="img/syllabus2.png" alt="CET Syllabus" class="w-24 h-24 object-cover rounded-lg">
+                    <div>
+                        <h3 class="font-semibold text-gov-blue">Updated CET 2025 Syllabus</h3>
+                        <p class="text-sm text-gray-600">Complete breakdown of the latest syllabus changes</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gov-blue text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm text-gray-400">© 2025 CET Preparation Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Set active link
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if (link.getAttribute('href') === currentPath.split('/').pop()) {
+                link.classList.add('bg-indian-blue', 'text-white');
+                link.classList.remove('text-gray-700', 'hover:text-indian-blue', 'hover:bg-gray-50');
+            }
+        });
+    </script>
+
+    <!-- Translation functionality -->
+    <script>
+        // Language Switcher Functionality
+        const languageToggle = document.getElementById('languageToggle');
+        const translateBtnText = document.getElementById('translateBtnText');
+        
+        // Hindi translations
+        const translations = {
+            // Headings
+            'Top Benefits of Qualifying the CET Exam in 2025': 'CET परीक्षा 2025 के प्रमुख फायदे',
+            'Why CET 2025 is a Game-Changer': 'CET 2025 कैसे बदल रहा है आपका भविष्य',
+            'Comprehensive Benefits Breakdown': 'CET के विस्तृत लाभ',
+            'Career Growth Opportunities': 'कैरियर में विकास के अवसर',
+            'Job Security and Stability': 'नौकरी की सुरक्षा और स्थिरता',
+            'Skill Development': 'कौशल विकास',
+            'Ready to Start Your CET Journey?': 'CET की तैयारी शुरू करने के लिए तैयार हैं?',
+            'Related Articles': 'संबंधित लेख',
+
+            // Main Content
+            'The Common Eligibility Test (CET) is revolutionizing government job recruitment in India. Discover how qualifying CET 2025 can transform your career prospects.': 'सामान्य पात्रता परीक्षा (CET) भारत में सरकारी नौकरी की भर्ती में क्रांति ला रही है। जानिए कैसे CET 2025 पास करना आपके कैरियर के अवसरों को बदल सकता है।',
+            'The Common Eligibility Test (CET) has transformed the landscape of government job recruitment in India. Here\'s why qualifying CET 2025 can be your ticket to a successful government career:': 'सामान्य पात्रता परीक्षा (CET) ने भारत में सरकारी नौकरी की भर्ती के क्षेत्र में क्रांतिकारी बदलाव ला दिया है। यहां जानिए क्यों CET 2025 पास करना आपके सफल सरकारी कैरियर का मार्ग प्रशस्त कर सकता है:',
+
+            // Benefits
+            'Unified Recruitment Process': 'एकीकृत भर्ती प्रक्रिया',
+            'Single exam for multiple government job applications, eliminating the need to prepare for various recruitment tests.': 'एक ही परीक्षा से कई सरकारी नौकरियों के लिए आवेदन करें, अलग-अलग भर्ती परीक्षाओं की तैयारी की आवश्यकता समाप्त।',
+            'Cost and Time Efficiency': 'लागत और समय की बचत',
+            'Save on multiple application fees and reduce preparation time with a single comprehensive exam.': 'एक ही व्यापक परीक्षा से कई आवेदन शुल्क बचाएं और तैयारी का समय कम करें।',
+            'Enhanced Transparency': 'बेहतर पारदर्शिता',
+            'Standardized testing process ensures fair evaluation and reduces malpractices in recruitment.': 'मानकीकृत परीक्षण प्रक्रिया निष्पक्ष मूल्यांकन सुनिश्चित करती है और भर्ती में अनियमितताओं को कम करती है।',
+            'Multiple Attempts': 'कई प्रयासों का अवसर',
+            'Opportunity to improve scores within the validity period, increasing chances of selection.': 'वैधता अवधि के भीतर स्कोर सुधारने का अवसर, चयन की संभावना बढ़ाएं।',
+
+            // Career Growth
+            'Qualifying CET opens doors to various positions in SSC, RRB, and IBPS, offering a broad spectrum of career options in the government sector.': 'CET पास करने से SSC, RRB और IBPS में विभिन्न पदों के अवसर मिलते हैं, सरकारी क्षेत्र में कैरियर के व्यापक विकल्प उपलब्ध होते हैं।',
+            'Government jobs offer unparalleled job security, regular promotions, and comprehensive benefits packages.': 'सरकारी नौकरियां अतुलनीय नौकरी सुरक्षा, नियमित पदोन्नति और व्यापक लाभ पैकेज प्रदान करती हैं।',
+            'CET preparation enhances your analytical, reasoning, and problem-solving skills, valuable for any career path.': 'CET की तैयारी आपके विश्लेषणात्मक, तार्किक और समस्या-समाधान कौशल को बढ़ाती है, जो किसी भी कैरियर के लिए मूल्यवान है।',
+
+            // Call to Action
+            'Begin your preparation today and unlock these benefits for your future.': 'आज ही अपनी तैयारी शुरू करें और अपने भविष्य के लिए इन लाभों को प्राप्त करें।',
+            'How to Crack CET →': 'CET कैसे पास करें →',
+            'Study Resources →': 'अध्ययन सामग्री →',
+
+            // Navigation
+            'Home': 'मुख्य पृष्ठ',
+            'CET Syllabus': 'CET पाठ्यक्रम',
+            'How to Crack CET': 'CET कैसे पास करें',
+            'CET Benefits': 'CET के लाभ',
+            'CET Updates': 'CET अपडेट',
+            'Blog': 'ब्लॉग',
+            'Apply Now': 'अभी आवेदन करें',
+            'Practice Tests': 'अभ्यास परीक्षा',
+            'Contact': 'संपर्क करें',
+
+            // Additional Content
+            'Published: March 15, 2024': 'प्रकाशित: 15 मार्च, 2024',
+            '5 min read': '5 मिनट का पठन',
+            'Expert Tips for CET 2025 Preparation': 'CET 2025 की तैयारी के लिए विशेषज्ञ सुझाव',
+            'Learn proven strategies to excel in your CET examination': 'अपनी CET परीक्षा में उत्कृष्ट प्रदर्शन के लिए सिद्ध रणनीतियां सीखें',
+            'Updated CET 2025 Syllabus': 'अपडेटेड CET 2025 पाठ्यक्रम',
+            'Complete breakdown of the latest syllabus changes': 'नवीनतम पाठ्यक्रम परिवर्तनों का विस्तृत विश्लेषण'
+        };
+
+        languageToggle.addEventListener('change', function() {
+            const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, span, a');
+            elements.forEach(element => {
+                const text = element.textContent.trim();
+                if (this.checked) {
+                    // Switch to Hindi
+                    if (translations[text]) {
+                        element.textContent = translations[text];
+                    }
+                    translateBtnText.textContent = 'अंग्रेजी में अनुवाद करें';
+                } else {
+                    // Switch to English
+                    Object.entries(translations).forEach(([english, hindi]) => {
+                        if (text === hindi) {
+                            element.textContent = english;
+                        }
+                    });
+                    translateBtnText.textContent = 'Translate to Hindi';
+                }
+            });
+        });
+    </script>
+
+    <!-- Load Navbar -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+    <!-- Loader Script -->
+    <script>
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('loader-hidden');
+            }, 1500);
+        });
+    </script>
+</body>
+</html> 

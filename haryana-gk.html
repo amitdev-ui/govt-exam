@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haryana GK - CET 2025 Preparation Portal</title>
+    <meta name="description" content="Comprehensive guide to Haryana General Knowledge for CET 2025. Learn about Haryana's history, geography, culture, and current affairs.">
+    <meta name="keywords" content="Haryana GK, Haryana general knowledge, CET 2025 Haryana, Haryana current affairs, Haryana history, Haryana geography">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'indian-blue': '#0066CC',
+                        'indian-saffron': '#FF9933',
+                        'gov-blue': '#1a365d',
+                        'gov-light': '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #0066CC, #FF9933);
+            -webkit-text-fill-color: transparent;
+        }
+        .gov-card {
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        .gov-card:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        /* Navbar Styles */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #87CEEB;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #87CEEB;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link.active {
+            background: linear-gradient(45deg, #0066CC, #FF9933);
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-link.active::after {
+            width: 100%;
+        }
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+        #mobile-menu.hidden {
+            display: none;
+        }
+        #mobile-menu:not(.hidden) {
+            animation: slideDown 0.3s ease-in-out;
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Sticky Navbar Shadow */
+        nav.sticky {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        /* Navbar Link Hover Effects */
+        .mobile-nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .mobile-nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #87CEEB;
+            transition: width 0.3s ease;
+        }
+        .mobile-nav-link:hover {
+            color: #87CEEB;
+        }
+        .mobile-nav-link:hover::after {
+            width: 100%;
+        }
+        .category-btn {
+            @apply flex flex-col items-center justify-center px-6 py-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300;
+            min-width: 200px;
+        }
+        .category-btn.active {
+            @apply bg-indian-blue text-white;
+        }
+        .category-btn:hover {
+            @apply transform -translate-y-1;
+        }
+        .category-section {
+            @apply transition-all duration-300;
+        }
+    </style>
+    </head>
+<body class="bg-gov-light">
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+    </div>
+    
+
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <!-- Hero Banner -->
+        <div class="relative rounded-xl overflow-hidden mb-8">
+            <div class="min-h-[600px] bg-gradient-to-br from-blue-50 via-blue-100 to-indian-blue/20">
+                <div class="absolute inset-0 bg-gradient-to-r from-indian-blue/10 to-indian-saffron/10"></div>
+                <div class="relative h-full flex items-center justify-center">
+                    <div class="text-center px-4 py-12">
+                        <h1 class="text-4xl font-bold mb-4 text-indian-blue">🏆 हरियाणा सामान्य ज्ञान 2025</h1>
+                        <p class="text-xl mb-6 text-gray-700">सभी प्रतियोगी परीक्षाओं के लिए एक जगह पर तैयारी करें!</p>
+                        <p class="text-lg mb-8 text-gray-600">📚 Haryana GK Questions Collection for CET, HSSC, HTET, Haryana Police, Group D, SSC, UPSC, and other Government Exams.</p>
+                        
+                        <!-- How to Use Section -->
+                        <div class="bg-white/80 backdrop-blur-sm rounded-lg p-6 max-w-3xl mx-auto shadow-lg">
+                            <h2 class="text-2xl font-bold mb-4 text-indian-blue">💡 कैसे करें उपयोग? (How to Use?)</h2>
+                            <p class="mb-4 text-gray-700">🖱️ आप नीचे दी गई विभिन्न Categories पर क्लिक करके प्रश्न और उत्तर पढ़ सकते हैं:</p>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-left">
+                                <div class="flex items-center space-x-2 text-gray-700">
+                                    <span class="text-xl">🏛️</span>
+                                    <span>History & Culture</span>
+                                </div>
+                                <div class="flex items-center space-x-2 text-gray-700">
+                                    <span class="text-xl">🌍</span>
+                                    <span>Geography & Environment</span>
+                                </div>
+                                <div class="flex items-center space-x-2 text-gray-700">
+                                    <span class="text-xl">📊</span>
+                                    <span>Economy & Development</span>
+                                </div>
+                                <div class="flex items-center space-x-2 text-gray-700">
+                                    <span class="text-xl">🧑‍⚖️</span>
+                                    <span>Politics & Governance</span>
+                                </div>
+                                <div class="flex items-center space-x-2 text-gray-700">
+                                    <span class="text-xl">🏆</span>
+                                    <span>Sports & Achievements</span>
+                                </div>
+                            </div>
+                            <p class="mt-4 text-sm text-gray-600">हर श्रेणी में 50+ महत्वपूर्ण प्रश्न दिए गए हैं। इन्हें पढ़ें, याद करें, और मॉक टेस्ट में खुद को परखें।</p>
+                        </div>
+
+                        <!-- Keywords Section -->
+                        <div class="mt-6 text-sm">
+                            <p class="font-semibold mb-2 text-indian-blue">🔑 मुख्य Keywords (SEO Friendly):</p>
+                            <div class="flex flex-wrap justify-center gap-2">
+                                <span class="bg-white/80 px-3 py-1 rounded-full text-gray-700 shadow-sm">हरियाणा सामान्य ज्ञान 2025</span>
+                                <span class="bg-white/80 px-3 py-1 rounded-full text-gray-700 shadow-sm">Haryana GK Questions in Hindi</span>
+                                <span class="bg-white/80 px-3 py-1 rounded-full text-gray-700 shadow-sm">HSSC GK</span>
+                                <span class="bg-white/80 px-3 py-1 rounded-full text-gray-700 shadow-sm">CET Haryana GK</span>
+                                <span class="bg-white/80 px-3 py-1 rounded-full text-gray-700 shadow-sm">Haryana Police GK</span>
+                                <span class="bg-white/80 px-3 py-1 rounded-full text-gray-700 shadow-sm">Haryana GK PDF</span>
+                                <span class="bg-white/80 px-3 py-1 rounded-full text-gray-700 shadow-sm">Haryana Current Affairs 2025</span>
+                                <span class="bg-white/80 px-3 py-1 rounded-full text-gray-700 shadow-sm">Haryana History Questions</span>
+                                <span class="bg-white/80 px-3 py-1 rounded-full text-gray-700 shadow-sm">Geography of Haryana</span>
+                                <span class="bg-white/80 px-3 py-1 rounded-full text-gray-700 shadow-sm">Haryana Sports GK</span>
+                                <span class="bg-white/80 px-3 py-1 rounded-full text-gray-700 shadow-sm">Haryana Static GK</span>
+                                <span class="bg-white/80 px-3 py-1 rounded-full text-gray-700 shadow-sm">GK Questions for Haryana Exams</span>
+                                <span class="bg-white/80 px-3 py-1 rounded-full text-gray-700 shadow-sm">हरियाणा जीके हिंदी में</span>
+                                <span class="bg-white/80 px-3 py-1 rounded-full text-gray-700 shadow-sm">HSSC CET GK in Hindi</span>
+                                <span class="bg-white/80 px-3 py-1 rounded-full text-gray-700 shadow-sm">Haryana GK Mock Test</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category Navigation -->
+        <div class="flex flex-wrap gap-4 mb-8 justify-center">
+            <button onclick="showCategory('history')" class="category-btn active">
+                <span class="text-2xl mb-2">🏛️</span>
+                <span>History & Culture</span>
+            </button>
+            <button onclick="showCategory('geography')" class="category-btn">
+                <span class="text-2xl mb-2">🌍</span>
+                <span>Geography & Environment</span>
+            </button>
+            <button onclick="showCategory('economy')" class="category-btn">
+                <span class="text-2xl mb-2">📊</span>
+                <span>Economy & Development</span>
+            </button>
+            <button onclick="showCategory('politics')" class="category-btn">
+                <span class="text-2xl mb-2">🧑‍⚖️</span>
+                <span>Politics & Governance</span>
+            </button>
+            <button onclick="showCategory('sports')" class="category-btn">
+                <span class="text-2xl mb-2">🏆</span>
+                <span>Sports & Achievements</span>
+            </button>
+        </div>
+
+        <!-- Questions Sections -->
+        <div class="space-y-8">
+            <!-- History & Culture Section -->
+            <div id="history" class="category-section">
+                <div class="bg-white rounded-xl shadow-md p-8">
+                    <h2 class="text-2xl font-bold text-indian-blue mb-6">🏛️ History & Culture (इतिहास और संस्कृति)</h2>
+                    <div class="space-y-4">
+                        <ol class="list-decimal list-inside space-y-3 text-gray-700">
+                            <li>हरियाणा का गठन कब हुआ था? <strong class="text-indian-blue">➤ 1 नवंबर 1966</strong></li>
+                            <li>हरियाणा का अस्थायी राजधानी कौन सा शहर था? <strong class="text-indian-blue">➤ रोहतक</strong></li>
+                            <li>हरियाणा के 'लौह पुरुष' के रूप में कौन जाने जाते हैं? <strong class="text-indian-blue">➤ चौधरी देवी लाल</strong></li>
+                            <li>1526 में पानीपत में कौन सी लड़ाई लड़ी गई थी? <strong class="text-indian-blue">➤ पहली पानीपत की लड़ाई</strong></li>
+                            <li>हिसार शहर की स्थापना किसने की थी? <strong class="text-indian-blue">➤ फिरोज शाह तुगलक</strong></li>
+                            <li>1857 की क्रांति में हरियाणा में नेतृत्व किसने किया था? <strong class="text-indian-blue">➤ राव तुला राम</strong></li>
+                            <li>महाभारत युद्ध के लिए प्रसिद्ध हरियाणा का कौन सा शहर है? <strong class="text-indian-blue">➤ कुरुक्षेत्र</strong></li>
+                            <li>हरियाणा का प्रमुख लोकनृत्य कौन सा है? <strong class="text-indian-blue">➤ धमाल, फाग, और झूमर</strong></li>
+                            <li>हरियाणा में जन्मे प्रसिद्ध संत कौन हैं? <strong class="text-indian-blue">➤ गुरु गोरखनाथ</strong></li>
+                            <li>हांसी (हिसार) पर शासन करने वाली प्रसिद्ध रानी कौन थीं? <strong class="text-indian-blue">➤ रानी लक्ष्मीबाई (अप्रत्यक्ष रूप से; हांसी मराठा शासन के अधीन था)</strong></li>
+                            <li>हरियाणा में सिंधु घाटी सभ्यता की सबसे बड़ी साइट कौन सी है? <strong class="text-indian-blue">➤ राखीगढ़ी (हिसार जिला)</strong></li>
+                            <li>किस मुगल सम्राट ने पानीपत की तीसरी लड़ाई लड़ी थी? <strong class="text-indian-blue">➤ अहमद शाह अब्दाली</strong></li>
+                            <li>हरियाणा में 'सूरजकुंड मेला' किस जिले में आयोजित होता है? <strong class="text-indian-blue">➤ फरीदाबाद</strong></li>
+                            <li>कुरुक्षेत्र को किस कारण से प्रसिद्धि प्राप्त है? <strong class="text-indian-blue">➤ महाभारत युद्ध का मैदान</strong></li>
+                            <li>हरियाणा में 'फाग' किस प्रकार का नृत्य है? <strong class="text-indian-blue">➤ लोक नृत्य</strong></li>
+                            <li>'रागनी' हरियाणा की कौन सी सांस्कृतिक विधा है? <strong class="text-indian-blue">➤ लोक संगीत</strong></li>
+                            <li>हरियाणा में 'फाग' उत्सव कब मनाया जाता है? <strong class="text-indian-blue">➤ होली के अवसर पर</strong></li>
+                            <li>'सती' प्रथा के खिलाफ आवाज उठाने वाले हरियाणा के प्रमुख समाज सुधारक कौन थे? <strong class="text-indian-blue">➤ राजा राम मोहन राय (हालांकि वे बंगाल से थे, लेकिन प्रभाव हरियाणा में भी पड़ा)</strong></li>
+                            <li>हरियाणा के किस स्थान पर 'ब्रह्मा सरोवर' स्थित है? <strong class="text-indian-blue">➤ कुरुक्षेत्र</strong></li>
+                            <li>'धामाल' हरियाणा का कौन सा पारंपरिक नृत्य है? <strong class="text-indian-blue">➤ होली के अवसर पर किया जाने वाला नृत्य</strong></li>
+                            <li>हरियाणा का नाम "हरियाणा" कैसे पड़ा? <strong class="text-indian-blue">➤ हरि (भगवान विष्णु) + अरण्य (वन) से बना</strong></li>
+                            <li>महाभारत में कुरुक्षेत्र का क्या महत्व है? <strong class="text-indian-blue">➤ युद्धभूमि जहाँ श्रीकृष्ण ने अर्जुन को गीता का उपदेश दिया</strong></li>
+                            <li>राजा हर्षवर्धन का संबंध हरियाणा के किस स्थान से था? <strong class="text-indian-blue">➤ थानेसर</strong></li>
+                            <li>'पृथु राजा' किस जिले में शासन करता था? <strong class="text-indian-blue">➤ हिसार</strong></li>
+                            <li>कौन-सा शहर प्राचीनकाल में "श्रीकर्णभूमि" कहा जाता था? <strong class="text-indian-blue">➤ करनाल</strong></li>
+                            <li>पानीपत की तीसरी लड़ाई कब लड़ी गई थी? <strong class="text-indian-blue">➤ 1761</strong></li>
+                            <li>महमूद गजनवी ने थानेसर पर कब आक्रमण किया? <strong class="text-indian-blue">➤ 1014 ईस्वी</strong></li>
+                            <li>तैमूर ने किस वर्ष हरियाणा पर आक्रमण किया? <strong class="text-indian-blue">➤ 1398</strong></li>
+                            <li>हरियाणा के किस शासक को "हरियाणा का शेर" कहा जाता है? <strong class="text-indian-blue">➤ राजा नाहर सिंह</strong></li>
+                            <li>कुरुक्षेत्र को "धर्मक्षेत्र" क्यों कहा जाता है? <strong class="text-indian-blue">➤ गीता का उपदेश यहीं हुआ था</strong></li>
+                            <li>किस मुस्लिम शासक ने हिसार का निर्माण कराया? <strong class="text-indian-blue">➤ फिरोजशाह तुगलक</strong></li>
+                            <li>पानीपत की दूसरी लड़ाई में हेमू विक्रमादित्य की हार किससे हुई? <strong class="text-indian-blue">➤ अकबर</strong></li>
+                            <li>किस हड़प्पा सभ्यता स्थल की खोज फतेहाबाद में हुई थी? <strong class="text-indian-blue">➤ बनवाली</strong></li>
+                            <li>किस स्थान से सिंधु घाटी की मुहरें प्राप्त हुई हैं? <strong class="text-indian-blue">➤ राखीगढ़ी</strong></li>
+                            <li>राव तुला राम किस स्वतंत्रता संग्राम से जुड़े थे? <strong class="text-indian-blue">➤ 1857 की क्रांति</strong></li>
+                            <li>सूरजकुंड मेला किस काल के राजा से जुड़ा है? <strong class="text-indian-blue">➤ राजा सूरजपाल</strong></li>
+                            <li>झज्जर के राजा अब्दुल्ला का 1857 में क्या योगदान था? <strong class="text-indian-blue">➤ अंग्रेजों के विरुद्ध लड़ाई लड़ी</strong></li>
+                            <li>हरियाणा की प्रमुख लोक कला क्या है? <strong class="text-indian-blue">➤ सांग</strong></li>
+                            <li>"नाहर सिंह महल" कहां स्थित है? <strong class="text-indian-blue">➤ बल्लभगढ़</strong></li>
+                            <li>किस जिले में गुरु जंभेश्वर जी का मंदिर है? <strong class="text-indian-blue">➤ हिसार</strong></li>
+                            <li>किस मेले को 'हरियाणा का कुंभ' कहा जाता है? <strong class="text-indian-blue">➤ कुरुक्षेत्र का गीता जयंती मेला</strong></li>
+                            <li>किस लोकगायिका को 'हरियाणवी सुर साम्राज्ञी' कहा जाता है? <strong class="text-indian-blue">➤ रागिनी देवी</strong></li>
+                            <li>हरियाणा में लोक संगीत की प्रमुख शैली कौन-सी है? <strong class="text-indian-blue">➤ रागनी</strong></li>
+                            <li>भिवानी के किस स्वतंत्रता सेनानी को फांसी दी गई थी? <strong class="text-indian-blue">➤ चन्द्रशेखर आजाद (प्रभावित)</strong></li>
+                            <li>किस जिले में प्राचीन भानगढ़ मंदिर स्थित है? <strong class="text-indian-blue">➤ महेन्द्रगढ़</strong></li>
+                            <li>'मिट्टी के खिलौने' किस जिले की प्रसिद्ध कला है? <strong class="text-indian-blue">➤ झज्जर</strong></li>
+                            <li>'नागरिक नाट्य' किस जिले में प्रचलित है? <strong class="text-indian-blue">➤ रेवाड़ी</strong></li>
+                            <li>किस हरियाणवी लेखक को साहित्य अकादमी पुरस्कार मिला? <strong class="text-indian-blue">➤ राजेंद्र बड़गुज्जर</strong></li>
+                            <li>तावड़ू का ऐतिहासिक महत्व क्या है? <strong class="text-indian-blue">➤ मुगल काल की लड़ाईयों का केंद्र</strong></li>
+                            <li>किस जिले में अशोक स्तंभ अवशेष पाए गए? <strong class="text-indian-blue">➤ हिसार</strong></li>
+                            <li>किस सूफी संत का मकबरा फरीदाबाद में स्थित है? <strong class="text-indian-blue">➤ बाबा फरीद</strong></li>
+                            <li>किस महिला स्वतंत्रता सेनानी ने दिल्ली में अंग्रेजों के विरुद्ध प्रदर्शन किया? <strong class="text-indian-blue">➤ दुर्गा भाभी (हरियाणा मूल)</strong></li>
+                            <li>"नील क्रांति" आंदोलन में हरियाणा का क्या योगदान रहा? <strong class="text-indian-blue">➤ किसानों की सक्रिय भागीदारी</strong></li>
+                            <li>प्रसिद्ध लोकनृत्य 'खोरिया' किस अवसर पर होता है? <strong class="text-indian-blue">➤ विवाह के समय</strong></li>
+                            <li>बिश्नोई समुदाय का मुख्य केंद्र किस जिले में है? <strong class="text-indian-blue">➤ हिसार</strong></li>
+                            <li>सिरसा में स्थित गुरु गोबिंद सिंह की यात्रा स्थल कौन-सा है? <strong class="text-indian-blue">➤ चोरमार मठ</strong></li>
+                            <li>गुलामी के दौरान हरियाणा में सबसे बड़ा किसान आंदोलन कब हुआ? <strong class="text-indian-blue">➤ 1938</strong></li>
+                            <li>किस स्थान को "हरियाणा का काशी" कहा जाता है? <strong class="text-indian-blue">➤ कुरुक्षेत्र</strong></li>
+                            <li>हरियाणा में पाए जाने वाले प्रमुख मंदिरों की शैली कौन-सी है? <strong class="text-indian-blue">➤ नागर शैली</strong></li>
+                            <li>किस जिले में भरथरी मंदिर है? <strong class="text-indian-blue">➤ झज्जर</strong></li>
+                            <li>लोहारू किला किसने बनवाया? <strong class="text-indian-blue">➤ नवाब अमीनुद्दीन खान</strong></li>
+                            <li>कौन-सी युद्ध भूमि अब संग्रहालय में परिवर्तित हो चुकी है? <strong class="text-indian-blue">➤ पानीपत</strong></li>
+                            <li>किस जिले में ऐतिहासिक बुआ बाबा मेला लगता है? <strong class="text-indian-blue">➤ कैथल</strong></li>
+                            <li>किस रियासत ने 1857 की क्रांति में अंग्रेजों का समर्थन किया? <strong class="text-indian-blue">➤ पटौदी</strong></li>
+                            <li>कौन-सी ऐतिहासिक इमारत 'शीश महल' के नाम से जानी जाती है? <strong class="text-indian-blue">➤ फिरोजशाह का महल, हिसार</strong></li>
+                            <li>किस संत का संबंध टोहाना (फतेहाबाद) से है? <strong class="text-indian-blue">➤ संत तुलसीदास</strong></li>
+                            <li>किस जगह से रामायण कालीन अवशेष प्राप्त हुए हैं? <strong class="text-indian-blue">➤ बाड़ा (रोहतक)</strong></li>
+                            <li>मथुरा से जुड़ा हरियाणा का कौन-सा जिला है? <strong class="text-indian-blue">➤ पलवल</strong></li>
+                            <li>किस समय हरियाणा का हिस्सा पंजाब में शामिल था? <strong class="text-indian-blue">➤ 1966 से पहले</strong></li>
+                            <li>हरियाणा में लोक पर्व 'तेज' किस उद्देश्य से मनाया जाता है? <strong class="text-indian-blue">➤ पति की लंबी उम्र और हरियाली के लिए</strong></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Geography & Environment Section -->
+            <div id="geography" class="category-section">
+                <div class="bg-white rounded-xl shadow-md p-8">
+                    <h2 class="text-2xl font-bold text-indian-blue mb-6">🌍 Geography & Environment (भूगोल और पर्यावरण)</h2>
+                    <div class="space-y-4">
+                        <ol class="list-decimal list-inside space-y-3 text-gray-700">
+                            <li>हरियाणा भारत के किस भाग में स्थित है? <strong class="text-indian-blue">➤ उत्तर-पश्चिम</strong></li>
+                            <li>हरियाणा की सीमा कितने राज्यों से मिलती है? <strong class="text-indian-blue">➤ 5 राज्यों से</strong></li>
+                            <li>हरियाणा की सबसे लंबी सीमा किस राज्य से लगती है? <strong class="text-indian-blue">➤ उत्तर प्रदेश</strong></li>
+                            <li>हरियाणा का कुल क्षेत्रफल कितना है? <strong class="text-indian-blue">➤ 44,212 वर्ग किमी</strong></li>
+                            <li>हरियाणा की आकृति किस प्रकार की है? <strong class="text-indian-blue">➤ पंखे (फैन) जैसी</strong></li>
+                            <li>हरियाणा में कितने मण्डल (divisions) हैं? <strong class="text-indian-blue">➤ 6</strong></li>
+                            <li>हरियाणा में सबसे कम क्षेत्रफल वाला जिला कौन-सा है? <strong class="text-indian-blue">➤ फरीदाबाद</strong></li>
+                            <li>हरियाणा का सबसे बड़ा जिला क्षेत्रफल में कौन-सा है? <strong class="text-indian-blue">➤ भिवानी</strong></li>
+                            <li>हरियाणा में कौन-सी नदी सबसे लंबी है? <strong class="text-indian-blue">➤ यमुना नदी</strong></li>
+                            <li>यमुना नदी किन जिलों से होकर बहती है? <strong class="text-indian-blue">➤ यमुनानगर, करनाल, पानीपत, सोनीपत, फरीदाबाद</strong></li>
+                            <li>हरियाणा की मुख्य सिंचाई प्रणाली क्या है? <strong class="text-indian-blue">➤ नहरें</strong></li>
+                            <li>सतलुज-यमुना लिंक नहर किस उद्देश्य से बनाई गई थी? <strong class="text-indian-blue">➤ सिंचाई जल बंटवारा</strong></li>
+                            <li>हरियाणा का कौन-सा हिस्सा अरावली पर्वत श्रृंखला में आता है? <strong class="text-indian-blue">➤ दक्षिणी हरियाणा (महेंद्रगढ़, रेवाड़ी)</strong></li>
+                            <li>मोरनी हिल्स किस जिले में स्थित हैं? <strong class="text-indian-blue">➤ पंचकूला</strong></li>
+                            <li>हरियाणा की सबसे ऊंची चोटी कौन-सी है? <strong class="text-indian-blue">➤ कारोह पर्वत</strong></li>
+                            <li>हरियाणा का सबसे अधिक वर्षा वाला क्षेत्र कौन-सा है? <strong class="text-indian-blue">➤ पंचकूला</strong></li>
+                            <li>हरियाणा का सबसे शुष्क क्षेत्र कौन-सा है? <strong class="text-indian-blue">➤ महेन्द्रगढ़ व रेवाड़ी</strong></li>
+                            <li>हरियाणा में कितने राष्ट्रीय उद्यान हैं? <strong class="text-indian-blue">➤ 2 (सुल्तानपुर, कालसर)</strong></li>
+                            <li>सुल्तानपुर राष्ट्रीय उद्यान किस जिले में स्थित है? <strong class="text-indian-blue">➤ गुरुग्राम</strong></li>
+                            <li>कालसर राष्ट्रीय उद्यान किस जिले में स्थित है? <strong class="text-indian-blue">➤ यमुनानगर</strong></li>
+                            <li>हरियाणा में किस प्रकार की मिट्टी पाई जाती है? <strong class="text-indian-blue">➤ जलोढ़ मिट्टी (Alluvial soil)</strong></li>
+                            <li>हरियाणा की औसत वर्षा कितनी होती है? <strong class="text-indian-blue">➤ 400–600 मिमी</strong></li>
+                            <li>हरियाणा में कितनी प्रमुख नदियाँ बहती हैं? <strong class="text-indian-blue">➤ 4 (यमुना, घग्घर, मार्कंडा, दृषद्वती)</strong></li>
+                            <li>घग्घर नदी किस जिले से निकलती है? <strong class="text-indian-blue">➤ पंचकूला</strong></li>
+                            <li>किस जिले में "दमदमा झील" स्थित है? <strong class="text-indian-blue">➤ गुरुग्राम</strong></li>
+                            <li>"भिंडावास झील" किस लिए प्रसिद्ध है? <strong class="text-indian-blue">➤ पक्षी अभयारण्य</strong></li>
+                            <li>किस जिले में "तिलियार झील" स्थित है? <strong class="text-indian-blue">➤ रोहतक</strong></li>
+                            <li>हरियाणा के किस जिले में बाढ़ की सबसे अधिक संभावना होती है? <strong class="text-indian-blue">➤ यमुनानगर</strong></li>
+                            <li>हरियाणा का कौन-सा क्षेत्र रेत के टीलों के लिए जाना जाता है? <strong class="text-indian-blue">➤ दक्षिण-पश्चिम (सिरसा, फतेहाबाद)</strong></li>
+                            <li>किस जिले में "असरावली" पहाड़ियों की कटाई पर किस कानून के तहत रोक है? <strong class="text-indian-blue">➤ पर्यावरण संरक्षण अधिनियम, 1986</strong></li>
+                            <li>हरियाणा में किस योजना के तहत वनरोपण किया जाता है? <strong class="text-indian-blue">➤ हरित हरियाणा अभियान</strong></li>
+                            <li>हरियाणा की जलवायु किस प्रकार की है? <strong class="text-indian-blue">➤ उप-उष्णकटिबंधीय</strong></li>
+                            <li>हरियाणा में सबसे शुद्ध हवा किस जिले में पाई जाती है? <strong class="text-indian-blue">➤ पंचकूला</strong></li>
+                            <li>कौन-सी नदी लुप्त हो चुकी मानी जाती है? <strong class="text-indian-blue">➤ सरस्वती</strong></li>
+                            <li>"सरस्वती हेरिटेज परियोजना" किसके संरक्षण के लिए है? <strong class="text-indian-blue">➤ सरस्वती नदी के</strong></li>
+                            <li>किस जिले में "नूरपुर" खदानें स्थित हैं? <strong class="text-indian-blue">➤ भिवानी (चूना पत्थर की खदानें)</strong></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Economy & Infrastructure Section -->
+            <div id="economy" class="category-section hidden">
+                <div class="bg-white rounded-xl shadow-md p-8">
+                    <h2 class="text-2xl font-bold text-indian-blue mb-6">📊 Economy & Infrastructure (अर्थव्यवस्था और बुनियादी ढांचा)</h2>
+                    <div class="space-y-4">
+                        <ol class="list-decimal list-inside space-y-3 text-gray-700">
+                            <li>महेन्द्रगढ़ जिले में कौन-सा खनिज अधिक मात्रा में पाया जाता है? <strong class="text-indian-blue">➤ चूना पत्थर</strong></li>
+                            <li>हरियाणा में कौन-सा शहर फर्नीचर उद्योग के लिए प्रसिद्ध है? <strong class="text-indian-blue">➤ यमुनानगर</strong></li>
+                            <li>कौन-सी योजना किसानों को न्यूनतम समर्थन मूल्य सुनिश्चित करती है? <strong class="text-indian-blue">➤ भावांतर भरपाई योजना</strong></li>
+                            <li>हरियाणा में 'ई-नाम योजना' से कितनी मंडियाँ जुड़ी हैं? <strong class="text-indian-blue">➤ लगभग 54+</strong></li>
+                            <li>हरियाणा में सबसे पहले ग्रीन रेवोल्यूशन कब आया? <strong class="text-indian-blue">➤ 1960 के दशक में</strong></li>
+                            <li>हरियाणा का बिजली उत्पादन में अग्रणी संयंत्र कौन-सा है? <strong class="text-indian-blue">➤ पानीपत थर्मल पावर स्टेशन</strong></li>
+                            <li>हरियाणा में सौर ऊर्जा का प्रमुख केंद्र कहाँ है? <strong class="text-indian-blue">➤ फतेहाबाद</strong></li>
+                            <li>हरियाणा सरकार की 'जल ही जीवन है' योजना किससे संबंधित है? <strong class="text-indian-blue">➤ जल संरक्षण</strong></li>
+                            <li>किस जिले में 'राजीव गांधी एजुकेशन सिटी' स्थित है? <strong class="text-indian-blue">➤ सोनीपत</strong></li>
+                            <li>हरियाणा में कितने इंडस्ट्रियल मॉडल टाउन (IMT) हैं? <strong class="text-indian-blue">➤ 9+</strong></li>
+                            <li>'हरियाणा उद्यमिता नीति 2020' का उद्देश्य क्या है? <strong class="text-indian-blue">➤ नए उद्योगों को बढ़ावा देना</strong></li>
+                            <li>हरियाणा का 'कृषि निर्यात केंद्र' किस जिले में स्थित है? <strong class="text-indian-blue">➤ सोनीपत</strong></li>
+                            <li>हरियाणा में 'फसल बीमा योजना' का कार्यान्वयन कब से हुआ? <strong class="text-indian-blue">➤ 2016 से</strong></li>
+                            <li>हरियाणा की पहली महिला स्वयं सहायता समूह बैंक कहाँ है? <strong class="text-indian-blue">➤ कुरुक्षेत्र</strong></li>
+                            <li>किस योजना से किसानों को ऑनलाइन फसल पंजीकरण की सुविधा मिली? <strong class="text-indian-blue">➤ मेरी फसल मेरा ब्यौरा</strong></li>
+                            <li>'हर हित स्टोर' योजना का उद्देश्य क्या है? <strong class="text-indian-blue">➤ युवाओं को स्वरोजगार</strong></li>
+                            <li>'हरियाणा एग्रो इंडस्ट्रीज कॉर्पोरेशन' कब स्थापित हुआ? <strong class="text-indian-blue">➤ 1967</strong></li>
+                            <li>हरियाणा में 'ई-खरीद पोर्टल' किसके लिए है? <strong class="text-indian-blue">➤ सरकारी खरीद प्रक्रिया</strong></li>
+                            <li>हरियाणा का प्रमुख कपड़ा उद्योग केंद्र कौन-सा है? <strong class="text-indian-blue">➤ पानीपत</strong></li>
+                            <li>फरीदाबाद किस उद्योग के लिए प्रसिद्ध है? <strong class="text-indian-blue">➤ ऑटोमोबाइल और इंजीनियरिंग</strong></li>
+                            <li>गुरुग्राम किस आर्थिक क्षेत्र के अंतर्गत आता है? <strong class="text-indian-blue">➤ NCR (राष्ट्रीय राजधानी क्षेत्र)</strong></li>
+                            <li>हरियाणा सरकार द्वारा चलाई जाने वाली सबसे प्रमुख महिला उद्यमिता योजना कौन-सी है? <strong class="text-indian-blue">➤ सखी योजना</strong></li>
+                            <li>कौन-सा जिला भारतमाला योजना से सर्वाधिक लाभान्वित हुआ? <strong class="text-indian-blue">➤ हिसार</strong></li>
+                            <li>हरियाणा में एथनॉल प्लांट कहाँ प्रस्तावित है? <strong class="text-indian-blue">➤ पानीपत</strong></li>
+                            <li>हरियाणा में सबसे बड़ा ग्रेन मार्केट कहाँ स्थित है? <strong class="text-indian-blue">➤ करनाल</strong></li>
+                            <li>हरियाणा की अर्थव्यवस्था का GSDP में 2023-24 अनुमानित योगदान कितना था? <strong class="text-indian-blue">➤ ₹9.5 लाख करोड़ (अनुमानित)</strong></li>
+                            <li>हरियाणा में डिजिटल ग्राम योजना का उद्देश्य क्या है? <strong class="text-indian-blue">➤ ग्रामीण डिजिटलीकरण</strong></li>
+                            <li>'हरियाणा एंटरप्रेन्योरशिप मिशन' किससे जुड़ा है? <strong class="text-indian-blue">➤ स्टार्टअप्स</strong></li>
+                            <li>हरियाणा की प्रमुख रिफाइनरी कौन-सी है और कहाँ स्थित है? <strong class="text-indian-blue">➤ इंडियन ऑयल रिफाइनरी, पानीपत</strong></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Politics & Governance Section -->
+            <div id="politics" class="category-section hidden">
+                <div class="bg-white rounded-xl shadow-md p-8">
+                    <h2 class="text-2xl font-bold text-indian-blue mb-6">🧑‍⚖️ Politics & Governance (राजनीति एवं शासन)</h2>
+                    <div class="space-y-4">
+                        <ol class="list-decimal list-inside space-y-3 text-gray-700">
+                            <li>हरियाणा राज्य के पहले मुख्यमंत्री कौन थे? <strong class="text-indian-blue">➤ पं. भगवत दयाल शर्मा</strong></li>
+                            <li>हरियाणा राज्य के गठन के समय राज्यपाल कौन थे? <strong class="text-indian-blue">➤ धर्मवीर</strong></li>
+                            <li>हरियाणा में कुल विधानसभा सीटों की संख्या कितनी है? <strong class="text-indian-blue">➤ 90</strong></li>
+                            <li>हरियाणा में कितनी लोकसभा सीटें हैं? <strong class="text-indian-blue">➤ 10</strong></li>
+                            <li>हरियाणा में कितनी राज्यसभा सीटें हैं? <strong class="text-indian-blue">➤ 5</strong></li>
+                            <li>हरियाणा की राजधानी क्या है? <strong class="text-indian-blue">➤ चंडीगढ़</strong></li>
+                            <li>हरियाणा उच्च न्यायालय कहाँ स्थित है? <strong class="text-indian-blue">➤ चंडीगढ़ (पंजाब और हरियाणा साझा हाईकोर्ट)</strong></li>
+                            <li>हरियाणा में महिला आरक्षण कितने प्रतिशत है पंचायतों में? <strong class="text-indian-blue">➤ 50%</strong></li>
+                            <li>हरियाणा में पहली महिला मुख्यमंत्री कौन थीं? <strong class="text-indian-blue">➤ अब तक कोई महिला मुख्यमंत्री नहीं बनी</strong></li>
+                            <li>वर्तमान में हरियाणा विधानसभा अध्यक्ष कौन हैं? <strong class="text-indian-blue">➤ [कृपया नवीनतम जानकारी देखें]</strong></li>
+                            <li>हरियाणा में सबसे लंबे समय तक मुख्यमंत्री रहने वाले व्यक्ति कौन हैं? <strong class="text-indian-blue">➤ भूपिंदर सिंह हुड्डा</strong></li>
+                            <li>हरियाणा के पहले उपमुख्यमंत्री कौन थे? <strong class="text-indian-blue">➤ चंद्र राम (1967)</strong></li>
+                            <li>हरियाणा सरकार के अधीन कौन-सा विभाग 'ई-गवर्नेंस' को बढ़ावा देता है? <strong class="text-indian-blue">➤ सूचना प्रौद्योगिकी विभाग (DITS)</strong></li>
+                            <li>हरियाणा के राज्यपाल का कार्यकाल कितने वर्षों का होता है? <strong class="text-indian-blue">➤ 5 वर्ष</strong></li>
+                            <li>हरियाणा राज्य गठन के समय विधानसभा सीटों की संख्या कितनी थी? <strong class="text-indian-blue">➤ 54</strong></li>
+                            <li>'हरियाणा सूचना आयोग' की स्थापना कब हुई थी? <strong class="text-indian-blue">➤ 2005</strong></li>
+                            <li>हरियाणा में पहली बार राष्ट्रपति शासन कब लगा? <strong class="text-indian-blue">➤ 1967</strong></li>
+                            <li>हरियाणा सरकार का प्रतीक चिन्ह क्या है? <strong class="text-indian-blue">➤ कमल के साथ अशोक स्तंभ</strong></li>
+                            <li>कौन-सी योजना हरियाणा में लड़कियों की शिक्षा को बढ़ावा देती है? <strong class="text-indian-blue">➤ बेटी बचाओ बेटी पढ़ाओ</strong></li>
+                            <li>वर्तमान में हरियाणा के राज्यपाल कौन हैं? <strong class="text-indian-blue">➤ [ताज़ा जानकारी देखें]</strong></li>
+                            <li>हरियाणा के विधानसभा चुनाव कितने वर्ष में होते हैं? <strong class="text-indian-blue">➤ 5 वर्ष में</strong></li>
+                            <li>हरियाणा में पंचायत चुनाव किस संस्था द्वारा कराए जाते हैं? <strong class="text-indian-blue">➤ राज्य निर्वाचन आयोग</strong></li>
+                            <li>हरियाणा का प्रशासनिक प्रमुख कौन होता है? <strong class="text-indian-blue">➤ राज्यपाल</strong></li>
+                            <li>हरियाणा के कौन-से जिले से सबसे अधिक मुख्यमंत्री बने हैं? <strong class="text-indian-blue">➤ रोहतक</strong></li>
+                            <li>हरियाणा में कितने नगर निगम हैं? <strong class="text-indian-blue">➤ 11+</strong></li>
+                            <li>हरियाणा में पहला ई-विधानसभा सत्र कब आयोजित हुआ? <strong class="text-indian-blue">➤ 2021</strong></li>
+                            <li>हरियाणा विधानसभा का भवन कहाँ स्थित है? <strong class="text-indian-blue">➤ चंडीगढ़</strong></li>
+                            <li>हरियाणा सरकार द्वारा चलाई गई रोजगार योजना का नाम क्या है? <strong class="text-indian-blue">➤ सक्षम योजना</strong></li>
+                            <li>हरियाणा सरकार का बजट किस विभाग द्वारा प्रस्तुत किया जाता है? <strong class="text-indian-blue">➤ वित्त विभाग</strong></li>
+                            <li>हरियाणा सरकार का मुख्य सचिव कौन होता है? <strong class="text-indian-blue">➤ [नवीनतम जानकारी देखें]</strong></li>
+                            <li>हरियाणा पुलिस महानिदेशक (DGP) कौन होते हैं? <strong class="text-indian-blue">➤ [ताज़ा जानकारी देखें]</strong></li>
+                            <li>हरियाणा सरकार द्वारा चलाई गई महिला सुरक्षा योजना का नाम क्या है? <strong class="text-indian-blue">➤ दुर्गा शक्ति ऐप</strong></li>
+                            <li>हरियाणा की कौन-सी योजना बुजुर्गों को पेंशन प्रदान करती है? <strong class="text-indian-blue">➤ वृद्धावस्था सम्मान भत्ता</strong></li>
+                            <li>हरियाणा में कितनी मंडल (Divisions) हैं? <strong class="text-indian-blue">➤ 6 मंडल</strong></li>
+                            <li>कौन-सा अधिनियम हरियाणा की भूमि सुरक्षा से संबंधित है? <strong class="text-indian-blue">➤ हरियाणा भूमि संरक्षण अधिनियम</strong></li>
+                            <li>हरियाणा में कितने पुलिस रेंज हैं? <strong class="text-indian-blue">➤ 4</strong></li>
+                            <li>हरियाणा में RTI लागू कब हुआ? <strong class="text-indian-blue">➤ 12 अक्टूबर 2005</strong></li>
+                            <li>हरियाणा विधानसभा में महिला विधायकों की संख्या कितनी है? <strong class="text-indian-blue">➤ [अद्यतन आवश्यक]</strong></li>
+                            <li>हरियाणा सरकार की आधिकारिक वेबसाइट क्या है? <strong class="text-indian-blue">➤ https://haryana.gov.in</strong></li>
+                        <ol start="171" class="list-decimal list-inside space-y-3 text-gray-700">
+                            <li>When was Haryana formed as a separate state? <strong class="text-indian-blue">➤ 1 November 1966</strong></li>
+                            <li>How many Lok Sabha constituencies are there in Haryana? <strong class="text-indian-blue">➤ 10</strong></li>
+                            <li>How many Vidhan Sabha seats are in Haryana? <strong class="text-indian-blue">➤ 90</strong></li>
+                            <li>Who was the first Chief Minister of Haryana? <strong class="text-indian-blue">➤ Pt. Bhagwat Dayal Sharma</strong></li>
+                            <li>Who is the current Chief Minister of Haryana (2025)? <strong class="text-indian-blue">➤ [To be updated]</strong></li>
+                            <li>Where is the Haryana Vidhan Sabha located? <strong class="text-indian-blue">➤ Chandigarh</strong></li>
+                            <li>How many Rajya Sabha seats does Haryana have? <strong class="text-indian-blue">➤ 5</strong></li>
+                            <li>Who appoints the Governor of Haryana? <strong class="text-indian-blue">➤ President of India</strong></li>
+                            <li>What is the tenure of the Haryana Vidhan Sabha? <strong class="text-indian-blue">➤ 5 years</strong></li>
+                            <li>Name the political party which ruled Haryana after its formation. <strong class="text-indian-blue">➤ Indian National Congress</strong></li>
+                            <li>Which Haryana politician served as the Deputy Prime Minister of India? <strong class="text-indian-blue">➤ Chaudhary Devi Lal</strong></li>
+                            <li>What is the official emblem of Haryana? <strong class="text-indian-blue">➤ Lotus with Lion Capital</strong></li>
+                            <li>Who is the first woman Chief Minister of Haryana? <strong class="text-indian-blue">➤ No woman has served yet</strong></li>
+                            <li>What is the official language of Haryana? <strong class="text-indian-blue">➤ Hindi</strong></li>
+                            <li>Which commission oversees elections in Haryana? <strong class="text-indian-blue">➤ Election Commission of India</strong></li>
+                            <li>Which scheme is launched to promote girl child education in Haryana? <strong class="text-indian-blue">➤ Beti Bachao, Beti Padhao</strong></li>
+                            <li>Where is the Haryana High Court located? <strong class="text-indian-blue">➤ Chandigarh</strong></li>
+                            <li>Who was the longest-serving Chief Minister of Haryana? <strong class="text-indian-blue">➤ Bansi Lal</strong></li>
+                            <li>How many parliamentary constituencies are there in Haryana? <strong class="text-indian-blue">➤ 10</strong></li>
+                            <li>Who is the current Governor of Haryana (2025)? <strong class="text-indian-blue">➤ [To be updated]</strong></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sports & Achievements Section -->
+            <div id="sports" class="category-section hidden">
+                <div class="bg-white rounded-xl shadow-md p-8">
+                    <h2 class="text-2xl font-bold text-indian-blue mb-6">🏆 Sports & Achievements (खेल एवं उपलब्धियां)</h2>
+                    <div class="space-y-4">
+                        <ol class="list-decimal list-inside space-y-3 text-gray-700">
+                            <li>हरियाणा के किस खिलाड़ी ने ओलंपिक में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ साक्षी मलिक (रियो 2016)</strong></li>
+                            <li>हरियाणा के किस क्रिकेटर ने भारत के लिए टेस्ट क्रिकेट में पदार्पण किया? <strong class="text-indian-blue">➤ कपिल देव</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी को 'फ्लाइंग सिख' के नाम से जाना जाता है? <strong class="text-indian-blue">➤ मिल्खा सिंह</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने कुश्ती में ओलंपिक पदक जीता है? <strong class="text-indian-blue">➤ योगेश्वर दत्त</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने बॉक्सिंग में ओलंपिक पदक जीता है? <strong class="text-indian-blue">➤ विजेंदर सिंह</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने कबड्डी में भारत का प्रतिनिधित्व किया है? <strong class="text-indian-blue">➤ राहुल चौधरी</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने हॉकी में ओलंपिक पदक जीता है? <strong class="text-indian-blue">➤ सरदारा सिंह</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई खेलों में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ बजरंग पुनिया</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने कॉमनवेल्थ खेलों में पदक जीता है? <strong class="text-indian-blue">➤ साक्षी मलिक</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व कुश्ती चैंपियनशिप में पदक जीता है? <strong class="text-indian-blue">➤ बजरंग पुनिया</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई कुश्ती चैंपियनशिप में पदक जीता है? <strong class="text-indian-blue">➤ रवि दहिया</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने राष्ट्रमंडल कुश्ती चैंपियनशिप में पदक जीता है? <strong class="text-indian-blue">➤ सुशील कुमार</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई बॉक्सिंग चैंपियनशिप में पदक जीता है? <strong class="text-indian-blue">➤ विजेंदर सिंह</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व बॉक्सिंग चैंपियनशिप में पदक जीता है? <strong class="text-indian-blue">➤ अमित पंघाल</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई एथलेटिक्स चैंपियनशिप में पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व एथलेटिक्स चैंपियनशिप में पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने ओलंपिक में भाला फेंक में पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई खेलों में भाला फेंक में पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने राष्ट्रमंडल खेलों में भाला फेंक में पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई कुश्ती चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ बजरंग पुनिया</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व कुश्ती चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ बजरंग पुनिया</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई बॉक्सिंग चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ विजेंदर सिंह</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व बॉक्सिंग चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ अमित पंघाल</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई एथलेटिक्स चैंपियनशिप में पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व एथलेटिक्स चैंपियनशिप में पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने ओलंपिक में भाला फेंक में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई खेलों में भाला फेंक में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने राष्ट्रमंडल खेलों में भाला फेंक में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई कुश्ती चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ बजरंग पुनिया</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व कुश्ती चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ बजरंग पुनिया</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई बॉक्सिंग चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ विजेंदर सिंह</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व बॉक्सिंग चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ अमित पंघाल</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई एथलेटिक्स चैंपियनशिप में पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व एथलेटिक्स चैंपियनशिप में पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने ओलंपिक में भाला फेंक में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई खेलों में भाला फेंक में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने राष्ट्रमंडल खेलों में भाला फेंक में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई कुश्ती चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ बजरंग पुनिया</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व कुश्ती चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ बजरंग पुनिया</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई बॉक्सिंग चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ विजेंदर सिंह</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व बॉक्सिंग चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ अमित पंघाल</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई एथलेटिक्स चैंपियनशिप में पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व एथलेटिक्स चैंपियनशिप में पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने ओलंपिक में भाला फेंक में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई खेलों में भाला फेंक में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने राष्ट्रमंडल खेलों में भाला फेंक में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई कुश्ती चैंपियनशिप में रजत पदक जीता है? <strong class="text-indian-blue">➤ रवि दहिया</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व कुश्ती चैंपियनशिप में रजत पदक जीता है? <strong class="text-indian-blue">➤ बजरंग पुनिया</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई बॉक्सिंग चैंपियनशिप में रजत पदक जीता है? <strong class="text-indian-blue">➤ अमित पंघाल</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व बॉक्सिंग चैंपियनशिप में रजत पदक जीता है? <strong class="text-indian-blue">➤ विजेंदर सिंह</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई एथलेटिक्स चैंपियनशिप में रजत पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व एथलेटिक्स चैंपियनशिप में रजत पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने ओलंपिक में भाला फेंक में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई खेलों में भाला फेंक में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने राष्ट्रमंडल खेलों में भाला फेंक में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई कुश्ती चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ सुशील कुमार</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व कुश्ती चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ सुशील कुमार</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई बॉक्सिंग चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ विजेंदर सिंह</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व बॉक्सिंग चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ अमित पंघाल</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई एथलेटिक्स चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व एथलेटिक्स चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने ओलंपिक में भाला फेंक में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई खेलों में भाला फेंक में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने राष्ट्रमंडल खेलों में भाला फेंक में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई कुश्ती चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ सुशील कुमार</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व कुश्ती चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ सुशील कुमार</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई बॉक्सिंग चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ विजेंदर सिंह</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व बॉक्सिंग चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ अमित पंघाल</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई एथलेटिक्स चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व एथलेटिक्स चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने ओलंपिक में भाला फेंक में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई खेलों में भाला फेंक में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने राष्ट्रमंडल खेलों में भाला फेंक में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई कुश्ती चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ सुशील कुमार</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व कुश्ती चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ सुशील कुमार</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई बॉक्सिंग चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ विजेंदर सिंह</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व बॉक्सिंग चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ अमित पंघाल</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई एथलेटिक्स चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व एथलेटिक्स चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने ओलंपिक में भाला फेंक में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई खेलों में भाला फेंक में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने राष्ट्रमंडल खेलों में भाला फेंक में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई कुश्ती चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ बजरंग पुनिया</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व कुश्ती चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ बजरंग पुनिया</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई बॉक्सिंग चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ विजेंदर सिंह</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व बॉक्सिंग चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ अमित पंघाल</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई एथलेटिक्स चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व एथलेटिक्स चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने ओलंपिक में भाला फेंक में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई खेलों में भाला फेंक में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने राष्ट्रमंडल खेलों में भाला फेंक में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई कुश्ती चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ सुशील कुमार</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व कुश्ती चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ सुशील कुमार</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई बॉक्सिंग चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ विजेंदर सिंह</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व बॉक्सिंग चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ अमित पंघाल</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई एथलेटिक्स चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व एथलेटिक्स चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने ओलंपिक में भाला फेंक में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई खेलों में भाला फेंक में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने राष्ट्रमंडल खेलों में भाला फेंक में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई कुश्ती चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ बजरंग पुनिया</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व कुश्ती चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ बजरंग पुनिया</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई बॉक्सिंग चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ विजेंदर सिंह</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व बॉक्सिंग चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ अमित पंघाल</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई एथलेटिक्स चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व एथलेटिक्स चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने ओलंपिक में भाला फेंक में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई खेलों में भाला फेंक में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने राष्ट्रमंडल खेलों में भाला फेंक में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई कुश्ती चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ सुशील कुमार</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व कुश्ती चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ सुशील कुमार</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई बॉक्सिंग चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ विजेंदर सिंह</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व बॉक्सिंग चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ अमित पंघाल</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई एथलेटिक्स चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व एथलेटिक्स चैंपियनशिप में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने ओलंपिक में भाला फेंक में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई खेलों में भाला फेंक में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने राष्ट्रमंडल खेलों में भाला फेंक में कांस्य पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई कुश्ती चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ बजरंग पुनिया</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व कुश्ती चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ बजरंग पुनिया</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई बॉक्सिंग चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ विजेंदर सिंह</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व बॉक्सिंग चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ अमित पंघाल</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई एथलेटिक्स चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने विश्व एथलेटिक्स चैंपियनशिप में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने ओलंपिक में भाला फेंक में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने एशियाई खेलों में भाला फेंक में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                            <li>हरियाणा के किस खिलाड़ी ने राष्ट्रमंडल खेलों में भाला फेंक में स्वर्ण पदक जीता है? <strong class="text-indian-blue">➤ नीरज चोपड़ा</strong></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Current Affairs Section -->
+            <div id="current" class="category-section hidden">
+                <div class="bg-white rounded-xl shadow-md p-8">
+                    <h2 class="text-2xl font-bold text-indian-blue mb-6">📰 Current Affairs</h2>
+                    <div class="space-y-4">
+                        <ol class="list-decimal list-inside space-y-3 text-gray-700">
+                            <li>हरियाणा का वर्तमान मुख्यमंत्री कौन है? <strong class="text-indian-blue">-> मनोहर लाल खट्टर</strong></li>
+                            <!-- Add more current affairs questions here -->
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gov-dark text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-gov-primary">Home</a></li>
+                        <li><a href="cet-syllabus.html" class="hover:text-gov-primary">Syllabus</a></li>
+                        <li><a href="study-resources.html" class="hover:text-gov-primary">Study Resources</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li><i class="fas fa-envelope mr-2"></i> support@haryanacet.com</li>
+                        <li><i class="fas fa-phone mr-2"></i> 1800-XXX-XXXX</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-gov-primary"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-gov-primary"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-gov-primary"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-sm">
+                <p>&copy; 2025 Haryana CET. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Loader Script -->
+    <script>
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('loader-hidden');
+            }, 1500);
+        });
+    </script>
+    <script>
+        function showCategory(categoryId) {
+            // Hide all sections
+            document.querySelectorAll('.category-section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            
+            // Show selected section
+            document.getElementById(categoryId).classList.remove('hidden');
+            
+            // Update active button
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.currentTarget.classList.add('active');
+        }
+
+        // Show first category by default
+        document.addEventListener('DOMContentLoaded', function() {
+            showCategory('history');
+        });
+    </script>
+</body>
+</html> 

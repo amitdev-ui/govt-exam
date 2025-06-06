@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Government Vacancies After CET - CET Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+
+/* Navbar Styles */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #87CEEB;
+    transition: width 0.3s ease;
+}
+.nav-link:hover {
+    color: #87CEEB;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+.nav-link.active {
+    background: linear-gradient(45deg, #0066CC, #FF9933);
+    -webkit-text-fill-color: transparent;
+}
+.nav-link.active::after {
+    width: 100%;
+}
+/* Mobile Menu Animation */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+#mobile-menu.hidden {
+    display: none;
+}
+#mobile-menu:not(.hidden) {
+    animation: slideDown 0.3s ease-in-out;
+}
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Sticky Navbar Shadow */
+nav.sticky {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/* Navbar Link Hover Effects */
+.mobile-nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.mobile-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #87CEEB;
+    transition: width 0.3s ease;
+}
+.mobile-nav-link:hover {
+    color: #87CEEB;
+}
+.mobile-nav-link:hover::after {
+    width: 100%;
+}
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #0066CC;
+            --secondary: #FF9933;
+            --accent: #4CAF50;
+            --background: #f8fafc;
+            --text: #1e293b;
+        }
+        
+        /* Language Toggle Styles */
+        .language-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .language-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .language-toggle img {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        .language-toggle span {
+            font-weight: 500;
+            color: var(--text);
+        }
+
+        /* Hindi Content Styles */
+        .hindi-content {
+            display: block;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        .hindi-content.active {
+            display: block;
+        }
+
+        .english-content.active {
+            display: block;
+        }
+
+        .english-content {
+            display: none;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .article-header {
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(255, 153, 51, 0.1));
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .article-content h2 {
+            color: var(--primary);
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            color: #4a5568;
+        }
+
+        .article-content ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: #64748b;
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+        }
+
+        .article-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin: 2rem 0;
+        }
+
+        .article-tag {
+            background-color: #e2e8f0;
+            color: #475569;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .share-button {
+            background-color: #f1f5f9;
+            color: #475569;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .share-button:hover {
+            background-color: #e2e8f0;
+            transform: translateY(-2px);
+        }
+
+        .vacancy-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease;
+        }
+
+        .vacancy-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .vacancy-card h3 {
+            color: var(--primary);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .vacancy-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .detail-item {
+            background-color: #f8fafc;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .detail-item h4 {
+            color: var(--secondary);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .salary-range {
+            color: var(--accent);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Language Toggle Button -->
+    <div class="language-toggle" onclick="toggleLanguage()">
+        <img src="https://flagcdn.com/w40/in.png" alt="English" id="current-flag">
+        <div id="navbar"></div>
+        <script src="navbar.js"></script>
+    
+    </div>
+
+    <article class="max-w-4xl mx-auto px-4 py-8">
+        <!-- English Content -->
+        <div class="english-content active">
+            <!-- Include Navbar -->
+            <div id="navbar"></div>
+            <script src="navbar.js"></script>
+
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-3xl mx-auto text-center">
+                        <h1 class="text-4xl md:text-5xl font-bold mb-4">Upcoming Government Vacancies After CET</h1>
+                        <div class="article-meta justify-center">
+                            <span><i class="far fa-calendar-alt mr-2"></i>March 16, 2024</span>
+                            <span><i class="far fa-clock mr-2"></i>8 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Article Content -->
+            <main class="article-content">
+                <img src="img/upcoming vacancy.png" alt="Upcoming Vacancies" class="w-full h-auto rounded-lg mb-8">
+                
+                <p class="lead text-xl text-gray-700 mb-8">
+                    Stay informed about the latest government job vacancies that will be filled through CET scores. This comprehensive guide covers upcoming opportunities across various sectors.
+                </p>
+
+                <h2>Why Monitor Upcoming Vacancies?</h2>
+                <p>
+                    Keeping track of upcoming vacancies is crucial for CET aspirants because:
+                </p>
+                <ul>
+                    <li>It helps you plan your preparation strategy</li>
+                    <li>You can target specific departments or positions</li>
+                    <li>You can prepare for department-specific requirements</li>
+                    <li>It helps in making informed career decisions</li>
+                </ul>
+
+                <div class="vacancy-card">
+                    <h3>1. Banking Sector Vacancies</h3>
+                    <p>Major public sector banks are expected to announce recruitment through CET scores.</p>
+                    <div class="vacancy-details">
+                        <div class="detail-item">
+                            <h4>Expected Positions</h4>
+                            <ul>
+                                <li>Probationary Officer</li>
+                                <li>Clerk</li>
+                                <li>Specialist Officer</li>
+                            </ul>
+                        </div>
+                        <div class="detail-item">
+                            <h4>Salary Range</h4>
+                            <p class="salary-range">₹30,000 - ₹80,000</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vacancy-card">
+                    <h3>2. Public Sector Undertakings</h3>
+                    <p>Various PSUs are planning to recruit through CET scores in the coming months.</p>
+                    <div class="vacancy-details">
+                        <div class="detail-item">
+                            <h4>Expected Positions</h4>
+                            <ul>
+                                <li>Management Trainee</li>
+                                <li>Junior Engineer</li>
+                                <li>Technical Officer</li>
+                            </ul>
+                        </div>
+                        <div class="detail-item">
+                            <h4>Salary Range</h4>
+                            <p class="salary-range">₹40,000 - ₹1,00,000</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vacancy-card">
+                    <h3>3. Government Departments</h3>
+                    <p>Multiple government departments are expected to announce vacancies.</p>
+                    <div class="vacancy-details">
+                        <div class="detail-item">
+                            <h4>Expected Positions</h4>
+                            <ul>
+                                <li>Administrative Officer</li>
+                                <li>Section Officer</li>
+                                <li>Deputy Secretary</li>
+                            </ul>
+                        </div>
+                        <div class="detail-item">
+                            <h4>Salary Range</h4>
+                            <p class="salary-range">₹35,400 - ₹1,12,400</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>How to Stay Updated</h2>
+                <ul>
+                    <li>Regularly check the official CET website</li>
+                    <li>Subscribe to government job portals</li>
+                    <li>Follow official social media handles</li>
+                    <li>Join CET preparation groups</li>
+                    <li>Set up job alerts on employment websites</li>
+                </ul>
+
+                <h2>Application Process</h2>
+                <p>
+                    When vacancies are announced, follow these steps:
+                </p>
+                <ul>
+                    <li>Check eligibility criteria carefully</li>
+                    <li>Prepare required documents in advance</li>
+                    <li>Submit applications before deadlines</li>
+                    <li>Keep your CET scorecard ready</li>
+                    <li>Follow up on application status</li>
+                </ul>
+
+                <div class="article-tags">
+                    <span class="article-tag">Vacancies</span>
+                    <span class="article-tag">Government Jobs</span>
+                    <span class="article-tag">Career Opportunities</span>
+                    <span class="article-tag">Job Updates</span>
+                </div>
+
+                <div class="share-buttons">
+                    <button class="share-button">
+                        <i class="fab fa-facebook-f"></i>
+                        Share
+                    </button>
+                    <button class="share-button">
+                        <i class="fab fa-twitter"></i>
+                        Tweet
+                    </button>
+                    <button class="share-button">
+                        <i class="fab fa-linkedin-in"></i>
+                        Share
+                    </button>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="bg-gray-900 text-white py-12 mt-12">
+                <div class="container mx-auto px-4">
+                    <div class="text-center">
+                        <p>&copy; 2024 CET Exam. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Hindi Content -->
+        <div class="hindi-content">
+            <header class="mb-8">
+                <h1 class="text-4xl font-bold mb-4">सीईटी के बाद आने वाली सरकारी नौकरियां</h1>
+                <div class="flex items-center text-gray-600 mb-4">
+                    <span class="mr-4"><i class="far fa-calendar-alt mr-2"></i>16 मार्च 2024</span>
+                    <span><i class="far fa-clock mr-2"></i>8 मिनट का पढ़ना</span>
+                </div>
+            </header>
+
+            <div class="prose prose-lg max-w-none">
+                <img src="img/govtexam.png" alt="आगामी नौकरियां" class="w-full h-auto rounded-lg mb-8">
+                
+                <p class="lead mb-6 text-xl font-semibold bg-yellow-100 p-4 rounded-lg border-l-4 border-yellow-500">
+                    <span class="text-red-600">🔴 विशेष सूचना:</span> 2025 में CET के माध्यम से लगभग 2 लाख सरकारी पदों पर भर्ती की जाने वाली है! अपनी तैयारी अभी से शुरू करें और सरकारी नौकरी पाने का अवसर न चूकें।
+                </p>
+
+                <p class="lead mb-6">
+                    सीईटी परीक्षा पास करने के बाद आने वाली सरकारी नौकरियों के बारे में जानकारी रखना आपकी तैयारी का महत्वपूर्ण हिस्सा है। इस लेख में हम आपको आने वाली नौकरियों के बारे में विस्तृत जानकारी देंगे।
+                </p>
+
+                <h2 class="text-2xl font-bold mb-4">सरकारी नौकरियों के लाभ</h2>
+                <div class="bg-blue-50 p-6 rounded-lg mb-6">
+                    <ul class="list-disc pl-6 mb-6 space-y-2">
+                        <li>नौकरी सुरक्षा और स्थिरता</li>
+                        <li>आकर्षक वेतन पैकेज (7वें वेतन आयोग के अनुसार)</li>
+                        <li>नियमित वेतन वृद्धि और पदोन्नति के अवसर</li>
+                        <li>स्वास्थ्य बीमा और पेंशन लाभ</li>
+                        <li>सामाजिक प्रतिष्ठा और सम्मान</li>
+                        <li>कम तनाव और बेहतर कार्य-जीवन संतुलन</li>
+                    </ul>
+                </div>
+
+                <h2 class="text-2xl font-bold mb-4">नौकरियों पर नज़र क्यों रखें?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-lg font-bold mb-3 text-blue-800">रणनीतिक लाभ</h3>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li>पहले से तैयारी करने का मौका</li>
+                            <li>सही पद के लिए योग्यता हासिल करना</li>
+                            <li>आवेदन प्रक्रिया की समझ</li>
+                            <li>सैलरी और लाभों की जानकारी</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gradient-to-r from-green-50 to-green-100 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-lg font-bold mb-3 text-green-800">कैरियर विकास</h3>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li>अपने कौशल के अनुसार पद चुनें</li>
+                            <li>दीर्घकालिक कैरियर योजना बनाएं</li>
+                            <li>आवश्यक प्रमाणपत्र और कौशल विकसित करें</li>
+                            <li>इंटरव्यू और पर्सनैलिटी टेस्ट की तैयारी</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl font-bold mb-4 text-red-700">⚡ आने वाली नौकरियां - 2025 में विशेष अवसर</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-2">
+                        <div class="text-blue-600 font-bold text-3xl mb-2">50,000+</div>
+                        <h3 class="text-xl font-bold mb-3">बैंकिंग क्षेत्र</h3>
+                        <ul class="list-disc pl-4 mb-3">
+                            <li>प्रोबेशनरी ऑफिसर</li>
+                            <li>क्लर्क</li>
+                            <li>स्पेशलिस्ट ऑफिसर</li>
+                        </ul>
+                        <p class="mt-3 text-gray-600">सैलरी: ₹30,000 - ₹80,000</p>
+                        <p class="mt-2 text-sm text-red-600">आवेदन अंतिम तिथि: मई 2025</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-2">
+                        <div class="text-green-600 font-bold text-3xl mb-2">35,000+</div>
+                        <h3 class="text-xl font-bold mb-3">सरकारी विभाग</h3>
+                        <ul class="list-disc pl-4 mb-3">
+                            <li>प्रशासनिक अधिकारी</li>
+                            <li>अनुभाग अधिकारी</li>
+                            <li>कार्यालय सहायक</li>
+                        </ul>
+                        <p class="mt-3 text-gray-600">सैलरी: ₹35,400 - ₹1,12,400</p>
+                        <p class="mt-2 text-sm text-red-600">आवेदन अंतिम तिथि: जून 2025</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-2">
+                        <div class="text-purple-600 font-bold text-3xl mb-2">25,000+</div>
+                        <h3 class="text-xl font-bold mb-3">सार्वजनिक क्षेत्र</h3>
+                        <ul class="list-disc pl-4 mb-3">
+                            <li>प्रबंधन प्रशिक्षु</li>
+                            <li>कनिष्ठ अभियंता</li>
+                            <li>तकनीकी अधिकारी</li>
+                        </ul>
+                        <p class="mt-3 text-gray-600">सैलरी: ₹40,000 - ₹1,00,000</p>
+                        <p class="mt-2 text-sm text-red-600">आवेदन अंतिम तिथि: जुलाई 2025</p>
+                    </div>
+                </div>
+
+                <div class="bg-orange-100 p-6 rounded-lg border-l-4 border-orange-500 mb-8">
+                    <h3 class="text-xl font-bold mb-3 text-orange-800">विशेष तैयारी टिप्स</h3>
+                    <p class="mb-4">CET स्कोर के आधार पर सरकारी नौकरी पाने के लिए इन महत्वपूर्ण बिंदुओं पर ध्यान दें:</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><span class="font-semibold">उच्च स्कोर लक्ष्य:</span> न्यूनतम योग्यता से 20-30% अधिक स्कोर का लक्ष्य रखें</li>
+                        <li><span class="font-semibold">विभाग-विशेष तैयारी:</span> जिस विभाग में नौकरी चाहिए, उसकी विशेष तैयारी करें</li>
+                        <li><span class="font-semibold">मॉक इंटरव्यू:</span> नियमित अभ्यास से इंटरव्यू कौशल विकसित करें</li>
+                        <li><span class="font-semibold">दस्तावेज़ तैयारी:</span> सभी आवश्यक प्रमाणपत्र पहले से तैयार रखें</li>
+                        <li><span class="font-semibold">समय प्रबंधन:</span> अंतिम समय की भागदौड़ से बचें</li>
+                    </ul>
+                </div>
+
+                <h2 class="text-2xl font-bold mb-4">नौकरियों के बारे में कैसे जानें?</h2>
+                <ul class="list-disc pl-6 mb-6">
+                    <li>सरकारी वेबसाइटों पर नज़र रखें</li>
+                    <li>नौकरी पोर्टल्स की सदस्यता लें</li>
+                    <li>समाचार पत्रों में विज्ञापन देखें</li>
+                    <li>सोशल मीडिया पर फॉलो करें</li>
+                    <li>CET की आधिकारिक वेबसाइट पर नियमित विजिट करें</li>
+                    <li>रोजगार समाचार का अध्ययन करें</li>
+                </ul>
+
+                <div class="bg-green-100 p-6 rounded-lg mb-8">
+                    <h3 class="text-xl font-bold mb-3 text-green-800">सफलता की कहानियां</h3>
+                    <div class="mb-4 border-l-4 border-green-500 pl-4">
+                        <p class="italic">"मैंने CET 2023 में 92% स्कोर किया और अब मैं प्रतिष्ठित सरकारी बैंक में प्रोबेशनरी ऑफिसर के पद पर कार्यरत हूँ। नियमित अध्ययन और सही रणनीति ने मुझे सफलता दिलाई।"</p>
+                        <p class="font-semibold mt-2">- अमित शर्मा, दिल्ली</p>
+                    </div>
+                    <div class="border-l-4 border-green-500 pl-4">
+                        <p class="italic">"CET स्कोर के आधार पर मुझे अपना पसंदीदा विभाग मिला। मेरी सैलरी में दोगुना वृद्धि हुई है और अब मेरे पास कैरियर में आगे बढ़ने के अनेक अवसर हैं।"</p>
+                        <p class="font-semibold mt-2">- प्रिया गुप्ता, जयपुर</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-8 border-t">
+                <h3 class="text-2xl font-bold mb-4">आज ही तैयारी शुरू करें!</h3>
+                <p class="mb-6">सरकारी नौकरी का सपना अब वास्तविकता बन सकता है। CET 2025 के लिए अभी से अपनी तैयारी शुरू करें और सफलता की राह पर अग्रसर हों।</p>
+                
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">नौकरियां</span>
+                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">सरकारी नौकरियां</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">करियर</span>
+                    <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">सीईटी 2025</span>
+                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">आगामी अवसर</span>
+                </div>
+
+                <div class="flex gap-4">
+                    <button class="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                        <i class="fab fa-facebook-f"></i>
+                        शेयर करें
+                    </button>
+                    <button class="flex items-center gap-2 px-4 py-2 bg-blue-400 text-white rounded-lg hover:bg-blue-500 transition">
+                        <i class="fab fa-twitter"></i>
+                        ट्वीट करें
+                    </button>
+                    <button class="flex items-center gap-2 px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800 transition">
+                        <i class="fab fa-linkedin-in"></i>
+                        शेयर करें
+                    </button>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer class="bg-gray-100 py-8 mt-12">
+        <div class="max-w-4xl mx-auto px-4 text-center text-gray-600">
+            <p>&copy; 2024 CET Exam. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleLanguage() {
+            const englishContent = document.querySelector('.english-content');
+            const hindiContent = document.querySelector('.hindi-content');
+            const currentFlag = document.getElementById('current-flag');
+            const currentLang = document.getElementById('current-lang');
+
+            if (englishContent.classList.contains('active')) {
+                englishContent.classList.remove('active');
+                hindiContent.classList.add('active');
+                currentFlag.src = "https://flagcdn.com/w40/in.png";
+                currentLang.textContent = "हिंदी";
+            } else {
+                hindiContent.classList.remove('active');
+                englishContent.classList.add('active');
+                currentFlag.src = "https://flagcdn.com/w40/gb.png";
+                currentLang.textContent = "English";
+            }
+        }
+        
+        // Set Hindi as default language when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const englishContent = document.querySelector('.english-content');
+            const hindiContent = document.querySelector('.hindi-content');
+            const currentFlag = document.getElementById('current-flag');
+            const currentLang = document.getElementById('current-lang');
+            
+            // Set to Hindi
+            englishContent.classList.remove('active');
+            hindiContent.classList.add('active');
+            currentFlag.src = "https://flagcdn.com/w40/in.png";
+            currentLang.textContent = "हिंदी";
+        });
+    </script>
+</body>
+</html> 

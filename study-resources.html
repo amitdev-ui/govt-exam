@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Resources - CET 2025 Preparation Portal</title>
+    <meta name="description" content="Comprehensive study resources for CET 2025 preparation. Access free study materials, practice tests, and subject-wise guides.">
+    <meta name="keywords" content="CET 2025 study materials, CET preparation resources, CET practice tests, CET study guide, CET exam resources">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="translations.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'indian-blue': '#0066CC',
+                        'indian-saffron': '#FF9933',
+                        'gov-blue': '#1a365d',
+                        'gov-light': '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #0066CC, #FF9933);
+            -webkit-text-fill-color: transparent;
+        }
+        .gov-card {
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        .gov-card:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        /* Navbar Styles */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #87CEEB;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #87CEEB;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link.active {
+            background: linear-gradient(45deg, #0066CC, #FF9933);
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-link.active::after {
+            width: 100%;
+        }
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+        #mobile-menu.hidden {
+            display: none;
+        }
+        #mobile-menu:not(.hidden) {
+            animation: slideDown 0.3s ease-in-out;
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Sticky Navbar Shadow */
+        nav.sticky {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        /* Navbar Link Hover Effects */
+        .mobile-nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .mobile-nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #87CEEB;
+            transition: width 0.3s ease;
+        }
+        .mobile-nav-link:hover {
+            color: #87CEEB;
+        }
+        .mobile-nav-link:hover::after {
+            width: 100%;
+        }
+        .gov-border {
+            border-color: #e2e8f0;
+        }
+        .gov-shadow {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        .modal-content {
+            animation: slideIn 0.5s ease-out;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Language Switcher Styles */
+        .lang-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+        }
+        .lang-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 30px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "EN";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        input:checked + .slider {
+            background-color: #0066CC;
+        }
+        input:checked + .slider:before {
+            transform: translateX(30px);
+            content: "हिं";
+        }
+
+        /* Floating Translation Button */
+        .floating-translate-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #0066CC, #004C99);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            animation: pulse 2s infinite;
+        }
+
+        .floating-translate-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 25px rgba(0, 102, 204, 0.4);
+            background: linear-gradient(135deg, #004C99, #0066CC);
+        }
+
+        .floating-translate-btn i {
+            font-size: 20px;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+            }
+            50% {
+                box-shadow: 0 4px 30px rgba(0, 102, 204, 0.5);
+            }
+            100% {
+                box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-3px);
+            }
+        }
+
+        /* Custom variables */
+        :root {
+            --blue-color: #87CEEB;
+            --dark-blue: #5DADE2;
+            --gov-blue: #2c3e50;
+        }
+        
+        /* Override gov-blue color to use sky blue */
+        .text-gov-blue {
+            color: var(--gov-blue) !important;
+        }
+        
+        .bg-gov-blue {
+            background-color: var(--blue-color) !important;
+        }
+        
+        /* Replace gradient backgrounds with solid sky blue */
+        .gradient-bg {
+            background-color: #e0f7fa !important;
+        }
+        
+        /* Override hover styles */
+        .hover\:bg-gov-light-blue:hover {
+            background-color: var(--dark-blue) !important;
+        }
+        
+        /* Make cards smaller */
+        .card-compact {
+            max-height: 380px;
+            overflow: hidden;
+        }
+        
+        .card-compact img {
+            height: 140px !important;
+            object-fit: cover;
+        }
+        
+        /* Hero banner with skyblue background */
+        .hero-banner {
+            background-color: #e0f7fa;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        /* Buttons with skyblue styling */
+        .btn-skyblue {
+            background-color: var(--blue-color);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-skyblue:hover {
+            background-color: var(--dark-blue);
+        }
+        
+        /* Card hover effect */
+        .resource-card {
+            transition: all 0.3s ease;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    
+</head>
+<body class="bg-gov-light">
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+    </div>
+    
+
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="hero-banner">
+            <h1 class="text-2xl md:text-3xl font-bold text-gov-blue mb-2">CET 2025 Study Resources</h1>
+            <p class="text-gov-gray text-lg">Essential materials, online platforms, and tips to ace your exam preparation</p>
+        </section>
+
+        <!-- Study Resources Section -->
+        <section class="bg-white gov-shadow rounded-lg p-6 mb-8">
+            <h2 class="text-xl font-semibold text-gov-blue mb-4">📚 Essential Study Materials</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="border gov-border rounded-lg p-4 card-compact resource-card">
+                    <img src="img/books.png" alt="Books and Resources" class="w-full object-cover rounded-lg mb-4">
+                    <h3 class="font-semibold text-gov-blue mb-2">Recommended Books</h3>
+                    <ul class="text-gov-gray space-y-1 list-disc list-inside">
+                        <li>Lucent's GK (Hindi/English)</li>
+                        <li>Haryana: History & Culture</li>
+                        <li>Fast Track Objective Arithmetic</li>
+                        <li>Modern Approach to Verbal & Non-Verbal Reasoning</li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="#" class="btn-skyblue px-4 py-2 rounded inline-block">More Details</a>
+                    </div>
+                            </div>
+
+                <div class="border gov-border rounded-lg p-4 card-compact resource-card">
+                    <img src="img/previous-papers.png" alt="Previous Year Papers" class="w-full object-cover rounded-lg mb-4">
+                    <h3 class="font-semibold text-gov-blue mb-2">Previous Year Papers</h3>
+                    <ul class="text-gov-gray space-y-1 list-disc list-inside">
+                        <li>CET 2023 & 2024 Papers</li>
+                        <li>HSSC Group C & D Papers</li>
+                        <li>Section-wise Question Banks</li>
+                        <li>Solved Model Papers</li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="https://www.testbook.com/haryana-cet-previous-year-papers" target="_blank" class="btn-skyblue px-4 py-2 rounded inline-block">Download Papers</a>
+                    </div>
+                            </div>
+
+                <div class="border gov-border rounded-lg p-4 card-compact resource-card">
+                    <img src="img/notes.jpg" alt="Study Notes" class="w-full object-cover rounded-lg mb-4">
+                    <h3 class="font-semibold text-gov-blue mb-2">Free Study Notes</h3>
+                    <ul class="text-gov-gray space-y-1 list-disc list-inside">
+                        <li>Haryana GK Capsule</li>
+                        <li>Quantitative Aptitude Formulas</li>
+                        <li>Reasoning Shortcuts</li>
+                        <li>Current Affairs Digest</li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="#" class="btn-skyblue px-4 py-2 rounded inline-block">View Notes</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Online Platforms Section -->
+        <section class="bg-white gov-shadow rounded-lg p-6 mb-8">
+            <h2 class="text-xl font-semibold text-gov-blue mb-4">🖥️ Best Online Learning Platforms</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-xl border-2 border-gray-100 p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:border-blue-color resource-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-white p-2 rounded-lg shadow-md mr-4 flex-shrink-0">
+                            <img src="img/testbook.png" alt="Testbook" class="h-12 w-12 object-contain">
+                        </div>
+                        <h3 class="font-bold text-gov-blue text-lg">Testbook</h3>
+                    </div>
+                    <p class="text-gov-gray mb-4">Complete CET courses with live classes and tests</p>
+                    <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                        <a href="https://testbook.com/" target="_blank" class="text-blue-color hover:text-dark-blue font-medium transition-colors">Visit Website →</a>
+                        <div class="flex items-center">
+                            <span class="text-yellow-500 mr-1">⭐</span>
+                            <span class="text-sm text-gray-600">4.5/5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl border-2 border-gray-100 p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:border-blue-color resource-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-white p-2 rounded-lg shadow-md mr-4 flex-shrink-0">
+                            <img src="img/careerpower.png" alt="Career Power" class="h-12 w-12 object-contain">
+                        </div>
+                        <h3 class="font-bold text-gov-blue text-lg">Career Power</h3>
+                    </div>
+                    <p class="text-gov-gray mb-4">Offline and online coaching with expert faculty</p>
+                    <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                        <a href="https://www.careerpower.in/" target="_blank" class="text-blue-color hover:text-dark-blue font-medium transition-colors">Visit Website →</a>
+                        <div class="flex items-center">
+                            <span class="text-yellow-500 mr-1">⭐</span>
+                            <span class="text-sm text-gray-600">4.2/5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl border-2 border-gray-100 p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:border-blue-color resource-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-white p-2 rounded-lg shadow-md mr-4 flex-shrink-0">
+                            <img src="img/embibe.png" alt="Embibe" class="h-12 w-12 object-contain">
+                        </div>
+                        <h3 class="font-bold text-gov-blue text-lg">Embibe</h3>
+                    </div>
+                    <p class="text-gov-gray mb-4">AI-powered personalized learning experience</p>
+                    <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                        <a href="https://www.embibe.com/" target="_blank" class="text-blue-color hover:text-dark-blue font-medium transition-colors">Visit Website →</a>
+                        <div class="flex items-center">
+                            <span class="text-yellow-500 mr-1">⭐</span>
+                            <span class="text-sm text-gray-600">4.4/5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl border-2 border-gray-100 p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:border-blue-color resource-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-white p-2 rounded-lg shadow-md mr-4 flex-shrink-0">
+                            <img src="img/toopersexam.jpg" alt="Toppers Exam" class="h-12 w-12 object-contain">
+                        </div>
+                        <h3 class="font-bold text-gov-blue text-lg">Toppers Exam</h3>
+                    </div>
+                    <p class="text-gov-gray mb-4">Previous year papers and detailed solutions</p>
+                    <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                        <a href="https://www.topperexam.com/" target="_blank" class="text-blue-color hover:text-dark-blue font-medium transition-colors">Visit Website →</a>
+                        <div class="flex items-center">
+                            <span class="text-yellow-500 mr-1">⭐</span>
+                            <span class="text-sm text-gray-600">4.3/5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Downloadable PDFs Section -->
+        <section class="bg-white gov-shadow rounded-lg p-6 mb-8">
+            <h2 class="text-xl font-semibold text-gov-blue mb-4">📝 Downloadable Resources</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="border gov-border rounded-lg p-4 card-compact resource-card">
+                    <img src="img/haryanagk.png" alt="Haryana GK Notes" class="w-full object-cover rounded-lg mb-4">
+                    <h3 class="font-semibold text-gov-blue mb-2">Haryana GK Cet</h3>
+                    <p class="text-gov-gray mb-3">Comprehensive notes covering Haryana's history, geography, and current affairs</p>
+                    <a href="haryana-gk.html" class="btn-skyblue px-4 py-2 rounded inline-block">Read Now</a>
+                </div>
+                <div class="border gov-border rounded-lg p-4 card-compact resource-card">
+                    <img src="img/previous-papers.png" alt="Current Affairs Digest" class="w-full object-cover rounded-lg mb-4">
+                    <h3 class="font-semibold text-gov-blue mb-2"> Previous Exam Papers</h3>
+                    <p class="text-gov-gray mb-3">Weekly updated current affairs for CET preparation</p>
+                    <a href="https://sarkari.network/wp-content/uploads/HSSC-CET-Group-C-Group-56-Mains-Exam-Question-Paper-17-Aug-2024-2.pdf" class="btn-skyblue px-4 py-2 rounded inline-block">Read Now</a>
+                </div>
+                <div class="border gov-border rounded-lg p-4 card-compact resource-card">
+                    <img src="img/notes.jpg" alt="Study Planner" class="w-full object-cover rounded-lg mb-4">
+                    <h3 class="font-semibold text-gov-blue mb-2">Monthly Study Planner</h3>
+                    <p class="text-gov-gray mb-3">Structured study plan with print-friendly version</p>
+                    <button onclick="openStudyPlannerModal()" class="btn-skyblue px-4 py-2 rounded inline-block">View Study Plan</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Monthly Study Planner Modal -->
+    <div id="studyPlannerModal" class="modal">
+        <div class="modal-content bg-white rounded-lg shadow-xl max-w-4xl mx-auto mt-20 p-6">
+            <div class="flex justify-between items-start mb-4">
+                <h2 class="text-2xl font-bold text-gov-blue">📅 Monthly CET Study Planner – Crack CET in 3 to 6 Months!</h2>
+                <button onclick="closeStudyPlannerModal()" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="space-y-6">
+                <div class="bg-blue-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-gov-blue mb-2">🗓️ Month 1: Foundation Building</h3>
+                    <ul class="list-disc list-inside text-gov-gray space-y-1">
+                        <li>Understand the CET syllabus and exam pattern.</li>
+                        <li>Collect reliable study resources (books, PDFs, online courses).</li>
+                        <li>Make a daily study schedule (2–3 hours/day).</li>
+                        <li>Focus on basics: Quantitative Aptitude, Reasoning & English.</li>
+                        <li>Start vocabulary and grammar revision (English section).</li>
+                        <li>Take one mock test to assess current level.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-green-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-gov-blue mb-2">🗓️ Month 2: Concept Clarity & Practice</h3>
+                    <ul class="list-disc list-inside text-gov-gray space-y-1">
+                        <li>Strengthen weak areas identified in Month 1.</li>
+                        <li>Start solving topic-wise practice questions.</li>
+                        <li>Complete 50% of the syllabus (all sections).</li>
+                        <li>Practice mental math and reasoning puzzles.</li>
+                        <li>Weekly mock tests + analysis.</li>
+                        <li>Revise key formulas and shortcuts.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-yellow-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-gov-blue mb-2">🗓️ Month 3: Advanced Practice + Mock Strategy</h3>
+                    <ul class="list-disc list-inside text-gov-gray space-y-1">
+                        <li>Complete the remaining syllabus.</li>
+                        <li>Solve previous year CET question papers.</li>
+                        <li>Increase mock tests to 2 per week.</li>
+                        <li>Focus on time management & accuracy.</li>
+                        <li>Create short notes for revision.</li>
+                        <li>Take sectional tests for speed improvement.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-purple-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-gov-blue mb-2">🗓️ Optional Month 4–5 (Buffer Time)</h3>
+                    <ul class="list-disc list-inside text-gov-gray space-y-1">
+                        <li>Revise all subjects thoroughly.</li>
+                        <li>Continue full-length mocks and analyze performance.</li>
+                        <li>Work on high-weightage topics.</li>
+                        <li>Join peer discussions or revision groups.</li>
+                        <li>Take rest days to avoid burnout.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-gov-blue mb-2">📌 General Tips</h3>
+                    <ul class="list-disc list-inside text-gov-gray space-y-1">
+                        <li>Stick to your schedule consistently.</li>
+                        <li>Take short breaks to maintain focus.</li>
+                        <li>Track your weekly goals.</li>
+                        <li>Sleep well and eat healthy.</li>
+                    </ul>
+                </div>
+
+                <div class="flex justify-end mt-6">
+                    <button onclick="closeStudyPlannerModal()" class="bg-gov-blue text-white px-6 py-2 rounded hover:bg-gov-light-blue transition-colors">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Motivational Popup -->
+    <div id="motivationModal" class="modal">
+        <div class="modal-content bg-white rounded-lg shadow-xl max-w-2xl mx-auto mt-20 p-6">
+            <div class="flex justify-between items-start mb-4">
+                <h2 class="text-2xl font-bold text-gov-blue">Need a Motivation Boost?</h2>
+                <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="flex flex-col md:flex-row gap-6">
+                <div class="md:w-1/2">
+                    <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_ksxv6yyc.json" background="transparent" speed="1" style="width: 100%; height: 200px;" loop autoplay></lottie-player>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-gov-blue mb-2">Motivation Theories</h3>
+                        <p class="text-gov-gray mb-2">• Maslow's Hierarchy: Self-actualization = achieving your dream job</p>
+                        <p class="text-gov-gray">• Self-Determination Theory: Mastering CET gives you autonomy, competence, and recognition</p>
+                    </div>
+                    <div class="border-l-4 border-gov-blue pl-4 mb-4">
+                        <p class="italic text-gov-gray">"Don't watch the clock; do what it does. Keep going."</p>
+                    </div>
+                    <button onclick="closeModal()" class="bg-gov-blue text-white px-6 py-2 rounded hover:bg-gov-light-blue transition-colors">Back to Study</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gov-blue text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <img src="img/logo.png" alt="CET Logo" class="h-16 w-16 mb-4">
+                    <h3 class="text-lg font-semibold mb-4">Haryana Staff Selection Commission</h3>
+                    <p class="text-gray-100 text-sm">
+                        Government of Haryana
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Important Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://hssc.gov.in/" target="_blank" class="text-gray-100 hover:text-white hover:underline">HSSC Official Website</a></li>
+                        <li><a href="#" class="text-gray-100 hover:text-white hover:underline">One-Time Registration</a></li>
+                        <li><a href="#" class="text-gray-100 hover:text-white hover:underline">Syllabus Download</a></li>
+                        <li><a href="#" class="text-gray-100 hover:text-white hover:underline">Previous Year Papers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Information</h3>
+                    <p class="text-gray-100 text-sm mb-2">
+                        HSSC Office, Panchkula<br>
+                        Phone: 0172-2560123<br>
+                        Email: info@hssc.gov.in
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-100">
+                <p>© 2025 Haryana Staff Selection Commission. All rights reserved.</p>
+                <p class="mt-2">This website is for informational and educational purposes only and is not affiliated with HSSC.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        }
+
+        // Study Planner Modal
+        function openStudyPlannerModal() {
+            const modal = document.getElementById('studyPlannerModal');
+            if (modal) modal.style.display = 'block';
+        }
+
+        function closeStudyPlannerModal() {
+            const modal = document.getElementById('studyPlannerModal');
+            if (modal) modal.style.display = 'none';
+        }
+
+        // Motivation Modal
+        function openModal() {
+            const modal = document.getElementById('motivationModal');
+            if (modal) modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('motivationModal');
+            if (modal) modal.style.display = 'none';
+        }
+
+        // Close modals when clicking outside
+        window.onclick = function(event) {
+            const studyPlannerModal = document.getElementById('studyPlannerModal');
+            const motivationModal = document.getElementById('motivationModal');
+            
+            if (event.target == studyPlannerModal) {
+                studyPlannerModal.style.display = 'none';
+            }
+            
+            if (event.target == motivationModal) {
+                motivationModal.style.display = 'none';
+            }
+        }
+
+        // Apply custom styles when document is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Apply skyblue styling to buttons
+            const govBlueButtons = document.querySelectorAll('.bg-gov-blue');
+            govBlueButtons.forEach(button => {
+                button.classList.remove('bg-gov-blue');
+                button.classList.add('btn-skyblue');
+            });
+            
+            // Apply card-compact class to resource cards
+            const resourceCards = document.querySelectorAll('.gov-border');
+            resourceCards.forEach(card => {
+                if (!card.classList.contains('card-compact')) {
+                    card.classList.add('card-compact', 'resource-card');
+                }
+            });
+            
+            // Set fixed height for images
+            const cardImages = document.querySelectorAll('.card-compact img');
+            cardImages.forEach(img => {
+                img.style.height = '140px';
+                img.style.objectFit = 'cover';
+            });
+        });
+        
+        // Loader functionality
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            if (loader) {
+            setTimeout(() => {
+                loader.classList.add('loader-hidden');
+            }, 1500);
+            }
+        });
+    </script>
+</body>
+</html> 

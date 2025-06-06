@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CET Vacancies - CET 2025 Preparation Portal</title>
+    <meta name="description" content="Latest job vacancies and recruitment notifications for CET 2025 examination.">
+    <meta name="keywords" content="Upcoming government vacancies 2025, CET 2025 jobs, SSC exams 2025, Government job calendar 2025, Upcoming RRB and banking recruitment">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'indian-blue': '#0066CC',
+                        'indian-saffron': '#FF9933',
+                        'gov-blue': '#1a365d',
+                        'gov-light': '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #0066CC, #FF9933);
+            -webkit-text-fill-color: transparent;
+        }
+        .gov-card {
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        .gov-card:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        /* Navbar Styles */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #87CEEB;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #87CEEB;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link.active {
+            background: linear-gradient(45deg, #0066CC, #FF9933);
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-link.active::after {
+            width: 100%;
+        }
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+        #mobile-menu.hidden {
+            display: none;
+        }
+        #mobile-menu:not(.hidden) {
+            animation: slideDown 0.3s ease-in-out;
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Sticky Navbar Shadow */
+        nav.sticky {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        /* Navbar Link Hover Effects */
+        .mobile-nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .mobile-nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #87CEEB;
+            transition: width 0.3s ease;
+        }
+        .mobile-nav-link:hover {
+            color: #87CEEB;
+        }
+        .mobile-nav-link:hover::after {
+            width: 100%;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(0,102,204,0.1) 0%, rgba(255,153,51,0.1) 100%);
+        }
+        .vacancy-card {
+            transition: transform 0.3s ease;
+        }
+        .vacancy-card:hover {
+            transform: translateY(-5px);
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e2e8f0;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: -4px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #0066CC;
+        }
+        .gov-border {
+            border-color: #e2e8f0;
+        }
+        .gov-shadow {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        /* Language Switcher Styles */
+        .lang-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+        }
+        .lang-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 30px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "EN";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        input:checked + .slider {
+            background-color: #0066CC;
+        }
+        input:checked + .slider:before {
+            transform: translateX(30px);
+            content: "हिं";
+        }
+        /* Floating Translation Button */
+        .floating-translate-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #0066CC, #004C99);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            animation: pulse 2s infinite;
+        }
+        .floating-translate-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 25px rgba(0, 102, 204, 0.4);
+            background: linear-gradient(135deg, #004C99, #0066CC);
+        }
+        .floating-translate-btn i {
+            font-size: 20px;
+            animation: bounce 1s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+            }
+            50% {
+                box-shadow: 0 4px 30px rgba(0, 102, 204, 0.5);
+            }
+            100% {
+                box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+            }
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-3px);
+            }
+        }
+    </style>
+    </head>
+<body class="bg-gov-light">
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+    </div>
+    
+
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+
+    <!-- Language Switcher -->
+    <div class="fixed top-4 right-4 z-50 flex items-center space-x-2">
+        <span class="text-sm text-gray-600">EN</span>
+        <label class="lang-switch">
+            <input type="checkbox" id="languageToggle">
+            <span class="slider"></span>
+        </label>
+        <span class="text-sm text-gray-600">हिं</span>
+    </div>
+
+    <!-- Floating Translation Button -->
+    <div class="floating-translate-btn" onclick="document.getElementById('languageToggle').click()">
+        <i class="fas fa-language"></i>
+        <span id="translateBtnText" class="font-semibold">Translate to Hindi</span>
+    </div>
+
+    <main class="container mx-auto px-4 py-10 max-w-4xl">
+        <!-- Hero Section -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-8">
+            <img src="img/upcoming-vacancy.png" alt="Government Vacancies 2025" class="w-full h-64 object-cover">
+            <div class="p-8">
+                <h1 class="text-4xl font-bold text-gov-blue mb-4">Upcoming Government Vacancies in 2025: Your Complete Guide</h1>
+                <p class="text-gray-600 text-lg mb-6">Government job aspirants across India are eagerly waiting for the upcoming vacancies in 2025. This year promises a wide range of opportunities across various sectors like SSC, CET, RRB, IBPS, and state-level departments.</p>
+                <div class="flex items-center text-sm text-gray-500">
+                    <span>Published: March 15, 2024</span>
+                    <span class="mx-2">•</span>
+                    <span>8 min read</span>
+                </div>
+            </div>
+        </div>
+
+    <!-- Main Content -->
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <div class="prose max-w-none">
+                <!-- Organizations Infographic -->
+                <div class="mb-12">
+                    <img src="img/nokrihinokri.png" alt="Top 2025 Vacancies by Organization" class="w-full rounded-lg shadow-md">
+                </div>
+
+                <!-- Major Vacancies Section -->
+                <h2 class="text-2xl font-bold text-gov-blue mb-6">Major Upcoming Government Vacancies in 2025</h2>
+                
+                <!-- Vacancy Cards -->
+                <div class="grid grid-cols-1 gap-6 mb-12">
+                    <!-- Haryana CET -->
+                    <div class="vacancy-card bg-gov-light rounded-lg p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-semibold text-gov-blue">Haryana CET 2025</h3>
+                            <span class="bg-indian-blue text-white px-3 py-1 rounded-full text-sm">13,000+ Posts</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-gray-600 mb-2"><strong>Posts:</strong> Group C and D</p>
+                                <p class="text-gray-600 mb-2"><strong>Application Window:</strong> May 28 – June 12, 2025</p>
+                                <p class="text-gray-600 mb-2"><strong>Exam Date:</strong> Likely in August/September</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-600 mb-2"><strong>Eligibility:</strong> 10th, 12th, Graduation depending on post</p>
+                                <p class="text-gray-600 mb-2"><strong>Official Website:</strong> hssc.gov.in</p>
+                            </div>
+                                </div>
+                                </div>
+                                
+                    <!-- SSC CHSL -->
+                    <div class="vacancy-card bg-gov-light rounded-lg p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-semibold text-gov-blue">SSC CHSL 2025</h3>
+                            <span class="bg-indian-blue text-white px-3 py-1 rounded-full text-sm">4,000+ Posts</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-gray-600 mb-2"><strong>Posts:</strong> LDC, DEO, Postal Assistants</p>
+                                <p class="text-gray-600 mb-2"><strong>Notification Date:</strong> January 2025</p>
+                                </div>
+                            <div>
+                                <p class="text-gray-600 mb-2"><strong>Eligibility:</strong> 12th Pass</p>
+                                <p class="text-gray-600 mb-2"><strong>Website:</strong> ssc.nic.in</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RRB NTPC & Group D -->
+                    <div class="vacancy-card bg-gov-light rounded-lg p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-semibold text-gov-blue">RRB NTPC & Group D 2025</h3>
+                            <span class="bg-indian-blue text-white px-3 py-1 rounded-full text-sm">35,000+ Posts</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-gray-600 mb-2"><strong>Posts:</strong> Clerks, Guards, Technicians</p>
+                                <p class="text-gray-600 mb-2"><strong>Notification Date:</strong> Mid 2025</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-600 mb-2"><strong>Eligibility:</strong> 10th/12th/Graduation</p>
+                                <p class="text-gray-600 mb-2"><strong>Website:</strong> rrbcdg.gov.in</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IBPS PO & Clerk -->
+                    <div class="vacancy-card bg-gov-light rounded-lg p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-semibold text-gov-blue">IBPS PO & Clerk 2025</h3>
+                            <span class="bg-indian-blue text-white px-3 py-1 rounded-full text-sm">10,000+ Posts</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-gray-600 mb-2"><strong>Posts:</strong> Probationary Officers, Clerks</p>
+                                <p class="text-gray-600 mb-2"><strong>Notification:</strong> July–August 2025</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-600 mb-2"><strong>Eligibility:</strong> Graduation</p>
+                                <p class="text-gray-600 mb-2"><strong>Website:</strong> ibps.in</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job Calendar Section -->
+                <h2 class="text-2xl font-bold text-gov-blue mb-6">Government Job Calendar for 2025</h2>
+                <div class="bg-gov-light rounded-lg p-6 mb-8">
+                <div class="space-y-4">
+                        <div class="timeline-item">
+                            <h3 class="font-semibold text-gov-blue">January–February</h3>
+                            <p class="text-gray-600">SSC CHSL, UP Police</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3 class="font-semibold text-gov-blue">March–April</h3>
+                            <p class="text-gray-600">CET, Railway Group D</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3 class="font-semibold text-gov-blue">May–June</h3>
+                            <p class="text-gray-600">State PSCs, IBPS RRB</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3 class="font-semibold text-gov-blue">July–August</h3>
+                            <p class="text-gray-600">IBPS PO/Clerk</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3 class="font-semibold text-gov-blue">September–November</h3>
+                            <p class="text-gray-600">SSC CGL, Other CETs</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Why 2025 Section -->
+                <h2 class="text-2xl font-bold text-gov-blue mb-6">Why 2025 Is a Big Year for Aspirants</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-gov-light rounded-lg p-6">
+                        <h3 class="font-semibold text-gov-blue mb-2">Centralized Exams</h3>
+                        <p class="text-gray-600">Reduces number of forms, saves time</p>
+                </div>
+                    <div class="bg-gov-light rounded-lg p-6">
+                        <h3 class="font-semibold text-gov-blue mb-2">Massive Retirement Drive</h3>
+                        <p class="text-gray-600">Many government employees are retiring, opening up new posts</p>
+                    </div>
+                    <div class="bg-gov-light rounded-lg p-6">
+                        <h3 class="font-semibold text-gov-blue mb-2">Digital Recruitment</h3>
+                        <p class="text-gray-600">Easy application, transparent evaluation</p>
+                    </div>
+                </div>
+                
+                <!-- Pro Tips Section -->
+                <div class="bg-indian-blue text-white rounded-lg p-8 mb-8">
+                    <h2 class="text-2xl font-bold mb-4">Pro Tip: How to Stay Updated</h2>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Follow official websites regularly</li>
+                        <li>Use job alert apps and Google Alerts</li>
+                        <li>Bookmark and follow your favorite exam-prep blogs like ours!</li>
+                    </ul>
+                </div>
+                
+                <!-- Conclusion -->
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold text-gov-blue mb-4">Conclusion</h2>
+                    <p class="text-gray-600">With so many government vacancies expected in 2025, this is the right time to start your preparation. Whether you are targeting CET, SSC, Railways, or Banking, a strong strategy and early planning can set you apart from the competition.</p>
+                </div>
+                
+                <!-- Related Articles -->
+                <div class="bg-gov-light rounded-lg p-6">
+                    <h2 class="text-xl font-bold text-gov-blue mb-4">Related Blogs</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <a href="cet-benefits.html" class="group block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                            <div class="relative overflow-hidden">
+                                <img src="img/pm.jpg" alt="CET Benefits" class="w-full h-40 object-cover transform group-hover:scale-105 transition duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-indian-blue/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
+                            <div class="p-4">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="text-xs text-blue-700 font-medium">Benefits</span>
+                                    <span class="text-xs text-gray-500">•</span>
+                                    <span class="text-xs text-gray-500">Must Read</span>
+                                </div>
+                                <h3 class="font-semibold text-gov-blue group-hover:text-indian-blue transition duration-300">Top Benefits of Qualifying CET 2025</h3>
+                                <div class="flex items-center mt-3 text-sm text-gray-500">
+                                    <span class="flex items-center gap-1">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                        </svg>
+                                        5 min read
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="cet-syllabus.html" class="group block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                            <div class="relative overflow-hidden">
+                                <img src="img/syllabus2025.png" alt="CET Syllabus" class="w-full h-40 object-cover transform group-hover:scale-105 transition duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-indian-blue/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
+                            <div class="p-4">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="text-xs text-pink-700 font-medium">Syllabus</span>
+                                    <span class="text-xs text-gray-500">•</span>
+                                    <span class="text-xs text-gray-500">Updated</span>
+                                </div>
+                                <h3 class="font-semibold text-gov-blue group-hover:text-indian-blue transition duration-300">Updated CET 2025 Syllabus</h3>
+                                <div class="flex items-center mt-3 text-sm text-gray-500">
+                                    <span class="flex items-center gap-1">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                        </svg>
+                                        5 min read
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="how-to-crack-cet.html" class="group block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                            <div class="relative overflow-hidden">
+                                <img src="img/openbook.jpg" alt="CET Preparation Tips" class="w-full h-40 object-cover transform group-hover:scale-105 transition duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-indian-blue/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
+                            <div class="p-4">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="text-xs text-green-700 font-medium">Study Tips</span>
+                                    <span class="text-xs text-gray-500">•</span>
+                                    <span class="text-xs text-gray-500">Popular</span>
+                                </div>
+                                <h3 class="font-semibold text-gov-blue group-hover:text-indian-blue transition duration-300">Expert Tips for CET 2025 Preparation</h3>
+                                <div class="flex items-center mt-3 text-sm text-gray-500">
+                                    <span class="flex items-center gap-1">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                        </svg>
+                                        6 min read
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+            </div>
+                </div>
+            </div>
+            </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gov-blue text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm text-gray-400">© 2025 CET Preparation Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Include Navbar Script -->
+    <script>
+        // Load navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+
+        // Set active link
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if (link.getAttribute('href') === currentPath.split('/').pop()) {
+                link.classList.add('text-indigo-900');
+                link.classList.remove('text-gray-600');
+            }
+        });
+
+        // Language Switcher Functionality
+        const languageToggle = document.getElementById('languageToggle');
+        const translateBtnText = document.getElementById('translateBtnText');
+        
+        // Hindi translations
+        const translations = {
+            // Headings
+            'Upcoming Government Vacancies in 2025': '2025 में आने वाली सरकारी रिक्तियां',
+            'Your Complete Guide': 'आपकी पूरी गाइड',
+            'Major Upcoming Government Vacancies in 2025': '2025 में आने वाली प्रमुख सरकारी रिक्तियां',
+            'Government Job Calendar for 2025': '2025 के लिए सरकारी नौकरी कैलेंडर',
+            'Why 2025 Is a Big Year for Aspirants': '2025 आकांक्षियों के लिए बड़ा वर्ष क्यों है',
+            'Pro Tip: How to Stay Updated': 'प्रो टिप: कैसे अपडेट रहें',
+            'Conclusion': 'निष्कर्ष',
+            'Related Blogs': 'संबंधित ब्लॉग',
+
+            // Vacancy Details
+            'Posts': 'पद',
+            'Application Window': 'आवेदन विंडो',
+            'Exam Date': 'परीक्षा तिथि',
+            'Eligibility': 'पात्रता',
+            'Official Website': 'आधिकारिक वेबसाइट',
+            'Notification Date': 'अधिसूचना तिथि',
+            'Website': 'वेबसाइट',
+
+            // Job Categories
+            'Group C and D': 'समूह C और D',
+            'LDC, DEO, Postal Assistants': 'LDC, DEO, डाक सहायक',
+            'Clerks, Guards, Technicians': 'क्लर्क, गार्ड, तकनीशियन',
+            'Probationary Officers, Clerks': 'परिवीक्षाधीन अधिकारी, क्लर्क',
+
+            // Calendar Months
+            'January–February': 'जनवरी-फरवरी',
+            'March–April': 'मार्च-अप्रैल',
+            'May–June': 'मई-जून',
+            'July–August': 'जुलाई-अगस्त',
+            'September–November': 'सितंबर-नवंबर',
+
+            // Pro Tips
+            'Follow official websites regularly': 'आधिकारिक वेबसाइटों को नियमित रूप से फॉलो करें',
+            'Use job alert apps and Google Alerts': 'जॉब अलर्ट ऐप्स और Google Alerts का उपयोग करें',
+            'Bookmark and follow your favorite exam-prep blogs': 'अपने पसंदीदा परीक्षा-तैयारी ब्लॉग्स को बुकमार्क और फॉलो करें',
+
+            // Related Posts
+            'Top Benefits of Qualifying CET 2025': 'CET 2025 क्वालिफाई करने के शीर्ष लाभ',
+            'Detailed CET 2025 Syllabus': 'विस्तृत CET 2025 पाठ्यक्रम',
+            'Best Resources to Crack CET': 'CET क्रैक करने के लिए सर्वश्रेष्ठ संसाधन'
+        };
+
+        languageToggle.addEventListener('change', function() {
+            const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, span, a');
+            elements.forEach(element => {
+                const text = element.textContent.trim();
+                if (this.checked) {
+                    // Switch to Hindi
+                    if (translations[text]) {
+                        element.textContent = translations[text];
+                    }
+                    translateBtnText.textContent = 'अंग्रेजी में अनुवाद करें';
+                } else {
+                    // Switch to English
+                    Object.entries(translations).forEach(([english, hindi]) => {
+                        if (text === hindi) {
+                            element.textContent = english;
+                        }
+                    });
+                    translateBtnText.textContent = 'Translate to Hindi';
+                }
+            });
+        });
+    </script>
+    <!-- Loader Script -->
+    <script>
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('loader-hidden');
+            }, 1500);
+        });
+    </script>
+    <script src="loader.js"></script>
+</body>
+</html>
