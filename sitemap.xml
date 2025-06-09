@@ -1,166 +1,187 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/</loc>
-    <lastmod>2025-05-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-  <!-- Main Pages -->
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/apply-now.html</loc>
-    <lastmod>2025-05-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/exam-pattern.html</loc>
-    <lastmod>2025-05-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/study-resources.html</loc>
-    <lastmod>2025-05-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/blog-index.html</loc>
-    <lastmod>2025-05-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/contact-us.html</loc>
-    <lastmod>2025-05-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
 
-  <!-- Important Information Pages -->
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/cet-2025-schedule.html</loc>
-    <lastmod>2025-05-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/cet-syllabus.html</loc>
-    <lastmod>2025-05-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/cet-application-process.html</loc>
-    <lastmod>2025-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/document-requirements.html</loc>
-    <lastmod>2025-05-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/apply-now.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/exam-pattern.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/study-resources.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/mock-tests-cet-2025.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/cet-success-stories.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/blog-index.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/mistakes-avoid-govt-job.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/caste-certificate-importance.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/cet-website-busy-solution.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/cet-exam-date-extension.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/blog-cet-achievement-hindi.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/how-to-crack-cet.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/upcoming-vacancies-cet.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/blog-cet-guide-hindi.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/index.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/group-c-d-jobs.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/document-requirements.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/haryana-gk.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/cet-syllabus.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/cet-application-process.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/syllabus-cet-2025.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/cet-government-jobs.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/time-management-tips-cet.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/cet-latest-updates.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/best-books-cet-preparation.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/cet-2025-schedule.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/note-taking-strategies-cet.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/cet-vacancies.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/blog-cet-achievement.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/blog-cet-benefits.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/online-practice.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/privacy-policy.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/faq.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.sarkarinokriya.xyz/cet-preparation-tips.html</loc>
+  <lastmod>2025-06-09T10:06:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
 
-  <!-- Blog Posts -->
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/blog-cet-guide-hindi.html</loc>
-    <lastmod>2025-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/blog-cet-benefits.html</loc>
-    <lastmod>2025-05-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/blog-cet-achievement.html</loc>
-    <lastmod>2025-05-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/blog-cet-achievement-hindi.html</loc>
-    <lastmod>2025-05-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
 
-  <!-- Preparation Resources -->
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/how-to-crack-cet.html</loc>
-    <lastmod>2025-05-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/best-books-cet-preparation.html</loc>
-    <lastmod>2025-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/mock-tests-cet-2025.html</loc>
-    <lastmod>2025-05-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/online-practice.html</loc>
-    <lastmod>2025-05-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Job Information -->
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/cet-vacancies.html</loc>
-    <lastmod>2025-05-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/upcoming-vacancies-cet.html</loc>
-    <lastmod>2025-05-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/group-c-d-jobs.html</loc>
-    <lastmod>2025-05-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/career-opportunities-cet.html</loc>
-    <lastmod>2025-05-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Additional Resources -->
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/haryana-gk.html</loc>
-    <lastmod>2025-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/faq.html</loc>
-    <lastmod>2025-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.sarkarinokriya.xyz/privacy-policy.html</loc>
-    <lastmod>2025-05-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
 </urlset>
