@@ -175,6 +175,37 @@
         .gov-card:hover {
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
+        /* Updated Button Styles */
+        .apply-button {
+            background-color: #87CEEB;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border: 2px solid #87CEEB;
+        }
+        .apply-button:hover {
+            background-color: white;
+            color: #87CEEB;
+            border-color: #87CEEB;
+        }
+        .apply-button i {
+            margin-right: 0.5rem;
+        }
+        /* Mobile Responsive Button Styles */
+        @media (max-width: 640px) {
+            .apply-button {
+                width: 100%;
+                margin-bottom: 0.5rem;
+                font-size: 0.9rem;
+                padding: 0.6rem 1rem;
+            }
+        }
     </style>
     </head>
 <body class="bg-gov-light">
@@ -188,16 +219,56 @@
     <!-- Main Content -->
     <main id="main-content" class="container mx-auto px-4 py-8">
         <!-- Countdown Banner -->
-        <div style="background-color: skyblue;" class="bg--to-r from-indian-blue to-indian-saffron text-white rounded-lg p-6 mb-8 text-center">
-            <h2 class="text-2xl font-bold mb-2">⏰ Application Deadline Countdown</h2>
-            <p class="text-xl" id="countdown">Loading...</p>
-            
-            <!-- Add Translation Button -->
-            <div class="mt-4">
-                <button id="translateBtn" class="bg-indian-blue text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300 flex items-center justify-center mx-auto">
-                    <i class="fas fa-language mr-2"></i>
-                    <span id="translateBtnText">हिंदी में देखें</span>
-                </button>
+        <div style="background-color: whitesmoke;" class="bg-gradient-to-r text-white rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-black">⏰ Application Deadline</h2>
+           
+
+        <!-- Important Dates Section -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-6 text-black">📅 Important Dates</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="border-l-4 border-[#0066CC] pl-4">
+                    <h3 class="text-lg font-semibold text-black mb-2">Haryana CET 2025</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-800">
+                            <span class="w-2 h-2 bg-[#0066CC] rounded-full mr-2"></span>
+                            Application Start: May 28, 2025
+                        </li>
+                        <li class="flex items-center text-gray-800">
+                            <span class="w-2 h-2 bg-[#0066CC] rounded-full mr-2"></span>
+                            Last Date to Apply: June 12, 2025
+                        </li>
+                        <li class="flex items-center text-gray-800">
+                            <span class="w-2 h-2 bg-[#0066CC] rounded-full mr-2"></span>
+                            Fee Payment Deadline: June 14, 2025
+                        </li>
+                        <li class="flex items-center text-gray-800">
+                            <span class="w-2 h-2 bg-[#0066CC] rounded-full mr-2"></span>
+                            Exam Date: August-September 2025
+                        </li>
+                    </ul>
+                </div>
+                <div class="border-l-4 border-[#87CEEB] pl-4">
+                    <h3 class="text-lg font-semibold text-black mb-2">NRA CET 2025</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-800">
+                            <span class="w-2 h-2 bg-[#87CEEB] rounded-full mr-2"></span>
+                            Notification Release: July 2025
+                        </li>
+                        <li class="flex items-center text-gray-800">
+                            <span class="w-2 h-2 bg-[#87CEEB] rounded-full mr-2"></span>
+                            Application Period: July-August 2025
+                        </li>
+                        <li class="flex items-center text-gray-800">
+                            <span class="w-2 h-2 bg-[#87CEEB] rounded-full mr-2"></span>
+                            Exam Period: October-November 2025
+                        </li>
+                        <li class="flex items-center text-gray-800">
+                            <span class="w-2 h-2 bg-[#87CEEB] rounded-full mr-2"></span>
+                            Result Declaration: December 2025
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -207,35 +278,33 @@
             <div class="apply-card bg-white rounded-lg shadow-md p-6 hover-scale">
                 <div class="flex items-center mb-4">
                     <span class="text-2xl mr-2">🟢</span>
-                    <h2 class="text-xl font-bold text-gray-800">Haryana CET 2025</h2>
+                    <h2 class="text-xl font-bold text-black">Haryana CET 2025</h2>
                 </div>
-                <p class="text-gray-600 mb-4">Group C & D Posts - Haryana Staff Selection Commission (HSSC)</p>
+                <p class="text-gray-800 mb-4">Group C & D Posts - Haryana Staff Selection Commission (HSSC)</p>
                 
                 <div class="space-y-4">
                     <div class="bg-gray-50 p-4 rounded-lg">
-                        <h3 class="font-semibold text-indian-blue mb-2">📅 Important Dates</h3>
-                        <ul class="list-disc list-inside text-gray-700">
+                        <h3 class="font-semibold text-black mb-2">📅 Important Dates</h3>
+                        <ul class="list-disc list-inside text-gray-800">
                             <li>Application Period: May 28 to June 12, 2025</li>
                             <li>Fee Payment Deadline: June 14, 2025 (until 6:00 PM)</li>
                         </ul>
                     </div>
 
                     <div class="bg-gray-50 p-4 rounded-lg">
-                        <h3 class="font-semibold text-indian-blue mb-2">👥 Eligibility</h3>
-                        <ul class="list-disc list-inside text-gray-700">
+                        <h3 class="font-semibold text-black mb-2">👥 Eligibility</h3>
+                        <ul class="list-disc list-inside text-gray-800">
                             <li>Education: 10th or 12th grade completed</li>
                             <li>Age: 18–42 years</li>
                         </ul>
                     </div>
 
                     <div class="flex flex-wrap gap-4 mt-6">
-                        <a href="https://hssc.gov.in/apply" target="_blank" class="bg-indian-blue text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300 flex items-center">
+                        <a href="https://hssc.gov.in/apply" target="_blank" class="bg-[#0066CC] text-black px-6 py-2 rounded-lg hover:bg-white hover:text-[#0066CC] hover:border-2 hover:border-[#0066CC] transition duration-300 flex items-center">
                             <i class="fas fa-external-link-alt mr-2"></i>
                             Apply Online →
                         </a>
-                        <a href="https://hssc.gov.in/notification" target="_blank" class="bg-white border border-indian-blue text-indian-blue px-6 py-2 rounded-lg hover:bg-gray-50 transition duration-300 flex items-center">
-                            <i class="fas fa-download mr-2"></i>
-                            Download Notification
+                        <a href="https://hssc.gov.in/notification" target="_blank" class="bg-[#0066CC] text-white px-6 py-2 rounded-lg hover:bg-white hover:text-[#0066CC] hover:border-2 hover:border-[#0066CC] transition duration-300 flex items-center">
                         </a>
                     </div>
                 </div>
@@ -245,35 +314,35 @@
             <div class="apply-card bg-white rounded-lg shadow-md p-6 hover-scale">
                 <div class="flex items-center mb-4">
                     <span class="text-2xl mr-2">🟡</span>
-                    <h2 class="text-xl font-bold text-gray-800">NRA CET 2025</h2>
+                    <h2 class="text-xl font-bold text-black">NRA CET 2025</h2>
                 </div>
-                <p class="text-gray-600 mb-4">National-Level Exam for SSC, RRB, IBPS</p>
+                <p class="text-gray-800 mb-4">National-Level Exam for SSC, RRB, IBPS</p>
                 
                 <div class="space-y-4">
                     <div class="bg-gray-50 p-4 rounded-lg">
-                        <h3 class="font-semibold text-indian-blue mb-2">📅 Expected Timeline</h3>
-                        <ul class="list-disc list-inside text-gray-700">
+                        <h3 class="font-semibold text-black mb-2">📅 Expected Timeline</h3>
+                        <ul class="list-disc list-inside text-gray-800">
                             <li>Notification Release: July 2025</li>
                             <li>Exam Period: October–November 2025</li>
                         </ul>
                     </div>
 
                     <div class="bg-gray-50 p-4 rounded-lg">
-                        <h3 class="font-semibold text-indian-blue mb-2">👥 Eligibility</h3>
-                        <ul class="list-disc list-inside text-gray-700">
+                        <h3 class="font-semibold text-black mb-2">👥 Eligibility</h3>
+                        <ul class="list-disc list-inside text-gray-800">
                             <li>Education: 10th, 12th, or graduation (based on exam level)</li>
                             <li>For non-gazetted posts in central government organizations</li>
                         </ul>
                     </div>
 
                     <div class="flex flex-wrap gap-4 mt-6">
-                        <a href="https://nracet.nic.in/apply" target="_blank" class="bg-indian-blue text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300 flex items-center">
+                        <a href="https://nracet.nic.in/apply" target="_blank" class="bg-[#0066CC] text-black px-6 py-2 rounded-lg hover:bg-blue hover:text-blue hover:bg-white hover:border-2 hover:border-blue transition duration-300 flex items-center">
                             <i class="fas fa-external-link-alt mr-2"></i>
                             Visit Portal →
                         </a>
-                        <button onclick="alert('Notification will be available in July 2025')" class="bg-white border border-indian-blue text-indian-blue px-6 py-2 rounded-lg hover:bg-gray-50 transition duration-300 flex items-center">
+                        <button onclick="alert('Notification will be available in July 2025')" class="bg-[#0066CC] text-black px-6 py-2 rounded-lg hover:text-blue hover:text-[#0066CC] hover:border-2 hover:border-[#0066CC] transition duration-300 flex items-center">
                             <i class="fas fa-bell mr-2"></i>
-                            Get Updates
+                         <a href="group-c-d-jobs.html"></a>   Get Updates
                         </button>
                     </div>
                 </div>
@@ -282,22 +351,22 @@
 
         <!-- Additional Resources -->
         <section class="bg-white rounded-lg shadow-md p-6 mb-8">
-            <h2 class="text-2xl font-bold bg-blue mb-4">📚 Additional Resources</h2>
+            <h2 class="text-2xl font-bold text-black mb-4">📚 Additional Resources</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <a href="how-to-crack-cet.html" class="bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition duration-300 group">
                     <img src="img/prepare.png" alt="Application Guide" class="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition duration-300">
-                    <h3 class="font-semibold text-indian-blue mb-2">📋 Application Guide</h3>
-                    <p class="text-gray-600">Step-by-step guide for filling out the application form</p>
+                    <h3 class="font-semibold text-black mb-2">📋 Application Guide</h3>
+                    <p class="text-gray-800">Step-by-step guide for filling out the application form</p>
                 </a>
                 <a href="document-requirements.html" class="bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition duration-300 group">
                     <img src="img/requiermnent.jpg" alt="Document Checklist" class="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition duration-300">
-                    <h3 class="font-semibold text-indian-blue mb-2">📝 Document Checklist</h3>
-                    <p class="text-gray-600">Essential documents required for application</p>
+                    <h3 class="font-semibold text-black mb-2">📝 Document Checklist</h3>
+                    <p class="text-gray-800">Essential documents required for application</p>
                 </a>
                 <a href="blog-cet-achievement-hindi.html" class="bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition duration-300 group">
                     <img src="img/achivement.png" alt="CET Benefits" class="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition duration-300">
-                    <h3 class="font-semibold text-indian-blue mb-2">❓ Benefits Of Cracking CET 2025</h3>
-                    <p class="text-gray-600">🏆 CET सफलता: सरकारी नौकरी की दिशा में एक ऐतिहासिक उपलब्धि!</p>
+                    <h3 class="font-semibold text-black mb-2">❓ Benefits Of Cracking CET 2025</h3>
+                    <p class="text-gray-800">🏆 CET सफलता: सरकारी नौकरी की दिशा में एक ऐतिहासिक उपलब्धि!</p>
                 </a>
             </div>
         </section>
@@ -334,11 +403,16 @@
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById('countdown').innerHTML = 
-                `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds remaining`;
+            document.getElementById('days').innerHTML = days.toString().padStart(2, '0');
+            document.getElementById('hours').innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').innerHTML = seconds.toString().padStart(2, '0');
 
             if (distance < 0) {
-                document.getElementById('countdown').innerHTML = "Application Period Ended";
+                document.getElementById('days').innerHTML = "00";
+                document.getElementById('hours').innerHTML = "00";
+                document.getElementById('minutes').innerHTML = "00";
+                document.getElementById('seconds').innerHTML = "00";
             }
         }
 
