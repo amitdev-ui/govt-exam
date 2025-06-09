@@ -14,7 +14,7 @@ const navbarContent = `
             <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center space-x-6">
                 <a href="index.html" class="nav-link text-gray-700 hover:text-indian-blue transition duration-300 font-medium">Home</a>
-                <a href="apply-now.html" class="nav-link text-gray-700 hover:text-indian-blue transition duration-300 font-medium">Apply Now</a>
+                <a href="apply-now.html" class="nav-link text-gray-700 hover:text-indian-blue transition duration-300 font-medium">fill Now</a>
                 <a href="exam-pattern.html" class="nav-link text-gray-700 hover:text-indian-blue transition duration-300 font-medium">Exam Pattern</a>
                 <a href="study-resources.html" class="nav-link text-gray-700 hover:text-indian-blue transition duration-300 font-medium">Study Resources</a>
                 <a href="blog-index.html" class="nav-link text-gray-700 hover:text-indian-blue transition duration-300 font-medium">Blogs</a>
