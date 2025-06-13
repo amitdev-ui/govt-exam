@@ -45,20 +45,24 @@
         }
         .blog-container {
             background-color: #ffffff;
-            padding: 30px;
+            padding: 40px;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         h1 {
             color: #2c3e50;
             font-size: 2.8em;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             line-height: 1.2;
             font-weight: 700;
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #e2e8f0;
         }
         h2 {
             color: #34495e;
-            margin-top: 35px;
+            margin-top: 40px;
+            margin-bottom: 20px;
             font-size: 2em;
             line-height: 1.3;
             font-weight: 600;
@@ -68,63 +72,99 @@
         h3 {
             color: #2c3e50;
             font-size: 1.5em;
-            margin-top: 30px;
+            margin-top: 25px;
+            margin-bottom: 15px;
             line-height: 1.4;
             font-weight: 600;
         }
-        .salary-box {
-            background-color: #e8f4f8;
-            padding: 20px;
-            border-radius: 8px;
+        .section-content {
             margin: 20px 0;
+            padding: 20px;
+            background-color: #f8fafc;
+            border-radius: 8px;
+        }
+        .subsection {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: #ffffff;
+            border-left: 4px solid #1e40af;
+            border-radius: 4px;
         }
         .benefits-list {
             list-style-type: none;
             padding: 0;
+            margin: 15px 0;
         }
         .benefits-list li {
             margin: 10px 0;
-            padding-left: 25px;
+            padding: 10px 15px;
+            background-color: #f1f5f9;
+            border-radius: 6px;
             position: relative;
+            padding-left: 35px;
         }
         .benefits-list li:before {
             content: "✓";
             color: #27ae60;
             position: absolute;
-            left: 0;
+            left: 15px;
+            font-weight: bold;
+        }
+        .salary-box {
+            background-color: #e8f4f8;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #b3e0ff;
+        }
+        .highlight-box {
+            background-color: #fff3cd;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #ffeeba;
+        }
+        .table-container {
+            margin: 25px 0;
+            overflow-x: auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th {
+            background-color: #f8fafc;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tr:hover {
+            background-color: #f8fafc;
         }
         .image-container {
-            margin: 20px 0;
+            margin: 30px 0;
             text-align: center;
         }
         .image-container img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        .table-container {
-            overflow-x: auto;
-            margin: 20px 0;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
-        th {
-            background-color: #f5f5f5;
-        }
-        .highlight-box {
-            background-color: #fff3cd;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 20px 0;
+        p {
+            margin: 15px 0;
+            line-height: 1.8;
         }
         
         /* Lazy loading for images */
@@ -264,40 +304,51 @@
         <h1>👮 दिल्ली पुलिस हेड कांस्टेबल की नौकरी: सैलरी, फायदे और पूरी जानकारी</h1>
 
         <div class="image-container">
-            <img src="img/delhip.png"
-             alt="Delhi Police Head Constable in Uniform" title="दिल्ली पुलिस हेड कांस्टेबल" class="w-full h-auto rounded-lg shadow-md">
+            <img src="img/delhip.png" alt="Delhi Police Head Constable in Uniform" title="दिल्ली पुलिस हेड कांस्टेबल" class="w-full h-auto rounded-lg shadow-md">
         </div>
 
-        <p>दिल्ली पुलिस में हेड कांस्टेबल की पोस्ट सरकारी नौकरी चाहने वालों के लिए एक सुनहरा मौका है। यह पोस्ट न सिर्फ एक अच्छी salary देती है, बल्कि कई तरह के गवर्नमेंट बेनिफिट्स और प्रमोशन के अवसर भी देती है।</p>
+        <div class="section-content">
+            <p>दिल्ली पुलिस में हेड कांस्टेबल की पोस्ट सरकारी नौकरी चाहने वालों के लिए एक सुनहरा मौका है। यह पोस्ट न सिर्फ एक अच्छी salary देती है, बल्कि कई तरह के गवर्नमेंट बेनिफिट्स और प्रमोशन के अवसर भी देती है।</p>
+        </div>
 
         <h2>🔍 दिल्ली पुलिस हेड कांस्टेबल कौन होते हैं?</h2>
-        <p>हेड कांस्टेबल वह पद है जो कांस्टेबल और सब-इंस्पेक्टर के बीच आता है। यह एक सुपरवाइजरी पोस्ट होती है जिसमें फील्ड ड्यूटी के साथ-साथ ऑफिस वर्क भी शामिल होता है।</p>
+        <div class="section-content">
+            <p>हेड कांस्टेबल वह पद है जो कांस्टेबल और सब-इंस्पेक्टर के बीच आता है। यह एक सुपरवाइजरी पोस्ट होती है जिसमें फील्ड ड्यूटी के साथ-साथ ऑफिस वर्क भी शामिल होता है।</p>
+        </div>
 
         <h2>💰 दिल्ली पुलिस हेड कांस्टेबल सैलरी: कितना मिलता है हर महीने?</h2>
         <div class="salary-box">
             <h3>मासिक वेतन संरचना</h3>
-            <p><strong>बेसिक पे:</strong> ₹25,500 से शुरू</p>
-            <p><strong>ग्रेड पे:</strong> ₹2,400</p>
-            <p>7th Pay Commission के अनुसार, कुल इन-हैंड सैलरी ₹40,000 तक जा सकती है।</p>
+            <div class="subsection">
+                <p><strong>बेसिक पे:</strong> ₹25,500 से शुरू</p>
+                <p><strong>ग्रेड पे:</strong> ₹2,400</p>
+                <p>7th Pay Commission के अनुसार, कुल इन-हैंड सैलरी ₹40,000 तक जा सकती है।</p>
+            </div>
         </div>
 
         <h2>🧾 अन्य सुविधाएं:</h2>
-        <ul class="benefits-list">
-            <li>HRA (House Rent Allowance)</li>
-            <li>DA (Dearness Allowance)</li>
-            <li>TA (Transport Allowance)</li>
-            <li>Medical और Pension लाभ</li>
-            <li>वर्दी भत्ता और Festival बोनस</li>
-        </ul>
+        <div class="section-content">
+            <ul class="benefits-list">
+                <li>HRA (House Rent Allowance)</li>
+                <li>DA (Dearness Allowance)</li>
+                <li>TA (Transport Allowance)</li>
+                <li>Medical और Pension लाभ</li>
+                <li>वर्दी भत्ता और Festival बोनस</li>
+            </ul>
+        </div>
 
         <h2>📈 करियर ग्रोथ और प्रमोशन</h2>
-        <p>Delhi Police में काम करते हुए एक हेड कांस्टेबल समय के साथ इन पदों पर प्रमोट हो सकते हैं:</p>
-        <ul class="benefits-list">
-            <li>Assistant Sub-Inspector</li>
-            <li>Sub-Inspector</li>
-            <li>Inspector</li>
-        </ul>
-        <p>Promotion के लिए विभागीय परीक्षा और अनुभव ज़रूरी होता है।</p>
+        <div class="section-content">
+            <p>Delhi Police में काम करते हुए एक हेड कांस्टेबल समय के साथ इन पदों पर प्रमोट हो सकते हैं:</p>
+            <div class="subsection">
+                <ul class="benefits-list">
+                    <li>Assistant Sub-Inspector</li>
+                    <li>Sub-Inspector</li>
+                    <li>Inspector</li>
+                </ul>
+            </div>
+            <p>Promotion के लिए विभागीय परीक्षा और अनुभव ज़रूरी होता है।</p>
+        </div>
 
         <h2>📚 योग्यता और पात्रता (Eligibility)</h2>
         <div class="table-container">
@@ -322,14 +373,16 @@
         </div>
 
         <h2>📝 चयन प्रक्रिया (Selection Process)</h2>
-        <div class="selection-process">
+        <div class="section-content">
             <h3>चयन प्रक्रिया के चरण</h3>
-            <ul class="benefits-list">
-                <li>CBT Written Exam – 100 मार्क्स का टेस्ट</li>
-                <li>Typing Test – कंप्यूटर पर 30 WPM इंग्लिश या 25 WPM हिंदी</li>
-                <li>Physical Efficiency Test</li>
-                <li>Medical & Document Verification</li>
-            </ul>
+            <div class="subsection">
+                <ul class="benefits-list">
+                    <li>CBT Written Exam – 100 मार्क्स का टेस्ट</li>
+                    <li>Typing Test – कंप्यूटर पर 30 WPM इंग्लिश या 25 WPM हिंदी</li>
+                    <li>Physical Efficiency Test</li>
+                    <li>Medical & Document Verification</li>
+                </ul>
+            </div>
         </div>
 
         <div class="image-container">
@@ -339,19 +392,23 @@
         <h2>📆 दिल्ली पुलिस हेड कांस्टेबल 2025 भर्ती कब आएगी?</h2>
         <div class="highlight-box">
             <h3>महत्वपूर्ण तिथियां</h3>
-            <p><strong>नोटिफिकेशन:</strong> उम्मीद की जा रही है कि भर्ती नोटिफिकेशन सितंबर 2025 तक आ सकता है।</p>
-            <p><strong>आवेदन की तिथि:</strong> नोटिफिकेशन आने के 15 दिनों के भीतर</p>
-            <p><strong>एग्जाम डेट:</strong> नवंबर - दिसंबर 2025</p>
+            <div class="subsection">
+                <p><strong>नोटिफिकेशन:</strong> उम्मीद की जा रही है कि भर्ती नोटिफिकेशन सितंबर 2025 तक आ सकता है।</p>
+                <p><strong>आवेदन की तिथि:</strong> नोटिफिकेशन आने के 15 दिनों के भीतर</p>
+                <p><strong>एग्जाम डेट:</strong> नवंबर - दिसंबर 2025</p>
+            </div>
         </div>
 
         <h2>📣 क्यों करें दिल्ली पुलिस की यह नौकरी?</h2>
-        <ul class="benefits-list">
-            <li>सरकारी नौकरी की सुरक्षा</li>
-            <li>अच्छी salary और allowances</li>
-            <li>प्रमोशन और ग्रोथ के अवसर</li>
-            <li>समाज में सम्मान</li>
-            <li>पेंशन और मेडिकल सुरक्षा</li>
-        </ul>
+        <div class="section-content">
+            <ul class="benefits-list">
+                <li>सरकारी नौकरी की सुरक्षा</li>
+                <li>अच्छी salary और allowances</li>
+                <li>प्रमोशन और ग्रोथ के अवसर</li>
+                <li>समाज में सम्मान</li>
+                <li>पेंशन और मेडिकल सुरक्षा</li>
+            </ul>
+        </div>
     </div>
 
     <!-- FAQ Section -->
