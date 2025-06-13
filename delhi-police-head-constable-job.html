@@ -14,6 +14,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'indian-blue': '#1e40af',
+                        'gov-blue': '#1e40af'
+                    }
+                }
+            }
+        }
+    </script>
+    
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/logo.png">
     
@@ -36,12 +51,26 @@
         }
         h1 {
             color: #2c3e50;
-            font-size: 2.5em;
-            margin-bottom: 20px;
+            font-size: 2.8em;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            font-weight: 700;
         }
         h2 {
             color: #34495e;
+            margin-top: 35px;
+            font-size: 2em;
+            line-height: 1.3;
+            font-weight: 600;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+        h3 {
+            color: #2c3e50;
+            font-size: 1.5em;
             margin-top: 30px;
+            line-height: 1.4;
+            font-weight: 600;
         }
         .salary-box {
             background-color: #e8f4f8;
@@ -230,24 +259,25 @@
 </head>
 <body>
     <div id="navbar"></div>
-    <script src="navbar.js"></script>
 
     <div class="blog-container">
         <h1>👮 दिल्ली पुलिस हेड कांस्टेबल की नौकरी: सैलरी, फायदे और पूरी जानकारी</h1>
 
         <div class="image-container">
-            <img src="https://cet-exam.s3.ap-south-1.amazonaws.com/delhipolice.png" alt="Delhi Police Head Constable in Uniform" title="दिल्ली पुलिस हेड कांस्टेबल">
+            <img src="img/delhip.png"
+             alt="Delhi Police Head Constable in Uniform" title="दिल्ली पुलिस हेड कांस्टेबल" class="w-full h-auto rounded-lg shadow-md">
         </div>
 
         <p>दिल्ली पुलिस में हेड कांस्टेबल की पोस्ट सरकारी नौकरी चाहने वालों के लिए एक सुनहरा मौका है। यह पोस्ट न सिर्फ एक अच्छी salary देती है, बल्कि कई तरह के गवर्नमेंट बेनिफिट्स और प्रमोशन के अवसर भी देती है।</p>
 
-        <h2>🔍 Delhi Police Head Constable कौन होते हैं?</h2>
+        <h2>🔍 दिल्ली पुलिस हेड कांस्टेबल कौन होते हैं?</h2>
         <p>हेड कांस्टेबल वह पद है जो कांस्टेबल और सब-इंस्पेक्टर के बीच आता है। यह एक सुपरवाइजरी पोस्ट होती है जिसमें फील्ड ड्यूटी के साथ-साथ ऑफिस वर्क भी शामिल होता है।</p>
 
-        <h2>💰 Delhi Police Head Constable Salary: कितना मिलता है हर महीने?</h2>
+        <h2>💰 दिल्ली पुलिस हेड कांस्टेबल सैलरी: कितना मिलता है हर महीने?</h2>
         <div class="salary-box">
-            <p><strong>Basic Pay:</strong> ₹25,500 से शुरू</p>
-            <p><strong>Grade Pay:</strong> ₹2,400</p>
+            <h3>मासिक वेतन संरचना</h3>
+            <p><strong>बेसिक पे:</strong> ₹25,500 से शुरू</p>
+            <p><strong>ग्रेड पे:</strong> ₹2,400</p>
             <p>7th Pay Commission के अनुसार, कुल इन-हैंड सैलरी ₹40,000 तक जा सकती है।</p>
         </div>
 
@@ -260,7 +290,7 @@
             <li>वर्दी भत्ता और Festival बोनस</li>
         </ul>
 
-        <h2>📈 Career Growth & Promotion</h2>
+        <h2>📈 करियर ग्रोथ और प्रमोशन</h2>
         <p>Delhi Police में काम करते हुए एक हेड कांस्टेबल समय के साथ इन पदों पर प्रमोट हो सकते हैं:</p>
         <ul class="benefits-list">
             <li>Assistant Sub-Inspector</li>
@@ -292,25 +322,29 @@
         </div>
 
         <h2>📝 चयन प्रक्रिया (Selection Process)</h2>
-        <ul class="benefits-list">
-            <li>CBT Written Exam – 100 मार्क्स का टेस्ट</li>
-            <li>Typing Test – कंप्यूटर पर 30 WPM इंग्लिश या 25 WPM हिंदी</li>
-            <li>Physical Efficiency Test</li>
-            <li>Medical & Document Verification</li>
-        </ul>
-
-        <div class="image-container">
-            <img src="https://cet-exam.s3.ap-south-1.amazonaws.com/delhi-police-selection-process.jpg" alt="Delhi Police Job Selection Process Chart" title="दिल्ली पुलिस चयन प्रक्रिया">
+        <div class="selection-process">
+            <h3>चयन प्रक्रिया के चरण</h3>
+            <ul class="benefits-list">
+                <li>CBT Written Exam – 100 मार्क्स का टेस्ट</li>
+                <li>Typing Test – कंप्यूटर पर 30 WPM इंग्लिश या 25 WPM हिंदी</li>
+                <li>Physical Efficiency Test</li>
+                <li>Medical & Document Verification</li>
+            </ul>
         </div>
 
-        <h2>📆 Delhi Police Head Constable 2025 भर्ती कब आएगी?</h2>
+        <div class="image-container">
+            <img src="img/delhi-police-selection-process.jpg" alt="Delhi Police Job Selection Process Chart" title="दिल्ली पुलिस चयन प्रक्रिया" class="w-full h-auto rounded-lg shadow-md">
+        </div>
+
+        <h2>📆 दिल्ली पुलिस हेड कांस्टेबल 2025 भर्ती कब आएगी?</h2>
         <div class="highlight-box">
+            <h3>महत्वपूर्ण तिथियां</h3>
             <p><strong>नोटिफिकेशन:</strong> उम्मीद की जा रही है कि भर्ती नोटिफिकेशन सितंबर 2025 तक आ सकता है।</p>
             <p><strong>आवेदन की तिथि:</strong> नोटिफिकेशन आने के 15 दिनों के भीतर</p>
             <p><strong>एग्जाम डेट:</strong> नवंबर - दिसंबर 2025</p>
         </div>
 
-        <h2>📣 क्यों करें Delhi Police की यह Job?</h2>
+        <h2>📣 क्यों करें दिल्ली पुलिस की यह नौकरी?</h2>
         <ul class="benefits-list">
             <li>सरकारी नौकरी की सुरक्षा</li>
             <li>अच्छी salary और allowances</li>
@@ -397,7 +431,7 @@
         <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">संबंधित लेख</h2>
         <div class="related-cards">
             <a href="haryana-gk.html" class="related-card">
-                <img src="https://cet-exam.s3.ap-south-1.amazonaws.com/haryanagk.png" alt="हरियाणा जीके" loading="lazy">
+                <img src="img/haryanagk.png" alt="हरियाणा जीके" loading="lazy" class="w-full h-48 object-cover">
                 <div class="related-card-content">
                     <h3>हरियाणा जीके: सरकारी नौकरी के लिए महत्वपूर्ण</h3>
                     <p>हरियाणा सरकारी नौकरियों के लिए महत्वपूर्ण जीके और करंट अफेयर्स</p>
@@ -409,7 +443,7 @@
             </a>
             
             <a href="mistakes-avoid-govt-job.html" class="related-card">
-                <img src="https://cet-exam.s3.ap-south-1.amazonaws.com/warning.png" alt="सरकारी नौकरी में गलतियां" loading="lazy">
+                <img src="img/warning.png" alt="सरकारी नौकरी में गलतियां" loading="lazy" class="w-full h-48 object-cover">
                 <div class="related-card-content">
                     <h3>सरकारी नौकरी में न करें ये गलतियां</h3>
                     <p>सरकारी नौकरी के आवेदन में होने वाली आम गलतियां और उनसे बचने के तरीके</p>
@@ -421,7 +455,7 @@
             </a>
             
             <a href="cet-website-busy-solution.html" class="related-card">
-                <img src="https://cet-exam.s3.ap-south-1.amazonaws.com/serverbussy.png" alt="वेबसाइट बिजी" loading="lazy">
+                <img src="img/serverbussy.png" alt="वेबसाइट बिजी" loading="lazy" class="w-full h-48 object-cover">
                 <div class="related-card-content">
                     <h3>वेबसाइट बिजी? फॉर्म भरने के स्मार्ट टिप्स</h3>
                     <p>सरकारी वेबसाइट पर फॉर्म भरते समय सर्वर बिजी की समस्या का समाधान</p>
@@ -437,4 +471,4 @@
     <div id="footer"></div>
     <script src="footer.js"></script>
 </body>
-</html> 
+</html>
