@@ -26,12 +26,15 @@
             margin: 20px 0;
         }
         th, td {
-            border: 1px solid #ddd;
+            border: 1px solid #000;
             padding: 8px;
             text-align: left;
+            color: #000;
         }
         th {
             background-color: #f5f5f5;
+            color: #000;
+            font-weight: bold;
         }
         img {
             max-width: 100%;
@@ -42,6 +45,35 @@
             background: #f9f9f9;
             padding: 20px;
             margin: 20px 0;
+            border-radius: 8px;
+        }
+        .related-blog-card {
+            display: flex;
+            margin-bottom: 15px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .related-blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+        .related-blog-image {
+            width: 120px;
+            height: 90px;
+            object-fit: cover;
+        }
+        .related-blog-content {
+            padding: 10px;
+            flex: 1;
+        }
+        /* Global heading and paragraph styles */
+        h1, h2, h3, h4, h5, h6 {
+            color: #000 !important; /* Force black color for all headings */
+        }
+        p {
+            color: #333 !important; /* Darker color for paragraphs */
         }
     </style>
 </head>
@@ -60,8 +92,8 @@
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-8">
         <!-- Hero Section -->
-        <section class="bg-white rounded-lg shadow-lg p-6 mb-8">
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">🚔 Delhi Police Head Constable भर्ती 2025</h1>
+websigte        <section class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-black mb-4">🚔 Delhi Police Head Constable भर्ती 2025</h1>
             <p class="text-xl text-gray-600">जानिए सैलरी, योग्यता और तैयारी की पूरी जानकारी</p>
         </section>
 
@@ -71,7 +103,7 @@
             <div class="lg:col-span-2">
                 <!-- Introduction -->
                 <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">📝 भूमिका</h2>
+                    <h2 class="text-2xl font-bold text-black mb-4">📝 भूमिका</h2>
                     <p class="text-gray-600 mb-6">
                         अगर आप सरकारी नौकरी (Sarkari Job) की तलाश में हैं और दिल्ली पुलिस में नौकरी करना आपका सपना है, तो Delhi Police Head Constable की भर्ती आपके लिए एक बेहतरीन मौका हो सकती है। इसमें न केवल अच्छी सैलरी मिलती है, बल्कि प्रतिष्ठा और सुरक्षित भविष्य भी साथ आता है।
                     </p>
@@ -80,7 +112,7 @@
 
                 <!-- Key Information -->
                 <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">📅 Delhi Police Head Constable भर्ती 2025: मुख्य जानकारी</h2>
+                    <h2 class="text-2xl font-bold text-black mb-4">📅 Delhi Police Head Constable भर्ती 2025: मुख्य जानकारी</h2>
                     <div class="table-container">
                         <table>
                             <tr>
@@ -121,7 +153,7 @@
 
                 <!-- Salary Details -->
                 <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">💰 सैलरी और भत्ते (Salary & Perks)</h2>
+                    <h2 class="text-2xl font-bold text-black mb-4">💰 सैलरी और भत्ते (Salary & Perks)</h2>
                     <div class="table-container">
                         <table>
                             <tr>
@@ -154,7 +186,7 @@
 
                 <!-- Exam Pattern -->
                 <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">📘 परीक्षा पैटर्न (Exam Pattern)</h2>
+                    <h2 class="text-2xl font-bold text-black mb-4">📘 परीक्षा पैटर्न (Exam Pattern)</h2>
                     <div class="table-container">
                         <table>
                             <tr>
@@ -196,9 +228,48 @@
                     </div>
                 </div>
 
+                <!-- Related Blogs Section (New) -->
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-black mb-4">📚 संबंधित लेख (Related Articles)</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Blog Card 1 -->
+                        <a href="group-c-d-jobs.html" class="related-blog-card">
+                            <img src="img/group.jpg" alt="Group C & D Jobs" class="related-blog-image">
+                            <div class="related-blog-content">
+                                <h3 class="font-bold text-black">CET Group C & D Jobs</h3>
+                                <p class="text-sm text-gray-600">क्लर्क और अन्य पदों की जानकारी</p>
+                            </div>
+                        </a>
+                        <!-- Blog Card 2 -->
+                        <a href="cet-government-jobs.html" class="related-blog-card">
+                            <img src="img/govtexam.png" alt="Government Jobs" class="related-blog-image">
+                            <div class="related-blog-content">
+                                <h3 class="font-bold text-black">CET Government Jobs</h3>
+                                <p class="text-sm text-gray-600">हरियाणा सरकारी नौकरियां</p>
+                            </div>
+                        </a>
+                        <!-- Blog Card 3 -->
+                        <a href="cet-preparation.html" class="related-blog-card">
+                            <img src="img/prepare.png" alt="CET Preparation" class="related-blog-image">
+                            <div class="related-blog-content">
+                                <h3 class="font-bold text-black">CET परीक्षा की तैयारी</h3>
+                                <p class="text-sm text-gray-600">सफलता के लिए महत्वपूर्ण टिप्स</p>
+                            </div>
+                        </a>
+                        <!-- Blog Card 4 -->
+                        <a href="cet-syllabus.html" class="related-blog-card">
+                            <img src="img/syllabus.png" alt="CET Syllabus" class="related-blog-image">
+                            <div class="related-blog-content">
+                                <h3 class="font-bold text-black">CET सिलेबस 2025</h3>
+                                <p class="text-sm text-gray-600">पूरा पाठ्यक्रम और तैयारी गाइड</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
                 <!-- Conclusion -->
                 <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">✍️ निष्कर्ष (Conclusion)</h2>
+                    <h2 class="text-2xl font-bold text-black mb-4">✍️ निष्कर्ष (Conclusion)</h2>
                     <p class="text-gray-600">
                         Delhi Police Head Constable की नौकरी उन उम्मीदवारों के लिए सुनहरा मौका है जो कम उम्र में सरकारी नौकरी चाहते हैं। इसकी सैलरी, सुविधाएं और सम्मान इसे एक Top Sarkari Job बनाते हैं। सही तैयारी और सही दिशा में मेहनत से आप इस नौकरी को पा सकते हैं।
                     </p>
@@ -209,26 +280,34 @@
             <div class="lg:col-span-1">
                 <!-- Related Blogs -->
                 <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">संबंधित ब्लॉग</h3>
+                    <h3 class="text-xl font-bold text-black mb-4">संबंधित ब्लॉग</h3>
                     <div class="space-y-4">
                         <a href="cet-syllabus.html" class="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
-                            <h4 class="font-semibold text-gray-800">CET 2025 सिलेबस</h4>
+                            <h4 class="font-semibold text-black">CET 2025 सिलेबस</h4>
                             <p class="text-sm text-gray-600">पूरी जानकारी और तैयारी के टिप्स</p>
                         </a>
                         <a href="how-to-crack-cet.html" class="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
-                            <h4 class="font-semibold text-gray-800">CET कैसे क्रैक करें</h4>
+                            <h4 class="font-semibold text-black">CET कैसे क्रैक करें</h4>
                             <p class="text-sm text-gray-600">सफलता के लिए स्ट्रेटेजी</p>
                         </a>
                         <a href="cet-vacancies.html" class="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
-                            <h4 class="font-semibold text-gray-800">CET वैकेंसी 2025</h4>
+                            <h4 class="font-semibold text-black">CET वैकेंसी 2025</h4>
                             <p class="text-sm text-gray-600">सभी नई भर्तियों की जानकारी</p>
+                        </a>
+                        <a href="cet-preparation-tips.html" class="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
+                            <h4 class="font-semibold text-black">CET तैयारी टिप्स</h4>
+                            <p class="text-sm text-gray-600">परीक्षा में सफलता के लिए रणनीति</p>
+                        </a>
+                        <a href="mock-tests-cet-2025.html" class="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
+                            <h4 class="font-semibold text-black">CET मॉक टेस्ट</h4>
+                            <p class="text-sm text-gray-600">अभ्यास के लिए फ्री मॉक टेस्ट</p>
                         </a>
                     </div>
                 </div>
 
                 <!-- Quick Links -->
                 <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">महत्वपूर्ण लिंक</h3>
+                    <h3 class="text-xl font-bold text-black mb-4">महत्वपूर्ण लिंक</h3>
                     <ul class="space-y-3">
                         <li><a href="https://ssc.nic.in" target="_blank" class="text-blue-600 hover:text-blue-800">SSC आधिकारिक वेबसाइट</a></li>
                         <li><a href="https://delhipolice.gov.in" target="_blank" class="text-blue-600 hover:text-blue-800">दिल्ली पुलिस वेबसाइट</a></li>
