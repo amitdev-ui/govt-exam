@@ -450,6 +450,7 @@ nav.sticky {
                     <i class="fas fa-search text-gray-400 mr-3"></i>
                     <input type="text" placeholder="Search articles..." class="w-full outline-none text-gray-700">
                 </div>
+                <div id="no-results-message" class="mt-2 text-center text-gray-500 hidden"></div>
             </div>
         </div>
     </section>
@@ -947,6 +948,18 @@ nav.sticky {
                     </a>
                 </div>
             </div>
+
+            <div class="blog-item updates preparation">
+                <img src="img/govtexam.png" alt="Top 10 Sarkari Naukri June–July 2025" class="blog-image">
+                <div class="content" style="background-color: #F0F9FF; border-top: 3px solid #87CEEB;">
+                    <span class="category" style="background-color: #DBEAFE; color: #1E40AF;">Latest Jobs</span>
+                    <h2 class="title">📢 Top 10 Sarkari Naukri You Must Apply in June–July 2025</h2>
+                    <p class="excerpt">June–July 2025 में निकलने वाली टॉप 10 सरकारी नौकरियां – eligibility, salary, और direct apply link के साथ!</p>
+                    <a href="top-10-sarkari-naukri-june-july-2025.html" class="read-more">
+                        Read More
+                    </a>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -1150,28 +1163,74 @@ nav.sticky {
             window.addEventListener('resize', arrangeGridItems);
         });
 
-        // Search functionality
-        const searchInput = document.querySelector('.search-bar input');
-        searchInput.addEventListener('input', (e) => {
-            const searchTerm = e.target.value.toLowerCase();
-            const blogItems = document.querySelectorAll('.blog-item');
-            
-            blogItems.forEach(item => {
-                const title = item.querySelector('.title').textContent.toLowerCase();
-                const excerpt = item.querySelector('.excerpt').textContent.toLowerCase();
-                
-                if (title.includes(searchTerm) || excerpt.includes(searchTerm)) {
-                    item.classList.remove('hidden');
-                    item.style.opacity = '1';
-                    item.style.transform = 'translateY(0)';
-                } else {
-                    item.style.opacity = '0';
-                    item.style.transform = 'translateY(10px)';
-                    setTimeout(() => {
-                        item.classList.add('hidden');
-                    }, 400);
-                }
-            });
+        // Blog Search Functionality
+        window.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.querySelector('.search-bar input[type="text"]');
+            const blogItems = document.querySelectorAll('.blog-grid .blog-item');
+            const noResultsDiv = document.getElementById('no-results-message');
+            function normalize(str) {
+                return str.toLowerCase().replace(/\s+/g, ' ').trim();
+            }
+            function getSimilarBlogs(query) {
+                if (!query) return [];
+                const results = [];
+                blogItems.forEach(item => {
+                    const title = item.querySelector('.title')?.textContent || '';
+                    const excerpt = item.querySelector('.excerpt')?.textContent || '';
+                    const normTitle = normalize(title);
+                    const normExcerpt = normalize(excerpt);
+                    // Fuzzy: contains any word from query
+                    const queryWords = query.split(' ');
+                    let matchCount = 0;
+                    queryWords.forEach(word => {
+                        if (word && (normTitle.includes(word) || normExcerpt.includes(word))) matchCount++;
+                    });
+                    if (matchCount > 0) {
+                        results.push({
+                            item,
+                            title,
+                            link: item.querySelector('a.read-more')?.getAttribute('href') || '#',
+                            matchCount
+                        });
+                    }
+                });
+                // Sort by most matches, then by title
+                results.sort((a, b) => b.matchCount - a.matchCount || a.title.localeCompare(b.title));
+                return results.slice(0, 3);
+            }
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    const query = normalize(this.value);
+                    let found = false;
+                    blogItems.forEach(item => {
+                        const title = normalize(item.querySelector('.title')?.textContent || '');
+                        const excerpt = normalize(item.querySelector('.excerpt')?.textContent || '');
+                        if (query && (title.includes(query) || excerpt.includes(query))) {
+                            item.classList.remove('hidden');
+                            found = true;
+                        } else if (!query) {
+                            item.classList.remove('hidden');
+                            found = true;
+                        } else {
+                            item.classList.add('hidden');
+                        }
+                    });
+                    // Show/hide no results message
+                    if (!found && query) {
+                        const similars = getSimilarBlogs(query);
+                        if (similars.length > 0) {
+                            noResultsDiv.innerHTML = 'No exact results found.<br>Similar blogs:<br>' +
+                                similars.map(s => `<a href="${s.link}" class="text-blue-600 underline block mt-1">${s.title}</a>`).join('');
+                        } else {
+                            noResultsDiv.innerHTML = 'No results found.';
+                        }
+                        noResultsDiv.classList.remove('hidden');
+                    } else {
+                        noResultsDiv.classList.add('hidden');
+                        noResultsDiv.innerHTML = '';
+                    }
+                });
+            }
         });
 
         // Translation functionality
