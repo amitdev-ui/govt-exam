@@ -58,6 +58,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
   }
   </script>
+
+  <!-- Structured Data for Logo & Brand -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Sarkari Nokriya",
+    "url": "https://www.sarkarinokriya.xyz",
+    "logo": "https://www.sarkarinokriya.xyz/img/logo.png"
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/logo.png" type="image/png">
+
+  <!-- Manifest File -->
+  <link rel="manifest" href="manifest.json">
         <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -448,184 +465,57 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-8">
-        <!-- Enhanced Banner Slider -->
-        <div class="banner-slider mb-8">
-            <div class="banner-slide active" style="background-image: url('img/goodstudent2.jpg');">
-                <div class="banner-overlay">
-                    <div class="container mx-auto px-4">
-                        <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
-                            <span class="bg-gradient-to-r from-sky-blue to-indian-blue text-transparent bg-clip-text glow-text">CET 2025</span>
-                        </h1>
-                        <p class="text-3xl md:text-4xl text-yellow-100 font-semibold mb-4 glow-text" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.6);">
-                            आपके सपनों की सीढ़ी
-                        </p>
-                        <p class="text-2xl md:text-3xl text-blue-50 font-medium glow-text" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.6);">
-                            सरकारी नौकरी का सुनहरा अवसर
-                        </p>
-                        <div class="mt-8 flex flex-wrap gap-4 justify-center">
-                            <a href="apply-now.html" class="bg-sky-blue hover:bg-indian-blue text-white font-medium py-3 px-8 rounded-lg transition duration-300 hover-scale">
-                                Apply Now
-                            </a>
-                            <a href="exam-pattern.html" class="bg-white text-indian-blue hover:bg-gray-100 font-medium py-3 px-8 rounded-lg transition duration-300 hover-scale">
-                                View Exam Pattern
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="banner-slide" style="background-image: url('img/pmindinan2.png');">
-                <div class="banner-overlay">
-                    <div class="container mx-auto px-4">
-                        <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
-                            <span class="bg-gradient-to-r from-sky-blue to-indian-blue text-transparent bg-clip-text glow-text">सफलता का रहस्य</span>
-                        </h1>
-                        <p class="text-3xl md:text-4xl text-yellow-100 font-semibold mb-4 glow-text" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.6);">
-                            विशेषज्ञों की सीख
-                        </p>
-                        <p class="text-2xl md:text-3xl text-blue-50 font-medium glow-text" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.6);">
-                            सफलता के लिए सही रणनीति
-                        </p>
-                        <div class="mt-8 flex flex-wrap gap-4 justify-center">
-                            <a href="study-resources.html" class="bg-sky-blue hover:bg-indian-blue text-white font-medium py-3 px-8 rounded-lg transition duration-300 hover-scale">
-                                Study Resources
-                            </a>
-                            <a href="mock-tests-cet-2025.html" class="bg-white text-indian-blue hover:bg-gray-100 font-medium py-3 px-8 rounded-lg transition duration-300 hover-scale">
-                                Mock Tests
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="banner-slide" style="background-image: url('img/pmindian.png');">
-                <div class="banner-overlay">
-                    <div class="container mx-auto px-4">
-                        <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
-                            <span class="bg-gradient-to-r from-sky-blue to-indian-blue text-transparent bg-clip-text glow-text">सफलता की कहानियां</span>
-                        </h1>
-                        <p class="text-3xl md:text-4xl text-yellow-100 font-semibold mb-4 glow-text" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.6);">
-                            टॉपर्स की सफलता का राज
-                        </p>
-                        <p class="text-2xl md:text-3xl text-blue-50 font-medium glow-text" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.6);">
-                            आप भी बन सकते हैं सफल
-                        </p>
-                        <div class="mt-8 flex flex-wrap gap-4 justify-center">
-                            <a href="cet-success-stories.html" class="bg-sky-blue hover:bg-indian-blue text-white font-medium py-3 px-8 rounded-lg transition duration-300 hover-scale">
-                                Success Stories
-                            </a>
-                            <a href="blog-index.html" class="bg-white text-indian-blue hover:bg-gray-100 font-medium py-3 px-8 rounded-lg transition duration-300 hover-scale">
-                                Read Blog
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Lightweight Header -->
+        <header class="relative bg-cover bg-center h-72 flex items-center justify-center" style="background-image: url('img/pmindinan2.png');">
+          <div class="bg-white bg-opacity-70 rounded-lg p-8 shadow-lg text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gov-blue mb-2">सरकारी नौकरी की तैयारी 2025</h1>
+            <p class="text-xl text-gray-700">CET, SSC, Post Office, Police & More</p>
+          </div>
+        </header>
 
-        <script>
-            // Banner Slider
-            const slides = document.querySelectorAll('.banner-slide');
-            let currentSlide = 0;
-
-            function nextSlide() {
-                slides[currentSlide].classList.remove('active');
-                currentSlide = (currentSlide + 1) % slides.length;
-                slides[currentSlide].classList.add('active');
-            }
-
-            setInterval(nextSlide, 5000);
-        </script>
-
-        <!-- ATTENTION-GRABBING BLOG POSTS -->
-        <section class="mb-8">
-            <h2 class="text-3xl font-bold text-gov-blue mb-6 text-center">⚠️ Critical Updates <span class="text-xl block text-gray-600">महत्वपूर्ण अपडेट</span></h2>
-            
-            <!-- Emergency Warning Blog Post - Top Priority -->
-            <div class="mx-auto mb-6 bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border-2 border-red-500 animate-pulse">
-                <div class="flex flex-col md:flex-row">
-                    <div class="md:w-2/5 bg-red-50">
-                        <div class="relative h-full">
-                            <div class="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg shadow-md z-10">
-                                <i class="fas fa-exclamation-triangle mr-1"></i> URGENT WARNING
-                            </div>
-                            <img src="img/warning.png" alt="Important Warning for CET 2025 Applicants - Don't Miss Critical Updates" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                    <div class="md:w-3/5 p-6 bg-gradient-to-r from-red-50 to-orange-50">
-                        <div class="flex items-center mb-2">
-                            <span class="bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full">आवश्यक चेतावनी</span>
-                            <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full ml-2">अभी पढ़ें</span>
-                        </div>
-                        <h2 class="text-2xl font-bold text-gray-900 mb-2">⚠️ आप अपना सरकारी नौकरी का सपना खो सकते हैं — अगर इन बातों को नजरअंदाज़ किया!</h2>
-                        <p class="text-gray-600 mb-4">हर साल हज़ारों छात्र छोटी-छोटी लापरवाहियों के कारण रिजेक्ट हो जाते हैं। जाति प्रमाणपत्र अपडेट नहीं है? गलत फॉर्म भरा है? जल्दी जानें क्या गलतियां आपका सिलेक्शन रोक सकती हैं!</p>
-                        <a href="mistakes-avoid-govt-job.html" class="inline-block bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 transform hover:-translate-y-1">
-                            जरूर पढ़ें <i class="fas fa-exclamation-circle ml-2"></i>
-                        </a>
-                    </div>
+        <!-- Featured Blogs Section -->
+        <section class="py-12">
+          <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center gradient-text">लेटेस्ट सरकारी नौकरी ब्लॉग्स</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <!-- Blog 1: Indian Post Office GDS -->
+              <a href="indian-post-office-gds.html" class="gov-card hover-scale">
+                <img src="img/gds.png" alt="Indian Post Office GDS 2025" class="card-image">
+                <div class="p-6">
+                  <h3 class="text-xl font-bold mb-2">Indian Post Office GDS 2025</h3>
+                  <p class="text-gray-600 mb-2">10वीं पास के लिए सीधी भर्ती, No Exam</p>
+                  <span class="text-blue-600 font-semibold">Read More →</span>
                 </div>
+              </a>
+              <!-- Blog 2: Indian Navy Agniveer -->
+              <a href="indian-navy-agniveer-2025.html" class="gov-card hover-scale">
+                <img src="img/navy.png" alt="Indian Navy Agniveer 2025" class="card-image">
+                <div class="p-6">
+                  <h3 class="text-xl font-bold mb-2">Indian Navy Agniveer 2025</h3>
+                  <p class="text-gray-600 mb-2">SSR/MR भर्ती, 10वीं/12वीं पास</p>
+                  <span class="text-blue-600 font-semibold">Read More →</span>
+                </div>
+              </a>
+              <!-- Blog 3: SSC CGL 2025 -->
+              <a href="ssc-cgl-2025-notification.html" class="gov-card hover-scale">
+                <img src="img/ssc-cgl.png" alt="SSC CGL 2025" class="card-image">
+                <div class="p-6">
+                  <h3 class="text-xl font-bold mb-2">SSC CGL 2025</h3>
+                  <p class="text-gray-600 mb-2">Notification, Eligibility, Salary, Exam Pattern</p>
+                  <span class="text-blue-600 font-semibold">Read More →</span>
+                </div>
+              </a>
+              <!-- Blog 4: Delhi Police Head Constable -->
+              <a href="delhi-police-head-constable-job.html" class="gov-card hover-scale">
+                <img src="img/delhip.png" alt="Delhi Police Head Constable 2025" class="card-image">
+                <div class="p-6">
+                  <h3 class="text-xl font-bold mb-2">Delhi Police Head Constable 2025</h3>
+                  <p class="text-gray-600 mb-2">सैलरी, योग्यता और तैयारी</p>
+                  <span class="text-blue-600 font-semibold">Read More →</span>
+                </div>
+              </a>
             </div>
-
-            <!-- FEATURED BLOG POSTS IN ONE ROW -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Featured Blog Post 1 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border-2 border-yellow-400">
-                    <div class="relative">
-                        <img src="img/castecertificate.png" alt="Updated Caste Certificate Requirements for CET 2025 - Essential Document Guide" class="w-full h-48 object-cover">
-                        <div class="absolute top-0 right-0 bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg shadow-md z-10">
-                            <i class="fas fa-star mr-1"></i> FEATURED
-                        </div>
-                    </div>
-                    <div class="p-6 bg-gradient-to-r from-yellow-50 to-orange-50">
-                        <div class="flex items-center mb-2">
-                            <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-3 py-1 rounded-full">नई जानकारी</span>
-                        </div>
-                        <h2 class="text-xl font-bold text-gray-900 mb-2">✍️ अद्यतित जाति प्रमाणपत्र: CET 2025 के लिए अनिवार्य दस्तावेज</h2>
-                        <p class="text-gray-600 mb-4 line-clamp-2">सरकारी नौकरियों में आरक्षण का लाभ उठाने के लिए अद्यतित जाति प्रमाणपत्र क्यों अनिवार्य है और इसे कैसे प्राप्त करें?</p>
-                        <a href="caste-certificate-importance.html" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:-translate-y-1">
-                            अभी पढ़ें <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Featured Blog Post - Self Study for Sarkari Naukri -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border-2 border-green-400 animate-pulse">
-                    <div class="relative">
-                        <img src="img/self study.png" alt="Self Study for Sarkari Naukri" class="w-full h-48 object-cover">
-                        <div class="absolute top-0 right-0 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg shadow-md z-10">
-                            <i class="fas fa-star mr-1"></i> NEW
-                        </div>
-                    </div>
-                    <div class="p-6 bg-gradient-to-r from-green-50 to-blue-50">
-                        <div class="flex items-center mb-2">
-                            <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">स्मार्ट तैयारी</span>
-                        </div>
-                        <h2 class="text-xl font-bold text-gray-900 mb-2">📘 How to Prepare for Sarkari Naukri at Home – Free Resources</h2>
-                        <p class="text-gray-600 mb-4 line-clamp-2">Sarkari Naukri ki tayyari ab ghar baithe bhi possible hai! Step-by-step guide for self-study with free resources.</p>
-                        <a href="sarkari-naukri-home-preparation.html" class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:-translate-y-1">
-                            तैयारी शुरू करें <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Featured Blog Post 3 - CET Exam Date Extension -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border-2 border-blue-400 animate-pulse">
-                    <div class="relative">
-                        <img src="img/schedule.png" alt="CET 2025 Exam Date Extension Updates - Latest Schedule Information" class="w-full h-48 object-cover">
-                        <div class="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg shadow-md z-10">
-                            <i class="fas fa-calendar-alt mr-1"></i> NEW UPDATE
-                        </div>
-                    </div>
-                    <div class="p-6 bg-gradient-to-r from-blue-50 to-indigo-50">
-                        <div class="flex items-center mb-2">
-                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">महत्वपूर्ण अपडेट</span>
-                        </div>
-                        <h2 class="text-xl font-bold text-gray-900 mb-2">📅 क्या CET की तारीख बढ़ेगी? जानिए सच्चाई!</h2>
-                        <p class="text-gray-600 mb-4 line-clamp-2">CET 2025 की तारीख बढ़ने की संभावना, कारण और प्रभाव की पूरी जानकारी पढ़ें।</p>
-                        <a href="cet-exam-date-extension.html" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:-translate-y-1">
-                            पूरी जानकारी पढ़ें <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </section>
 
         <!-- Latest Blogs Section -->
@@ -1022,49 +912,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <section class="py-12">
           <div class="max-w-6xl mx-auto px-4">
             <h2 class="text-3xl font-bold mb-8 text-center gradient-text">लेटेस्ट सरकारी नौकरी ब्लॉग्स</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-              <!-- Blog 1 -->
-              <a href="ssc-cgl-2025-notification.html" class="gov-card hover-scale">
-                <img src="img/ssc-cgl.png" alt="SSC CGL 2025 Notification, Eligibility, Salary, Exam Pattern" class="card-image">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <!-- Blog 1: Indian Post Office GDS -->
+              <a href="indian-post-office-gds.html" class="gov-card hover-scale">
+                <img src="img/gds.png" alt="Indian Post Office GDS 2025" class="card-image">
                 <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">SSC CGL 2025 – पूरी जानकारी</h3>
+                  <h3 class="text-xl font-bold mb-2">Indian Post Office GDS 2025</h3>
+                  <p class="text-gray-600 mb-2">10वीं पास के लिए सीधी भर्ती, No Exam</p>
+                  <span class="text-blue-600 font-semibold">Read More →</span>
+                </div>
+              </a>
+              <!-- Blog 2: Indian Navy Agniveer -->
+              <a href="indian-navy-agniveer-2025.html" class="gov-card hover-scale">
+                <img src="img/navy.png" alt="Indian Navy Agniveer 2025" class="card-image">
+                <div class="p-6">
+                  <h3 class="text-xl font-bold mb-2">Indian Navy Agniveer 2025</h3>
+                  <p class="text-gray-600 mb-2">SSR/MR भर्ती, 10वीं/12वीं पास</p>
+                  <span class="text-blue-600 font-semibold">Read More →</span>
+                </div>
+              </a>
+              <!-- Blog 3: SSC CGL 2025 -->
+              <a href="ssc-cgl-2025-notification.html" class="gov-card hover-scale">
+                <img src="img/ssc-cgl.png" alt="SSC CGL 2025" class="card-image">
+                <div class="p-6">
+                  <h3 class="text-xl font-bold mb-2">SSC CGL 2025</h3>
                   <p class="text-gray-600 mb-2">Notification, Eligibility, Salary, Exam Pattern</p>
                   <span class="text-blue-600 font-semibold">Read More →</span>
                 </div>
               </a>
-              <!-- Blog 2 -->
-              <a href="sarkari-naukri-whatsapp-telegram-groups.html" class="gov-card hover-scale">
-                <img src="img/phoneuse.png" alt="Sarkari Naukri WhatsApp Telegram Groups 2025" class="card-image">
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">Sarkari Naukri WhatsApp & Telegram Groups</h3>
-                  <p class="text-gray-600 mb-2">Fastest Govt Job Alerts & Study Material</p>
-                  <span class="text-blue-600 font-semibold">Read More →</span>
-                </div>
-              </a>
-              <!-- Blog 3 -->
+              <!-- Blog 4: Delhi Police Head Constable -->
               <a href="delhi-police-head-constable-job.html" class="gov-card hover-scale">
                 <img src="img/delhip.png" alt="Delhi Police Head Constable 2025" class="card-image">
                 <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">Delhi Police Head Constable भर्ती 2025</h3>
-                  <p class="text-gray-600 mb-2">सैलरी, योग्यता और तैयारी की पूरी जानकारी</p>
-                  <span class="text-blue-600 font-semibold">Read More →</span>
-                </div>
-              </a>
-              <!-- Blog 4 -->
-              <a href="top-10-sarkari-naukri-june-july-2025.html" class="gov-card hover-scale">
-                <img src="img/govtexam.png" alt="Top 10 Sarkari Naukri June July 2025" class="card-image">
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">Top 10 Sarkari Naukri June–July 2025</h3>
-                  <p class="text-gray-600 mb-2">Latest Govt Jobs, Eligibility, Salary</p>
-                  <span class="text-blue-600 font-semibold">Read More →</span>
-                </div>
-              </a>
-              <!-- Blog 5 -->
-              <a href="indian-post-office-gds.html" class="gov-card hover-scale">
-                <img src="img/govtexam.png" alt="Indian Post Office GDS 2025, gramin dak sevak, postman job rural" class="card-image">
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">Indian Post Office GDS 2025 – बिना परीक्षा सरकारी नौकरी</h3>
-                  <p class="text-gray-600 mb-2">10वीं पास के लिए सीधी भर्ती, No Exam</p>
+                  <h3 class="text-xl font-bold mb-2">Delhi Police Head Constable 2025</h3>
+                  <p class="text-gray-600 mb-2">सैलरी, योग्यता और तैयारी</p>
                   <span class="text-blue-600 font-semibold">Read More →</span>
                 </div>
               </a>
